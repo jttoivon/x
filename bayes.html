@@ -1,0 +1,978 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Naive Bayes classification &#8212; Data analysis with Python  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Clustering" href="clustering.html" />
+    <link rel="prev" title="Linear regression" href="linear_regression.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 8ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+</style>
+<div class="section" id="Naive-Bayes-classification">
+<h1>Naive Bayes classification<a class="headerlink" href="#Naive-Bayes-classification" title="Permalink to this headline">¶</a></h1>
+<p><em>Classification</em> is one form of supervised learning. The aim is to
+annotate all data points with a label. Those points that have the same
+label belong to the same class. There can be two or more labels. For
+example, a lifeforms can be classified (coarsely) with labels animal,
+plant, fungi, archaea, bacteria, protozoa, and chromista. The data
+points are observed to have certain features that can be used to predict
+their labels. For example, if it is has feathers, then it is most likely
+an animal.</p>
+<p>In supervised learning an algorithm is first given a training set of
+data points with their features and labels. Then the algorithm learns
+from these features and labels a (probabilistic) model, which can
+afterwards be used to predict the labels of previously unseen data.</p>
+<p><em>Naive Bayes classification</em> is a fast and simple to understand method.
+Its speed is due to some simplifications we make about the underlying
+probability distributions, namely, the assumption about the independence
+of features. Yet, it can be quite powerful, especially when there are
+enough features in the data.</p>
+<p>Suppose we have for each label L a probability distribution. This
+distribution gives probability for each possible combination of features
+(a feature vector):</p>
+<div class="math notranslate nohighlight">
+\[P(features | L).\]</div>
+<p>The main idea in Bayesian classification is to reverse the direction of
+dependence: we want to predict the label based on the features:</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}P(L | features)\\This is possible by `the Bayes\end{aligned}\end{align} \]</div>
+<p>theorem &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">https://en.wikipedia.org/wiki/Bayes%27_theorem</a>&gt;`__:</p>
+<div class="math notranslate nohighlight">
+\[P(L | features) = \frac{P(features | L)P(L)}{P(features)}.\]</div>
+<p>Let’s assume we have to labels L1 and L2, and their associated
+distributions: <span class="math notranslate nohighlight">\(P(features | L1)\)</span> and <span class="math notranslate nohighlight">\(P(features | L2)\)</span>. If
+we have a data point with “features”, whose label we don’t know, we can
+try to predict it using the ratio of posterior probabilities:</p>
+<div class="math notranslate nohighlight">
+\[\frac{P(L1 | features)}{P(L2 | features)} = \frac{P(features | L1)P(L1)}{P(features | L2)P(L2)}.\]</div>
+<p>If the ratio is greater than one, we label our data point with label L1,
+and if not, we give it label L2. The prior probabilities P(L1) and P(L2)
+of labels can be easily found out from the input data, as for each data
+point we also have its label. Same goes for the probabilities of
+features conditioned on the label.</p>
+<p>We first demonstrate naive Bayes classification using Gaussian
+distributions.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [323]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [324]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">make_blobs</span>
+<span class="n">X</span><span class="p">,</span><span class="n">y</span> <span class="o">=</span> <span class="n">make_blobs</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">centers</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">cluster_std</span><span class="o">=</span><span class="mf">1.5</span><span class="p">)</span>
+<span class="n">colors</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">y</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">label</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">colors</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">c</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">label</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+<span class="c1">#plt.colorbar();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_4_0.png" src="_images/bayes_4_0.png" />
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [325]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">GaussianNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="c1">#model = MultinomialNB()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<p>Naive Bayes algorithm fitted two 2-dimensional Gaussian distribution to
+the data. The means and the variances define these distributions
+completely.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [326]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Means:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard deviations:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Means: [[-1.64939095 -9.36891451]
+ [ 1.29327924 -1.24101221]]
+Standard deviations: [[2.06097005 2.47716872]
+ [3.33164807 2.22401384]]
+</pre></div></div>
+</div>
+<p>Let’s plot these distributions. First we define a helper function to
+draw an ellipse that gives the standard deviation in each direction from
+the origo.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [327]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">plot_ellipse</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;k&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Based on</span>
+<span class="sd">    http://stackoverflow.com/questions/17952171/not-sure-how-to-fit-data-with-a-gaussian-python.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="k">import</span> <span class="n">Ellipse</span>
+    <span class="c1"># Compute eigenvalues and associated eigenvectors</span>
+    <span class="n">vals</span><span class="p">,</span> <span class="n">vecs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">eigh</span><span class="p">(</span><span class="n">sigma</span><span class="p">)</span>
+
+    <span class="c1"># Compute &quot;tilt&quot; of ellipse using first eigenvector</span>
+    <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">vecs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">]</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">degrees</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arctan2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">))</span>
+
+    <span class="c1"># Eigenvalues give length of ellipse along each eigenvector</span>
+    <span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">vals</span><span class="p">)</span>
+
+    <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+    <span class="n">ellipse</span> <span class="o">=</span> <span class="n">Ellipse</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">label</span><span class="p">)</span>  <span class="c1"># color=&quot;k&quot;)</span>
+    <span class="n">ellipse</span><span class="o">.</span><span class="n">set_clip_box</span><span class="p">(</span><span class="n">ax</span><span class="o">.</span><span class="n">bbox</span><span class="p">)</span>
+    <span class="n">ellipse</span><span class="o">.</span><span class="n">set_alpha</span><span class="p">(</span><span class="mf">0.2</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">ellipse</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">ellipse</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [328]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<span class="n">plot_ellipse</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(),</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">)</span>
+<span class="n">plot_ellipse</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(),</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_10_0.png" src="_images/bayes_10_0.png" />
+</div>
+</div>
+<p><em>Accuracy score</em> gives a measure about how well we managed to predict
+the labels. The maximum value is 1.0.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [329]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y_fitted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_fitted</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy score is 1.0
+</pre></div></div>
+</div>
+<p>The score was the best possible, which is not a surprise, since we tried
+to predict the data we had already seen!</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [342]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1"># These densities based on samples don&#39;t look good.</span>
+<span class="c1">#data1=np.random.multivariate_normal(model.theta_[0], np.identity(2)*model.sigma_[0], size=1000)</span>
+<span class="c1">#data1 = pd.DataFrame(data1, columns=[&#39;x&#39;,&#39;y&#39;])</span>
+<span class="c1">#sns.kdeplot(data1.x, data1.y)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="Another-example">
+<h2>Another example<a class="headerlink" href="#Another-example" title="Permalink to this headline">¶</a></h2>
+<p>Let’s generate some more data using multivariate normal distributions.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [331]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">cov</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span> <span class="mf">4.68</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.32</span><span class="p">],</span>
+ <span class="p">[</span><span class="o">-</span><span class="mf">4.32</span><span class="p">,</span>  <span class="mf">4.68</span><span class="p">]])</span>
+<span class="n">mean1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">mean2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">n</span><span class="o">=</span><span class="mi">500</span>
+<span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean1</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean2</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+<span class="c1">#print(type(x1), x1.shape)</span>
+<span class="c1">#print(x1[:5])</span>
+<span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">x2</span><span class="o">.</span><span class="n">T</span><span class="p">])</span>
+<span class="c1">#print(X[:5])</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
+<span class="c1">#y=np.hstack([y1,y2])</span>
+<span class="c1">#plt.hist2d(X[:,0], X[:,1], bins=100, cmap=&#39;Blues&#39;);</span>
+<span class="c1">#plt.scatter(X[:,0], X[:,1], c=y)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_17_0.png" src="_images/bayes_17_0.png" />
+</div>
+</div>
+<p>The two clusters seem to be quite separate. Let’s try naive Bayesian
+classification on this data.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [332]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">model</span> <span class="o">=</span> <span class="n">GaussianNB</span><span class="p">()</span>
+<span class="c1">#model = MultinomialNB()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [333]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Means:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Standard deviations:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Means: [[-0.12823719  0.14571559]
+ [ 0.01507932  3.9942384 ]]
+Standard deviations: [[4.52895773 4.35115634]
+ [4.26576426 4.39396456]]
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [334]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">y_fitted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">colors</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="s2">&quot;blue&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">y_fitted</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">([],</span> <span class="p">[],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
+<span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span><span class="n">y_fitted</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy score is 0.839
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_21_1.png" src="_images/bayes_21_1.png" />
+</div>
+</div>
+<p>Even thought the score is quite good, we can see from the plot that the
+algorithm didn’t have good models for the data. We can plot the models
+the algorithm used:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [335]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">e1</span><span class="o">=</span><span class="n">plot_ellipse</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(),</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">)</span>
+<span class="n">e2</span><span class="o">=</span><span class="n">plot_ellipse</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(),</span> <span class="n">model</span><span class="o">.</span><span class="n">theta_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">np</span><span class="o">.</span><span class="n">identity</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">sigma_</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="n">e1</span><span class="p">,</span> <span class="n">e2</span><span class="p">],</span> <span class="p">[</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/bayes_23_0.png" src="_images/bayes_23_0.png" />
+</div>
+</div>
+<p>The problem with naive Bayesian classification is that it tries to model
+the data using Gaussian distributions, which are aligned along the x and
+y axes. With this example data we would have needed Gaussian
+distributions which are “tilted”.</p>
+</div>
+<div class="section" id="Text-classification">
+<h2>Text classification<a class="headerlink" href="#Text-classification" title="Permalink to this headline">¶</a></h2>
+<p>We next try to classificate a set of messages that were posted on a
+public forum. The messages were divided into groups by the topics. So,
+we have a data set ready for classification testing. Let’s first load
+this data using scikit-learn and print the message categories.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [336]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="k">import</span> <span class="n">fetch_20newsgroups</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">()</span>
+<span class="n">data</span><span class="o">.</span><span class="n">target_names</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[336]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>[&#39;alt.atheism&#39;,
+ &#39;comp.graphics&#39;,
+ &#39;comp.os.ms-windows.misc&#39;,
+ &#39;comp.sys.ibm.pc.hardware&#39;,
+ &#39;comp.sys.mac.hardware&#39;,
+ &#39;comp.windows.x&#39;,
+ &#39;misc.forsale&#39;,
+ &#39;rec.autos&#39;,
+ &#39;rec.motorcycles&#39;,
+ &#39;rec.sport.baseball&#39;,
+ &#39;rec.sport.hockey&#39;,
+ &#39;sci.crypt&#39;,
+ &#39;sci.electronics&#39;,
+ &#39;sci.med&#39;,
+ &#39;sci.space&#39;,
+ &#39;soc.religion.christian&#39;,
+ &#39;talk.politics.guns&#39;,
+ &#39;talk.politics.mideast&#39;,
+ &#39;talk.politics.misc&#39;,
+ &#39;talk.religion.misc&#39;]
+</pre></div>
+</div>
+</div>
+<p>We concentrate on four message categories only. The tool
+fetch_20newsgroups allows us to easily split the data into training and
+testing data.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [337]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">categories</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;comp.graphics&#39;</span><span class="p">,</span> <span class="s1">&#39;rec.autos&#39;</span><span class="p">,</span> <span class="s1">&#39;sci.electronics&#39;</span><span class="p">,</span> <span class="s1">&#39;sci.crypt&#39;</span><span class="p">]</span>
+<span class="n">train</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span>
+<span class="n">test</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">&#39;test&#39;</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>Let’s see what we got:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [338]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Training data:&quot;</span><span class="p">,</span> <span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">data</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="s2">&quot;Target:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">target</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test data:&quot;</span><span class="p">,</span> <span class="s2">&quot;Data:&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">data</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">data</span><span class="p">),</span> <span class="s2">&quot;Target&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">data</span><span class="p">)),</span> <span class="nb">len</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Training data: Data: &lt;class &#39;list&#39;&gt; 2364 Target: &lt;class &#39;numpy.ndarray&#39;&gt; 2364
+Test data: Data: &lt;class &#39;list&#39;&gt; 1574 Target &lt;class &#39;list&#39;&gt; 1574
+</pre></div></div>
+</div>
+<p>We use as features the frequencies of each word in the dataset. That is,
+there as many features as there are distinct words in the dataset. We
+denote the number of features by <span class="math notranslate nohighlight">\(f\)</span>. As the features are now
+counts, it is sensible to use multinomial distribution instead of
+Gaussian.</p>
+<p>Let’s try to model these messages using multinomial distributions. Each
+message category has its own distribution. A multinomial distribution
+has <span class="math notranslate nohighlight">\(f\)</span> non-negative parameters
+<span class="math notranslate nohighlight">\(\theta_1,\ldots , \theta_f\)</span>, which sum up to one. For example,
+the parameter <span class="math notranslate nohighlight">\(\theta_3\)</span> might tell the the probability of the
+word “board” appearing in a message of the category this distribution is
+describing.</p>
+<p>In scikit-learn there is a class CountVectorizer that converts messages
+in form of text strings to feature vectors. We can integrate this
+conversion with the model we are using (multinomial naive Bayes), so
+that the conversion happens automatically as part of the fit method. We
+achive this integration using the make_pipeline tool.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [339]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="c1">#from sklearn.feature_extraction.text import TfidfVectorizer  # an alternative feature extractor</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">CountVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.naive_bayes</span> <span class="k">import</span> <span class="n">MultinomialNB</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">make_pipeline</span>
+
+<span class="c1">#model = make_pipeline(TfidfVectorizer(), MultinomialNB())</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">CountVectorizer</span><span class="p">(),</span> <span class="n">MultinomialNB</span><span class="p">())</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">train</span><span class="o">.</span><span class="n">target</span><span class="p">)</span>
+<span class="n">labels_fitted</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">labels_fitted</span><span class="p">,</span> <span class="n">test</span><span class="o">.</span><span class="n">target</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Accuracy score is 0.920584498094028
+</pre></div></div>
+</div>
+<p>The classifier seem to work quite well!</p>
+<p>Let’s have a closer look at the resulting feature vectors.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [340]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">vec</span><span class="o">=</span><span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">features</span><span class="o">=</span><span class="n">vec</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type of feature matrix:&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">,:])</span>        <span class="c1"># print the features of the first sample point</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Type of feature matrix: &lt;class &#39;scipy.sparse.csr.csr_matrix&#39;&gt;
+  (0, 20579)    1
+  (0, 19220)    1
+  (0, 29697)    1
+  (0, 6320)     1
+  (0, 25926)    1
+  (0, 34222)    1
+  (0, 31398)    1
+  (0, 17883)    1
+  (0, 16809)    1
+  (0, 34425)    1
+  (0, 23460)    1
+  (0, 21787)    1
+  (0, 11068)    1
+  (0, 29494)    1
+  (0, 29505)    1
+  (0, 18436)    1
+  (0, 24025)    1
+  (0, 25336)    1
+  (0, 12577)    1
+  (0, 27517)    1
+  (0, 30641)    1
+  (0, 5980)     1
+  (0, 29104)    1
+  (0, 27521)    1
+  (0, 11100)    1
+  :     :
+  (0, 17310)    1
+  (0, 25400)    1
+  (0, 23118)    1
+  (0, 31686)    6
+  (0, 27158)    1
+  (0, 18085)    1
+  (0, 12580)    1
+  (0, 2100)     1
+  (0, 20381)    1
+  (0, 32729)    1
+  (0, 23854)    2
+  (0, 11079)    1
+  (0, 15109)    2
+  (0, 20509)    1
+  (0, 23858)    1
+  (0, 26624)    1
+  (0, 30377)    1
+  (0, 16034)    1
+  (0, 19099)    1
+  (0, 13317)    6
+  (0, 34790)    6
+  (0, 9553)     4
+  (0, 21852)    5
+  (0, 18962)    3
+  (0, 15373)    1
+</pre></div></div>
+</div>
+<p>The feature matrix is stored in sparse format, that is, only the nonzero
+counts are stored. How many words were in the first message?</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [341]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of words:&quot;</span><span class="p">,</span> <span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">,:]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">col</span> <span class="o">=</span> <span class="n">vec</span><span class="o">.</span><span class="n">vocabulary_</span><span class="p">[</span><span class="s2">&quot;it&quot;</span><span class="p">]</span>   <span class="c1"># Get the column of &#39;it&#39; word in the feature matrix</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Word &#39;it&#39; appears in the first message </span><span class="si">%i</span><span class="s2"> times.&quot;</span> <span class="o">%</span> <span class="n">features</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">col</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">train</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>   <span class="c1"># Let&#39;s print the corresponding message as well</span>
+<span class="c1">#print(vec.get_feature_names())</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Number of words: 177
+Word &#39;it&#39; appears in the first message 2 times.
+
+From: jgfoot@minerva.cis.yale.edu (Josh A. Goldfoot)
+Subject: Re: Organized Lobbying for Cryptography
+Organization: Yale University
+Lines: 21
+Distribution: inet
+Reply-To: jgfoot@minerva.cis.yale.edu
+NNTP-Posting-Host: minerva.cis.yale.edu
+X-Newsreader: TIN [version 1.1 Minerva PL9]
+
+Shaun P. Hughes (sphughes@sfsuvax1.sfsu.edu) wrote:
+: In article &lt;1r3jgbINN35i@eli.CS.YALE.EDU&gt; jgfoot@minerva.cis.yale.edu writes:
+[deletion]
+: &gt;Perhaps these encryption-only types would defend the digitized porn if it
+: &gt;was posted encrypted?
+: &gt;
+: &gt;These issues are not as seperable as you maintain.
+: &gt;
+
+: Now why would anyone &#34;post&#34; anything encrypted? Encryption is only of
+: use between persons who know how to decrypt the data.
+
+: And why should I care what other people look at?
+
+I was responding to another person (Tarl Neustaedter) who held that the
+EFF wasn&#39;t the best organization to fight for crytography rights since the
+EFF also supports the right to distribute pornography over the internet,
+something some Crypto people might object to. In other words, he&#39;s
+implying that there are people who will protect any speech, just  as long
+as it is encrypted.
+
+
+</pre></div></div>
+</div>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 5 (blob_classification)</div>
+<p>Write a function blob_classification that gets feature matrix X and
+label vector y as parameters. It should then return the accuracy score
+of the prediction. Do the prediction using GaussianNB, and use
+train_test_split function from sklearn to split the dataset in to two
+equal halves: one for training and one for testing. Give parameter
+random_state=0 to the splitting function so that the result is
+deterministic. Use training set size of 75% of the whole data.</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 6 (plant classification)</div>
+<p>Write function plant_classification that does the following: * loads
+the iris dataset using sklearn (sklearn.datasets.load_iris) * splits
+the data into training and testing part using the train_test_split
+function so that the training set size is 80% of the whole data (give
+the call also the random_state=0 argument to make the result
+deterministic) * use Gaussian naive Bayes to fit the training data *
+predict labels of the test data * the function should return the
+accuracy score of the prediction performance
+(sklearn.metrics.accuracy_score)</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 7 (word classification)</div>
+<p>Part 1.</p>
+<p>Write function get_features that gets a one dimensional np.array,
+containing words, as parameter. It should return a feature matrix of
+shape (n, 29), where n is the number of elements of the input array.
+There should be one feature for each of the letters in the following
+alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
+<p>Part 2.</p>
+<p>Write function contains_valid_chars that takes a string as a parameter
+and returns the truth value of whether all the characters in the string
+belong to the alphabet or not.</p>
+<p>Part 3.</p>
+<p>Write function get_features_and_labels() that returns the tuple (X,
+y) of the feature matrix and the target vector. Use the labels 0 and 1
+for Finnish and English, respectively. Use the supplied functions
+load_finnish() and load_english() to get the lists of words. Filter
+the lists in the following ways:</p>
+<ul class="simple">
+<li>Convert the Finnish words to lowercase, and then filter out those
+words that contain characters that don’t belong to the alphabet.</li>
+<li>For the English words first filter out those words that begin with an
+uppercase letter to get rid of proper nouns. Then proceed as with the
+Finnish words.</li>
+</ul>
+<p>Use get_features function you made earlier to form the feature matrix.</p>
+<p>Part 4.</p>
+<p>Create <code class="docutils literal notranslate"><span class="pre">word_classification</span></code> function that does the following:</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> you made earlier to get the
+feature matrix and the labels. Use multinomial naive Bayes to do the
+classification. Get the accuracy scores using the
+<code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.cross_val_score</span></code> function; use 5-fold cross
+validation. The function should return a list of five accuracy scores.</p>
+<p>The cv parameter of cross_val_score can be either an integer, which
+specifies the number of folds, or it can be a <em>cross-validation
+generator</em> that generates the (train set,test set) pairs. What happens
+if you pass the following cross-validation generator to
+<code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter:
+<code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
+<p>Why the difference?</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 8 (spam detection)</div>
+<p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The
+files are preprocessed versions of the files from
+<a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email
+per line. The file ham.txt.gz contains emails that are non-spam, and,
+conversely, emails in file spam.txt are spam. The email headers have
+been removed, except for the subject line, and non-ascii characters have
+been deleted.</p>
+<p>Write function spam_detection that does the following: * reads these
+files. Use function open from gzip module, since the files are
+compressed. * forms the combined feature matrix using
+<code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method. * use labels 0 for
+ham and 1 for spam * divide that feature matrix and the target label
+into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> * train a
+MultinomialNB model, and use it to predict the labels for the test set</p>
+<p>The function should return a triple consisting of * accuracy score of
+the prediction * size of test sample * number of misclassified sample
+points</p>
+<p>Pass the function’s random_state parameter to function
+<code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Data analysis with Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Basic input and output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html#Repetition">Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html#Regression-exercises">Regression exercises</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Naive Bayes classification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Another-example">Another example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Text-classification">Text classification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">Principal component analysis</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="linear_regression.html" title="previous chapter">Linear regression</a></li>
+      <li>Next: <a href="clustering.html" title="next chapter">Clustering</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Jarkko Toivonen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/bayes.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

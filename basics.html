@@ -1,0 +1,519 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Basic input and output &#8212; Data analysis with Python  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Linear regression" href="linear_regression.html" />
+    <link rel="prev" title="Instructions" href="instructions.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput,
+div.nbinput div.prompt,
+div.nbinput div.input_area,
+div.nbinput div[class*=highlight],
+div.nbinput div[class*=highlight] pre,
+div.nboutput,
+div.nbinput div.prompt,
+div.nbinput div.output_area,
+div.nboutput div[class*=highlight],
+div.nboutput div[class*=highlight] pre {
+    background: none;
+    border: none;
+    padding: 0 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+/* avoid gaps between output lines */
+div.nboutput div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput,
+div.nboutput {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput,
+    div.nboutput {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput div.prompt pre {
+    color: #303F9F;
+}
+
+/* output prompt */
+div.nboutput div.prompt pre {
+    color: #D84315;
+}
+
+/* all prompts */
+div.nbinput div.prompt,
+div.nboutput div.prompt {
+    min-width: 8ex;
+    padding-top: 0.4em;
+    padding-right: 0.4em;
+    text-align: right;
+    flex: 0;
+}
+@media (max-width: 540px) {
+    div.nbinput div.prompt,
+    div.nboutput div.prompt {
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput div.prompt.empty {
+        padding: 0;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput div.prompt pre,
+div.nboutput div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput div.input_area,
+div.nboutput div.output_area {
+    padding: 0.4em;
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput div.input_area,
+    div.nboutput div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput div.input_area {
+    border: 1px solid #cfcfcf;
+    border-radius: 2px;
+    background: #f7f7f7;
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.pngmath center alignment in output cells */
+div.nboutput div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+</style>
+<div class="section" id="Basic-input-and-output">
+<h1>Basic input and output<a class="headerlink" href="#Basic-input-and-output" title="Permalink to this headline">¶</a></h1>
+<p>The traditional “Hello, world” program is very simple in Python. You can
+run the program by selecting the cell by mouse and pressing
+control-enter on keyboard. Try editing the string in the quotes and
+rerunning the program.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hello, world!
+</pre></div></div>
+</div>
+<p>Multiple strings can be printed. By default, they are concatenated with
+a space:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="s2">&quot;John.&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hello, John. How are you?
+</pre></div></div>
+</div>
+<p>In the print function, numerical expression are first evaluated and then
+automatically converted to strings. Subsequently the strings are
+concatenated with spaces:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;plus&quot;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;equals&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 plus 2 equals 3
+</pre></div></div>
+</div>
+<p>Reading textual input from the user can be achieved with the input
+function. The input function is given a string parameter, which is
+printed and prompts the user to give input. In the example below, the
+string entered by the user is stored the variable <code class="docutils literal notranslate"><span class="pre">name</span></code>.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">name</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give me your name: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Give me your name: Sari
+Hello, Sari
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Repetition">
+<h1>Repetition<a class="headerlink" href="#Repetition" title="Permalink to this headline">¶</a></h1>
+<p>Repetition is possible with the for loop. Note that the body of for loop
+is indented whith a tabulator or four spaces. Unlike in some other
+languages, braces are not needed to denote the body of the loop. When
+the indentation stops the body of the loop ends.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [4]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Hello
+Hello
+Hello
+</pre></div></div>
+</div>
+<p>The range(3) expression above actually results with the sequence of
+integers 0, 1, and 2. So, the range is a half-open interval with the end
+point excluded from the range. In general, expression range(n) gives
+integers 0, 1, 2, …, n-1. Modify the above program to make it also
+print the value of variable i at each iteration. Rerun the code with
+control-enter.</p>
+<p>Exercise: Fill in the missing piece in the solution stub to make it
+print the following:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code></p>
+<p>Exercise: Fill in the stub solution to make the program work as follows.
+The program should ask the user for an input, and the print an answer as
+the examples below show. The string user entered is shown in red.</p>
+<div class="line-block">
+<div class="line">What country are you from? Sweden</div>
+<div class="line">I have heard that Sweden is a beautiful country.</div>
+</div>
+<div class="line-block">
+<div class="line">What country are you from? Chile</div>
+<div class="line">I have heard that Chile is a beautiful country.</div>
+</div>
+<p>Exercise: make a program that gives the following output. You must use a
+for loop in your solution.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">0</span> <span class="ow">is</span> <span class="mi">0</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">4</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">2</span> <span class="ow">is</span> <span class="mi">8</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">3</span> <span class="ow">is</span> <span class="mi">12</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">4</span> <span class="ow">is</span> <span class="mi">16</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">5</span> <span class="ow">is</span> <span class="mi">20</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">6</span> <span class="ow">is</span> <span class="mi">24</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">7</span> <span class="ow">is</span> <span class="mi">28</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">8</span> <span class="ow">is</span> <span class="mi">32</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">9</span> <span class="ow">is</span> <span class="mi">36</span>
+<span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">10</span> <span class="ow">is</span> <span class="mi">40</span>
+</pre></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="k">import</span> <span class="n">HTML</span>
+<span class="kn">from</span> <span class="nn">urllib.request</span> <span class="k">import</span> <span class="n">urlopen</span>
+<span class="n">HTML</span><span class="p">(</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://bit.ly/1Bf5Hft&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[5]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<style>
+
+html {
+  font-size: 62.5% !important; }
+body {
+  font-size: 1.5em !important; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.6 !important;
+  font-weight: 400 !important;
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  color: #222 !important; }
+
+div{ border-radius: 0px !important;  }
+div.CodeMirror-sizer{ background: rgb(244, 244, 248) !important; }
+div.input_area{ background: rgb(244, 244, 248) !important; }
+
+div.out_prompt_overlay:hover{ background: rgb(244, 244, 248) !important; }
+div.input_prompt:hover{ background: rgb(244, 244, 248) !important; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333 !important;
+  margin-top: 0 !important;
+  margin-bottom: 2rem !important;
+  font-weight: 300 !important; }
+h1 { font-size: 4.0rem !important; line-height: 1.2 !important;  letter-spacing: -.1rem !important;}
+h2 { font-size: 3.6rem !important; line-height: 1.25 !important; letter-spacing: -.1rem !important; }
+h3 { font-size: 3.0rem !important; line-height: 1.3 !important;  letter-spacing: -.1rem !important; }
+h4 { font-size: 2.4rem !important; line-height: 1.35 !important; letter-spacing: -.08rem !important; }
+h5 { font-size: 1.8rem !important; line-height: 1.5 !important;  letter-spacing: -.05rem !important; }
+h6 { font-size: 1.5rem !important; line-height: 1.6 !important;  letter-spacing: 0 !important; }
+
+@media (min-width: 550px) {
+  h1 { font-size: 5.0rem !important; }
+  h2 { font-size: 4.2rem !important; }
+  h3 { font-size: 3.6rem !important; }
+  h4 { font-size: 3.0rem !important; }
+  h5 { font-size: 2.4rem !important; }
+  h6 { font-size: 1.5rem !important; }
+}
+
+p {
+  margin-top: 0 !important; }
+
+a {
+  color: #1EAEDB !important; }
+a:hover {
+  color: #0FA0CE !important; }
+
+code {
+  padding: .2rem .5rem !important;
+  margin: 0 .2rem !important;
+  font-size: 90% !important;
+  white-space: nowrap !important;
+  background: #F1F1F1 !important;
+  border: 1px solid #E1E1E1 !important;
+  border-radius: 4px !important; }
+pre > code {
+  display: block !important;
+  padding: 1rem 1.5rem !important;
+  white-space: pre !important; }
+
+button{ border-radius: 0px !important; }
+.navbar-inner{ background-image: none !important;  }
+select, textarea{ border-radius: 0px !important; }
+
+</style></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Data analysis with Python</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic input and output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#Repetition">Repetition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html#Regression-exercises">Regression exercises</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayes.html">Naive Bayes classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">Principal component analysis</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="instructions.html" title="previous chapter">Instructions</a></li>
+      <li>Next: <a href="linear_regression.html" title="next chapter">Linear regression</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Jarkko Toivonen.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/basics.ipynb.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
