@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Basic input and output &#8212; Data analysis with Python  documentation</title>
+    <title>Basic concepts &#8212; Data analysis with Python  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -200,19 +200,21 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 </style>
+<div class="section" id="Basic-concepts">
+<h1>Basic concepts<a class="headerlink" href="#Basic-concepts" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Basic-input-and-output">
-<h1>Basic input and output<a class="headerlink" href="#Basic-input-and-output" title="Permalink to this headline">¶</a></h1>
+<h2>Basic input and output<a class="headerlink" href="#Basic-input-and-output" title="Permalink to this headline">¶</a></h2>
 <p>The traditional “Hello, world” program is very simple in Python. You can
 run the program by selecting the cell by mouse and pressing
 control-enter on keyboard. Try editing the string in the quotes and
 rerunning the program.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [9]:
+<span></span>In [6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -221,18 +223,18 @@ rerunning the program.</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Hello, world!
+Hello world!
 </pre></div></div>
 </div>
 <p>Multiple strings can be printed. By default, they are concatenated with
 a space:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [6]:
+<span></span>In [4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="s2">&quot;John.&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello,&quot;</span><span class="p">,</span> <span class="s2">&quot;John!&quot;</span><span class="p">,</span> <span class="s2">&quot;How are you?&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -241,7 +243,7 @@ a space:</p>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Hello, John. How are you?
+Hello, John! How are you?
 </pre></div></div>
 </div>
 <p>In the print function, numerical expression are first evaluated and then
@@ -290,20 +292,21 @@ Hello, Sari
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Repetition">
-<h1>Repetition<a class="headerlink" href="#Repetition" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Indentation">
+<h2>Indentation<a class="headerlink" href="#Indentation" title="Permalink to this headline">¶</a></h2>
 <p>Repetition is possible with the for loop. Note that the body of for loop
 is indented whith a tabulator or four spaces. Unlike in some other
 languages, braces are not needed to denote the body of the loop. When
 the indentation stops the body of the loop ends.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [4]:
+<span></span>In [5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bye!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -315,20 +318,31 @@ the indentation stops the body of the loop ends.</p>
 Hello
 Hello
 Hello
+Bye!
 </pre></div></div>
 </div>
+<p>Indentation applies to other compound statements as well, such as bodies
+of functions, different branches of an if statement, and while loops. We
+shall see examples of these later.</p>
 <p>The range(3) expression above actually results with the sequence of
 integers 0, 1, and 2. So, the range is a half-open interval with the end
 point excluded from the range. In general, expression range(n) gives
 integers 0, 1, 2, …, n-1. Modify the above program to make it also
 print the value of variable i at each iteration. Rerun the code with
 control-enter.</p>
-<p>Exercise: Fill in the missing piece in the solution stub to make it
-print the following:</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 1 (hello world)</div>
+<p>Fill in the missing piece in the solution stub to make it print the
+following:</p>
 <p><code class="docutils literal notranslate"><span class="pre">Hello,</span> <span class="pre">world!</span></code></p>
-<p>Exercise: Fill in the stub solution to make the program work as follows.
-The program should ask the user for an input, and the print an answer as
-the examples below show. The string user entered is shown in red.</p>
+<p>Make sure you use correct indenting.</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 2 (compliment)</div>
+<p>Fill in the stub solution to make the program work as follows. The
+program should ask the user for an input, and the print an answer as the
+examples below show. The string the user entered is shown below in red.</p>
 <div class="line-block">
 <div class="line">What country are you from? Sweden</div>
 <div class="line">I have heard that Sweden is a beautiful country.</div>
@@ -337,8 +351,11 @@ the examples below show. The string user entered is shown in red.</p>
 <div class="line">What country are you from? Chile</div>
 <div class="line">I have heard that Chile is a beautiful country.</div>
 </div>
-<p>Exercise: make a program that gives the following output. You must use a
-for loop in your solution.</p>
+<hr class="docutils" />
+<div class="admonition note">
+Exercise 3 (multiplication)</div>
+<p>Make a program that gives the following output. You must use a for loop
+in your solution.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">0</span> <span class="ow">is</span> <span class="mi">0</span>
 <span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">1</span> <span class="ow">is</span> <span class="mi">4</span>
 <span class="mi">4</span> <span class="n">multiplied</span> <span class="n">by</span> <span class="mi">2</span> <span class="ow">is</span> <span class="mi">8</span>
@@ -437,6 +454,846 @@ select, textarea{ border-radius: 0px !important; }
 </style></div>
 </div>
 </div>
+<div class="section" id="Variables-and-data-types">
+<h2>Variables and data types<a class="headerlink" href="#Variables-and-data-types" title="Permalink to this headline">¶</a></h2>
+<p>We saw already earlier that assigning a value to variable is very
+simple:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span><span class="o">=</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1
+</pre></div></div>
+</div>
+<p>Note that we did not need to introduce the variable a in any way. No
+type was given for the variable. Python automatically detected that the
+type of a must be int. We can query the type of a variable with the
+builtin function type:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[8]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>int
+</pre></div>
+</div>
+</div>
+<p>Note also that the type of a variable is not fixed:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span><span class="o">=</span><span class="s2">&quot;some text&quot;</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>Out[9]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>str
+</pre></div>
+</div>
+</div>
+<p>In Python the type of a variable is not attached to the name of the
+variable, like in C for instance, but instead with the actual value.
+This is called dynamic typing.</p>
+<div class="figure" id="id1">
+<img alt="typing.svg" src="attachment:typing.svg" /><p class="caption"><span class="caption-text">typing.svg</span></p>
+</div>
+<p>We say that a variable is a name that <em>refers</em> to a value or and object,
+and the assignment operator <em>binds</em> a variable name to a value.</p>
+<p>The basic data types in Python are: int, float, complex, str (a string),
+bool (a boolean with values True and False), and bytes. Below are few
+examples of their use.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [18]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">i</span><span class="o">=</span><span class="mi">5</span>
+<span class="n">f</span><span class="o">=</span><span class="mf">1.5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">i</span><span class="o">==</span><span class="mi">4</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Result of the comparison:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">0</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Complex multiplication:&quot;</span><span class="p">,</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+<span class="n">s</span><span class="o">=</span><span class="s2">&quot;conca&quot;</span> <span class="o">+</span> <span class="s2">&quot;tenation&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Result of the comparison: False
+Complex multiplication: (-4+0j)
+concatenation
+</pre></div></div>
+</div>
+<p>The names of the types act as conversion operators between types:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="o">-</span><span class="mf">2.8</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">),</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>  <span class="c1"># Zero is interpreted as False</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">234</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+-2
+2.0
+123
+True False
+234
+</pre></div></div>
+</div>
+<div class="section" id="Creating-strings">
+<h3>Creating strings<a class="headerlink" href="#Creating-strings" title="Permalink to this headline">¶</a></h3>
+<p>A string is a sequence of characters commonly used to store input or
+output data in a program. The characters of a string are specified
+either between single (‘) or double (“) quotes. This optionaly is useful
+if a string needs to contain a quotation mark: “I don’t want to go!”.
+You can also achieve this by <em>escaping</em> the quotation mark with the
+backslash: ‘I don’t want to go’.</p>
+<p>The string can also contain other escape sequences like</p>
+<div class="math notranslate nohighlight">
+\n</div><p>for newline and</p>
+<div class="math notranslate nohighlight">
+\t</div><p>for a tabulator. See
+<a class="reference external" href="https://docs.python.org/3/reference/lexical_analysis.html#literals">literals</a>
+for a list of all escape sequences.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;One</span><span class="se">\t</span><span class="s2">Two</span><span class="se">\n</span><span class="s2">Three</span><span class="se">\t</span><span class="s2">Four&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+One     Two
+Three   Four
+</pre></div></div>
+</div>
+<p>A string containing newlines can be easily given within triple double or
+triple single quotes:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [24]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;A string</span>
+<span class="s2">spanning over</span>
+<span class="s2">several lines&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<p>Although we can concatenate strings using the + operator, for effiency
+reasons, one should use the join method to concatenate largen number of
+strings:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [26]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">a</span><span class="o">=</span><span class="s2">&quot;first&quot;</span>
+<span class="n">b</span><span class="o">=</span><span class="s2">&quot;second&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">]))</span>   <span class="c1"># More about the join method later</span>
+
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+firstsecond
+first second second first
+</pre></div></div>
+</div>
+<p>Sometimes printing by concatenation from pieces can be clumsy:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [31]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; plus &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; is equal to &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="c1"># slightly better</span>
+<span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;plus&quot;</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="s2">&quot;is equal to&quot;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 plus 3 is equal to 4
+1 plus 3 is equal to 4
+</pre></div></div>
+</div>
+<p>The multiple catenation and quotation characters break the flow of
+thought. <em>String interpolation</em> offers somewhat easier syntax:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [33]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%i</span><span class="s2"> plus </span><span class="si">%i</span><span class="s2"> is equal to </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 plus 3 is equal to 4
+</pre></div></div>
+</div>
+<p>Or alternatively using the newer format-method:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [34]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> plus </span><span class="si">{}</span><span class="s2"> is equal to </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 plus 3 is equal to 4
+</pre></div></div>
+</div>
+<p>The %i format specifier corresponds to integers and the specifier %f
+corresponds to floats. It is often useful to specify the number of
+decimals when printing the float:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [42]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%.1f</span><span class="s2"> </span><span class="si">%.2f</span><span class="s2"> </span><span class="si">%.3f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">))</span>               <span class="c1"># Old style</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{:.1f}</span><span class="s2"> </span><span class="si">{:.2f}</span><span class="s2"> </span><span class="si">{:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.6</span><span class="p">,</span> <span class="mf">1.7</span><span class="p">,</span> <span class="mf">1.8</span><span class="p">))</span>     <span class="c1"># new style</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1.6 1.70 1.800
+1.6 1.70 1.800
+</pre></div></div>
+</div>
+<p>Look <a class="reference external" href="https://pyformat.info/#number">here</a> for more details about
+format specifiers, and for comparison between the old and new style of
+string interpolation.</p>
+</div>
+</div>
+<div class="section" id="Expressions">
+<h2>Expressions<a class="headerlink" href="#Expressions" title="Permalink to this headline">¶</a></h2>
+<p>An <em>expression</em> is a piece of Python code that results in a value. It
+consists of values combined together with <em>operators</em>. Values can be
+literals, such as <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">1.2</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;text&quot;</span></code>, or variables. Operators
+include arithmetics operators, comparison operators, function call,
+indexing, attribute references, among others. Below there are a few
+examples of expressions:</p>
+<p><code class="docutils literal notranslate"><span class="pre">1+2</span> <span class="pre">7/(2+0.1)</span> <span class="pre">a</span> <span class="pre">cos(0)</span> <span class="pre">mylist[1]</span> <span class="pre">c</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">c</span> <span class="pre">!=1</span> <span class="pre">(1,2,3)</span> <span class="pre">a&lt;5</span> <span class="pre">obj.attr</span> <span class="pre">(-1)**2</span> <span class="pre">==</span> <span class="pre">1</span></code></p>
+<div class="admonition warning">
+Note that in Python the operator <code class="docutils literal notranslate"><span class="pre">//</span></code> performs integer division and
+operator <code class="docutils literal notranslate"><span class="pre">/</span></code> performs float division. The <code class="docutils literal notranslate"><span class="pre">**</span></code> operator denotes
+exponentiation. These operators might therefore behave differently than
+in many other comman languages.</div>
+<p>As another example the following expression computes the kinetic energy
+of a non-rotating object: <code class="docutils literal notranslate"><span class="pre">0.5</span> <span class="pre">*</span> <span class="pre">mass</span> <span class="pre">*</span> <span class="pre">velocity**2</span></code></p>
+</div>
+<div class="section" id="Statements">
+<h2>Statements<a class="headerlink" href="#Statements" title="Permalink to this headline">¶</a></h2>
+<p>Statements are command that have some effect. For example, a function
+call (that is not part of another expression) is a statement. Also, the
+variable assignment is a statement:</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [45]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span>    <span class="c1"># This is a commong idion to increment the value of i by one</span>
+<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>     <span class="c1"># This is a short-hand for the above</span>
+</pre></div>
+</div>
+</div>
+<p>It turns out that the operators <code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">-</span> <span class="pre">*</span> <span class="pre">/</span> <span class="pre">//</span> <span class="pre">%</span> <span class="pre">&amp;</span> <span class="pre">|</span> <span class="pre">^</span> <span class="pre">&gt;&gt;</span> <span class="pre">&lt;&lt;</span> <span class="pre">**</span></code> have the
+corresponding <em>augmented assignment operators</em>
+<code class="docutils literal notranslate"><span class="pre">+=</span> <span class="pre">-=</span> <span class="pre">*=</span> <span class="pre">/=</span> <span class="pre">//=</span> <span class="pre">%=</span> <span class="pre">&amp;=</span> <span class="pre">|=</span> <span class="pre">^=</span> <span class="pre">&gt;&gt;=</span> <span class="pre">&lt;&lt;=</span> <span class="pre">**=</span></code></p>
+<p>Another large set of statements if the flow-control statements such as
+if-else, for and while loops. We will look into these in the next
+sections.</p>
+<div class="section" id="Loops-for-repetitive-tasks">
+<h3>Loops for repetitive tasks<a class="headerlink" href="#Loops-for-repetitive-tasks" title="Permalink to this headline">¶</a></h3>
+<p>In Python we have two kinds of loops: while and for. We briefly saw the
+for loop earlier. Let’s now look at the while loop. A while loop repeats
+a set of statements while a given condition holds. An example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [46]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">i</span><span class="o">=</span><span class="mi">1</span>
+<span class="k">while</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">1000</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square of&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="n">i</span><span class="o">*</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Finished printing all the squares below 1000.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Square of 1 is 1
+Square of 2 is 4
+Square of 3 is 9
+Square of 4 is 16
+Square of 5 is 25
+Square of 6 is 36
+Square of 7 is 49
+Square of 8 is 64
+Square of 9 is 81
+Square of 10 is 100
+Square of 11 is 121
+Square of 12 is 144
+Square of 13 is 169
+Square of 14 is 196
+Square of 15 is 225
+Square of 16 is 256
+Square of 17 is 289
+Square of 18 is 324
+Square of 19 is 361
+Square of 20 is 400
+Square of 21 is 441
+Square of 22 is 484
+Square of 23 is 529
+Square of 24 is 576
+Square of 25 is 625
+Square of 26 is 676
+Square of 27 is 729
+Square of 28 is 784
+Square of 29 is 841
+Square of 30 is 900
+Square of 31 is 961
+Finished printing all the squares below 1000
+</pre></div></div>
+</div>
+<p>Note again that the body of the while statement was marked with the
+indentation.</p>
+<p>Another way of repeating statements is with the for statement. An
+example</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]:</span>
+    <span class="nb">sum</span> <span class="o">=</span> <span class="nb">sum</span> <span class="o">+</span> <span class="n">i</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sum is&quot;</span><span class="p">,</span> <span class="nb">sum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The sum is 45
+</pre></div></div>
+</div>
+<p>The for loop executes the statements in the block as many times as there
+are elements in the given list. At each iteration the variable i refers
+to another value from the list in order. Instead of the giving the list
+explicitly as above, we could have used the <em>generator</em> range(10) which
+returns values from the sequence 0,1,…,9 as the for loop asks for a
+new value. In the most general form the for loop goes through all the
+elements in an <em>iterable</em>. Besides lists and generators there are other
+iterables. We will talk about iterables and generators later this week.</p>
+<p>When one wants to iterate through all the elements in an iterable, then
+the for loop is a natural choice. But sometimes while loops offer
+cleaner solution. For instance, if we want to go through all Fibonacci
+number up till a given limit, then it is easier to do with a <code class="docutils literal notranslate"><span class="pre">while</span></code>
+loop.</p>
+</div>
+<div class="section" id="Decision-making-with-the-if-statement">
+<h3>Decision making with the if statement<a class="headerlink" href="#Decision-making-with-the-if-statement" title="Permalink to this headline">¶</a></h3>
+<p>The if-else statement works as can be expected. Try running the below
+cell by pressing control+enter.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [49]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">x</span><span class="o">=</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give an integer: &quot;</span><span class="p">)</span>
+<span class="n">x</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">a</span><span class="o">=</span><span class="n">x</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">a</span><span class="o">=-</span><span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The absolute value of </span><span class="si">%i</span><span class="s2"> is </span><span class="si">%i</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Give an integer: -2
+The absolute value of -2 is 2
+</pre></div></div>
+</div>
+<p>The general from of an if-else statement is</p>
+<p><code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">condition1:</span>&#160;&#160;&#160;&#160; <span class="pre">statement1_1</span>&#160;&#160;&#160;&#160; <span class="pre">statement1_2</span>&#160;&#160;&#160;&#160; <span class="pre">...</span> <span class="pre">elif</span> <span class="pre">condition2:</span>&#160;&#160;&#160;&#160; <span class="pre">statement2_1</span>&#160;&#160;&#160;&#160; <span class="pre">statement2_2</span>&#160;&#160;&#160;&#160; <span class="pre">...</span> <span class="pre">...</span> <span class="pre">else:</span>&#160;&#160;&#160;&#160; <span class="pre">statementn_1</span>&#160;&#160;&#160;&#160; <span class="pre">statementn_2</span>&#160;&#160;&#160;&#160; <span class="pre">...</span></code></p>
+<p>Another example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [54]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">c</span><span class="o">=</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Give a number: &quot;</span><span class="p">))</span>
+<span class="k">if</span> <span class="n">c</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is positive&quot;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">c</span><span class="o">&lt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is negative&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;c is zero&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Give a number: -1
+c is negative
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Breaking-and-continuing-loop">
+<h3>Breaking and continuing loop<a class="headerlink" href="#Breaking-and-continuing-loop" title="Permalink to this headline">¶</a></h3>
+<p>Breaking the loop, when the wanted element is found, with the <code class="docutils literal notranslate"><span class="pre">break</span></code>
+statement:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [57]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">break</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The first negative list element was&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The first negative list element was -1
+</pre></div></div>
+</div>
+<p>Stopping current iteration and continuing to the next one with the
+<code class="docutils literal notranslate"><span class="pre">continue</span></code> statement:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [60]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span><span class="p">,</span> <span class="n">log</span>
+<span class="n">l</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">65</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">56</span><span class="p">,</span><span class="o">-</span><span class="mi">10</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Square root of </span><span class="si">%i</span><span class="s2"> is </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Natural logarithm of </span><span class="si">%i</span><span class="s2"> is </span><span class="si">%f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Square root of 1 is 1.000000
+Natural logarithm of 1 is 0.000000
+Square root of 3 is 1.732051
+Natural logarithm of 3 is 1.098612
+Square root of 65 is 8.062258
+Natural logarithm of 65 is 4.174387
+Square root of 3 is 1.732051
+Natural logarithm of 3 is 1.098612
+Square root of 56 is 7.483315
+Natural logarithm of 56 is 4.025352
+</pre></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="Functions">
+<h2>Functions<a class="headerlink" href="#Functions" title="Permalink to this headline">¶</a></h2>
+<p>A function is defined with the <code class="docutils literal notranslate"><span class="pre">def</span></code> statement. Let’s do a doubling
+function.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [63]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">double</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="s2">&quot;This function multiplies its argument by two.&quot;</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">double</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="n">double</span><span class="p">(</span><span class="mf">1.2</span><span class="p">),</span> <span class="n">double</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">))</span> <span class="c1"># It even happens to work for strings!</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+8 2.4 abcabc
+</pre></div></div>
+</div>
+<p>The double function takes only one parameter. Notice the <em>docstring</em> on
+the second line. It documents the purpose and usage of the function.
+Let’s try to access it.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [66]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The docstring is:&quot;</span><span class="p">,</span> <span class="n">double</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">double</span><span class="p">)</span>   <span class="c1"># Another way to access the docstring</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+The docstring is: This function multiplies its argument by two.
+Help on function double in module __main__:
+
+double(x)
+    This function multiplies its argument by two.
+
+</pre></div></div>
+</div>
+<p>Most of Python’s builtin functions, classes, and modules should contain
+a docstring.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [67]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Help on built-in function print in module builtins:
+
+print(...)
+    print(value, ..., sep=&#39; &#39;, end=&#39;\n&#39;, file=sys.stdout, flush=False)
+
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [68]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">sum_of_squares</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="s2">&quot;Computes the sum of arguments squared&quot;</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+25
+</pre></div></div>
+</div>
+<p>It would be nice that the number of arguments could be arbitrary, not
+just two. We could pass a list to the function as a parameter.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [71]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">sum_of_squares</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+    <span class="s2">&quot;Computes the sum of squares of elements in the list given as parameter&quot;</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">]))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">([</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4
+45
+</pre></div></div>
+</div>
+<p>This works perfectly! There is however some extra typing with the
+brackets around the lists. Let’s see if we can do better:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [74]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">sum_of_squares</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">):</span>
+    <span class="s2">&quot;Computes the sum of squares of arbitrary number of arguments&quot;</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+4
+45
+</pre></div></div>
+</div>
+<p>The strange looking argument notation is called <em>argument packing</em>. It
+packs all the given positional arguments into a tuple <code class="docutils literal notranslate"><span class="pre">t</span></code>. We will
+encounter tuples again later, but it suffices now to say that tuples are
+immutable lists. With the for loop we can iterate through all the
+elements in the tuple.</p>
+<p>Conversely, there is also syntax for <em>argument unpacking</em>. It has
+confusingly exactly same notation as argument packing, but they are
+separated by the location where used. Packing happens in the parameter
+list of the functions definition, and unpacking happens where the
+function is called:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [77]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">lst</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;With list unpacked as arguments to the functions:&quot;</span><span class="p">,</span> <span class="n">sum_of_squares</span><span class="p">(</span><span class="o">*</span><span class="n">lst</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_squares</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span>    <span class="c1"># Does not work correctly</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+With list unpacked as arguments to the functions: 90
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-77-4203ff5c9ea6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> lst<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;With list unpacked as arguments to the functions:&#34;</span><span class="ansi-blue-fg">,</span> sum_of_squares<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>lst<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span>sum_of_squares<span class="ansi-blue-fg">(</span>lst<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># Does not work correctly</span>
+
+<span class="ansi-green-fg">&lt;ipython-input-74-b89e2f7c723d&gt;</span> in <span class="ansi-cyan-fg">sum_of_squares</span><span class="ansi-blue-fg">(*t)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     sum<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">for</span> x <span class="ansi-green-fg">in</span> t<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 5</span><span class="ansi-red-fg">         </span>sum <span class="ansi-blue-fg">+=</span> x<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span>     <span class="ansi-green-fg">return</span> sum
+<span class="ansi-green-intense-fg ansi-bold">      7</span> print<span class="ansi-blue-fg">(</span>sum_of_squares<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">TypeError</span>: unsupported operand type(s) for ** or pow(): &#39;list&#39; and &#39;int&#39;
+</pre></div></div>
+</div>
+<p>The second call failed because the function tried to raise the list of
+numbers to the second power. Inside the function body we have
+t=([1,5,8]), where the parentheses denote a tuple with one element, a
+list.</p>
+<p>In addition to positional parameters we have seen so far, a function can
+also have <em>named parameters</em>. An example will explain this concept best:</p>
+<p>One can also specify optional parameter by giving the parameters a
+default value. The parameters that have default values must come after
+those parameters that don’t. We saw that the parameters of the print
+function were of form
+<code class="docutils literal notranslate"><span class="pre">print(value,</span> <span class="pre">...,</span> <span class="pre">sep='</span> <span class="pre">',</span> <span class="pre">end='\n',</span> <span class="pre">file=sys.stdout,</span> <span class="pre">flush=False)</span></code>.
+There were four parameters with default values. If some default values
+don’t suit us, we give them in the function call using the name of the
+parameter:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [82]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; |&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; -*- &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="s2">&quot;second&quot;</span><span class="p">,</span> <span class="s2">&quot;third&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39; |&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39; -*- &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+1 -*- 2 -*- 3 |first -*- second -*- third |
+</pre></div></div>
+</div>
+<p>Note that the named arguments didn’t need to be in the same order as in
+the function definition. Nor did we need to specify all the parameters
+with default values, only those we wanted to change.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
+<span></span>In [89]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">length</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Computes the length of the vector given as parameter. By default, it computes</span>
+<span class="sd">    the Euclidean distance (degree==2)&quot;&quot;&quot;</span>
+    <span class="nb">sum</span><span class="o">=</span><span class="mi">0</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
+        <span class="nb">sum</span> <span class="o">+=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="n">degree</span>
+    <span class="k">return</span> <span class="nb">sum</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">degree</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">length</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span> <span class="n">degree</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+5.0
+4.497941445275415
+</pre></div></div>
+</div>
+<p>With the default parameter this is the Euclidean distance, and if
+<span class="math notranslate nohighlight">\(p\ne 2\)</span> it is called
+<cite>:math:`p</cite>-norm &lt;<a class="reference external" href="https://en.wikipedia.org/wiki/P-norm">https://en.wikipedia.org/wiki/P-norm</a>&gt;`__.</p>
+<p>We saw that it was possible to use packing and unpacking of arguments
+with the * notation, when one wants to specify arbitrary number of
+<em>positional arguments</em>. This is also possible for arbitrary number of
+named arguments with the <code class="docutils literal notranslate"><span class="pre">**</span></code> notation. We will talk about this more
+in the data structures section.</p>
+</div>
+</div>
 
 
           </div>
@@ -458,8 +1315,15 @@ select, textarea{ border-radius: 0px !important; }
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic input and output</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#Repetition">Repetition</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Basic concepts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Basic-input-and-output">Basic input and output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Indentation">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Variables-and-data-types">Variables and data types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Expressions">Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Statements">Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Functions">Functions</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="linear_regression.html#Regression-exercises">Regression exercises</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">Naive Bayes classification</a></li>
