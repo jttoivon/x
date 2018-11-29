@@ -1,46 +1,164 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Machine learning &#8212; Data analysis with Python  documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Naive Bayes classification &mdash; Data analysis with Python  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Clustering" href="clustering.html" />
-    <link rel="prev" title="Machine learning" href="linear_regression.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="clustering.html" title="Clustering"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="linear_regression.html" title="Machine learning"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
-      </ul>
-    </div>  
+    <link rel="prev" title="Linear regression" href="linear_regression.html" /> 
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Data analysis with Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Machine learning:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Naive Bayes classification</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Another-example">Another example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Text-classification">Text classification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">Principal component analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data analysis with Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Naive Bayes classification</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/bayes.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   
 <style>
@@ -108,7 +226,7 @@ div.nboutput div.prompt pre {
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 7ex;
+    min-width: 8ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -207,11 +325,26 @@ div.nboutput div.output_area.stderr {
 
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
 </style>
-<div class="section" id="Machine-learning">
-<h1>Machine learning<a class="headerlink" href="#Machine-learning" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Naive-Bayes-classification">
-<h2>Naive Bayes classification<a class="headerlink" href="#Naive-Bayes-classification" title="Permalink to this headline">¶</a></h2>
+<h1>Naive Bayes classification<a class="headerlink" href="#Naive-Bayes-classification" title="Permalink to this headline">¶</a></h1>
 <p><em>Classification</em> is one form of supervised learning. The aim is to
 annotate all data points with a label. Those points that have the same
 label belong to the same class. There can be two or more labels. For
@@ -287,7 +420,7 @@ distributions.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_5_0.png" src="_images/bayes_5_0.png" />
+<img alt="_images/bayes_4_0.png" src="_images/bayes_4_0.png" />
 </div>
 </div>
 <div class="nbinput nblast docutils container">
@@ -381,7 +514,7 @@ the origo.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_11_0.png" src="_images/bayes_11_0.png" />
+<img alt="_images/bayes_10_0.png" src="_images/bayes_10_0.png" />
 </div>
 </div>
 <p><em>Accuracy score</em> gives a measure about how well we managed to predict
@@ -422,7 +555,7 @@ to predict the data we had already seen!</p>
 </div>
 </div>
 <div class="section" id="Another-example">
-<h3>Another example<a class="headerlink" href="#Another-example" title="Permalink to this headline">¶</a></h3>
+<h2>Another example<a class="headerlink" href="#Another-example" title="Permalink to this headline">¶</a></h2>
 <p>Let’s generate some more data using multivariate normal distributions.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
@@ -455,7 +588,7 @@ to predict the data we had already seen!</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_18_0.png" src="_images/bayes_18_0.png" />
+<img alt="_images/bayes_17_0.png" src="_images/bayes_17_0.png" />
 </div>
 </div>
 <p>The two clusters seem to be quite separate. Let’s try naive Bayesian
@@ -524,7 +657,7 @@ Accuracy score is 0.839
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_22_1.png" src="_images/bayes_22_1.png" />
+<img alt="_images/bayes_21_1.png" src="_images/bayes_21_1.png" />
 </div>
 </div>
 <p>Even thought the score is quite good, we can see from the plot that the
@@ -549,7 +682,7 @@ the algorithm used:</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_24_0.png" src="_images/bayes_24_0.png" />
+<img alt="_images/bayes_23_0.png" src="_images/bayes_23_0.png" />
 </div>
 </div>
 <p>The problem with naive Bayesian classification is that it tries to model
@@ -558,7 +691,7 @@ y axes. With this example data we would have needed Gaussian
 distributions which are “tilted”.</p>
 </div>
 <div class="section" id="Text-classification">
-<h3>Text classification<a class="headerlink" href="#Text-classification" title="Permalink to this headline">¶</a></h3>
+<h2>Text classification<a class="headerlink" href="#Text-classification" title="Permalink to this headline">¶</a></h2>
 <p>We next try to classificate a set of messages that were posted on a
 public forum. The messages were divided into groups by the topics. So,
 we have a data set ready for classification testing. Let’s first load
@@ -914,73 +1047,64 @@ test set</li>
 <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
 </div>
 </div>
-</div>
 
 
+           </div>
+           
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Machine learning</a><ul>
-<li><a class="reference internal" href="#Naive-Bayes-classification">Naive Bayes classification</a><ul>
-<li><a class="reference internal" href="#Another-example">Another example</a></li>
-<li><a class="reference internal" href="#Text-classification">Text classification</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="clustering.html" class="btn btn-neutral float-right" title="Clustering" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="linear_regression.html" class="btn btn-neutral" title="Linear regression" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="linear_regression.html"
-                        title="previous chapter">Machine learning</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="clustering.html"
-                        title="next chapter">Clustering</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/bayes.ipynb.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Jarkko Toivonen
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="clustering.html" title="Clustering"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="linear_regression.html" title="Machine learning"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, Jarkko Toivonen.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

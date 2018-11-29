@@ -1,46 +1,185 @@
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Numpy &#8212; Data analysis with Python  documentation</title>
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Numpy &mdash; Data analysis with Python  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
     
-    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Matplotlib" href="matplotlib.html" />
     <link rel="prev" title="Python" href="basics.html" /> 
-  </head><body>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="right" >
-          <a href="matplotlib.html" title="Matplotlib"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="basics.html" title="Python"
-             accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
-      </ul>
-    </div>  
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Data analysis with Python
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Numpy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Creation-of-arrays">Creation of arrays</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Arrays-with-random-elements">Arrays with random elements</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Array-types-and-attributes">Array types and attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Indexing,-slicing-and-reshaping">Indexing, slicing and reshaping</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Indexing">Indexing</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Slicing">Slicing</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Reshaping">Reshaping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#a-list-as-an-index-returns-a-2d-array,-single-index-a-1d-array">a list as an index returns a 2d array, single index a 1d array</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Array-concatenation,-splitting-and-stacking">Array concatenation, splitting and stacking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Fast-computation-using-universal-functions">Fast computation using universal functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Aggregations:-max,-min,-sum,-mean,-standard-deviation...">Aggregations: max, min, sum, mean, standard deviation…</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Broadcasting">Broadcasting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Comparisons-and-masking">Comparisons and masking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Fancy-indexing">Fancy indexing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Sorting-arrays">Sorting arrays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Matrix-operations">Matrix operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Solving-system-of-linear-equations">Solving system of linear equations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Machine learning:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bayes.html">Naive Bayes classification</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pca.html">Principal component analysis</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Data analysis with Python</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Numpy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/numpy.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
             
   
 <style>
@@ -108,7 +247,7 @@ div.nboutput div.prompt pre {
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 7ex;
+    min-width: 8ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -207,6 +346,23 @@ div.nboutput div.output_area.stderr {
 
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast,
+.nboutput.nblast {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast + .nbinput {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
 </style>
 <div class="section" id="Numpy">
 <h1>Numpy<a class="headerlink" href="#Numpy" title="Permalink to this headline">¶</a></h1>
@@ -1452,13 +1608,9 @@ previous example using vectorized operations of NumPy is shown below.</p>
 differs, this can compiled into machine language, and then performed in
 one go, hence avoiding Python’s dynamic typing. The name vector
 operation comes from linear algebra where the addition of two vectors
-\(v=(v_1,v_2,</p>
-<div class="math notranslate nohighlight">
-\ldots</div><p>, v_d)\) and \(w=(w_1,w_2,</p>
-<div class="math notranslate nohighlight">
-\ldots</div><p>, w_d)\) is defined element-wise as \(v+w = (v_1 + w_1,v_2 + w_2,</p>
-<div class="math notranslate nohighlight">
-\ldots</div><p>, v_d + w_d)\).</p>
+<span class="math notranslate nohighlight">\(v=(v_1,v_2, \ldots, v_d)\)</span> and <span class="math notranslate nohighlight">\(w=(w_1,w_2, \ldots, w_d)\)</span> is
+defined element-wise as
+<span class="math notranslate nohighlight">\(v+w = (v_1 + w_1,v_2 + w_2, \ldots, v_d + w_d)\)</span>.</p>
 <p>In addition to addition they are several mathematical functions defined
 in the vector form. The basic arithmetic operations are: addition <code class="docutils literal notranslate"><span class="pre">+</span></code>,
 subtraction <code class="docutils literal notranslate"><span class="pre">-</span></code>, negation <code class="docutils literal notranslate"><span class="pre">-</span></code>, multiplication <code class="docutils literal notranslate"><span class="pre">*</span></code>, division <code class="docutils literal notranslate"><span class="pre">/</span></code>,
@@ -2771,23 +2923,20 @@ pair of variables is the most highly correlated?</p>
 <div class="section" id="Solving-system-of-linear-equations">
 <h2>Solving system of linear equations<a class="headerlink" href="#Solving-system-of-linear-equations" title="Permalink to this headline">¶</a></h2>
 <p>The Scipy library has function
-<code class="docutils literal notranslate"><span class="pre">`np.linalg.solve</span></code> &lt;<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.solve.html">https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.solve.html</a>&gt;`__
+<a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.solve.html">np.linalg.solve</a>
 to solve systems of linear equations. The <code class="docutils literal notranslate"><span class="pre">solve</span></code> function gets as
 parameters the coefficient matrix and the vector containing the constant
 term. Below is an example of the general system of linear equations</p>
-<p>\(a_{11}x_1 + a_{12}x_2 +</p>
 <div class="math notranslate nohighlight">
-\cdots</div><p>a_{1m}x_m = b_1\ a_{21}x_1 + a_{22}x_2 +</p>
+\[\begin{split}a_{11}x_1 + a_{12}x_2 + \cdots a_{1m}x_m = b_1\\
+a_{21}x_1 + a_{22}x_2 + \cdots a_{2m}x_m = b_2\\
+\cdots\\
+a_{n1}x_1 + a_{n2}x_2 + \cdots a_{nm}x_m = b_n\\\end{split}\]</div>
+<p>and the equivalent matrix form</p>
 <div class="math notranslate nohighlight">
-\cdots</div><p>a_{2m}x_m = b_2\</p>
-<div class="math notranslate nohighlight">
-\cdots</div><p>\ a_{n1}x_1 + a_{n2}x_2 +</p>
-<div class="math notranslate nohighlight">
-\cdots</div><p>a_{nm}x_m = b_n\ \)</p>
-<p>and the equivalent matrix form \(A</p>
-<div class="math notranslate nohighlight">
-\cdot</div><p>x = b\) where <span class="math notranslate nohighlight">\(A\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, the unknown <span class="math notranslate nohighlight">\(x\)</span>
-has shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>, and <span class="math notranslate nohighlight">\(b\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>.</p>
+\[A \cdot x = b\]</div>
+<p>where <span class="math notranslate nohighlight">\(A\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, the unknown <span class="math notranslate nohighlight">\(x\)</span> has shape
+<code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>, and <span class="math notranslate nohighlight">\(b\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>.</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (meeting lines)</div>
@@ -2820,88 +2969,62 @@ both lines. You can use the <code class="docutils literal notranslate"><span cla
 </div>
 
 
+           </div>
+           
           </div>
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Numpy</a><ul>
-<li><a class="reference internal" href="#Creation-of-arrays">Creation of arrays</a><ul>
-<li><a class="reference internal" href="#Arrays-with-random-elements">Arrays with random elements</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Array-types-and-attributes">Array types and attributes</a></li>
-<li><a class="reference internal" href="#Indexing,-slicing-and-reshaping">Indexing, slicing and reshaping</a><ul>
-<li><a class="reference internal" href="#Indexing">Indexing</a><ul>
-<li><a class="reference internal" href="#Slicing">Slicing</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Reshaping">Reshaping</a></li>
-<li><a class="reference internal" href="#a-list-as-an-index-returns-a-2d-array,-single-index-a-1d-array">a list as an index returns a 2d array, single index a 1d array</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#Array-concatenation,-splitting-and-stacking">Array concatenation, splitting and stacking</a></li>
-<li><a class="reference internal" href="#Fast-computation-using-universal-functions">Fast computation using universal functions</a></li>
-<li><a class="reference internal" href="#Aggregations:-max,-min,-sum,-mean,-standard-deviation...">Aggregations: max, min, sum, mean, standard deviation…</a></li>
-<li><a class="reference internal" href="#Broadcasting">Broadcasting</a></li>
-<li><a class="reference internal" href="#Comparisons-and-masking">Comparisons and masking</a></li>
-<li><a class="reference internal" href="#Fancy-indexing">Fancy indexing</a></li>
-<li><a class="reference internal" href="#Sorting-arrays">Sorting arrays</a></li>
-<li><a class="reference internal" href="#Matrix-operations">Matrix operations</a></li>
-<li><a class="reference internal" href="#Solving-system-of-linear-equations">Solving system of linear equations</a></li>
-</ul>
-</li>
-</ul>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="matplotlib.html" class="btn btn-neutral float-right" title="Matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="basics.html" class="btn btn-neutral" title="Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="basics.html"
-                        title="previous chapter">Python</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="matplotlib.html"
-                        title="next chapter">Matplotlib</a></p>
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/numpy.ipynb.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3>Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Jarkko Toivonen
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="related" role="navigation" aria-label="related navigation">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             >index</a></li>
-        <li class="right" >
-          <a href="matplotlib.html" title="Matplotlib"
-             >next</a> |</li>
-        <li class="right" >
-          <a href="basics.html" title="Python"
-             >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
-      </ul>
-    </div>
-    <div class="footer" role="contentinfo">
-        &#169; Copyright 2018, Jarkko Toivonen.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
-    </div>
-  </body>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>
