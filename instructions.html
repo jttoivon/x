@@ -81,13 +81,13 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instructions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Install-Python-and-the-needed-external-packages">Install Python and the needed external packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#1-Install-Python-and-the-needed-external-packages">1 Install Python and the needed external packages</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#(alternative-a)-Install-full-anaconda-distribution">(alternative a) Install full anaconda distribution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#(alternative-b)-Install-miniconda-and-Python-packages">(alternative b) Install miniconda and Python packages</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#Install-TMC-client">Install TMC client</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Log-in-to-the-course-and-download-exercises">Log in to the course and download exercises</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#2-Install-TMC-client">2 Install TMC client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#3-Log-in-to-the-course-and-download-exercises">3 Log in to the course and download exercises</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
@@ -186,8 +186,8 @@
 </style>
 <div class="section" id="Instructions">
 <h1>Instructions<a class="headerlink" href="#Instructions" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="Install-Python-and-the-needed-external-packages">
-<h2>Install Python and the needed external packages<a class="headerlink" href="#Install-Python-and-the-needed-external-packages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="1-Install-Python-and-the-needed-external-packages">
+<h2>1 Install Python and the needed external packages<a class="headerlink" href="#1-Install-Python-and-the-needed-external-packages" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="(alternative-a)-Install-full-anaconda-distribution">
 <h3>(alternative a) Install full anaconda distribution<a class="headerlink" href="#(alternative-a)-Install-full-anaconda-distribution" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
@@ -220,16 +220,27 @@ file</li>
 </ul>
 </div>
 </div>
-<div class="section" id="Install-TMC-client">
-<h2>Install TMC client<a class="headerlink" href="#Install-TMC-client" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="2-Install-TMC-client">
+<h2>2 Install TMC client<a class="headerlink" href="#2-Install-TMC-client" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Follow the instructions on the following page to install TMC client
-<a class="reference external" href="https://github.com/testmycode/tmc-cli">https://github.com/testmycode/tmc-cli</a> The page also contains
-instructions on the use of the client</li>
+<a class="reference external" href="https://github.com/testmycode/tmc-cli">https://github.com/testmycode/tmc-cli</a></li>
+<li>After installing run command `./tmc config
+server-address=”<a class="reference external" href="https://tmc.mooc.fi/staging">https://tmc.mooc.fi/staging</a>”’</li>
+<li>Answer <code class="docutils literal notranslate"><span class="pre">y</span></code> to the question of using the staging server</li>
+<li>Provide login details, and use organization slug <code class="docutils literal notranslate"><span class="pre">hy</span></code></li>
+<li>Then issue command <code class="docutils literal notranslate"><span class="pre">./tmc</span> <span class="pre">download</span> <span class="pre">hy-data-analysis-in-python</span></code> to
+download the exercises</li>
+<li>Important commands:</li>
+<li><code class="docutils literal notranslate"><span class="pre">tmc</span></code> to show help message</li>
+<li><code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">test</span></code> to test your solution locally</li>
+<li><code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">submit</span></code> to submit your solution to the server for grading</li>
+<li>The github page of the tmc-client also contains instructions on the
+use of the client</li>
 </ul>
 </div>
-<div class="section" id="Log-in-to-the-course-and-download-exercises">
-<h2>Log in to the course and download exercises<a class="headerlink" href="#Log-in-to-the-course-and-download-exercises" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="3-Log-in-to-the-course-and-download-exercises">
+<h2>3 Log in to the course and download exercises<a class="headerlink" href="#3-Log-in-to-the-course-and-download-exercises" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li>Go to the <a class="reference external" href="https://tmc.mooc.fi/staging/org/hy/courses/106">exercise
 page</a> of the
