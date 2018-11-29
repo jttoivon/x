@@ -4,7 +4,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Principal component analysis\n",
+    "## Principal component analysis\n",
     "\n",
     "Principal component analysis is an unsupervised learning method that tries to detect the directions in which the vector formed data varies most. It first finds the direction of highest variance, and then proceeds to discover directions of highest variance that are orthogonal to those direction already found. So, for n dimensional data, it returns, by default, n orthogonal directions and the corresponding variances. These directions are called pricipal axes, and if we project a data point to these axes, we get the principal components of each axis.\n",
     "\n",
@@ -15,7 +15,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 41,
+   "execution_count": 19,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -35,7 +35,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 42,
+   "execution_count": 20,
    "metadata": {},
    "outputs": [
     {
@@ -72,7 +72,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 43,
+   "execution_count": 21,
    "metadata": {},
    "outputs": [
     {
@@ -109,7 +109,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 44,
+   "execution_count": 22,
    "metadata": {},
    "outputs": [
     {
@@ -118,7 +118,7 @@
        "Text(0.5,1,'Transformed')"
       ]
      },
-     "execution_count": 44,
+     "execution_count": 22,
      "metadata": {},
      "output_type": "execute_result"
     },
@@ -160,7 +160,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 45,
+   "execution_count": 23,
    "metadata": {},
    "outputs": [
     {
@@ -198,8 +198,15 @@
    ]
   },
   {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Example of feature extraction"
+   ]
+  },
+  {
    "cell_type": "code",
-   "execution_count": 46,
+   "execution_count": 24,
    "metadata": {},
    "outputs": [
     {
@@ -220,7 +227,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 47,
+   "execution_count": 25,
    "metadata": {},
    "outputs": [
     {
@@ -252,7 +259,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 50,
+   "execution_count": 26,
    "metadata": {},
    "outputs": [
     {
@@ -285,7 +292,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 55,
+   "execution_count": 27,
    "metadata": {},
    "outputs": [
     {
@@ -296,16 +303,6 @@
       " 6.13966550e-31 3.79755258e-31 2.89439513e-31 2.09287137e-31\n",
       " 1.60803888e-31 7.52400806e-32]\n"
      ]
-    },
-    {
-     "data": {
-      "text/plain": [
-       "[<matplotlib.lines.Line2D at 0x7f023af2efd0>]"
-      ]
-     },
-     "execution_count": 55,
-     "metadata": {},
-     "output_type": "execute_result"
     },
     {
      "data": {
@@ -334,7 +331,7 @@
     "\n",
     "Part 1.\n",
     "\n",
-    "Write function explained_variance which reads the tab separated file \"data.tsv\". It should return two lists (or 1D arrays). Then first list contains the variances of all the features. The fit PCA to the data. The second list should consist of the explained variances returned by the PCA.\n",
+    "Write function explained_variance which reads the tab separated file \"data.tsv\". It should return two lists (or 1D arrays). Then first list contains the variances of all the features. Then fit PCA to the data. The second list should consist of the explained variances returned by the PCA.\n",
     "\n",
     "In the main function print these values in the following form:\n",
     "```\n",

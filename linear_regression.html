@@ -6,32 +6,40 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Linear regression &#8212; Data analysis with Python  documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <title>Machine learning &#8212; Data analysis with Python  documentation</title>
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Naive Bayes classification" href="bayes.html" />
-    <link rel="prev" title="Basic concepts" href="basics.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="next" title="Machine learning" href="bayes.html" />
+    <link rel="prev" title="Image processing" href="image_processing.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="bayes.html" title="Machine learning"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="image_processing.html" title="Image processing"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   
@@ -100,7 +108,7 @@ div.nboutput div.prompt pre {
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 7ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -200,8 +208,10 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 </style>
+<div class="section" id="Machine-learning">
+<h1>Machine learning<a class="headerlink" href="#Machine-learning" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="Linear-regression">
-<h1>Linear regression<a class="headerlink" href="#Linear-regression" title="Permalink to this headline">¶</a></h1>
+<h2>Linear regression<a class="headerlink" href="#Linear-regression" title="Permalink to this headline">¶</a></h2>
 <p>Regression analysis tries to explain relationships between variables.
 One of these variables, called dependend variable, is what we want to
 “explain” using one or more <em>explanatory variables</em>. In linear
@@ -294,7 +304,7 @@ Let’s go through some examples.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/linear_regression_8_0.png" src="_images/linear_regression_8_0.png" />
+<img alt="_images/linear_regression_9_0.png" src="_images/linear_regression_9_0.png" />
 </div>
 </div>
 <p>The linear regression tries to minimize the sum of squared errors
@@ -336,7 +346,7 @@ the parameters that generated the data: coefficient 2 and intercept 1.
 Try experimenting with the number of data points and/or the standard
 deviation, to see if you can improve the estimated parameters.</p>
 <div class="section" id="Multiple-features">
-<h2>Multiple features<a class="headerlink" href="#Multiple-features" title="Permalink to this headline">¶</a></h2>
+<h3>Multiple features<a class="headerlink" href="#Multiple-features" title="Permalink to this headline">¶</a></h3>
 <p>The previous example had only one explanatory variable. Sometimes this
 is called a <em>simple linear regression</em>. The next example illustrates a
 more complex regression with multiple explanatory variables.</p>
@@ -415,7 +425,7 @@ product:
 </div>
 </div>
 <div class="section" id="Polynomial-regression">
-<h2>Polynomial regression<a class="headerlink" href="#Polynomial-regression" title="Permalink to this headline">¶</a></h2>
+<h3>Polynomial regression<a class="headerlink" href="#Polynomial-regression" title="Permalink to this headline">¶</a></h3>
 <p>It may perhaps come as a surprise that one can fit a polynomial curve to
 data points using linear regression. The trick is to add new explanatory
 variables to the model. Below we have a single feature x with associated
@@ -468,7 +478,7 @@ Intercept: -1488.9056772937038
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/linear_regression_21_1.png" src="_images/linear_regression_21_1.png" />
+<img alt="_images/linear_regression_22_1.png" src="_images/linear_regression_22_1.png" />
 </div>
 </div>
 <p>Linear and squared are not enough to explain the data, but the linear
@@ -476,11 +486,11 @@ regression manages to fit quite well a polynomial curve to the data
 points, when cubed variables are included!</p>
 </div>
 <div class="section" id="Ridge-regression">
-<h2>Ridge regression<a class="headerlink" href="#Ridge-regression" title="Permalink to this headline">¶</a></h2>
+<h3>Ridge regression<a class="headerlink" href="#Ridge-regression" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="Regression-exercises">
-<h1>Regression exercises<a class="headerlink" href="#Regression-exercises" title="Permalink to this headline">¶</a></h1>
+<h2>Regression exercises<a class="headerlink" href="#Regression-exercises" title="Permalink to this headline">¶</a></h2>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 1 (linear regression)</div>
@@ -502,8 +512,13 @@ scikit-learns’s LinearRegression to fit this data. Implement function
 <code class="docutils literal notranslate"><span class="pre">mystery_data</span></code> that reads this file and learns and returns the
 regression coefficients for the five features. You don’t have to fit the
 intercept. The main method will print output in the following form:</p>
-<p>Coefficient of X1 is … Coefficient of X2 is … Coefficient of X3 is
-… Coefficient of X4 is … Coefficient of X5 is …</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X1</span> <span class="ow">is</span> <span class="o">...</span>
+<span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X2</span> <span class="ow">is</span> <span class="o">...</span>
+<span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X3</span> <span class="ow">is</span> <span class="o">...</span>
+<span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X4</span> <span class="ow">is</span> <span class="o">...</span>
+<span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X5</span> <span class="ow">is</span> <span class="o">...</span>
+</pre></div>
+</div>
 <p>Which features you think are needed to explain the response Y?</p>
 <hr class="docutils" />
 <div class="admonition note">
@@ -541,58 +556,41 @@ intercept and without fitting the intercept.</p>
 <div class="admonition note">
 Exercise 4 ()</div>
 </div>
+</div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Data analysis with Python</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Basic concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Data-structures">Data structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Compact-way-of-creating-data-structures">Compact way of creating data structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Processing-sequences">Processing sequences</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#String-handling">String handling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Regular-expressions">Regular expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Basic-file-processing">Basic file processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Objects-and-classes">Objects and classes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Exceptions">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Modules">Modules</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Linear regression</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Multiple-features">Multiple features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Polynomial-regression">Polynomial regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#Ridge-regression">Ridge regression</a></li>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Machine learning</a><ul>
+<li><a class="reference internal" href="#Linear-regression">Linear regression</a><ul>
+<li><a class="reference internal" href="#Multiple-features">Multiple features</a></li>
+<li><a class="reference internal" href="#Polynomial-regression">Polynomial regression</a></li>
+<li><a class="reference internal" href="#Ridge-regression">Ridge regression</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#Regression-exercises">Regression exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bayes.html">Naive Bayes classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pca.html">Principal component analysis</a></li>
+<li><a class="reference internal" href="#Regression-exercises">Regression exercises</a></li>
+</ul>
+</li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="basics.html" title="previous chapter">Basic concepts</a></li>
-      <li>Next: <a href="bayes.html" title="next chapter">Naive Bayes classification</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="image_processing.html"
+                        title="previous chapter">Image processing</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="bayes.html"
+                        title="next chapter">Machine learning</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/linear_regression.ipynb.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <div class="searchformwrapper">
@@ -605,32 +603,28 @@ Exercise 4 ()</div>
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2018, Jarkko Toivonen.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/linear_regression.ipynb.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="bayes.html" title="Machine learning"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="image_processing.html" title="Image processing"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Jarkko Toivonen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+    </div>
   </body>
 </html>

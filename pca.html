@@ -7,30 +7,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Principal component analysis &#8212; Data analysis with Python  documentation</title>
-    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Clustering" href="clustering.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
-
+    <link rel="prev" title="Clustering" href="clustering.html" /> 
   </head><body>
-  
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="clustering.html" title="Clustering"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
+      </ul>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          
-
           <div class="body" role="main">
             
   
@@ -99,7 +104,7 @@ div.nboutput div.prompt pre {
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 7ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -219,7 +224,7 @@ this new coordinate system.</p>
 distribution.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [41]:
+<span></span>In [19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -234,7 +239,7 @@ distribution.</p>
 <p>First we sample data from this distribution, and then we plot it.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [42]:
+<span></span>In [20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -263,7 +268,7 @@ distribution.</p>
 their variances.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [43]:
+<span></span>In [21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -297,7 +302,7 @@ axes, and whose lengths are the corresponding variances. Then we plot
 the data in this new coordinate system.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [44]:
+<span></span>In [22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -319,7 +324,7 @@ the data in this new coordinate system.</p>
 </div>
 <div class="nboutput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[44]:
+<span></span>Out[22]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -344,7 +349,7 @@ any important information.</p>
 <p>Let’s use PCA to project the above data to one dimension.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [45]:
+<span></span>In [23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -378,9 +383,11 @@ of data. Additionally, dimensionality reduction can be used as a
 preprocessing method to obtain only the important features from the
 data. These important features can then be used, for example, for
 regression or classification.</p>
+<div class="section" id="Example-of-feature-extraction">
+<h2>Example of feature extraction<a class="headerlink" href="#Example-of-feature-extraction" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [46]:
+<span></span>In [24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -402,7 +409,7 @@ regression or classification.</p>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [47]:
+<span></span>In [25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -427,12 +434,12 @@ regression or classification.</p>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pca_12_1.png" src="_images/pca_12_1.png" />
+<img alt="_images/pca_13_1.png" src="_images/pca_13_1.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [50]:
+<span></span>In [26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -466,7 +473,7 @@ regression or classification.</p>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [55]:
+<span></span>In [27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -488,21 +495,11 @@ regression or classification.</p>
  1.60803888e-31 7.52400806e-32]
 </pre></div></div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[55]:
-</pre></div>
-</div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>[&lt;matplotlib.lines.Line2D at 0x7f023af2efd0&gt;]
-</pre></div>
-</div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pca_14_2.png" src="_images/pca_14_2.png" />
+<img alt="_images/pca_15_1.png" src="_images/pca_15_1.png" />
 </div>
 </div>
 <hr class="docutils" />
@@ -511,9 +508,9 @@ Exercise 12 (explained variance)</div>
 <p>Part 1.</p>
 <p>Write function explained_variance which reads the tab separated file
 “data.tsv”. It should return two lists (or 1D arrays). Then first list
-contains the variances of all the features. The fit PCA to the data. The
-second list should consist of the explained variances returned by the
-PCA.</p>
+contains the variances of all the features. Then fit PCA to the data.
+The second list should consist of the explained variances returned by
+the PCA.</p>
 <p>In the main function print these values in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The variances are: ?.??? ?.??? ...
 The explained variances after PCA are: ?.??? ?.??? ...
@@ -526,52 +523,32 @@ a space.</p>
 cumulative sum, and the x-axis the number of terms in the cumulative
 sum.</p>
 </div>
+</div>
 
 
           </div>
-          
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">Data analysis with Python</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html">Basic concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Data-structures">Data structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Compact-way-of-creating-data-structures">Compact way of creating data structures</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Processing-sequences">Processing sequences</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#String-handling">String handling</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Regular-expressions">Regular expressions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Basic-file-processing">Basic file processing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Objects-and-classes">Objects and classes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Exceptions">Exceptions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="basics.html#Modules">Modules</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Linear regression</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html#Regression-exercises">Regression exercises</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bayes.html">Naive Bayes classification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="clustering.html">Clustering</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Principal component analysis</a></li>
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Principal component analysis</a><ul>
+<li><a class="reference internal" href="#Example-of-feature-extraction">Example of feature extraction</a></li>
+</ul>
+</li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="clustering.html" title="previous chapter">Clustering</a></li>
-  </ul></li>
-</ul>
-</div>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="clustering.html"
+                        title="previous chapter">Clustering</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/pca.ipynb.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <div class="searchformwrapper">
@@ -584,32 +561,25 @@ sum.</p>
     </div>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="footer">
-      &copy;2018, Jarkko Toivonen.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.1</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/pca.ipynb.txt"
-          rel="nofollow">Page source</a>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="clustering.html" title="Clustering"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Data analysis with Python  documentation</a> &#187;</li> 
+      </ul>
     </div>
-
-    
-
-    
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2018, Jarkko Toivonen.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.8.2.
+    </div>
   </body>
 </html>

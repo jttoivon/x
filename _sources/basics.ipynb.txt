@@ -4,14 +4,21 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Basic concepts"
+    "# Python"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Basic input and output"
+    "## Basic concepts"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Basic input and output"
    ]
   },
   {
@@ -23,7 +30,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 84,
+   "execution_count": 117,
    "metadata": {},
    "outputs": [
     {
@@ -47,7 +54,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 85,
+   "execution_count": 118,
    "metadata": {},
    "outputs": [
     {
@@ -71,7 +78,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 86,
+   "execution_count": 119,
    "metadata": {},
    "outputs": [
     {
@@ -95,7 +102,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 87,
+   "execution_count": 120,
    "metadata": {
     "scrolled": true
    },
@@ -118,7 +125,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Indentation"
+    "### Indentation"
    ]
   },
   {
@@ -131,7 +138,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 88,
+   "execution_count": 121,
    "metadata": {},
    "outputs": [
     {
@@ -174,7 +181,8 @@
     "\n",
     "`Hello, world!`\n",
     "\n",
-    "Make sure you use correct indenting."
+    "Make sure you use correct indenting.\n",
+    "<hr/>"
    ]
   },
   {
@@ -188,7 +196,8 @@
     "I have heard that Sweden is a beautiful country.\n",
     "\n",
     "What country are you from? <font color='red'>Chile</font>  \n",
-    "I have heard that Chile is a beautiful country."
+    "I have heard that Chile is a beautiful country.\n",
+    "<hr/>"
    ]
   },
   {
@@ -210,21 +219,22 @@
     "4 multiplied by 8 is 32\n",
     "4 multiplied by 9 is 36\n",
     "4 multiplied by 10 is 40\n",
-    "```"
+    "```\n",
+    "<hr/>"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Variables and data types\n",
+    "### Variables and data types\n",
     "\n",
     "We saw already earlier that assigning a value to variable is very simple:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 89,
+   "execution_count": 122,
    "metadata": {},
    "outputs": [
     {
@@ -249,7 +259,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 90,
+   "execution_count": 123,
    "metadata": {},
    "outputs": [
     {
@@ -258,7 +268,7 @@
        "int"
       ]
      },
-     "execution_count": 90,
+     "execution_count": 123,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -276,7 +286,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 91,
+   "execution_count": 124,
    "metadata": {},
    "outputs": [
     {
@@ -285,7 +295,7 @@
        "str"
       ]
      },
-     "execution_count": 91,
+     "execution_count": 124,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -303,17 +313,11 @@
    ]
   },
   {
-   "attachments": {
-    "typing.svg": {
-     "image/svg+xml": [
-      "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIHN2Z19zdGFjayAoaHR0cDovL2dpdGh1Yi5jb20vYXN0cmF3L3N2Z19zdGFjaykgLS0+Cgo8c3ZnCiAgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIKICAgeG1sbnM6Y2M9Imh0dHA6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL25zIyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgogICB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zOnNvZGlwb2RpPSJodHRwOi8vc29kaXBvZGkuc291cmNlZm9yZ2UubmV0L0RURC9zb2RpcG9kaS0wLmR0ZCIKICAgeG1sbnM6aW5rc2NhcGU9Imh0dHA6Ly93d3cuaW5rc2NhcGUub3JnL25hbWVzcGFjZXMvaW5rc2NhcGUiCiAgIHZlcnNpb249IjEuMSIKICAgd2lkdGg9IjkzNC4yNjExMSIKICAgaGVpZ2h0PSIyNzYuMDMzMjMiCiAgIGlkPSJzdmc3NiIKICAgc29kaXBvZGk6ZG9jbmFtZT0idHlwaW5nLnN2ZyIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMC45Mi4zICgyNDA1NTQ2LCAyMDE4LTAzLTExKSI+CiAgPG1ldGFkYXRhCiAgICAgaWQ9Im1ldGFkYXRhODAiPgogICAgPHJkZjpSREY+CiAgICAgIDxjYzpXb3JrCiAgICAgICAgIHJkZjphYm91dD0iIj4KICAgICAgICA8ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD4KICAgICAgICA8ZGM6dHlwZQogICAgICAgICAgIHJkZjpyZXNvdXJjZT0iaHR0cDovL3B1cmwub3JnL2RjL2RjbWl0eXBlL1N0aWxsSW1hZ2UiIC8+CiAgICAgICAgPGRjOnRpdGxlPjwvZGM6dGl0bGU+CiAgICAgIDwvY2M6V29yaz4KICAgIDwvcmRmOlJERj4KICA8L21ldGFkYXRhPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiM2NjY2NjYiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBvYmplY3R0b2xlcmFuY2U9IjEwIgogICAgIGdyaWR0b2xlcmFuY2U9IjEwIgogICAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMCIKICAgICBpbmtzY2FwZTpwYWdlc2hhZG93PSIyIgogICAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTg3NyIKICAgICBpbmtzY2FwZTp3aW5kb3ctaGVpZ2h0PSI4MjEiCiAgICAgaWQ9Im5hbWVkdmlldzc4IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTp6b29tPSIwLjMxMjUzMzMzIgogICAgIGlua3NjYXBlOmN4PSI1MTAuNzEzNjciCiAgICAgaW5rc2NhcGU6Y3k9Ii05Mi4wMzM4ODciCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMCIKICAgICBpbmtzY2FwZTpjdXJyZW50LWxheWVyPSJzdmc3NiIgLz4KICA8ZGVmcwogICAgIGlkPSJkZWZzMiIgLz4KICA8ZwogICAgIGlkPSJpZDA6aWQwIgogICAgIHRyYW5zZm9ybT0ibWF0cml4KDAuMDc4ODc0MzEsMCwwLDAuMDc4ODU3NjMsLTM5LjY3ODgyNCwtMTkuNjgyODY0KSI+CiAgICA8ZwogICAgICAgaWQ9ImczNSIKICAgICAgIHN0eWxlPSJmaWxsOm5vbmUiPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxyZWN0CiAgICAgICAgIHg9IjUzMTAiCiAgICAgICAgIHk9IjU0MCIKICAgICAgICAgd2lkdGg9IjEwODAiCiAgICAgICAgIGhlaWdodD0iMzE5NSIKICAgICAgICAgaWQ9InJlY3Q0IgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHgiIC8+CiAgICAgIDwhLS0gTGluZSAtLT4KICAgICAgPHJlY3QKICAgICAgICAgeD0iNTQ5MCIKICAgICAgICAgeT0iOTkwIgogICAgICAgICB3aWR0aD0iNzY1IgogICAgICAgICBoZWlnaHQ9IjE4MCIKICAgICAgICAgaWQ9InJlY3Q2IgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHgiIC8+CiAgICAgIDwhLS0gTGluZSAtLT4KICAgICAgPHJlY3QKICAgICAgICAgeD0iNTQ5MCIKICAgICAgICAgeT0iMjA3MCIKICAgICAgICAgd2lkdGg9Ijc2NSIKICAgICAgICAgaGVpZ2h0PSIxODAiCiAgICAgICAgIGlkPSJyZWN0OCIKICAgICAgICAgc3R5bGU9InN0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozMHB4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxwb2x5bGluZQogICAgICAgICBwb2ludHM9IiA5NDUsMTk4MCAyMzQwLDE5ODAiCiAgICAgICAgIGlkPSJwb2x5bGluZTEwIgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjhweDtzdHJva2UtZGFzaGFycmF5OjQwLCA0MCIgLz4KICAgICAgPCEtLSBMaW5lIC0tPgogICAgICA8cmVjdAogICAgICAgICB4PSI2MzAiCiAgICAgICAgIHk9IjE2NjUiCiAgICAgICAgIHdpZHRoPSIxOTM1IgogICAgICAgICBoZWlnaHQ9IjYzMCIKICAgICAgICAgaWQ9InJlY3QxMiIKICAgICAgICAgc3R5bGU9InN0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozMHB4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxwb2x5bGluZQogICAgICAgICBwb2ludHM9IiAyNTY1LDE4MDAgMjU2NywxNzk5IDI1NzAsMTc5NyAyNTc3LDE3OTQgMjU4OCwxNzg5IDI2MDMsMTc4MiAyNjIzLDE3NzIgMjY0OCwxNzYwICAyNjc5LDE3NDYgMjcxMywxNzMwIDI3NTMsMTcxMiAyNzk1LDE2OTIgMjg0MSwxNjcxIDI4ODksMTY0OSAyOTM5LDE2MjYgMjk5MCwxNjAzICAzMDQxLDE1ODAgMzA5MiwxNTU4IDMxNDIsMTUzNiAzMTkxLDE1MTUgMzIzOSwxNDk0IDMyODYsMTQ3NSAzMzMxLDE0NTYgMzM3NSwxNDM5ICAzNDE3LDE0MjIgMzQ1OCwxNDA3IDM0OTgsMTM5MiAzNTM3LDEzNzggMzU3NSwxMzY1IDM2MTIsMTM1MyAzNjQ5LDEzNDEgMzY4NiwxMzMwICAzNzIyLDEzMTkgMzc1OSwxMzA5IDM3OTUsMTI5OSAzODMzLDEyOTAgMzg2NiwxMjgyIDM5MDAsMTI3NCAzOTM1LDEyNjYgMzk3MCwxMjU5ICA0MDA3LDEyNTIgNDA0NCwxMjQ1IDQwODIsMTIzOCA0MTIyLDEyMzEgNDE2MywxMjI0IDQyMDYsMTIxOCA0MjUwLDEyMTEgNDI5NywxMjA1ICA0MzQ1LDExOTggNDM5NiwxMTkyIDQ0NDgsMTE4NSA0NTAzLDExNzggNDU2MCwxMTcyIDQ2MTksMTE2NSA0NjgwLDExNTggNDc0MiwxMTUyICA0ODA1LDExNDUgNDg2OSwxMTM5IDQ5MzMsMTEzMiA0OTk3LDExMjYgNTA1OSwxMTIwIDUxMjAsMTExNCA1MTc3LDExMDggNTIzMSwxMTAzICA1MjgxLDEwOTkgNTMyNiwxMDk1IDUzNjUsMTA5MSA1Mzk5LDEwODggNTQyNywxMDg2IDU0NDksMTA4NCA1NDY1LDEwODIgNTQ5MCwxMDgwICIKICAgICAgICAgaWQ9InBvbHlsaW5lMTQiCiAgICAgICAgIHN0eWxlPSJzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MzBweDtzdHJva2UtbGluZWpvaW46YmV2ZWwiIC8+CiAgICAgIDwhLS0gRm9yd2FyZCBhcnJvdyB0byBwb2ludCAwLDAgLS0+CiAgICAgIDxwb2x5Z29uCiAgICAgICAgIHBvaW50cz0iIgogICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iOCIKICAgICAgICAgaWQ9InBvbHlnb24xNiIKICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NjBweDtzdHJva2UtbWl0ZXJsaW1pdDo4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxkZWZzCiAgICAgICAgIGlkPSJkZWZzMjEiPgogICAgICAgIDxjbGlwUGF0aAogICAgICAgICAgIGlkPSJpZDA6Y3AwIj4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBkPSJNIDQ4MCwyNDkgSCA2NDIzIFYgMzc2OCBIIDQ4MCBaIG0gMjgwMiwxMjYwIC0yNCwtNTUgLTI0MSwxMTcgMTUsMzMgeiIKICAgICAgICAgICAgIGlkPSJwYXRoMTgiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgc3R5bGU9ImNsaXAtcnVsZTpldmVub2RkIiAvPgogICAgICAgIDwvY2xpcFBhdGg+CiAgICAgIDwvZGVmcz4KICAgICAgPHBvbHlsaW5lCiAgICAgICAgIHBvaW50cz0iIDI1NjUsMjE2MCAyNTY3LDIxNjAgMjU3MCwyMTYxIDI1NzgsMjE2MyAyNTg5LDIxNjUgMjYwNSwyMTY4IDI2MjYsMjE3MiAyNjUyLDIxNzggIDI2ODQsMjE4NCAyNzIxLDIxOTEgMjc2MywyMTk5IDI4MDksMjIwOCAyODU5LDIyMTggMjkxMSwyMjI4IDI5NjYsMjIzOCAzMDIyLDIyNDggIDMwNzksMjI1OSAzMTM2LDIyNjkgMzE5MywyMjc5IDMyNDgsMjI4OSAzMzAzLDIyOTggMzM1NSwyMzA3IDM0MDcsMjMxNSAzNDU2LDIzMjIgIDM1MDQsMjMyOSAzNTQ5LDIzMzYgMzU5MywyMzQyIDM2MzYsMjM0NyAzNjc3LDIzNTIgMzcxNywyMzU2IDM3NTUsMjM1OSAzNzkyLDIzNjIgIDM4MjksMjM2NSAzODY1LDIzNjcgMzkwMCwyMzY4IDM5MzUsMjM2OSAzOTcwLDIzNzAgNDAwNSwyMzcwIDQwNDAsMjM3MCA0MDc1LDIzNjkgIDQxMTAsMjM2OCA0MTQ1LDIzNjcgNDE4MSwyMzY1IDQyMTgsMjM2MiA0MjU1LDIzNTkgNDI5MywyMzU2IDQzMzMsMjM1MiA0Mzc0LDIzNDcgIDQ0MTcsMjM0MiA0NDYxLDIzMzYgNDUwNiwyMzI5IDQ1NTQsMjMyMiA0NjAzLDIzMTUgNDY1NSwyMzA3IDQ3MDcsMjI5OCA0NzYyLDIyODkgIDQ4MTcsMjI3OSA0ODc0LDIyNjkgNDkzMSwyMjU5IDQ5ODgsMjI0OCA1MDQ0LDIyMzggNTA5OSwyMjI4IDUxNTEsMjIxOCA1MjAxLDIyMDggIDUyNDcsMjE5OSA1Mjg5LDIxOTEgNTMyNiwyMTg0IDUzNTgsMjE3OCA1Mzg0LDIxNzIgNTQwNSwyMTY4IDU0MjEsMjE2NSA1NDQ1LDIxNjAgIgogICAgICAgICBjbGlwLXBhdGg9InVybCgjaWQwOmNwMCkiCiAgICAgICAgIGlkPSJwb2x5bGluZTIzIgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHg7c3Ryb2tlLWxpbmVqb2luOmJldmVsIiAvPgogICAgICA8IS0tIEZvcndhcmQgYXJyb3cgdG8gcG9pbnQgMzA0MSwxNTgwIC0tPgogICAgICA8cG9seWdvbgogICAgICAgICBwb2ludHM9IjMyODIsMTUwOSAzMjU4LDE0NTQgMzE2MCwxNTI5ICIKICAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ9IjgiCiAgICAgICAgIGlkPSJwb2x5Z29uMjUiCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjYwcHg7c3Ryb2tlLW1pdGVybGltaXQ6OCIgLz4KICAgICAgPCEtLSBUZXh0IC0tPgogICAgICA8dGV4dAogICAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgICAgICB4PSIxMzA1IgogICAgICAgICB5PSIyMjA1IgogICAgICAgICBmb250LXN0eWxlPSJub3JtYWwiCiAgICAgICAgIGZvbnQtd2VpZ2h0PSJub3JtYWwiCiAgICAgICAgIGZvbnQtc2l6ZT0iMjQwIgogICAgICAgICBpZD0idGV4dDI3IgogICAgICAgICBzdHlsZT0iZm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToyNDBweDtmb250LWZhbWlseTpUaW1lczt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiMwMDAwMDAiPnR5cGU8L3RleHQ+CiAgICAgIDwhLS0gVGV4dCAtLT4KICAgICAgPHRleHQKICAgICAgICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKICAgICAgICAgeD0iNDk1IgogICAgICAgICB5PSI3MjAiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyODgiCiAgICAgICAgIGlkPSJ0ZXh0MjkiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI4OHB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+QyAtIHN0YXRpYyB0eXBpbmc8L3RleHQ+CiAgICAgIDwhLS0gVGV4dCAtLT4KICAgICAgPHRleHQKICAgICAgICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKICAgICAgICAgeD0iNTI2NSIKICAgICAgICAgeT0iMzYwIgogICAgICAgICBmb250LXN0eWxlPSJub3JtYWwiCiAgICAgICAgIGZvbnQtd2VpZ2h0PSJub3JtYWwiCiAgICAgICAgIGZvbnQtc2l6ZT0iMjQwIgogICAgICAgICBpZD0idGV4dDMxIgogICAgICAgICBzdHlsZT0iZm9udC1zdHlsZTpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToyNDBweDtmb250LWZhbWlseTpUaW1lczt0ZXh0LWFuY2hvcjpzdGFydDtmaWxsOiMwMDAwMDAiPm1lbW9yeTwvdGV4dD4KICAgICAgPCEtLSBUZXh0IC0tPgogICAgICA8dGV4dAogICAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgICAgICB4PSI2MzAiCiAgICAgICAgIHk9IjE4OTAiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyNDAiCiAgICAgICAgIGlkPSJ0ZXh0MzMiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0MHB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+dmFyaWFibGVfbmFtZTwvdGV4dD4KICAgIDwvZz4KICA8L2c+CiAgPGcKICAgICBpZD0iaWQxOmlkMSIKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgwLjA3ODg3NDMxLDAsMCwwLjA3ODg1NzYzLDQyOS4wNzExOCwtMTkuNjgyODY0KSI+CiAgICA8ZwogICAgICAgaWQ9Imc3MyIKICAgICAgIHN0eWxlPSJmaWxsOm5vbmUiPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxyZWN0CiAgICAgICAgIHg9IjUzMTAiCiAgICAgICAgIHk9IjU0MCIKICAgICAgICAgd2lkdGg9IjEwODAiCiAgICAgICAgIGhlaWdodD0iMzE5NSIKICAgICAgICAgaWQ9InJlY3QzOCIKICAgICAgICAgc3R5bGU9InN0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozMHB4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxyZWN0CiAgICAgICAgIHg9IjU4NSIKICAgICAgICAgeT0iMTY2NSIKICAgICAgICAgd2lkdGg9IjE5ODAiCiAgICAgICAgIGhlaWdodD0iNjMwIgogICAgICAgICBpZD0icmVjdDQwIgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHgiIC8+CiAgICAgIDwhLS0gTGluZSAtLT4KICAgICAgPHJlY3QKICAgICAgICAgeD0iNTQ5MCIKICAgICAgICAgeT0iOTkwIgogICAgICAgICB3aWR0aD0iNzY1IgogICAgICAgICBoZWlnaHQ9IjU4NSIKICAgICAgICAgaWQ9InJlY3Q0MiIKICAgICAgICAgc3R5bGU9InN0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDozMHB4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxyZWN0CiAgICAgICAgIHg9IjU0OTAiCiAgICAgICAgIHk9IjIwNzAiCiAgICAgICAgIHdpZHRoPSI3NjUiCiAgICAgICAgIGhlaWdodD0iNjc1IgogICAgICAgICBpZD0icmVjdDQ0IgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHgiIC8+CiAgICAgIDwhLS0gTGluZSAtLT4KICAgICAgPHBvbHlsaW5lCiAgICAgICAgIHBvaW50cz0iIDU2MjUsMTMwNSA2MTY1LDEzMDUiCiAgICAgICAgIGlkPSJwb2x5bGluZTQ2IgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjhweDtzdHJva2UtZGFzaGFycmF5OjQwLCA0MCIgLz4KICAgICAgPCEtLSBMaW5lIC0tPgogICAgICA8cG9seWxpbmUKICAgICAgICAgcG9pbnRzPSIgNTYyNSwyNDMwIDYxNjUsMjQzMCIKICAgICAgICAgaWQ9InBvbHlsaW5lNDgiCiAgICAgICAgIHN0eWxlPSJzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6OHB4O3N0cm9rZS1kYXNoYXJyYXk6NDAsIDQwIiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxwb2x5bGluZQogICAgICAgICBwb2ludHM9IiAyNTY1LDE4MDAgMjU2NywxNzk5IDI1NzAsMTc5NyAyNTc3LDE3OTQgMjU4OCwxNzg5IDI2MDMsMTc4MiAyNjIzLDE3NzIgMjY0OCwxNzYwICAyNjc5LDE3NDYgMjcxMywxNzMwIDI3NTMsMTcxMiAyNzk1LDE2OTIgMjg0MSwxNjcxIDI4ODksMTY0OSAyOTM5LDE2MjYgMjk5MCwxNjAzICAzMDQxLDE1ODAgMzA5MiwxNTU4IDMxNDIsMTUzNiAzMTkxLDE1MTUgMzIzOSwxNDk0IDMyODYsMTQ3NSAzMzMxLDE0NTYgMzM3NSwxNDM5ICAzNDE3LDE0MjIgMzQ1OCwxNDA3IDM0OTgsMTM5MiAzNTM3LDEzNzggMzU3NSwxMzY1IDM2MTIsMTM1MyAzNjQ5LDEzNDEgMzY4NiwxMzMwICAzNzIyLDEzMTkgMzc1OSwxMzA5IDM3OTUsMTI5OSAzODMzLDEyOTAgMzg2NiwxMjgyIDM5MDAsMTI3NCAzOTM1LDEyNjYgMzk3MCwxMjU5ICA0MDA3LDEyNTIgNDA0NCwxMjQ1IDQwODIsMTIzOCA0MTIyLDEyMzEgNDE2MywxMjI0IDQyMDYsMTIxOCA0MjUwLDEyMTEgNDI5NywxMjA1ICA0MzQ1LDExOTggNDM5NiwxMTkyIDQ0NDgsMTE4NSA0NTAzLDExNzggNDU2MCwxMTcyIDQ2MTksMTE2NSA0NjgwLDExNTggNDc0MiwxMTUyICA0ODA1LDExNDUgNDg2OSwxMTM5IDQ5MzMsMTEzMiA0OTk3LDExMjYgNTA1OSwxMTIwIDUxMjAsMTExNCA1MTc3LDExMDggNTIzMSwxMTAzICA1MjgxLDEwOTkgNTMyNiwxMDk1IDUzNjUsMTA5MSA1Mzk5LDEwODggNTQyNywxMDg2IDU0NDksMTA4NCA1NDY1LDEwODIgNTQ5MCwxMDgwICIKICAgICAgICAgaWQ9InBvbHlsaW5lNTAiCiAgICAgICAgIHN0eWxlPSJzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MzBweDtzdHJva2UtbGluZWpvaW46YmV2ZWwiIC8+CiAgICAgIDwhLS0gRm9yd2FyZCBhcnJvdyB0byBwb2ludCAwLDAgLS0+CiAgICAgIDxwb2x5Z29uCiAgICAgICAgIHBvaW50cz0iIgogICAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iOCIKICAgICAgICAgaWQ9InBvbHlnb241MiIKICAgICAgICAgc3R5bGU9ImZpbGw6IzAwMDAwMDtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6NjBweDtzdHJva2UtbWl0ZXJsaW1pdDo4IiAvPgogICAgICA8IS0tIExpbmUgLS0+CiAgICAgIDxkZWZzCiAgICAgICAgIGlkPSJkZWZzNTciPgogICAgICAgIDxjbGlwUGF0aAogICAgICAgICAgIGlkPSJpZDE6Y3AwIj4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBkPSJNIDQ4MCwyNDkgSCA2NDIzIFYgMzc2OCBIIDQ4MCBaIG0gMjgwMiwxMjYwIC0yNCwtNTUgLTI0MSwxMTcgMTUsMzMgeiIKICAgICAgICAgICAgIGlkPSJwYXRoNTQiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgc3R5bGU9ImNsaXAtcnVsZTpldmVub2RkIiAvPgogICAgICAgIDwvY2xpcFBhdGg+CiAgICAgIDwvZGVmcz4KICAgICAgPHBvbHlsaW5lCiAgICAgICAgIHBvaW50cz0iIDI1NjUsMjE2MCAyNTY3LDIxNjAgMjU3MCwyMTYxIDI1NzgsMjE2MyAyNTg5LDIxNjUgMjYwNSwyMTY4IDI2MjYsMjE3MiAyNjUyLDIxNzggIDI2ODQsMjE4NCAyNzIxLDIxOTEgMjc2MywyMTk5IDI4MDksMjIwOCAyODU5LDIyMTggMjkxMSwyMjI4IDI5NjYsMjIzOCAzMDIyLDIyNDggIDMwNzksMjI1OSAzMTM2LDIyNjkgMzE5MywyMjc5IDMyNDgsMjI4OSAzMzAzLDIyOTggMzM1NSwyMzA3IDM0MDcsMjMxNSAzNDU2LDIzMjIgIDM1MDQsMjMyOSAzNTQ5LDIzMzYgMzU5MywyMzQyIDM2MzYsMjM0NyAzNjc3LDIzNTIgMzcxNywyMzU2IDM3NTUsMjM1OSAzNzkyLDIzNjIgIDM4MjksMjM2NSAzODY1LDIzNjcgMzkwMCwyMzY4IDM5MzUsMjM2OSAzOTcwLDIzNzAgNDAwNSwyMzcwIDQwNDAsMjM3MCA0MDc1LDIzNjkgIDQxMTAsMjM2OCA0MTQ1LDIzNjcgNDE4MSwyMzY1IDQyMTgsMjM2MiA0MjU1LDIzNTkgNDI5MywyMzU2IDQzMzMsMjM1MiA0Mzc0LDIzNDcgIDQ0MTcsMjM0MiA0NDYxLDIzMzYgNDUwNiwyMzI5IDQ1NTQsMjMyMiA0NjAzLDIzMTUgNDY1NSwyMzA3IDQ3MDcsMjI5OCA0NzYyLDIyODkgIDQ4MTcsMjI3OSA0ODc0LDIyNjkgNDkzMSwyMjU5IDQ5ODgsMjI0OCA1MDQ0LDIyMzggNTA5OSwyMjI4IDUxNTEsMjIxOCA1MjAxLDIyMDggIDUyNDcsMjE5OSA1Mjg5LDIxOTEgNTMyNiwyMTg0IDUzNTgsMjE3OCA1Mzg0LDIxNzIgNTQwNSwyMTY4IDU0MjEsMjE2NSA1NDQ1LDIxNjAgIgogICAgICAgICBjbGlwLXBhdGg9InVybCgjaWQxOmNwMCkiCiAgICAgICAgIGlkPSJwb2x5bGluZTU5IgogICAgICAgICBzdHlsZT0ic3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjMwcHg7c3Ryb2tlLWxpbmVqb2luOmJldmVsIiAvPgogICAgICA8IS0tIEZvcndhcmQgYXJyb3cgdG8gcG9pbnQgMzA0MSwxNTgwIC0tPgogICAgICA8cG9seWdvbgogICAgICAgICBwb2ludHM9IjMyODIsMTUwOSAzMjU4LDE0NTQgMzE2MCwxNTI5ICIKICAgICAgICAgc3Ryb2tlLW1pdGVybGltaXQ9IjgiCiAgICAgICAgIGlkPSJwb2x5Z29uNjEiCiAgICAgICAgIHN0eWxlPSJmaWxsOiMwMDAwMDA7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjYwcHg7c3Ryb2tlLW1pdGVybGltaXQ6OCIgLz4KICAgICAgPCEtLSBUZXh0IC0tPgogICAgICA8dGV4dAogICAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgICAgICB4PSI0OTUiCiAgICAgICAgIHk9IjcyMCIKICAgICAgICAgZm9udC1zdHlsZT0ibm9ybWFsIgogICAgICAgICBmb250LXdlaWdodD0ibm9ybWFsIgogICAgICAgICBmb250LXNpemU9IjI4OCIKICAgICAgICAgaWQ9InRleHQ2MyIKICAgICAgICAgc3R5bGU9ImZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6Mjg4cHg7Zm9udC1mYW1pbHk6VGltZXM7dGV4dC1hbmNob3I6c3RhcnQ7ZmlsbDojMDAwMDAwIj5QeXRob24gLSBkeW5hbWljIHR5cGluZzwvdGV4dD4KICAgICAgPCEtLSBUZXh0IC0tPgogICAgICA8dGV4dAogICAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgICAgICB4PSI2MzAiCiAgICAgICAgIHk9IjIwNzAiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyNDAiCiAgICAgICAgIGlkPSJ0ZXh0NjUiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0MHB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+dmFyaWFibGVfbmFtZTwvdGV4dD4KICAgICAgPCEtLSBUZXh0IC0tPgogICAgICA8dGV4dAogICAgICAgICB4bWw6c3BhY2U9InByZXNlcnZlIgogICAgICAgICB4PSI1MzEwIgogICAgICAgICB5PSIzNjAiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyNDAiCiAgICAgICAgIGlkPSJ0ZXh0NjciCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjI0MHB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+bWVtb3J5PC90ZXh0PgogICAgICA8IS0tIFRleHQgLS0+CiAgICAgIDx0ZXh0CiAgICAgICAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgICAgICAgIHg9IjU3MTUiCiAgICAgICAgIHk9IjIyOTUiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyMTYiCiAgICAgICAgIGlkPSJ0ZXh0NjkiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjIxNnB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+c3RyPC90ZXh0PgogICAgICA8IS0tIFRleHQgLS0+CiAgICAgIDx0ZXh0CiAgICAgICAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgICAgICAgIHg9IjU3NjAiCiAgICAgICAgIHk9IjEyNjAiCiAgICAgICAgIGZvbnQtc3R5bGU9Im5vcm1hbCIKICAgICAgICAgZm9udC13ZWlnaHQ9Im5vcm1hbCIKICAgICAgICAgZm9udC1zaXplPSIyMTYiCiAgICAgICAgIGlkPSJ0ZXh0NzEiCiAgICAgICAgIHN0eWxlPSJmb250LXN0eWxlOm5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjIxNnB4O2ZvbnQtZmFtaWx5OlRpbWVzO3RleHQtYW5jaG9yOnN0YXJ0O2ZpbGw6IzAwMDAwMCI+aW50PC90ZXh0PgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg=="
-     ]
-    }
-   },
+   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![typing.svg](attachment:typing.svg)"
+    "![typing.svg](typing.svg)"
    ]
   },
   {
@@ -332,7 +336,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 92,
+   "execution_count": 125,
    "metadata": {},
    "outputs": [
     {
@@ -365,7 +369,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 93,
+   "execution_count": 126,
    "metadata": {},
    "outputs": [
     {
@@ -392,7 +396,61 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Creating strings\n",
+    "A *byte* can represent numbers between 0 and 255. A byte consists of 8 *bits*, which can in turn represent either 0 or 1. All the data that is stored on disks or transmitted across the internet are sequences of bytes. Normally we don't have to care about bytes, since our strings and other variables are automatically converted to a sequence of bytes when needed to. An example of the correspondence between the usual data types and bytes is the characters in a string. A single character is encoded as a sequence of one or more bytes. For example, in the common [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding the character `c` corresponds to the byte with integer value 99 and the character `ä` corresponds to sequence of bytes [195, 164]. An example conversion between characters and bytes:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "b'\\xc3\\xa4'\n",
+      "[195, 164]\n"
+     ]
+    }
+   ],
+   "source": [
+    "b=\"ä\".encode(\"utf-8\")     # Convert character(s) to a sequence of bytes\n",
+    "print(b)                  # Prints bytes in hexadecimal notation\n",
+    "print(list(b))            # Prints bytes in decimal notation"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'ä'"
+      ]
+     },
+     "execution_count": 128,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "bytes.decode(b, \"utf-8\")  # convert sequence of bytes to character(s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "During this course we don't have to care much about bytes, but in some cases, when loading data sets, we might have to specify the encoding if it deviates from the default one."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Creating strings\n",
     "A string is a sequence of characters commonly used to store input or output data in a program. The characters of a string are specified either between single (') or double (\") quotes. This optionaly is useful if a string needs to contain a quotation mark:\n",
     "\"I don't want to go!\". You can also achieve this by *escaping* the quotation mark with the backslash: 'I don\\'t want to go'.\n",
     "\n",
@@ -401,7 +459,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 94,
+   "execution_count": 129,
    "metadata": {},
    "outputs": [
     {
@@ -426,7 +484,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 95,
+   "execution_count": 130,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -444,7 +502,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 96,
+   "execution_count": 131,
    "metadata": {},
    "outputs": [
     {
@@ -472,7 +530,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 97,
+   "execution_count": 132,
    "metadata": {},
    "outputs": [
     {
@@ -499,7 +557,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 98,
+   "execution_count": 133,
    "metadata": {},
    "outputs": [
     {
@@ -523,7 +581,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 99,
+   "execution_count": 134,
    "metadata": {},
    "outputs": [
     {
@@ -548,7 +606,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 100,
+   "execution_count": 135,
    "metadata": {},
    "outputs": [
     {
@@ -569,6 +627,30 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "The specifier `%s` is used for strings. An example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "water concatenated with melon produces watermelon\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"%s concatenated with %s produces %s\" % (\"water\", \"melon\", \"water\"+\"melon\"))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "Look [here](https://pyformat.info/#number) for more details about format specifiers, and for comparison between the old and new style of string interpolation."
    ]
   },
@@ -576,7 +658,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Expressions\n",
+    "### Expressions\n",
     "An *expression* is a piece of Python code that results in a value. It consists of values combined together with *operators*. Values can be literals, such as `1`, `1.2`, `\"text\"`, or variables. Operators include arithmetics operators, comparison operators, function call, indexing, attribute references, among others. Below there are a few examples of expressions:"
    ]
   },
@@ -597,7 +679,6 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -616,13 +697,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Statements\n",
+    "### Statements\n",
     "Statements are command that have some effect. For example, a function call (that is not part of another expression) is a statement. Also, the variable assignment is a statement:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 101,
+   "execution_count": 137,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -649,13 +730,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Loops for repetitive tasks\n",
+    "#### Loops for repetitive tasks\n",
     "In Python we have two kinds of loops: while and for. We briefly saw the for loop earlier. Let's now look at the while loop. A while loop repeats a set of statements while a given condition holds. An example:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 102,
+   "execution_count": 138,
    "metadata": {},
    "outputs": [
     {
@@ -721,7 +802,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 103,
+   "execution_count": 139,
    "metadata": {},
    "outputs": [
     {
@@ -759,22 +840,72 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Decision making with the if statement\n",
-    "The if-else statement works as can be expected.\n",
-    "Try running the below cell by pressing control+enter."
+    "#### <div class=\"alert alert-info\">Exercise X (multiplication table)</div>\n",
+    "\n",
+    "In the main function print a multiplication table, which is shown below:\n",
+    "```\n",
+    "   1   2   3   4   5   6   7   8   9  10\n",
+    "   2   4   6   8  10  12  14  16  18  20\n",
+    "   3   6   9  12  15  18  21  24  27  30\n",
+    "   4   8  12  16  20  24  28  32  36  40\n",
+    "   5  10  15  20  25  30  35  40  45  50\n",
+    "   6  12  18  24  30  36  42  48  54  60\n",
+    "   7  14  21  28  35  42  49  56  63  70\n",
+    "   8  16  24  32  40  48  56  64  72  80\n",
+    "   9  18  27  36  45  54  63  72  81  90\n",
+    "  10  20  30  40  50  60  70  80  90 100\n",
+    "```\n",
+    "For example at row 4 and column 9 we have 4*9=36.\n",
+    "\n",
+    "Use two nested for loops to achive this. Note that you can use the following form to stop the `print` function from automatically starting a new line:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 104,
+   "execution_count": 140,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Give an integer: -2\n",
-      "The absolute value of -2 is 2\n"
+      "textmore text\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"text\", end=\"\")\n",
+    "print(\"more text\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Print the numbers in a field with width four, so that the numbers are nicely aligned. For instructions on how adjust the field width refer to [pyformat.info](https://pyformat.info/#number_padding).\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Decision making with the if statement\n",
+    "The if-else statement works as can be expected.\n",
+    "Try running the below cell by pressing control+enter."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Give an integer: -1\n",
+      "The absolute value of -1 is 1\n"
      ]
     }
    ],
@@ -794,7 +925,8 @@
    "source": [
     "The general from of an if-else statement is\n",
     "\n",
-    "```if condition1:\n",
+    "```\n",
+    "if condition1:\n",
     "    statement1_1\n",
     "    statement1_2\n",
     "    ...\n",
@@ -819,14 +951,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 105,
+   "execution_count": 142,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Give a number: -1\n",
+      "Give a number: -3\n",
       "c is negative\n"
      ]
     }
@@ -845,13 +977,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Breaking and continuing loop\n",
+    "#### Breaking and continuing loop\n",
     "Breaking the loop, when the wanted element is found, with the `break` statement:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 106,
+   "execution_count": 143,
    "metadata": {},
    "outputs": [
     {
@@ -879,7 +1011,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 107,
+   "execution_count": 144,
    "metadata": {},
    "outputs": [
     {
@@ -913,13 +1045,26 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Functions\n",
+    "#### <div class=\"alert alert-info\">Exercise X (two dice)</div>\n",
+    "\n",
+    "Let us consider throwing two dice. (A dice can give a value between 1 and 6.) Use two nested `for`\n",
+    "loops in the `main` function to iterate through all possible combinations the pair of dice can give. \n",
+    "There are 36 possible combinations. Print all those combinations as pairs that sum to 5. \n",
+    "For example, your printout should include the pair (2,3). Print one pair per line.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Functions\n",
     "A function is defined with the `def` statement. Let's do a doubling function."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 108,
+   "execution_count": 145,
    "metadata": {},
    "outputs": [
     {
@@ -946,7 +1091,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 109,
+   "execution_count": 146,
    "metadata": {},
    "outputs": [
     {
@@ -976,7 +1121,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 110,
+   "execution_count": 147,
    "metadata": {},
    "outputs": [
     {
@@ -1011,7 +1156,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 111,
+   "execution_count": 148,
    "metadata": {},
    "outputs": [
     {
@@ -1046,7 +1191,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 112,
+   "execution_count": 149,
    "metadata": {},
    "outputs": [
     {
@@ -1078,7 +1223,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 113,
+   "execution_count": 150,
    "metadata": {},
    "outputs": [
     {
@@ -1112,7 +1257,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 115,
+   "execution_count": 151,
    "metadata": {},
    "outputs": [
     {
@@ -1152,7 +1297,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 116,
+   "execution_count": 152,
    "metadata": {},
    "outputs": [
     {
@@ -1177,7 +1322,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": 153,
    "metadata": {},
    "outputs": [
     {
@@ -1205,7 +1350,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "With the default parameter this is the Euclidean distance, and if $p\\ne 2$ it is called [$p$-norm](https://en.wikipedia.org/wiki/P-norm)."
+    "With the default parameter this is the Euclidean distance, and if $p\\ne 2$ it is called [p-norm](https://en.wikipedia.org/wiki/P-norm)."
    ]
   },
   {
@@ -1219,7 +1364,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Visibility of variables\n",
+    "#### Visibility of variables\n",
     "Function definition creates a new namespace (also called local scope). Variables created inside this scope are not available from outside the function definition. Also, the function parameters are only visible inside the function definition. Variables that are not defined inside any function are called `global variables`.\n",
     "\n",
     "Global variable are readable also in local scopes, but an assignment creates a new local variable without rebinding the global variable. If we are inside a function, a local variable hides a global variable by the same name:"
@@ -1227,7 +1372,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 118,
+   "execution_count": 154,
    "metadata": {},
    "outputs": [
     {
@@ -1257,7 +1402,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 119,
+   "execution_count": 155,
    "metadata": {},
    "outputs": [
     {
@@ -1288,7 +1433,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
+   "execution_count": 156,
    "metadata": {},
    "outputs": [
     {
@@ -1323,16 +1468,76 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Data structures\n",
+    "#### <div class=\"alert alert-info\">Exercise X (triple square)</div>\n",
+    "\n",
+    "Write two functions: `triple` and `square`. Function `triple` multiplies its parameter by three. Function `square` raises its parameter to the power of two. For example, we have equalities `triple(5)==15`\n",
+    "and `square(5)==25`.\n",
+    "\n",
+    "Part 1.\n",
+    "\n",
+    "In the `main` function write a `for` loop that iterates through values 1 to 10, and for each value prints its triple and its square. The output should be as follows:\n",
+    "```\n",
+    "triple(1)==3 square(1)==1\n",
+    "triple(2)==6 square(2)==4\n",
+    "...\n",
+    "```\n",
+    "\n",
+    "Part 2.\n",
+    "\n",
+    "Now modify this `for` loop so that it stops iteration when the square of a value is larger than the\n",
+    "triple of the value, without printing anything in the last iteration.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (areas of shapes)</div>\n",
+    "\n",
+    "Create a program that can compute the areas of three shapes, triangles, rectangles and circles, when\n",
+    "their dimensions are given.\n",
+    "An endless loop should ask for which shape you want the area be calculated. If the user gives a\n",
+    "string that is none of the given shapes, the message “unknown shape!” should be printed.\n",
+    "An empty string will exit the loop.\n",
+    "Then it will ask for dimensions for that particular shape. When all the necessary dimensions are\n",
+    "given, it prints the area, and starts the loop all over again. Use format specifier \"%f\" for the radius.\n",
+    "What happens if you give incorrect dimensions, like giving string \"aa\" as radius? You don't have to check for errors in the input.\n",
+    "\n",
+    "Example interaction:\n",
+    "```\n",
+    "Choose a shape (triangle, rectangle, circle): triangle\n",
+    "Give base of the triangle: 20\n",
+    "Give height of the triangle: 5\n",
+    "The area is 50.000000\n",
+    "Choose a shape (triangle, rectangle, circle): rectangel\n",
+    "Unknown shape!\n",
+    "Choose a shape (triangle, rectangle, circle): rectangle\n",
+    "Give width of the rectangle: 20\n",
+    "Give height of the rectangle: 4\n",
+    "The area is 80.000000\n",
+    "Choose a shape (triangle, rectangle, circle): circle\n",
+    "Give radius of the circle: 10\n",
+    "The area is 314.159265\n",
+    "Choose a shape (triangle, rectangle, circle): \n",
+    "```\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Data structures\n",
     "The main data structures in Python are stringss, lists, tuples, dictionaries, and sets. We saw some examples of lists, when we discussed for loops. And we saw briefly tuples when we introduced argument packing and unpacking. Let's get into more details now.\n",
     "\n",
-    "## Sequences\n",
+    "#### Sequences\n",
     "A *list* contains arbitrary number of elements (even zero) that are stored in sequential order. The elements are separated by commas and written between brackets. The elements don't need to be of the same type. An example of a list with four values:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 121,
+   "execution_count": 157,
    "metadata": {},
    "outputs": [
     {
@@ -1341,7 +1546,7 @@
        "[2, 100, 'hello', 1.0]"
       ]
      },
-     "execution_count": 121,
+     "execution_count": 157,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1359,7 +1564,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 122,
+   "execution_count": 158,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1382,6 +1587,7 @@
     "As we can see, both lists and tuples can contain values different type.\n",
     "\n",
     "List, tuples, and strings are called *sequences* in Python, and they have several commonalities:\n",
+    "\n",
     "* their length can be queried with the `len` function\n",
     "* `min` and `max` function find the minimum and maximum element of a sequence, and `sum` adds all the elements of numbers together\n",
     "* Sequences can be concatenated with the `+` operator, and repeated with the `*` operator: `\"hi\"*3==\"hihihi\"`\n",
@@ -1399,7 +1605,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 123,
+   "execution_count": 159,
    "metadata": {},
    "outputs": [
     {
@@ -1408,7 +1614,7 @@
        "'bcd'"
       ]
      },
-     "execution_count": 123,
+     "execution_count": 159,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1428,7 +1634,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 124,
+   "execution_count": 160,
    "metadata": {},
    "outputs": [
     {
@@ -1447,13 +1653,35 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Modifying lists\n",
+    "#### <div class=\"alert alert-info\">Exercise X (solve quadratic)</div>\n",
+    "\n",
+    "In mathematics, the quadratic equation $ax^2+bx+c=0$ can be solved with the formula \n",
+    "$x=\\frac{-b\\pm \\sqrt{b^2 -4ac}}{2a}$. \n",
+    "\n",
+    "Write a function `solve_quadratic`, that returns both solutions of a generic quadratic as a pair (2-tuple)\n",
+    "when the coefficients are given as parameters. It should work like this:\n",
+    "```python\n",
+    "print(solve_quadratic(1,-3,2))\n",
+    "(2.0,1.0)\n",
+    "print(solve_quadratic(1,2,1))\n",
+    "(-1.0,-1.0)\n",
+    "```\n",
+    "\n",
+    "Use the `math.sqrt` function from the `math` module in your solution. Test that your function works in the main function!\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Modifying lists\n",
     "We can assign values to elements of a list by indexing or by slicing. An example:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 125,
+   "execution_count": 161,
    "metadata": {},
    "outputs": [
     {
@@ -1479,7 +1707,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 126,
+   "execution_count": 162,
    "metadata": {},
    "outputs": [
     {
@@ -1508,13 +1736,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "### Generating sequences\n",
+    "#### Generating sequences\n",
     "Trivial lists can be tedious to write: `[0,1,2,3,4,5,6]`. The function range creates numeric ranges automatically. The above sequence can be generated with the function call range(7). Note again that then end value is not included  in the sequence. An example of using the range function:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 127,
+   "execution_count": 163,
    "metadata": {},
    "outputs": [
     {
@@ -1545,7 +1773,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 128,
+   "execution_count": 164,
    "metadata": {},
    "outputs": [
     {
@@ -1577,7 +1805,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 129,
+   "execution_count": 165,
    "metadata": {},
    "outputs": [
     {
@@ -1596,7 +1824,203 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Dictionaries\n",
+    "#### Sorting sequences\n",
+    "\n",
+    "In Python there are two ways to sort sequences. The `sort` *method* modifies the original list, whereas the `sorted` *function* returns a new sorted list and leaves the original intact. A couple of examples will demonstrate this:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 166,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 3, 5, 7]\n",
+      "[1, 3, 6, 6, 7]\n",
+      "[6, 1, 7, 3, 6]\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=[5,3,7,1]\n",
+    "L.sort()      # here we call the sort method of the object L\n",
+    "print(L)\n",
+    "L2=[6,1,7,3,6]\n",
+    "print(sorted(L2))\n",
+    "print(L2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The parameter `reverse=True` can be given (both to sort and sorted) to get descending order of elements:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 167,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[7, 5, 3, 1]\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=[5,3,7,1]\n",
+    "print(sorted(L, reverse=True))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (merge)</div>\n",
+    "\n",
+    "Suppose we have two lists `L1` and `L2` that contain integers which are sorted in ascending order.\n",
+    "Create a function `merge` that gets these lists as parameters and returns a new sorted list `L` that has\n",
+    "all the elements of `L1` and `L2`. So, `len(L)` should equal to `len(L1)+len(L2)`. Do this using the\n",
+    "fact that both lists are already sorted. You can’t to use the `sorted` function or the `sort` method in implementing the `merge` method. You can however use these functions in the main function for creating inputs to the `merge` function.\n",
+    "Test with a couple of examples in the `main` function that your solution works correctly.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (detect ranges)</div>\n",
+    "\n",
+    "Create a function named `detect_ranges` that gets a list of integers as a parameter. The function\n",
+    "should then sort this list, and transform the list into another list where pairs are used for all the\n",
+    "detected intervals. So `3,4,5,6` is replaced by the pair `(3,7)`. Numbers that are not part of any\n",
+    "interval result just single numbers. The resulting list consists of these numbers and\n",
+    "pairs, separated by commas.\n",
+    "An example of how this function works:\n",
+    "```python\n",
+    "print(detect_ranges([2,5,4,8,12,6,7,10,13]))\n",
+    "[2,(4,9),10,(12,14)]\n",
+    "```\n",
+    "\n",
+    "Note that the second element of the pair does not belong to the range. This is consistent with the way Python's `range` function works.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Zipping sequences\n",
+    "\n",
+    "The `zip` function combines two (or more) sequences into one sequence. If, for example, two sequences are zipped together, the resulting list contains pairs. In general, if `n` sequences are zipped together, the elements of the resulting list contains `n`-tuples. Here's an example of using the `zip` function."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 168,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "On Monday it was rainy and the temperature was 10 degrees celsius.\n",
+      "On Tuesday it was rainy and the temperature was 12 degrees celsius.\n",
+      "On Wednesday it was sunny and the temperature was 12 degrees celsius.\n",
+      "On Thursday it was cloudy and the temperature was 9 degrees celsius.\n",
+      "On Friday it was rainy and the temperature was 9 degrees celsius.\n",
+      "On Saturday it was sunny and the temperature was 11 degrees celsius.\n",
+      "On Sunday it was sunny and the temperature was 11 degrees celsius.\n"
+     ]
+    }
+   ],
+   "source": [
+    "days=\"Monday Tuesday Wednesday Thursday Friday Saturday Sunday\".split()\n",
+    "weathers=\"rainy rainy sunny cloudy rainy sunny sunny\".split()\n",
+    "temperatures=[10,12,12,9,9,11,11]\n",
+    "for day, weather, temperature in zip(days,weathers,temperatures):\n",
+    "    print(\"On %s it was %s and the temperature was %i degrees celsius.\" % (day,weather,temperature))\n",
+    "\n",
+    "# Or equivalently, we following would be shorter:\n",
+    "#for t in zip(days,weathers,temperatures):\n",
+    "#    print(\"On %s it was %s and the temperature was %i degrees celsius.\" % t)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If the sequences are not of equal length, then the resulting sequence will be as long as the shortest input sequence is."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (interleave)</div>\n",
+    "\n",
+    "Write function `interleave` that gets arbitrary number of lists as parameters. You may assume that all the lists have equal length. The function should return one list containing all the elements from the input lists interleaved.\n",
+    "\n",
+    "Example:\n",
+    "`interleave([1,2,3], [20,30,40], ['a', 'b', 'c'])`\n",
+    "should return\n",
+    "`[1, 20, 'a', 2, 30, 'b', 3, 40, 'c']`.\n",
+    "Use the `zip` function and the `extend` method of the list object to implement `interleave`.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Enumerating sequences\n",
+    "\n",
+    "In some other programming languages one iterates through the elements using their indices (0,1, ...) in the sequence. In Python we normally don't need to think about indices when iterating, because the for loop allows simpler iteration through the elements. But sometimes you really need to know the index of the current element in the sequence. In this this one uses Python's `enumerate` function. In the next example we would like find the second occurrence of integer 5 in a list."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 169,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "7\n"
+     ]
+    }
+   ],
+   "source": [
+    "L=[1,2,98,5,-1,2,0,5,10]\n",
+    "counter = 0\n",
+    "for i, x in enumerate(L):\n",
+    "    if x == 5:\n",
+    "        counter += 1\n",
+    "        if counter == 2:\n",
+    "            break\n",
+    "print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "The `enumerate(L)` function call can be thought to be equivalent to `zip(range(len(L)), L)`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Dictionaries\n",
     "A *dictionary* is a dynamic, unordered container. Instead of using integers to access the elements of the container, the dictionary uses *keys* to acces the stored *values*. The dictionary can be created by listing the comma separated key-value pairs in braces. Keys and values are separated by a colon. A tuple (key,value) is called an *item* of the dictionary.\n",
     "\n",
     "Let's demonstrate the dictionary creation and usage:"
@@ -1604,7 +2028,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 130,
+   "execution_count": 170,
    "metadata": {},
    "outputs": [
     {
@@ -1634,7 +2058,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 131,
+   "execution_count": 171,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1651,7 +2075,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 132,
+   "execution_count": 172,
    "metadata": {},
    "outputs": [
     {
@@ -1670,7 +2094,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 135,
+   "execution_count": 173,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1708,7 +2132,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 136,
+   "execution_count": 174,
    "metadata": {},
    "outputs": [
     {
@@ -1717,7 +2141,7 @@
        "dict_values([1, 2, 3, 4, 5])"
       ]
      },
-     "execution_count": 136,
+     "execution_count": 174,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -1731,20 +2155,20 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Sets\n",
+    "#### Sets\n",
     "Set is a dynamic, unordered container. It works a bit like dictionary, but only the keys are stored. And each key can be stored only once. The set requires that the keys to be stored are hashable. Below are a few ways of creating a set:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 137,
+   "execution_count": 175,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "{'a', 1, 2}\n",
+      "{1, 2, 'a'}\n",
       "set()\n",
       "{7}\n"
      ]
@@ -1768,7 +2192,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 138,
+   "execution_count": 176,
    "metadata": {},
    "outputs": [
     {
@@ -1793,7 +2217,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 139,
+   "execution_count": 177,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1817,7 +2241,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 140,
+   "execution_count": 178,
    "metadata": {},
    "outputs": [
     {
@@ -1860,14 +2284,30 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Miscellaneous stuff\n",
+    "#### <div class=\"alert alert-info\">Exercise X (distinct characters)</div>\n",
+    "\n",
+    "Write function `distinct_characters` that gets a list of strings as a parameter. It should return a dictionary whose keys are the strings of the input list and the corresponding values are the numbers of distinct characters in the key.\n",
+    "\n",
+    "Use the `set` container to temporarily store the distinct characters in a string.\n",
+    "Example of usage:\n",
+    "`distinct_characters([\"check\", \"look\", \"try\", \"pop\"])`\n",
+    "should return\n",
+    "`{ \"check\" : 4, \"look\" : 3, \"try\" : 3, \"pop\" : 2}`.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Miscellaneous stuff\n",
     "\n",
     "To find out whether a container includes an element, the `in` operator can be used. The operator returns a truth values. Some examples of the usage:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 141,
+   "execution_count": 179,
    "metadata": {},
    "outputs": [
     {
@@ -1899,7 +2339,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 142,
+   "execution_count": 180,
    "metadata": {},
    "outputs": [
     {
@@ -1925,7 +2365,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 143,
+   "execution_count": 181,
    "metadata": {},
    "outputs": [
     {
@@ -1955,7 +2395,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 144,
+   "execution_count": 182,
    "metadata": {},
    "outputs": [
     {
@@ -1981,7 +2421,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 147,
+   "execution_count": 183,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -1999,7 +2439,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 148,
+   "execution_count": 184,
    "metadata": {},
    "outputs": [
     {
@@ -2027,13 +2467,55 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Compact way of creating data structures\n",
+    "#### <div class=\"alert alert-info\">Exercise X (reverse dictionary)</div>\n",
+    "\n",
+    "Let `d` be a dictionary that has English words as keys and a list of Finnish words as values. So, the\n",
+    "dictionary can be used to find out the Finnish equivalents of an English word in the following way:\n",
+    "\n",
+    "```\n",
+    "d[\"move\"]\n",
+    "[\"liikuttaa\"]\n",
+    "d[\"hide\"]\n",
+    "[\"piilottaa\", \"salata\"]\n",
+    "```\n",
+    "\n",
+    "Make a function `reverse_dictionary` that creates a Finnish to English dictionary based on a English to Finnish dictionary given as a parameter. It should work like this:\n",
+    "```\n",
+    "d={\"move\":[\"liikuttaa\"], \"hide\":[\"piilottaa\", \"salata\"]}\n",
+    "reverse_dictionary(d)\n",
+    "{’liikuttaa’: [’move’], ’salata’: [’hide’], ’piilottaa’: [’hide’]}\n",
+    "```\n",
+    "\n",
+    "Be careful with synonyms!&#8718;\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (find matching)</div>\n",
+    "\n",
+    "Write function `find_matching` that gets a list of strings and a search string as parameters. The function should return the indices to those elements in the input list that contain the search string.\n",
+    "\n",
+    "An example:\n",
+    "`find_matching([\"sensitive\", \"engine\", \"rubbish\", \"comment\"], \"en\")`\n",
+    "should return the list\n",
+    "`[0, 1, 3]`.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Compact way of creating data structures\n",
     "We can now easily create complicated data structures using for loops:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 149,
+   "execution_count": 185,
    "metadata": {},
    "outputs": [
     {
@@ -2074,7 +2556,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 150,
+   "execution_count": 186,
    "metadata": {},
    "outputs": [
     {
@@ -2105,7 +2587,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 151,
+   "execution_count": 187,
    "metadata": {},
    "outputs": [
     {
@@ -2133,7 +2615,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 152,
+   "execution_count": 188,
    "metadata": {},
    "outputs": [
     {
@@ -2170,7 +2652,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 153,
+   "execution_count": 189,
    "metadata": {},
    "outputs": [
     {
@@ -2195,7 +2677,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 154,
+   "execution_count": 190,
    "metadata": {},
    "outputs": [
     {
@@ -2215,8 +2697,19 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Processing sequences\n",
+    "#### <div class=\"alert alert-info\">Exercise X (two dice comprehension)</div>\n",
+    "\n",
+    "Redo the earlier exercise which printed all the pairs of two dice results that sum to 5. But this time use a list comprehension.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Processing sequences\n",
     "In this section we will go through some useful tool, are maybe familiar to you from some function programming language like *lisp* or *haskell*. These functions rely on functions being first-class objects in Python, that is, you can\n",
+    "\n",
     "* pass a function as a parameter to another function\n",
     "* return a function as a return value from some function\n",
     "* store a function in a data structure or a variable\n",
@@ -2228,21 +2721,21 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Map and lambda functions\n",
+    "#### Map and lambda functions\n",
     "The `map` function gets a list and a function as parameters, and it returns a new list whose\n",
     "elements are elements of the original list transformed by the parameter function. For this to work the parameter must take exactly one parameter and return a value. An example will clarify this concept:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 155,
+   "execution_count": 191,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "<map object at 0x7f06684055f8>\n"
+      "<map object at 0x7fe8cc6c86a0>\n"
      ]
     }
    ],
@@ -2262,7 +2755,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 156,
+   "execution_count": 192,
    "metadata": {},
    "outputs": [
     {
@@ -2287,7 +2780,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 157,
+   "execution_count": 193,
    "metadata": {},
    "outputs": [
     {
@@ -2316,7 +2809,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 158,
+   "execution_count": 194,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2333,7 +2826,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 159,
+   "execution_count": 195,
    "metadata": {},
    "outputs": [
     {
@@ -2353,7 +2846,23 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Filter function\n"
+    "#### <div class=\"alert alert-info\">Exercise X (transform)</div>\n",
+    "\n",
+    "Write a function `transform` that gets two strings as parameters and returns a list of integers. The function should split the strings into words, and convert these words to integer. This should give two lists of integers. Then the function should return a list whose elements are multiplication of two integers in the respective positions in the lists.\n",
+    "For example\n",
+    "`transform(\"1 5 3\", \"2 6 -1\")`\n",
+    "should return the list of integers\n",
+    "`[2, 30, -3]`.\n",
+    "\n",
+    "You **have** to use `split`, `map`, and `zip` functions/methods. You may assume that the two input strings are in correct format.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Filter function\n"
    ]
   },
   {
@@ -2365,7 +2874,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 160,
+   "execution_count": 196,
    "metadata": {},
    "outputs": [
     {
@@ -2395,13 +2904,25 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## The reduce function\n",
+    "#### <div class=\"alert alert-info\">Exercise X (positive list)</div>\n",
+    "\n",
+    "Write a function `positive_list` that gets a list of numbers as a parameter, and returns a list with the negative numbers filtered out using the `filter` function.\n",
+    "\n",
+    "The function call `positive_list([2,-2,1,-7])` should return the list `[2,1]`. Test your function in the `main` function.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### The reduce function\n",
     "The `sum` function that returns the sum of a numeric list, can be though to reduce a list to a single element. It does this reduction by repeated applying the `+` operator until all the list elements are consumed. For instance, the list [1,2,3,4] is reduced by the expression `(((0+1)+2)+3)+4` of repeated applications of the `+` operator. We could implement this with the following function:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 161,
+   "execution_count": 197,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2421,7 +2942,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 162,
+   "execution_count": 198,
    "metadata": {},
    "outputs": [
     {
@@ -2430,7 +2951,7 @@
        "10"
       ]
      },
-     "execution_count": 162,
+     "execution_count": 198,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2450,7 +2971,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 163,
+   "execution_count": 199,
    "metadata": {},
    "outputs": [
     {
@@ -2459,7 +2980,7 @@
        "24"
       ]
      },
-     "execution_count": 163,
+     "execution_count": 199,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2486,13 +3007,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# String handling\n",
+    "## String handling\n",
     "We have already seen how to index, slice, concatenate, and repeat strings. Let's now look into what methods the `str` class offers. In Python strings are immutable. This means that for instance the following assignment is not legal:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 164,
+   "execution_count": 200,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -2511,8 +3032,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Classification of strings\n",
+    "### Classification of strings\n",
     "All the following methods will take no parameters and return a truth value. An empty string will always result in `False`.\n",
+    "\n",
     "* `s.isalpha()` True if all characters are letters or digits\n",
     "* `s.isalpha()` True if all characters are letters\n",
     "* `s.isdigit()` True if all characters are digits\n",
@@ -2526,8 +3048,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## String transformations\n",
+    "### String transformations\n",
     "The following methods do conversions between lower and uppercase characters in the string. All these methods return a new string.\n",
+    "\n",
     "* `s.lower()`      Change all letters to lowercase\n",
     "* `s.upper()`      Change all letters to uppercase\n",
     "* `s.capitalize()` Change all letters to capitalcase\n",
@@ -2544,10 +3067,11 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Searching for substrings\n",
+    "### Searching for substrings\n",
     "All the following methods get the wanted substring as the\n",
     "parameter, except the replace method, which also gets the\n",
     "replacing string as a parameter\n",
+    "\n",
     "* `s.count(substr)` Counts the number of occurences of a substring\n",
     "* `s.find(substr)` Finds index of the first occurence of a substring, or -1\n",
     "* `s.rfind(substr)` Finds index of the last occurence of a substring, or -1\n",
@@ -2571,7 +3095,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Trimming and adjusting\n",
+    "### Trimming and adjusting\n",
     "* `s.strip(x)` Removes leading and trailing whitespace by default, or characters found in string x\n",
     "* `s.lstrip(x)` Same as strip but only leading characters are removed\n",
     "* `s.rstrip(x)` Same as strip but only trailing characters are removed\n",
@@ -2589,7 +3113,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 165,
+   "execution_count": 201,
    "metadata": {},
    "outputs": [
     {
@@ -2621,13 +3145,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Joining and splitting\n",
+    "### Joining and splitting\n",
     "The `join(seq)` method joins the strings of the sequence `seq`. The string itself is used as a delimitter. An example:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 166,
+   "execution_count": 202,
    "metadata": {},
    "outputs": [
     {
@@ -2636,7 +3160,7 @@
        "'abc--def--ghi'"
       ]
      },
-     "execution_count": 166,
+     "execution_count": 202,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2647,7 +3171,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 167,
+   "execution_count": 203,
    "metadata": {},
    "outputs": [
     {
@@ -2685,7 +3209,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 168,
+   "execution_count": 204,
    "metadata": {},
    "outputs": [
     {
@@ -2694,7 +3218,7 @@
        "['abc', 'def', 'ghi']"
       ]
      },
-     "execution_count": 168,
+     "execution_count": 204,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2707,14 +3231,729 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Regular expressions"
+    "#### <div class=\"alert alert-info\">Exercise X (acronyms)</div>\n",
+    "\n",
+    "Write function `acronyms` which takes a string as a parameter and returns a list of acronyms. A word is an acronym if it has length at least two, and all its characters are in uppercase. Before acronym detection, delete punctuation with the `strip` method.\n",
+    "\n",
+    "Test this function in the `main` function with the following call:\n",
+    "```python\n",
+    "print(acronyms(\"\"\"For the purposes of the EU General Data Protection Regulation (GDPR), the controller of your personal information is International Business Machines Corporation (IBM Corp.), 1 New Orchard Road, Armonk, New York, United States, unless indicated otherwise. Where IBM Corp. or a subsidiary it controls (not established in the European Economic Area (EEA)) is required to appoint a legal representative in the EEA, the representative for all such cases is IBM United Kingdom Limited, PO Box 41, North Harbour, Portsmouth, Hampshire, United Kingdom PO6 3AU.\"\"\"))\n",
+    "```\n",
+    "\n",
+    "This should return MISSING!!!!!!!\n",
+    "<hr/>"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Basic file processing"
+    "#### <div class=\"alert alert-info\">Exercise X (sum equation)</div>\n",
+    "\n",
+    "Write a function `sum_equation` which takes a list of positive integers as parameters and returns a string with an equation of the sum of the elements.\n",
+    "\n",
+    "Example:\n",
+    "`sum_equation([1,5,7])`\n",
+    "returns\n",
+    "`\"1 + 5 + 7 = 13\"`\n",
+    "Observe, the spaces should be exactly as shown above. For an empty list the function should return the string \"0 = 0\".\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Modules"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "To ease management of large programs, software is divided\n",
+    "into smaller pieces. In Python these pieces are called *modules*.\n",
+    "A module should be a unit that is as independent from other\n",
+    "modules as possible.\n",
+    "Each file in Python corresponds to a module.\n",
+    "Modules can contain classes, objects, functions, ...\n",
+    "For example, functions to handle regular expressions are in\n",
+    "module `re`\n",
+    "\n",
+    "The standard library of Python consists of hundreds of\n",
+    "modules. Some of the most common standard modules include\n",
+    "\n",
+    "* `re`\n",
+    "* `math`\n",
+    "* `random`\n",
+    "* `os`\n",
+    "* `sys`\n",
+    "\n",
+    "Any file with extension `.py` that contains Python source code\n",
+    "is a module. So, no special notation is needed to create a module."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Using modules\n",
+    "\n",
+    "Let’s say that we need to use the cosine function.\n",
+    "This function, and many other mathematical functions are\n",
+    "located in the `math` module.\n",
+    "To tell Python that we want to access the features offered by\n",
+    "this module, we can give the statement `import math`.\n",
+    "Now the module is loaded into memory.\n",
+    "We can now call the function like this:\n",
+    "```python\n",
+    "math.cos(0)\n",
+    "1.0\n",
+    "```\n",
+    "\n",
+    "Note that we need to include the module name where the `cos`\n",
+    "function is found.\n",
+    "This is because other modules may have a function (or other\n",
+    "attribute of a module) with the same name.\n",
+    "This usage of different namespace for each module prevents\n",
+    "name clashes. For example, `gzip.open`, `os.open` are not to be confused\n",
+    "with the builtin `open` function."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Breaking the namespace\n",
+    "\n",
+    "If the cosine is needed a lot, then it might be tedious to\n",
+    "always specify the namespace, especially if the name of the\n",
+    "namespace/module is long.\n",
+    "For these cases there is another way of importing modules.\n",
+    "Bring a name to the current scope with\n",
+    "`from math import cos` statement.\n",
+    "Now we can used it without the namespace specifier: `cos(1)`.\n",
+    "\n",
+    "Several names can be imported to the current scope with\n",
+    "from `math import name1, name2, ...`\n",
+    "Or even all names of the module with `from math import *`\n",
+    "The last form is sensible only in few cases, normally it just\n",
+    "confuses things since the user may have no idea what names\n",
+    "will be imported."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Module lookup\n",
+    "\n",
+    "When we try to import a module mod with the import\n",
+    "statement, the lookup proceeds in the following order:\n",
+    "\n",
+    "* Check if it is a builtin module\n",
+    "* Check if the file `mod.py` is found in any of the directories in\n",
+    "the list `sys.path`. The first item in this list is the current\n",
+    "directory\n",
+    "* When Python is started, the `sys.path` list is initialised with\n",
+    "the contents of the `PYTHONPATH` environment variable"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Module hierarchy\n",
+    "\n",
+    "The standard library contains hundreds of modules.\n",
+    "Hence, it is hard to comprehend what the library includes.\n",
+    "The modules therefore need to be organised somehow.\n",
+    "In Python the modules can be organised into hierarchies using\n",
+    "packages.\n",
+    "A package is a module that can contain other packages and\n",
+    "modules.\n",
+    "For example, the `numpy` package contains subpackages core,\n",
+    "distutils, f2py, fft, lib, linalg, ma, numarray, oldnumeric,\n",
+    "random, and testing.\n",
+    "And package `numpy.linalg` in turn contains modules `linalg`,\n",
+    "`lapack_lite` and `info`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Importing from packages\n",
+    "\n",
+    "The statement `import numpy` imports the top-level package `numpy`\n",
+    "but not its subpackages:\n",
+    "\n",
+    "* `import numpy.linalg` imports the subpackage, and\n",
+    "* `import numpy.linalg.linalg` imports the module only\n",
+    "\n",
+    "If we want to skip the long namespace specification, we can\n",
+    "use the form\n",
+    "\n",
+    "```python\n",
+    "from numpy.linalg import linalg\n",
+    "```\n",
+    "\n",
+    "or\n",
+    "\n",
+    "```python\n",
+    "from numpy.linalg import linalg as lin\n",
+    "```\n",
+    "\n",
+    "if we want to use a different name for the module. The following command imports the function `det` (computes the determinant of a matrix) from the module linalg, which is contained in a subpackage linalg, which belongs to package numpy:\n",
+    "```python\n",
+    "from numpy.linalg.linalg import det\n",
+    "```\n",
+    "\n",
+    "PIIRRÄ KUVA YLLÄOLEVASTA."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Correspondence between folder and module hierarchies\n",
+    "\n",
+    "The packages are represented by folders in the filesystem.\n",
+    "The folder should contain a file named `__init__.py` that\n",
+    "makes up the package body. This handles the initialisation of\n",
+    "the package.\n",
+    "The directory may contain also further directories\n",
+    "(subpackages) or Python files (normal modules).\n",
+    "\n",
+    "```\n",
+    "a/\n",
+    "    __init__.py\n",
+    "    b.py\n",
+    "    c/\n",
+    "        __init__.py\n",
+    "        d.py\n",
+    "        e.py\n",
+    "```\n",
+    "![package.svg](package.svg)"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Contents of a module\n",
+    "\n",
+    "Suppose we have a module named `mod.py`.\n",
+    "All the assignments, class definitions with the `class` statement,\n",
+    "and function definitions with `def` statement will create new\n",
+    "attributes to this module.\n",
+    "Let’s import this module from another Python file using the\n",
+    "`import mod` statement.\n",
+    "After the import we can access the attributes of the module\n",
+    "object using the normal dot notation: `mod.f()`,\n",
+    "`mod.myclass()`, `mod.a`, etc.\n",
+    "Note that Python doesn’t really have global variables that are\n",
+    "visible to all modules. All variables belong to some module\n",
+    "namespace.\n",
+    "\n",
+    "Just like other objects, the module object contains its\n",
+    "attributes in the dictionary `modulename.__dict__`\n",
+    "Usually a module contains at least the attributes name and\n",
+    "file . Other common attributes are `__version__`,\n",
+    "`__author__` and `__doc__` , which contains the docstring of the\n",
+    "module.\n",
+    "If the first statement of a file is a string, this is taken as the\n",
+    "docstring of that module.\n",
+    "The attribute `__file__` is always the filename of the module.\n",
+    "\n",
+    "The module attribute `__name__` has value `“__main__”` if we in are the main program,\n",
+    "otherwise some other module has imported us and name\n",
+    "equals `__file__`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise x (usemodule) </div>\n",
+    "\n",
+    "Create your own module as file `triangle.py` in the `src` folder. The module should contain two functions:\n",
+    "\n",
+    "* `hypothenuse` which returns the length of the hypothenuse when given the lengths of two other sides of a right-angled triangle\n",
+    "* `area` which returns the area of the right-angled triangle, when two sides, perpendicular to each other, are given as parameters.\n",
+    "\n",
+    "Make sure both the functions and the module have descriptive docstrings. Add also the `__version__` and `__author__` attributes to the module. Call both your functions from the main function (which is in file `usemodule.py`)."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Regular expressions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Examples\n",
+    "\n",
+    "We have already seen that we can ask from a string str\n",
+    "whether it begins with some substring as follows:\n",
+    "`str.startswith(’Apple’)`.\n",
+    "If we would like to know whether it starts with `”Apple”` or\n",
+    "`”apple”`, we would have to call `startswith` method twice.\n",
+    "Regular expressions offer a simpler solution:\n",
+    "`re.match(r’[Aa]pple’, str)`.\n",
+    "The bracket notation is one example of the special syntax of\n",
+    "*regular expressions*. In this case it says that any of the\n",
+    "characters inside brackets will do: either `’A’` or `’a’`. The other\n",
+    "letters in `”pple”` will act normally. The string `r’[Aa]pple’` is\n",
+    "called a pattern.\n",
+    "\n",
+    "A more complicated example asks whether the string `str`\n",
+    "starts with either `apple` or `banana` (no matter if the first letter\n",
+    "is capital or not):\n",
+    "`re.match(r’[Aa]pple|[Bb]anana’, str)`.\n",
+    "In this example we saw a new special character `|` that denotes\n",
+    "an alternative. On either side of the bar character we have a\n",
+    "subpattern.\n",
+    "\n",
+    "A legal variable name in Python starts with a letter or an\n",
+    "underline character and the following characters can also be\n",
+    "digits.\n",
+    "So legal names are, for instance: `_hidden`, `L_value`, `A123_`.\n",
+    "But the name `2abc` is not a valid variable name.\n",
+    "Let’s see what would be the regular expression pattern to\n",
+    "recognise valid variable names:\n",
+    "`r’[A-Za-z_][A-Za-z_0-9]*\\Z’`.\n",
+    "Here we have used a shorthand for character ranges: `A-Z`.\n",
+    "This means all the characters from `A` to `Z`.\n",
+    "\n",
+    "The first character of the variable name is defined in the first\n",
+    "brackets. The subsequent characters are defined in the second\n",
+    "brackets.\n",
+    "The special character `*` means that we allow any number\n",
+    "(0,1,2, . . . ) of the previous subpattern. For example the\n",
+    "pattern `r’ba*’` allows strings `’b’`, `’ba’`, `’baa’`, `’baaa’`, and\n",
+    "so on.\n",
+    "The special syntax `\\Z` denotes the end of the string.\n",
+    "Without it we would also accept `abc$` as a valid name since\n",
+    "match normally checks only that a string starts with a pattern.\n",
+    "\n",
+    "The special notations, like `\\Z`, also cause problems with string\n",
+    "handling.\n",
+    "Remember that normally in string literals we have some\n",
+    "special notation: `\\n` stands for newline, `\\t` stands for tab, and\n",
+    "so on.\n",
+    "So, both string literals and regular expressions use similar\n",
+    "looking notations, which can create serious confusion.\n",
+    "This can be solved by using the so-called raw strings. We\n",
+    "denote a raw string by having an r letter before the first\n",
+    "quotation mark, for example `r’ab*\\Z’`.\n",
+    "When using raw strings, the newline (`\\n`), tab (`\\t`), and other\n",
+    "special string literal notations aren’t interpreted. One should\n",
+    "always use raw strings when defining regular expression\n",
+    "patterns."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Patterns\n",
+    "\n",
+    "A pattern represents a set of strings. This set can even be\n",
+    "potentially infinite.\n",
+    "They can be used to describe a set of strings that have some\n",
+    "commonality; some regular structure.\n",
+    "Regular expressions are a classical computer science topic.\n",
+    "They are very common in programming tasks. Scripting\n",
+    "languages, like Python, are very fluent in regular expressions.\n",
+    "Very complex text processing can be achieved using regular\n",
+    "expressions.\n",
+    "\n",
+    "Normal characters (letters, numbers) just represent\n",
+    "themselves, unless preceded by a backslash, which may trigger\n",
+    "some special meaning\n",
+    "Punctuation characters have special meaning, unless preceded\n",
+    "by backslash (\\), which deprives their special meaning.\n",
+    "Use \\\\ to represent a backslash character without any special\n",
+    "meaning.\n",
+    "In the following slides we will go through some of the more\n",
+    "common RE notations.\n",
+    "\n",
+    "```\n",
+    ". Matches any character\n",
+    "[...] Matches any character contained within the brackets\n",
+    "[^...] Matches any character not appearing after the hat (ˆ)\n",
+    "ˆ Matches the start of the string\n",
+    "$ Matches the end of the string\n",
+    "* Matches zero or more previous RE\n",
+    "+ Matches one or more previous RE\n",
+    "{m,n} Matches m to n occurences of previous RE\n",
+    "? Matches zero or one occurences of previous RE\n",
+    "```\n",
+    "\n",
+    "We have already seen that a `|` character denotes alternatives.\n",
+    "For example, the pattern `r’Get (on|off|ready)’` matches\n",
+    "the following strings: `”Get on”`, `”Get off”`, `”Get ready”`.\n",
+    "We can use parentheses to create groupings inside a pattern:\n",
+    "`r’(ab)+’` will match the strings `”ab”`, `”abab”`, `”ababab”`,\n",
+    "and so on.\n",
+    "These groups are also given a reference number starting from 1. \n",
+    "We can refer to groups using backreferences: `\\number`.\n",
+    "For example, we can find separated patterns that get\n",
+    "repeated: `r’([a-z]{3,}) \\1 \\1’`.\n",
+    "This will recognise, for example, the following strings: `\"aca\n",
+    "aca aca\"`, `\"turn turn turn\"`. But not the strings `\"aca\n",
+    "aba aca\"` or `\"ac ac ac\"`.\n",
+    "\n",
+    "\n",
+    "In the following, note that a hat (ˆ) as the first character\n",
+    "inside brackets will create a complement set of characters:\n",
+    "\n",
+    "```\n",
+    "`\\d` same as `[0-9]`, matches a digit\n",
+    "`\\D` same as `[ˆ0-9]`, matches anything but a digit\n",
+    "`\\s` matches a whitespace character (newline, tab, ... )\n",
+    "`\\S` matches a nonwhitespace character\n",
+    "`\\w` same as `[a-zA-Z0-9_]`, matches one alphanumeric character\n",
+    "`\\W` matches one non-alphanumeric character\n",
+    "```\n",
+    "\n",
+    "Using the above notation we can now shorten our previous\n",
+    "variable name example to `r’[a-zA-Z_]\\w*\\Z’`\n",
+    "\n",
+    "The patterns `\\A`, `\\b`, `\\B`, and `\\Z` will all match an empty\n",
+    "string, but in specific places.\n",
+    "The patterns `\\A` and `\\Z` will recognise the beginning and end\n",
+    "of the string, respectively.\n",
+    "Note that the patterns `ˆ` and `$` can in some cases match also\n",
+    "after a newline and before a newline, correspondingly.\n",
+    "So, `\\A` is distinct from `ˆ`, and `\\Z` is distinct from `$`.\n",
+    "The pattern `\\b` matches at the start or end of a word. The\n",
+    "pattern `\\B` does the reverse."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Match and search functions\n",
+    "\n",
+    "We have so far only used the re.match function which tries\n",
+    "to find a match at the beginning of a string\n",
+    "The function re.search allows to match any substring of a\n",
+    "string.\n",
+    "Example: `re.search(r'\\bback\\b', s)` will match\n",
+    "strings `\"back\"`, `\"a back, is a body part\"`, `\"get back\"`. But it\n",
+    "will not match the strings `\"backspace\"` or `\"comeback\"`.\n",
+    "\n",
+    "The function `re.search` finds only the first occurence.\n",
+    "We can use the `re.findall` function to find all occurences.\n",
+    "Let’s say we want to find all present participle words in a\n",
+    "string `s`. The present participle words have ending `'ing'`.\n",
+    "The function call would look like this:\n",
+    "`re.findall(r'\\w+ing\\b', s)`.\n",
+    "Let’s try running this:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 205,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Doing', 'going', 'staying', 'sleeping']"
+      ]
+     },
+     "execution_count": 205,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "import re\n",
+    "s = \"Doing things, going home, staying awake, sleeping later\"\n",
+    "re.findall(r'\\w+ing\\b', s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Let’s say we want to pick up all the integers from a string.\n",
+    "We can try that with the following function call:\n",
+    "`re.findall(r'[+-]?\\d+', s)`.\n",
+    "An example run:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 206,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['23', '-24', '-1']"
+      ]
+     },
+     "execution_count": 206,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "re.findall(r'[+-]?\\d+', \"23 + -24 = -1\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Suppose we are given a string of if/then sentences, and we\n",
+    "would like to extract the conditions from these sentences.\n",
+    "Let’s try the following function call:\n",
+    "`re.findall(r'[Ii]f (.*), then', s)`.\n",
+    "An example run:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 207,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['I’m not in a hurry, then I should stay. On the other hand, if I leave']"
+      ]
+     },
+     "execution_count": 207,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "s = (\"If I’m not in a hurry, then I should stay. \" +\n",
+    "    \"On the other hand, if I leave, then I can sleep.\")\n",
+    "re.findall(r'[Ii]f (.*), then', s)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "But I wanted a result: `[\"I'm not in a hurry\", 'I leave']`. That\n",
+    "is, the condition from both sentences. How can this be fixed?\n",
+    "\n",
+    "The problem is that the pattern `.*` tries to match as many\n",
+    "characters as possible.\n",
+    "This is called *greedy matching*.\n",
+    "One way of solving this problem is to notice that the two\n",
+    "sentences are separated by a full-stop (.).\n",
+    "So, instead of matching all the characters, we need to match\n",
+    "everything but the dot character.\n",
+    "This can be achieved by using the complement character\n",
+    "class: `[^.]`. The hat character (`ˆ`) in the beginning of a\n",
+    "character class means the complement character class\n",
+    "\n",
+    "After the modification the function call looks like this:\n",
+    "`re.findall(r'[Ii]f ([^.]*), then', s)`.\n",
+    "Another way of solving this problem is to use a non-greedy\n",
+    "matching.\n",
+    "The repetition specifiers `+`, `*`, `?`, and `{m,n}` have\n",
+    "corresponding non-greedy versions: `+?`, `*?`, `??`, and `{m,n}?`.\n",
+    "These expressions use as few characters as possible to make\n",
+    "the whole pattern match some substring.\n",
+    "By using non-greedy version, the function call looks like this:\n",
+    "`re.findall(r’[Ii]f (.*?), then’, s)`.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Functions in the `re` module\n",
+    "\n",
+    "Below is a list of the most common functions in the `re` module\n",
+    "\n",
+    "* re.match(pattern, str)\n",
+    "* re.search(pattern, str)\n",
+    "* re.findall(pattern, str)\n",
+    "* re.finditer(pattern, str)\n",
+    "* re.sub(pattern, replacement, str, count=0)\n",
+    "\n",
+    "Functions match and search return a match object.\n",
+    "A match object describes the found occurence.\n",
+    "The function findall returns a list of all the occurences of\n",
+    "the pattern. The elements in the list are strings.\n",
+    "The function finditer works like findall function except\n",
+    "that instead of returning a list, it returns an iterator whose\n",
+    "items are match objects.\n",
+    "The function sub replaces all the occurences of the pattern in\n",
+    "str with the string replacement and returns the new string.\n",
+    "\n",
+    "An example: The following program will replace all ”she”\n",
+    "words with ”he”\n",
+    "\n",
+    "```\n",
+    "import re\n",
+    "str = \"She goes where she wants to, she's a sheriff.\"\n",
+    "newstr = re.sub(r'\\b[Ss]he\\b', 'he', str)\n",
+    "print newstr\n",
+    "```\n",
+    "\n",
+    "This will print `he goes where he wants to, he's a sheriff.`\n",
+    "\n",
+    "The `sub` function can also use backreferences to refer to the\n",
+    "matched string. The backreferences \\1, \\2, and so on, refer\n",
+    "to the groups of the pattern, in order.\n",
+    "An example:\n",
+    "```\n",
+    "import re\n",
+    "str = \"\"\"He is the president of Russia.\n",
+    "He’s a powerful man.\"\"\"\n",
+    "newstr = re.sub(r'(\\b[Hh]e\\b)', r'\\1 (Putin)', str, 1)\n",
+    "print newstr\n",
+    "```\n",
+    "\n",
+    "This will print\n",
+    "```\n",
+    "He (Putin) is the president of Russia.\n",
+    "He’s a powerful man.\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Match object\n",
+    "\n",
+    "Functions `match`, `search`, and `finditer` use `match` objects\n",
+    "to describe the found occurence.\n",
+    "The method `groups()` of the match object returns the tuple\n",
+    "of all the substrings matched by the groups of the pattern.\n",
+    "Each pair of parentheses in the pattern creates a new group.\n",
+    "These groups are are referred to by indices 1, 2, ...\n",
+    "The group 0 is a special one: it refers to the match created by\n",
+    "the whole pattern.\n",
+    "\n",
+    "Let’s look at the match object returned by the call\n",
+    "\n",
+    "```\n",
+    "mo = re.search(r'\\d+ (\\d+) \\d+ (\\d+)',\n",
+    "'first 123 45 67 890 last')\n",
+    "```\n",
+    "\n",
+    "The call `mo.groups()` returns a tuple `(’45’, ’890’)`.\n",
+    "We can access just some individual groups by using the\n",
+    "method `group(gid, ...)`.\n",
+    "For example, the call `mo.group(1)` will return `’45’`.\n",
+    "The zeroth group will represent the whole match:\n",
+    "`’123 45 67 890’`\n",
+    "\n",
+    "In addition to accessing the strings matched by the pattern\n",
+    "and its groups, the corresponding indices of the original string\n",
+    "can be accessed:\n",
+    "\n",
+    "* The `start(gid=0)` and `end(gid=0)` methods return the start\n",
+    "and end indices of the matched group gid, correspondingly\n",
+    "* The method `span(gid)` just returns the pair of these start\n",
+    "and end indices\n",
+    "\n",
+    "The match object mo can also be used like a boolean value:\n",
+    "\n",
+    "```python\n",
+    "mo = re.search(...)\n",
+    "if mo:\n",
+    "    # do something\n",
+    "```\n",
+    "\n",
+    "will do something if a match was found.\n",
+    "Alternatively, the match object can be converted to a boolean\n",
+    "value by the call `found = bool(mo)`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Miscellaneous stuff\n",
+    "\n",
+    "If the same pattern is used in many function calls, it may be\n",
+    "wise to precompile the pattern, mainly for efficiency reasons.\n",
+    "This can be done using the 'compile(pattern, flags=0)' function\n",
+    "in the re module. The function returns a so-called RE object.\n",
+    "The RE object has method versions of the functions found in\n",
+    "module 're'.\n",
+    "The only difference is that the first parameter is not the\n",
+    "pattern since the precompiled pattern is stored in the RE\n",
+    "object.\n",
+    "\n",
+    "The details of matching operation can be specified using\n",
+    "optional flags.\n",
+    "These flags can be given either inside the pattern or as a\n",
+    "parameter to the compile function.\n",
+    "Some of the more common flags are given in the following\n",
+    "table\n",
+    "\n",
+    "| x   | Flag |\n",
+    "|-----|--------------|\n",
+    "|`(?i)` | re.IGNORECASE|\n",
+    "|`(?m)` | re.MULTILINE|\n",
+    "|`(?s)` | re.DOTALL|\n",
+    "-------------------------\n",
+    "\n",
+    "The elements on the left can appear anywhere in the pattern\n",
+    "but preferably in the beginning.\n",
+    "On the right there are attributes of the re module that can be\n",
+    "given to the compile function as the second parameter\n",
+    "\n",
+    "The `IGNORECASE` flag makes lower- and uppercase\n",
+    "characters appear as equal.\n",
+    "The `MULTILINE` flag makes the special characters `ˆ` and `$`\n",
+    "match the beginning and end of each line in addition to the\n",
+    "beginning and end of the whole string. These flags make `\\A`\n",
+    "differ from `ˆ`, and `\\Z` differ from `$`.\n",
+    "The `DOTALL` flag makes the character class `.` (dot) also\n",
+    "accept the newline character, in addition to all the other\n",
+    "letters.\n",
+    "\n",
+    "When giving multiple flags to the compile function, the flags\n",
+    "can be separated with the `|` sign.\n",
+    "For example, `re.compile(pattern, re.MULTILINE | re.DOTALL)`.\n",
+    "This is equal to `re.compile('(?m)(?s)' + pattern)`."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (integers in brackets)</div>\n",
+    "\n",
+    "Write function `integers_in_brackets` that finds from a given string all integers that are enclosed in brackets.\n",
+    "\n",
+    "Example run:\n",
+    "`integers_in_brackets(\"  afd [asd] [12 ] [a34]  [ -43 ]tt [+12]xxx\")`\n",
+    "returns\n",
+    "`[12, -43, 12]`.\n",
+    "So there can be whitespace between the number and the brackets, but no other character besides those that make up the integer.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Basic file processing"
    ]
   },
   {
@@ -2746,13 +3985,14 @@
     "For binary mode the contents of the file are not interpreted in any way, and the read and write methods handle bytes. (A byte consists of 8 bits and can be used to represent a number in the range 0 to 255.)\n",
     "\n",
     "In the text mode two interpretations happen\n",
+    "\n",
     "* On Windows operating system the end of line in files is encoded by two characters. When the file is read these two charactes are converted to `'\\n'` character. During writes to a file this conversion happens in the opposite direction.\n",
     "* One character is encoded in the file as one or more bytes. This conversion happens automatically during read and write operations. One common encoding between bytes and characters is utf-8. In this encoding, the Finnish character `'ä'`, for example, is encoded as the following sequence of bytes:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 169,
+   "execution_count": 208,
    "metadata": {},
    "outputs": [
     {
@@ -2761,7 +4001,7 @@
        "b'\\xc3\\xa4'"
       ]
      },
-     "execution_count": 169,
+     "execution_count": 208,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2774,7 +4014,34 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Above the two bytes were expressed as hexadecimals. In decimal notation they would be 195 and 164. (Both in the range from 0 to 255.) What is the utf-8 encoding of the letter `'a'`?\n",
+    "Above the two bytes were expressed as hexadecimals. In decimal notation they would be 195 and 164. (Both in the range from 0 to 255.)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 209,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[195, 164]"
+      ]
+     },
+     "execution_count": 209,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "list(\"ä\".encode(\"utf-8\"))              # Show as a list of integers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "What is the utf-8 encoding of the letter `'a'`?\n",
     "\n",
     "During this course we will only consider files containing text, so the default text mode is fine for us."
    ]
@@ -2783,7 +4050,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Some common file object methods\n",
+    "### Some common file object methods\n",
     "* `read(size)` will read size characters/bytes as a string\n",
     "* `write(string)` will write string/bytes to a file\n",
     "* `readline()` will read a string until and including the next newline character is met\n",
@@ -2794,7 +4061,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 170,
+   "execution_count": 210,
    "metadata": {
     "scrolled": true
    },
@@ -2831,7 +4098,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 171,
+   "execution_count": 211,
    "metadata": {},
    "outputs": [
     {
@@ -2863,14 +4130,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 172,
+   "execution_count": 212,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "The longest line in this file has length 32497\n"
+      "The longest line in this file has length 1002\n"
      ]
     }
    ],
@@ -2887,8 +4154,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Standard file objects\n",
+    "### Standard file objects\n",
     "Python has automatically three file objects open:\n",
+    "\n",
     "* `sys.stdin` for *standard input*\n",
     "* `sys.stdout` for *standard output*\n",
     "* `sys.stderr` for *standard error*\n",
@@ -2899,31 +4167,25 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 173,
+   "execution_count": 213,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Give a positive integer: -1\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "You gave a negative integer.\n"
+      "Got a positive integer.\n"
      ]
     }
    ],
    "source": [
     "import sys\n",
-    "i=int(input(\"Give a positive integer: \"))\n",
+    "import random\n",
+    "i=random.randint(-10,10)\n",
     "if i >= 0:\n",
-    "    sys.stdout.write(\"You gave a positive integer.\\n\")\n",
+    "    sys.stdout.write(\"Got a positive integer.\\n\")\n",
     "else:\n",
-    "    sys.stderr.write(\"You gave a negative integer.\\n\")"
+    "    sys.stderr.write(\"Got a negative integer.\\n\")"
    ]
   },
   {
@@ -2939,14 +4201,543 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Objects and classes"
+    "## sys module\n",
+    "\n",
+    "We saw above that the `sys` module contains the three file objects `sys.stdin`, `sys.stdout`, and `sys.stderr`. It has also few other useful attributes. The attribute `sys.path` is the list of folders that Python uses to look for imported modules. The list `sys.argv` contains the so called *command line parameters*. For example in Linux if you are using the terminal, then you can run your program with the command `python3 programname.py param1 param2 ...`. After Python has started your program, the command line parameters are visible as follows. The name of the program is in `sys.argv[0]`. The rest of the command line parameters are after the program name in this list: `sys.argv[1]==\"param1\"`, `sys.argv[2]==\"param2\"`, and so on. The command line parameters can be useful in adjusting the behaviour of your program. A few examples of these will be in the following exercises. (The terminal window is a textual interface to your computer instead of the usual graphical interface.)\n",
+    "\n",
+    "The function `sys.exit` can be used to exit immediately your program. The integer parameter given to this function is the return value of the program. Usually the return value 0 means that the program ran successfully, and non-zero integer means that an error occurred. This return value is accessible from the terminal window from where you started the program."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Exceptions"
+    "#### <div class=\"alert alert-info\">Exercise X (word frequencies)</div>\n",
+    "\n",
+    "Create function `word_frequencies` that gets a filename as a parameter and returns a dict with the word frequencies. In the dictionary the keys are the words and the corresponding values are the number of times that word occurred in the file specified by the function parameter. Read all the lines from the file and split the lines into words using the `split()` method. Further, remove punctuation from the words using the `strip('\"[],.:?!')` method call.\n",
+    "\n",
+    "Test this function in the main function using the file `alice.txt`. The output format should be like:\n",
+    "MISSING!!!!\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (summary)</div>\n",
+    "\n",
+    "Part 1.\n",
+    "\n",
+    "Create a function called `summary` that gets a filename as a parameter. The input\n",
+    "file should contain a floating point number on each line of the file. Make your program read these\n",
+    "numbers and then return a triple containing the sum, average, and standard deviation of these numbers for the file.\n",
+    "As a remainder, the formula for corrected sample standard deviation is\n",
+    "\\\\(\\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline x)^2}{n-1}}\\\\),\n",
+    "where $\\overline x$ is the average.\n",
+    "\n",
+    "Example of usage from the command line:\n",
+    "`python3 src/summary.py src/example.txt src/example2.txt`\n",
+    "or\n",
+    "`python3 summary.py example.txt example2.txt`\n",
+    "if you are in the folder src.\n",
+    "\n",
+    "The output should look like this:\n",
+    "```\n",
+    "File: src/example.txt Sum: 51.400000 Average: 10.280000 Stddev: 8.904606\n",
+    "File: src/example2.txt Sum: 5446.200000 Average: 1815.400000 Stddev: 3124.294045\n",
+    "```\n",
+    "\n",
+    "Part 2.\n",
+    "\n",
+    "If some line doesn’t represent a number, you can just ignore that line. You can achieve this with the *try-except* block. An example of recovering from an exceptional situation:\n",
+    "```python\n",
+    "try:\n",
+    "    x = float(line)                 # The float constructor raises ValueError exception if conversion is no possible\n",
+    "except ValueError:\n",
+    "    # Statements in here are executed when the above conversion fails\n",
+    "```\n",
+    "We will cover more about exceptions later in the course.\n",
+    "The `main` function should call the function summary for each filename in the list `sys.argv[1:]` of command line parameters.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (file count)</div>\n",
+    "\n",
+    "Part 1.\n",
+    "\n",
+    "Create a function `file_count` that gets a filename as parameter and return a triple of numbers. The function should read the file, count the number of lines, words, and characters in the file, and return a triple with these count in this order. You get division into words by splitting at whitespace, you don't have to remove punctuation.\n",
+    "\n",
+    "Part 2.\n",
+    "\n",
+    "Create a main function that calls `file_count` for each filename in the list of command line parameters sys.argv[1:].\n",
+    "For call `python3 src/file_count file1 file2 ...`\n",
+    "the output should be\n",
+    "```\n",
+    "?      ?       ?       file1\n",
+    "?      ?       ?       file1\n",
+    "...\n",
+    "```\n",
+    "The fields are separated by tabs (`\\t`). The fields are in order: linecount, wordcount, charactercount, filename.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (file extensions)</div>\n",
+    "\n",
+    "Part 1.\n",
+    "\n",
+    "Write function `file_extensions` that gets as a parameter a filename.\n",
+    "It should read through the lines from this file. Each line contains a filename.\n",
+    "Find the extension for each filename. The function should return a pair, where the\n",
+    "first element is a list containing all filenames with no extension (no period (.) appears in the filename).\n",
+    "The second element of the pair is a dictionary with extensions as keys and corresponding values are lists with filenames having that extension.\n",
+    "\n",
+    "Sounds a bit complicated, but hopefully the next example will clarify this.\n",
+    "If the file contains the following lines\n",
+    "```\n",
+    "file1.txt\n",
+    "mydocument.pdf\n",
+    "file2.txt\n",
+    "archive.tar.gz\n",
+    "test\n",
+    "```\n",
+    "then the return value should be the pair:\n",
+    "`([\"test\"], { \"txt\" : [\"file1.txt\", \"file2.txt\"], \"pdf\" : [\"mydocument.pdf\"], \"gz\" : [\"archive.tar.gz\"] } )`\n",
+    "\n",
+    "Part 2.\n",
+    "\n",
+    "Write a main method that calls the `file_extensions` function with \"src/filenames.txt\" as the argument. Then output a line for each extension with the number of files with that extension.\n",
+    "With the example in part 1, the output should be\n",
+    "```\n",
+    "1 files with no extension\n",
+    "gz 1\n",
+    "pdf 1\n",
+    "txt 2\n",
+    "```\n",
+    "Had there been no filenames without extension then the first line would have been `0 files with no extension`. In the printout list the extensions in alphabetical order.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Objects and classes"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Python is an object-oriented programming language like Java\n",
+    "and C++.\n",
+    "But unlike Java, Python doesn’t force you to use classes,\n",
+    "inheritance and methods.\n",
+    "If you like, you can also choose the structural programming\n",
+    "paradigm with functions and modules.\n",
+    "\n",
+    "Every value in Python is an object.\n",
+    "Objects are a way to combine data and the functions that\n",
+    "handle that data.\n",
+    "This combination is called encapsulation.\n",
+    "The data items and functions of objects are called attributes,\n",
+    "and in particular the function attributes are called methods.\n",
+    "For example, the operator `+` on integers calls a method of\n",
+    "integers, and the operator `+` on strings calls a method of\n",
+    "strings.\n",
+    "\n",
+    "Functions, modules, methods, classes, etc are all first class\n",
+    "objects. This means that these objects can be\n",
+    "\n",
+    "* stored in a container\n",
+    "* passed to a function as a parameter\n",
+    "* returned by a function\n",
+    "* bound to a variable\n",
+    "\n",
+    "One can access an attribute of an object using the *dot\n",
+    "operator*: `object.attribute`.\n",
+    "For example: if `L` is a list, we can refer to the method `append`\n",
+    "with `L.append`. The method call can look, for instance, like\n",
+    "this: `L.append(4)`.\n",
+    "Because also modules are objects in Python, we can interpret\n",
+    "the expression `math.pi` as accessing the data attribute `pi` of\n",
+    "module object `math`.\n",
+    "\n",
+    "Numbers like 2 and 100 are instances of type `int`. Similarly,\n",
+    "`\"hello\"` is an instance of type `str`.\n",
+    "When we write `s=set()`, we are actually creating a new\n",
+    "instance of type `set`, and bind the resulting instance object to\n",
+    "`s`.\n",
+    "\n",
+    "A user can define his own data types.\n",
+    "These are called classes.\n",
+    "A user can call these classes like they were functions, and they\n",
+    "return a new instance object of that type.\n",
+    "Classes can be thought as recipes for creating objects.\n",
+    "\n",
+    "An example of class definition:\n",
+    "```python\n",
+    "class MyClass(object):\n",
+    "    \"\"\"Documentation string of the class\"\"\"\n",
+    "\n",
+    "    def __init__(self, param1, param2):\n",
+    "        \"This initialises an instance of type ClassName\"\n",
+    "        self.b = param1 # creates an instance attribute\n",
+    "        c = param2      # creates a local variable of the function\n",
+    "        # statements ...\n",
+    "    \n",
+    "    def f(self, param1):\n",
+    "        \"\"\"This is a method of the class\"\"\"\n",
+    "        # some statements\n",
+    "    \n",
+    "    a=1 # This creates a class attribute\n",
+    "```\n",
+    "\n",
+    "The class definition starts with the class statement.\n",
+    "With this statement you give a name for your new type, and\n",
+    "also in parentheses list the base classes of your class.\n",
+    "The next indented block is the class body.\n",
+    "After the whole class body is read, a new type is created.\n",
+    "Note that no instances are created yet.\n",
+    "All the attributes and methods of the class are defined in the\n",
+    "class body.\n",
+    "\n",
+    "The example class has two methods: `__init__` and `f`.\n",
+    "Note that their first parameter is special: `self`. It\n",
+    "corresponds to this variable of C++ or Java.\n",
+    "`__init__`\n",
+    "does the initialisation when an instance is created.\n",
+    "At instantiation with `i=MyClass(2,3)` the parameters\n",
+    "`param1` and `param2` are bound to values 2 and 3, respectively.\n",
+    "Now that we have an instance `i`, we can call its method `f`\n",
+    "with the dot operator: `i.f(1)`.\n",
+    "The parameters of `f` are bound in the following way:\n",
+    "`self=i` and `param1=1`.\n",
+    "\n",
+    "There are differences in how an assignment inside a class\n",
+    "creates variables.\n",
+    "The attribute `a` is at class level and is common for all\n",
+    "instances of the class `MyClass`.\n",
+    "The variable `c` is a local variable of the function `__init__`, and\n",
+    "cannot therefore be used outside the function.\n",
+    "The attribute `b` is specific to each instance of `MyClass`. Note\n",
+    "that `self` refers to the current instance.\n",
+    "An example: for objects `x=MyClass(1,0)` and\n",
+    "`y=MyClass(2,0)` we have `x.b != y.b`, but `x.a == y.a`.\n",
+    "\n",
+    "All methods of a class have a mandatory first parameter which\n",
+    "refers to the instance on which you called the method.\n",
+    "This parameter is usually named `self`.\n",
+    "If you want to access the class attribute `a` from a method of\n",
+    "the class, use the fully qualified form `MyClass.a`.\n",
+    "The methods whose names both begin and end with two\n",
+    "underscores are called *special methods*. For example, `__init__`\n",
+    "is a special method. These methods will be discussed in detail\n",
+    "later.\n",
+    "\n",
+    "### Instances\n",
+    "\n",
+    "We can create instances by calling a class like it were a\n",
+    "function: `i = ClassName(...)`.\n",
+    "Then parameters given in the call will be passed to the\n",
+    "`__init__` function.\n",
+    "In the `__init__` method you can create the instance specific\n",
+    "attributes.\n",
+    "If `__init__` is missing, we can create an instance without\n",
+    "giving any parameters. As a consequence, the instance has no\n",
+    "attributes.\n",
+    "Later you can (re)bind attributes with the assignment\n",
+    "`instance.attribute = new value`.\n",
+    "\n",
+    "If that attribute did not exist before, it will be added to the\n",
+    "instance with the assigned value.\n",
+    "In Python we really can add or delete attributes to/from an\n",
+    "existing instance.\n",
+    "This is possible because the attribute names and the\n",
+    "corresponding values are actually stored in a dictionary.\n",
+    "This dictionary is also an attribute of the instance and is\n",
+    "called `dict`.\n",
+    "Another standard attribute in addition to dict is called\n",
+    "`__class__`. This attribute stores the class of the instance.\n",
+    "That is, the type of the object"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Attribute lookup\n",
+    "\n",
+    "Suppose `x` is an instance of class `X`, and we want to read an\n",
+    "attribute `x.a`.\n",
+    "The lookup has three phases:\n",
+    "* First it is checked whether the attribute `a` is an attribute of\n",
+    "the instance `x`\n",
+    "* If not, then it is checked whether `a` is a class attribute of `x`’s\n",
+    "class `X`\n",
+    "* If not, then the base classes of `X` are checked\n",
+    "\n",
+    "If instead we want to bind the attribute `a`, things are much\n",
+    "simpler.\n",
+    "`x.a = value` will set the instance attribute.\n",
+    "And `X.a = value` will set the class attribute.\n",
+    "Note that if a base of `X`, the class `X`, and the instance `x` each\n",
+    "have an attribute called `a`, then `x.a` hides `X.a`, and `X.a` hides\n",
+    "the attribute of the base class."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (prepend)</div>\n",
+    "\n",
+    "Create a class called `Prepend`. We create an instance of the class by giving a string as a parameter\n",
+    "to the initializer. The initializer stores the parameter in an instance attribute `start`. The class\n",
+    "also has a method `write(s)` which prints the string `s` prepended with the `start` string.\n",
+    "An example of usage:\n",
+    "```python\n",
+    "p=Prepend(\"+++ \")\n",
+    "p.write(\"Hello\");\n",
+    "```\n",
+    "Will print\n",
+    "```\n",
+    "+++ Hello\n",
+    "```\n",
+    "\n",
+    "Try out the class in the main function.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Inheritance\n",
+    "\n",
+    "Inheritance allows us to reuse the code of an existing class `B`\n",
+    "in creating a new class `C`.\n",
+    "Let’s recap how the attribute lookup worked for classes.\n",
+    "When looking for an attribute, the lookup procedure starts\n",
+    "with the instance dictionary, and continues with the class\n",
+    "attributes.\n",
+    "If both fail, then the attribute is searched from the base\n",
+    "classes and, recursively, from their base classes.\n",
+    "\n",
+    "So, it may look like we access an attribute of a class `C`, when\n",
+    "in reality we are accessing the attribute of its base class `B`.\n",
+    "In this case we say that the class `C` inherits the attribute from\n",
+    "its base class `B`.\n",
+    "If we have attributes with the same name in both the class\n",
+    "and its base class, the attribute of the base class is hidden.\n",
+    "We say that the class `C` overrides the attribute of the base\n",
+    "class `B`.\n",
+    "Terminology: `B` is a base class and `C` is a derived class.\n",
+    "\n",
+    "Example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 214,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Executing B.f\n",
+      "Executing C.g\n"
+     ]
+    }
+   ],
+   "source": [
+    "class B(object):\n",
+    "    def f(self):\n",
+    "        print(\"Executing B.f\")\n",
+    "    def g(self):\n",
+    "        print(\"Executing B.g\")\n",
+    "    \n",
+    "class C(B):\n",
+    "    def g(self):\n",
+    "        print(\"Executing C.g\")\n",
+    "        \n",
+    "x=C()\n",
+    "x.f() # inherited from B\n",
+    "x.g() # overridden by C"
+   ]
+  },
+  {
+   "attachments": {},
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A derived class is sometimes also called a *subclass* and the\n",
+    "base class is called *super class*.\n",
+    "The inheritance relation of two classes `B` and `C` can be tested\n",
+    "with function `issubclass`:\n",
+    "`issubclass(C,B)==True` but `issubclass(B,C)==False`\n",
+    "Function `isinstance(obj, cls)` allows us to test whether\n",
+    "an instance has type `cls` or has an ancestor class of type `cls`.\n",
+    "Let’s create instances `x=C()` and `y=B()`.\n",
+    "Now we have `isinstance(x,B)==\n",
+    "isinstance(x,C)==isinstance(y,B)==True`.\n",
+    "But `isinstance(y,C)==False`.\n",
+    "\n",
+    "![inheritance_hierarchy.svg](inheritance_hierarchy.svg)\n",
+    "\n",
+    "`object` should be a base class or an ancestor class of every\n",
+    "other class.\n",
+    "This means that `isinstance(x, object)==True` for all\n",
+    "instances `x`.\n",
+    "\n",
+    "By deriving from an existing class we can modify and/or\n",
+    "extend its behaviour, without touching the original class.\n",
+    "For example, if we want to add one method to a list class,\n",
+    "we can use inheritance. Therefore we have to only code the\n",
+    "part that has changed and reuse the rest of the code of type\n",
+    "list.\n",
+    "Another use of inheritance is to create conceptual hierarchies.\n",
+    "For instance, later we will learn about the exception hierarchy\n",
+    "of Python.\n",
+    "Third use would be to use classes to create interfaces. There\n",
+    "can be several classes that have same interface (that is, they\n",
+    "offer the same attributes), but their behaviour or\n",
+    "implementation can be very different. This allows changing a\n",
+    "part of your program with minimal changes required elsewhere\n",
+    "in the code.\n",
+    "\n",
+    "If in the definition of the method `C.f` we need to call the\n",
+    "corresponding method of class `A`, we can use the fully qualified\n",
+    "call `A.f(...)`.\n",
+    "This is called delegation.\n",
+    "It is useful, for instance, when you want to call the init\n",
+    "method of the base class from the init of the derived\n",
+    "class to initialise the base class attributes."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Special methods\n",
+    "\n",
+    "We have already encountered one special method, namely the\n",
+    "`__init__` method.\n",
+    "This method sets the instance attributes to some initial value.\n",
+    "Its first parameter is `self`, and the subsequent parameters\n",
+    "are the ones that were passed to the call of the class.\n",
+    "The `__init__` method should return no value.\n",
+    "In the following slides the main general purpose special\n",
+    "methods are introduced.\n",
+    "They are executed when certain operations on objects are\n",
+    "performed.\n",
+    "\n",
+    "In the following, `C` is a class and `x` and `y` are its instances.\n",
+    "`__hash__` returns an int value, with the following\n",
+    "requirement: `x==y` implies `x.__hash__() == y.__hash__()`.\n",
+    "The value is used in storing objects in dictionaries and sets.\n",
+    "The instances `x` and `y` must be immutable\n",
+    "A class with `__call__` method makes its instances callable.\n",
+    "I.e. the call `x(a,b, ...)` will result in calling this special\n",
+    "method with the given parameters.\n",
+    "The method `__del__` gets called when the corresponding\n",
+    "instance gets deleted.\n",
+    "Method `__new__` is used to control the creation of new\n",
+    "instances. It can be used, for example, to create classes that\n",
+    "have only one instance.\n",
+    "\n",
+    "The method `__str__` is called when the print statement needs\n",
+    "to print the value of an instance. It returns a string. The\n",
+    "print-format expression calls this for conversion `%s`.\n",
+    "The method `__repr__` is called when the interactive interpreter\n",
+    "prints the value of an evaluated expression, and when the\n",
+    "conversion `%r` for print-format expression is used. Returns a\n",
+    "canonical representation string that (at least in theory) can be\n",
+    "used to recreate the original object.\n",
+    "Special methods `__eq__`, `__ge__`, `__gt__`, `__le__`, `__lt__`, and\n",
+    "`__ne__` get called when the corresponding operators `x==y`,\n",
+    "`x>=y`, `x>y`, `x<=y`, `x<y`, and `x!=y` are used.\n",
+    "\n",
+    "If you want the instances of your class to support the numeric\n",
+    "operations (like +, -, *, /, etc), you must define a set of\n",
+    "special methods in you class.\n",
+    "For example, the expression x+y will result in a call\n",
+    "x. add (y) which should return the result of the operation.\n",
+    "Here are a few of the most common numerical special\n",
+    "methods:\n",
+    "\n",
+    "|Method|Description|\n",
+    "|---|------------|\n",
+    "|`__add__` | addition (+) |\n",
+    "|`__sub__` | subtraction (-) |\n",
+    "|`__mul__` | multiplication (*) |\n",
+    "|`__truediv__` | division (/) |\n",
+    "|`__floordiv__` | division (//) |\n",
+    "-----------------------\n",
+    "\n",
+    "The corresponding augmented assignments += -= *= /=\n",
+    "have special methods iadd , isub , imul , idiv.\n",
+    "The conversion functions complex(), float(), int() and\n",
+    "long() call the following special methods:\n",
+    "\n",
+    "|Method|Description|\n",
+    "|------|-----------|\n",
+    "|`__complex__` | convert to a complex number|\n",
+    "|`__float__` | convert to a float|\n",
+    "|`__int__` | convert to an integer|\n",
+    "\n",
+    "In addition to the normal methods of containers, like the\n",
+    "append method of the list, there are several operations that\n",
+    "are handled by calls to special methods of the container class.\n",
+    "The test whether `x` is a member of container `c` is done by the\n",
+    "operation `x in c`. The corresponding special method call is\n",
+    "`x.__contains__(y)`.\n",
+    "Deletion of an element of container `c` can be done with the\n",
+    "operation `del c[key]`. This will result in the method call\n",
+    "`x.__delitem__`.\n",
+    "\n",
+    "Reading an item of a container `c` is done with the operation\n",
+    "`c[key]`. The corresponding method call is\n",
+    "`c.__getitem__(key)`.\n",
+    "Similarly, setting an item with `c[key]=value` results in the\n",
+    "call `c.__setitem__(key,value)`.\n",
+    "The number of elements in a container `c` can be queried with\n",
+    "the function call `len(c)`. This function call actually calls the\n",
+    "special method `c.__len__`.\n",
+    "The call `iter(c)` will call the special method `__iter__`. More\n",
+    "about the purpose of this function in the next few slides.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### <div class=\"alert alert-info\">Exercise X (rational)</div>\n",
+    "\n",
+    "\n",
+    "Create a class `Rational` whose instances are rational numbers. A new rational number can be\n",
+    "created with the call to the class. For example, the call `r=Rational(1,4)` creates a rational\n",
+    "number “one quarter”. Make the instances support the following operations:\n",
+    "`+` `-` `*` `/` `<` `>` `==`\n",
+    "with their natural behaviour. Make the rationals also printable so that from the printout we can\n",
+    "clearly see that they are rational numbers.\n",
+    "<hr/>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Exceptions"
    ]
   },
   {
@@ -3010,7 +4801,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 174,
+   "execution_count": 215,
    "metadata": {},
    "outputs": [
     {
@@ -3031,7 +4822,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 175,
+   "execution_count": 216,
    "metadata": {
     "scrolled": true
    },
@@ -3041,7 +4832,7 @@
      "output_type": "stream",
      "text": [
       "Give a number (non-number quits): 12\n",
-      "Give a number (non-number quits): \n",
+      "Give a number (non-number quits): a\n",
       "Average is 12.0\n"
      ]
     }
@@ -3083,23 +4874,17 @@
     "In Python exceptions are objects, like all values in Python.\n",
     "These objects are instantiated from exception classes.\n",
     "Exception classes form naturally hierarchies:\n",
+    "\n",
     "* New exception classes can be made by inheriting from existing exception classes and extending them\n",
     "* The root of this hierarchy is the class Exception\n",
     "* Python defines several base classes to derive from, and several ready-to-use exception classes"
    ]
   },
   {
-   "attachments": {
-    "exception_hierarchy.svg": {
-     "image/svg+xml": [
-      "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgdmlld0JveD0iMCAwIDE0MzguNjY2NyA3MjgiCiAgIGhlaWdodD0iNzI4IgogICB3aWR0aD0iMTQzOC42NjY3IgogICB4bWw6c3BhY2U9InByZXNlcnZlIgogICBpZD0ic3ZnMiIKICAgdmVyc2lvbj0iMS4xIj48bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE4Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICAgIGlkPSJkZWZzNiI+PGNsaXBQYXRoCiAgICAgICBpZD0iY2xpcFBhdGgyMCIKICAgICAgIGNsaXBQYXRoVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48cGF0aAogICAgICAgICBpZD0icGF0aDE4IgogICAgICAgICBkPSJNIDM2LDM2IEggMTA0MyBWIDUxMCBIIDM2IFoiIC8+PC9jbGlwUGF0aD48L2RlZnM+PGcKICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjMzMzMzMzMsMCwwLC0xLjMzMzMzMzMsMCw3MjgpIgogICAgIGlkPSJnMTAiPjxnCiAgICAgICBpZD0iZzEyIiAvPjxnCiAgICAgICBpZD0iZzE0Ij48ZwogICAgICAgICBjbGlwLXBhdGg9InVybCgjY2xpcFBhdGgyMCkiCiAgICAgICAgIGlkPSJnMTYiPjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgyMiIKICAgICAgICAgICBzdHlsZT0iZmlsbDojZmZmZmZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTojZmZmZmZmO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Ik0gMzYsMzYgViA1MTAgSCAxMDQzIFYgMzYgWiIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMjQiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDUzNCw1MDYgaCAtNzIgdiAtMzYgaCA3MiB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQyOCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDcwLDQ4My44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMjYiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjIzMjE0MzQgMTQuOTk0MjYyIDIxLjcyODM3OCAyNy43MjA0ODQgMzUuMjEwNjEzIDM4Ljk0ODY3NyA0MS45NDQ3MzMgNDkuNDM0ODYiPkV4Y2VwdGlvbjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMzAiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDM3Nyw0MzQgaCAtNzggdiAtMzYgaCA3OCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQzNCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsMzA2LjUsNDExLjg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4zMiIKICAgICAgICAgICAgIHk9IjAiCiAgICAgICAgICAgICB4PSIwIDguMjQ2MTQzMyAxNC45OTQyNjIgMjEuMDAwMzY2IDI0LjczODQzMiAzMC43MTY1MzYgNDEuMjE2NzE3IDQ5LjQ0ODg2IDU2LjE5Njk4IDU5LjE5MzAzMSI+U3lzdGVtRXhpdDwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMzYiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJNIDQ2Miw0NzIgQyA0MzYsNDYwIDQwMyw0NDUgMzc3LDQzNCIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMzgiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDQ5MSw0MzQgaCAtOTYgdiAtMzYgaCA5NiB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQ0MiIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDAzLDQxMS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNDAiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjI0NjE0MzMgMTEuOTg0MjA5IDE3Ljk3NjMxMyAyNC43MjQ0MyAzMi4yMjg1NjEgMzguMjA2NjY1IDQyLjcxNDc0NSA1MC4yMTg4NzYgNTguNDUxMDE5IDYyLjk0NTA5OSA2Ny40NTMxNzggNzQuOTU3MzA2Ij5TdGFuZGFyZEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGg0NCIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNDg0LDQ3MCBjIC04LC0xMSAtMTksLTI1IC0yNywtMzYiIC8+PHBhdGgKICAgICAgICAgICBpZD0icGF0aDQ2IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSA1OTcsNDM0IGggLTg4IHYgLTM2IGggODggeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0NTAiCiAgICAgICAgICAgc3R5bGU9ImZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToxNC4wMDAyNDQxNHB4O2ZvbnQtZmFtaWx5OidUaW1lcyBOZXcgUm9tYW4nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246VGltZXNOZXdSb21hbjt3cml0aW5nLW1vZGU6bHItdGI7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDUxNi41LDQxMS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNDgiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjI0NjE0MzMgMTEuOTg0MjA5IDE5LjQ4ODM0IDI2Ljk5MjQ3IDMxLjQ4NjU0OSAzNS4yMjQ2MTMgNDEuMjE2NzE3IDQ1LjcxMDc5NiA1MS43MDI5IDU1LjQ0MDk2OCA1OC40MjMwMTkgNjUuOTI3MTQ3Ij5TdG9wSXRlcmF0aW9uPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGg1MiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNTEyLDQ3MCBjIDgsLTExIDE5LC0yNSAyNywtMzYiIC8+PHBhdGgKICAgICAgICAgICBpZD0icGF0aDU0IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSA2NzcsNDM0IGggLTYyIHYgLTM2IGggNjIgeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0NTgiCiAgICAgICAgICAgc3R5bGU9ImZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToxNC4wMDAyNDQxNHB4O2ZvbnQtZmFtaWx5OidUaW1lcyBOZXcgUm9tYW4nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246VGltZXNOZXdSb21hbjt3cml0aW5nLW1vZGU6bHItdGI7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDYyMi41LDQxMS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNTYiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCAxMi43NDAyMjIgMTguNzMyMzI3IDIzLjIyNjQwNCAyOS45NzQ1MjIgMzIuOTcwNTczIDM5LjcxODY5MyI+V2FybmluZzwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoNjAiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDUzNCw0NzAgYyAyNSwtMTIgNTcsLTI3IDgxLC0zOSIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoNjIiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJNIDIzMiwzNjIgSCA5NCBWIDE4NCBoIDEzOCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQ4NCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsMTIxLjUsMzQ1LjM5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW42NCIKICAgICAgICAgICAgIHk9IjAiCiAgICAgICAgICAgICB4PSIwIDkuNzQ0MTcwMiAxNS43NTAyNzUgMjEuNzQyMzc4IDI3LjczNDQ4NCAzMi4yMjg1NjEgMzUuOTY2NjI1IDM4Ljk2MjY4MSA0Ni40NTI4MDggNTMuMjAwOTI4IDYxLjQ0NzA3MSA2NS45NDExNDcgNzAuNDQ5MjI2IDc3LjkzOTM2MiI+QXNzZXJ0aW9uRXJyb3I8L3RzcGFuPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNjYiCiAgICAgICAgICAgICB5PSIxNy4wMDAwMDYiCiAgICAgICAgICAgICB4PSIyLjQ5OTk5NTUgMTIuMjQ0MTY1IDE1Ljk4MjIzIDE5LjcyMDI5NSAyNC4yMjgzNzQgMjcuMjEwNDI2IDM0LjcxNDU1OCA0MS40NjI2NzMgNDUuMjAwNzQxIDUxLjE5Mjg0NCA1OS40MjQ5ODggNjMuOTMzMDY3IDY4LjQyNzE0NyA3NS45MzEyNzQiPkF0dHJpYnV0ZUVycm9yPC90c3Bhbj48dHNwYW4KICAgICAgICAgICAgIGlkPSJ0c3BhbjY4IgogICAgICAgICAgICAgeT0iMzQuMDAwMDExIgogICAgICAgICAgICAgeD0iNy41MDAwMDA1IDExLjk5NDA3OSAyMi40OTQyNjMgMjkuOTg0MzkyIDM3LjQ4ODUyMiA0MS45ODI2MDEgNDUuNzIwNjY1IDUzLjk2NjgxMiA1OC40NjA4ODggNjIuOTY4OTY3IDcwLjQ1OTA5OSI+SW1wb3J0RXJyb3I8L3RzcGFuPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNzAiCiAgICAgICAgICAgICB5PSI1MS4wMDAwMTkiCiAgICAgICAgICAgICB4PSItMTAuNTAwMDAxIC0wLjc1NTgzMTE4IDUuMjM2MjczMyAxMS45ODQzOTEgMTkuNDg4NTIyIDI2Ljk5MjY1MyAzMi45NzA3NTcgMzcuNDc4ODM2IDQ0Ljk2ODk2NyA0OS40NzcwNDMgNTYuMjI1MTYzIDU5Ljk2MzIyNiA2NS45NTUzMyA3MC40NDk0MDkgNzQuOTQzNDg5IDgxLjcwNTYwNSA4OS4xOTU3NCI+S2V5Ym9hcmRJbnRlcnJ1cHQ8L3RzcGFuPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuNzIiCiAgICAgICAgICAgICB5PSI2OC4wMDAwMjMiCiAgICAgICAgICAgICB4PSIzLjAwMDAwMDIgMTQuOTk4MjA5IDIwLjk5MDMxNCAzMS40NzY0OTYgMzguOTgwNjI5IDQzLjQ3NDcwNSA1MC4yMjI4MjQgNTguNDY4OTY3IDYyLjk2MzA0NyA2Ny40NTcxMjMgNzQuOTYxMjU4Ij5NZW1vcnlFcnJvcjwvdHNwYW4+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW43NCIKICAgICAgICAgICAgIHk9Ijg1LjAwMDAzMSIKICAgICAgICAgICAgIHg9Ii0xOS41MDAwMDIgLTkuNzU1ODMxNyAtMi4yNTE3MDE0IDEuNDg2MzYzOSA1Ljk4MDQ0MiAxNi40ODA2MjUgMjMuOTcwNzU3IDI2Ljk2NjgwOCAzMi45NDQ5MTIgNDMuNDQ1MDk1IDQ5LjQyMzE5OSA1Ni4xNzEzMTggNTkuOTA5MzgyIDY1LjkwMTQ4OSA3My40MDU2MTcgODEuNjM3NzY0IDg2LjE0NTgzNiA5MC42Mzk5MTUgOTguMTQ0MDUxIj5Ob3RJbXBsZW1lbnRlZEVycm9yPC90c3Bhbj48dHNwYW4KICAgICAgICAgICAgIGlkPSJ0c3Bhbjc2IgogICAgICAgICAgICAgeT0iMTAyLjAwMDA0IgogICAgICAgICAgICAgeD0iNi4wMDAwMDA1IDE0LjI0NjE0NCAyMC45OTQyNjMgMjcuMDAwMzY2IDMwLjczODQzMiAzNi43MTY1MzcgNDcuMjE2NzIxIDU1LjQ0ODg2NCA1OS45NDI5NCA2NC40NTEwMTkgNzEuOTU1MTQ3Ij5TeXN0ZW1FcnJvcjwvdHNwYW4+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW43OCIKICAgICAgICAgICAgIHk9IjExOS4wMDAwNCIKICAgICAgICAgICAgIHg9IjEyLjUwMDAwNiAyMC43MzIxNDkgMjcuNDk0MjY3IDM0Ljk4NDM5OCA0MC45NzY1MDEgNDkuMjA4NjQ1IDUzLjcxNjcyNCA1OC4yMTA4MDQgNjUuNzE0OTM1Ij5UeXBlRXJyb3I8L3RzcGFuPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuODAiCiAgICAgICAgICAgICB5PSIxMzYuMDAwMDUiCiAgICAgICAgICAgICB4PSIzLjAwMDAwMDIgMTIuNzQ0MTcgMTkuNDkyMjg5IDIyLjQ4ODM0IDI5LjIyMjQ1OCAzNi43MjY1ODkgNDQuMjMwNzIxIDUwLjIwODgyNCA1OC40NTQ5NjcgNjIuOTQ5MDQzIDY3LjQ1NzEyMyA3NC45NDcyNTgiPlVuaWNvZGVFcnJvcjwvdHNwYW4+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW44MiIKICAgICAgICAgICAgIHk9IjE1My4wMDAwNiIKICAgICAgICAgICAgIHg9IjEyLjAwMDAwMSAyMC4yNDYxNDUgMjYuMjM4MjQ5IDI5LjIyMDMwMSAzNS45Njg0MTggNDEuOTYwNTIyIDUwLjIwNjY2OSA1NC43MDA3NDUgNTkuMTk0ODI0IDY2LjY5ODk1MiI+VmFsdWVFcnJvcjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoODYiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDM5NSw0MDEgYyAtMywtMSAtNiwtMiAtOSwtMyAtNjQsLTE5IC04OSwtMiAtMTQ1LC0zNiAtMywtMiAtNiwtNCAtOSwtNiIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoODgiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDMyOCwyOTEgaCAtNzggdiAtMzYgaCA3OCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQ5MiIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsMjU4LDI2OC44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuOTAiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA5Ljc0NDE3MDIgMTUuNzM2Mjc1IDI2LjIyMjQ1OCAzMi4yMTQ1NjEgNDAuNDQ2NzA1IDQ0Ljk1NDc4NCA0OS40NDg4NiA1Ni45NTI5OTEiPk5hbWVFcnJvcjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoOTQiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDM5NSwzOTkgYyAtMjAsLTkgLTQyLC0yMSAtNTgsLTM3IC0yMSwtMjAgLTM1LC01MSAtNDIsLTcxIiAvPjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGg5NiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNDMwLDI5MSBoIC04NCB2IC0zNiBoIDg0IHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDEwMCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsMzU0LDI2OC44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuOTgiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjI0NjE0MzMgMTQuOTk0MjYyIDIxLjc0MjM3OCAyNS40ODA0NDQgMzEuNDcyNTQ5IDM4LjIyMDY2NSA0Ni40NjY4MDggNTAuOTYwODg4IDU1LjQ2ODk2NyA2Mi45NTkwOTkiPlN5bnRheEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMDIiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJNIDQzNiwzOTggQyA0MjUsMzcwIDQwNiwzMTkgMzk1LDI5MSIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTA0IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSA1NTAsMjkxIEggNDQ4IHYgLTM2IGggMTAyIHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDEwOCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDU1LjUsMjY4Ljg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4xMDYiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA5Ljc0NDE3MDIgMTQuMjUyMjQ5IDE3LjIzNDMwMSAyMC45NzIzNjYgMjcuNzIwNDg0IDM4LjIwNjY2NSA0NC4xOTg3NjkgNDcuOTM2ODM2IDUwLjkzMjg4OCA1Ny42NjcwMDQgNjUuODk5MTQ3IDcwLjQwNzIyNyA3NC45MDEzMDYgODIuNDA1NDM0Ij5Bcml0aG1ldGljRXJyb3I8L3RzcGFuPjwvdGV4dD4KPHBhdGgKICAgICAgICAgICBpZD0icGF0aDExMCIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNDUwLDM5OCBjIDExLC0yOCAzMSwtNzkgNDIsLTEwNyIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTEyIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSA3ODMsMjkxIGggLTkwIHYgLTM2IGggOTAgeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0MTE2IgogICAgICAgICAgIHN0eWxlPSJmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6MTQuMDAwMjQ0MTRweDtmb250LWZhbWlseTonVGltZXMgTmV3IFJvbWFuJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOlRpbWVzTmV3Um9tYW47d3JpdGluZy1tb2RlOmxyLXRiO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw3MDEsMjY4Ljg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4xMTQiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjIzMjE0MzQgMTUuNzM2Mjc1IDIzLjI0MDQwNCAyOS45ODg1MjMgMzYuNzM2NjQxIDQ0LjI0MDc3MiA1Mi40NzI5MTYgNTYuOTgwOTkxIDYxLjQ3NTA3MSA2OC45NzkyMDIiPkxvb2t1cEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMTgiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDQ4MiwzOTggYyAyMiwtMTAgNTEsLTI0IDc3LC0zNiA1MCwtMjQgMTA3LC01MyAxNDMsLTcxIiAvPjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMjAiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJNIDk2OCwyOTEgSCA4NTIgdiAtMzYgaCAxMTYgeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0MTI0IgogICAgICAgICAgIHN0eWxlPSJmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6MTQuMDAwMjQ0MTRweDtmb250LWZhbWlseTonVGltZXMgTmV3IFJvbWFuJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOlRpbWVzTmV3Um9tYW47d3JpdGluZy1tb2RlOmxyLXRiO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw4NjAsMjY4Ljg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4xMjIiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjIzMjE0MzQgMTQuOTk0MjYyIDIxLjc0MjM3OCAyNC43MjQ0MyAyOS4yMzI1MSAzNi43MjI2NDEgNDMuNDcwNzU3IDUzLjk3MDk0IDU5Ljk0OTA0MyA2Ni42OTcxNTkgNzAuNDM1MjI2IDc4LjY4MTM3NCA4My4xNzU0NTMgODcuNjgzNTI1IDk1LjE3MzY2Ij5FbnZpcm9ubWVudEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMjYiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDQ5MSw0MDAgYyAzLC0xIDYsLTEgOSwtMiAxMjcsLTI4IDE3MCwxMyAyOTIsLTM2IDQwLC0xNyA3OCwtNTAgMTAwLC03MSIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTI4IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSAxNjgsMTQ4IEggNDAgdiAtMzYgaCAxMjggeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0MTMyIgogICAgICAgICAgIHN0eWxlPSJmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6MTQuMDAwMjQ0MTRweDtmb250LWZhbWlseTonVGltZXMgTmV3IFJvbWFuJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOlRpbWVzTmV3Um9tYW47d3JpdGluZy1tb2RlOmxyLXRiO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw0Ny41LDEyNS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMTMwIgogICAgICAgICAgICAgeT0iMCIKICAgICAgICAgICAgIHg9IjAgOS43NDQxNzAyIDE2LjQ5MjI4NyAyMy45OTY0MTggMzEuNTAwNTQ5IDM4LjI0ODY2NSA0NC45OTY3ODQgNTIuNTAwOTE2IDYwLjczMzA1OSA2OC4yMzcxOSA3NC45NzEzMDYgODAuOTYzNDA5IDgzLjk0NTQ2NSA5Mi4xOTE2MDUgOTYuNjg1Njg0IDEwMS4xOTM3NiAxMDguNjgzODkiPlVuYm91bmRMb2NhbEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMzQiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDI4MywyNTUgYyAtNywtMjAgLTIxLC01MiAtNDIsLTcxIC0yMSwtMTggLTQ4LC0zMSAtNzMsLTM5IiAvPjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxMzYiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJNIDI5NCwxNDggSCAxODYgdiAtMzYgaCAxMDggeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0MTQwIgogICAgICAgICAgIHN0eWxlPSJmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6MTQuMDAwMjQ0MTRweDtmb250LWZhbWlseTonVGltZXMgTmV3IFJvbWFuJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOlRpbWVzTmV3Um9tYW47d3JpdGluZy1tb2RlOmxyLXRiO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSwxOTQsMTI1Ljg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4xMzgiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA0LjQ5NDA3ODIgMTEuMjU2MTk2IDE4Ljc0NjMyNiAyNC43Mzg0MzIgMzEuNDg2NTQ5IDM1LjIyNDYxMyA0MS4yMTY3MTcgNDQuOTU0Nzg0IDQ3LjkzNjgzNiA1NS40NDA5NjggNjIuMTg5MDgzIDcwLjQzNTIyNiA3NC45MjkzMDYgNzkuNDIzMzg2IDg2LjkyNzUxMyI+SW5kZW50YXRpb25FcnJvcjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTQyIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSAzODEsMjU1IGMgLTgsLTIwIC0yMywtNTAgLTQ0LC03MSAtMTUsLTE1IC0zNSwtMjcgLTUzLC0zNiIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTQ0IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSA0MzIsMTQ4IEggMzEyIHYgLTM2IGggMTIwIHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDE0OCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsMzIwLDEyNS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMTQ2IgogICAgICAgICAgICAgeT0iMCIKICAgICAgICAgICAgIHg9IjAgOC4yNDYxNDMzIDExLjI0MjE5NiAxOC43MzIzMjcgMjQuNzI0NDMgMjguNDYyNDk2IDMxLjQ0NDU0OCAzOC4yMDY2NjUgNDQuOTU0Nzg0IDUzLjIwMDkyOCA2MC43MDUwNTkgNjMuNjg3MTExIDcwLjQzNTIyNiA3NC4xNzMyOTQgODIuNDE5NDM0IDg2LjkxMzUxMyA5MS40MDc1OTMgOTguOTExNzIiPkZsb2F0aW5nUG9pbnRFcnJvcjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTUwIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSA0ODksMjU1IEMgNDc4LDIzNiA0NTksMjA2IDQzOSwxODQgNDI3LDE3MCA0MTEsMTU4IDM5OCwxNDgiIC8+PHBhdGgKICAgICAgICAgICBpZD0icGF0aDE1MiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNTQ4LDE0OCBoIC05OCB2IC0zNiBoIDk4IHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDE1NiIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNDU4LDEyNS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMTU0IgogICAgICAgICAgICAgeT0iMCIKICAgICAgICAgICAgIHg9IjAgMTAuNTAwMTgzIDE3LjI0ODMwMSAyMy4yNDA0MDQgMjcuNzM0NDg0IDMyLjI0MjU2MSAzNS4yMjQ2MTMgNDIuNzI4NzQ1IDUyLjQ3MjkxNiA2MC43MDUwNTkgNjUuMjEzMTM1IDY5LjcwNzIxNCA3Ny4yMTEzNDIiPk92ZXJmbG93RXJyb3I8L3RzcGFuPjwvdGV4dD4KPHBhdGgKICAgICAgICAgICBpZD0icGF0aDE1OCIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNDk5LDI1NSBjIDAsLTI4IDAsLTc5IDAsLTEwNyIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTYwIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSA2ODIsMTQ4IEggNTY2IHYgLTM2IGggMTE2IHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDE2NCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsNTczLjUsMTI1Ljg5ODQ0KSI+PHRzcGFuCiAgICAgICAgICAgICBpZD0idHNwYW4xNjIiCiAgICAgICAgICAgICB5PSIwIgogICAgICAgICAgICAgeD0iMCA4LjIzMjE0MzQgMTQuMjI0MjQ4IDE4LjczMjMyNyAyNi4yMjI0NTggMzUuOTgwNjI5IDM4Ljk2MjY4MSA0NS43MTA3OTYgNDguNzA2ODQ4IDU0LjY5ODk1MiA1Ny42ODEwMDQgNjUuMTg1MTM1IDcxLjkzMzI1IDgwLjE3OTM5OCA4NC42NzM0NzcgODkuMTgxNTU3IDk2LjY3MTY4NCI+WmVyb0RpdmlzaW9uRXJyb3I8L3RzcGFuPjwvdGV4dD4KPHBhdGgKICAgICAgICAgICBpZD0icGF0aDE2NiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gNTE1LDI1NSBjIDIzLC0yOCA2OSwtNzkgOTMsLTEwNyIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTY4IgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSA3NzYsMTQ4IGggLTc2IHYgLTM2IGggNzYgeiIgLz48dGV4dAogICAgICAgICAgIGlkPSJ0ZXh0MTcyIgogICAgICAgICAgIHN0eWxlPSJmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0Om5vcm1hbDtmb250LXNpemU6MTQuMDAwMjQ0MTRweDtmb250LWZhbWlseTonVGltZXMgTmV3IFJvbWFuJzstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOlRpbWVzTmV3Um9tYW47d3JpdGluZy1tb2RlOmxyLXRiO2ZpbGw6IzAwMDAwMDtmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZSIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLDAsMCwtMSw3MDcuNSwxMjUuODk4NDQpIj48dHNwYW4KICAgICAgICAgICAgIGlkPSJ0c3BhbjE3MCIKICAgICAgICAgICAgIHk9IjAiCiAgICAgICAgICAgICB4PSIwIDQuNDk0MDc4MiAxMS4yNTYxOTYgMTguNzQ2MzI2IDI0LjczODQzMiAzMS40ODY1NDkgMzkuNzMyNjkzIDQ0LjIyNjc3MiA0OC43MjA4NDggNTYuMjI0OTc5Ij5JbmRleEVycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxNzQiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDczOCwyNTUgYyAwLC0yOCAwLC03OSAwLC0xMDciIC8+PHBhdGgKICAgICAgICAgICBpZD0icGF0aDE3NiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gODYyLDE0OCBoIC02OCB2IC0zNiBoIDY4IHoiIC8+PHRleHQKICAgICAgICAgICBpZD0idGV4dDE4MCIKICAgICAgICAgICBzdHlsZT0iZm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpub3JtYWw7Zm9udC1zaXplOjE0LjAwMDI0NDE0cHg7Zm9udC1mYW1pbHk6J1RpbWVzIE5ldyBSb21hbic7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjpUaW1lc05ld1JvbWFuO3dyaXRpbmctbW9kZTpsci10YjtmaWxsOiMwMDAwMDA7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmUiCiAgICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMSwwLDAsLTEsODAyLDEyNS44OTg0NCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMTc4IgogICAgICAgICAgICAgeT0iMCIKICAgICAgICAgICAgIHg9IjAgOS43NDQxNzAyIDE1LjczNjI3NSAyMi40ODQzOTIgMzAuNzMwNTM2IDM1LjIyNDYxMyAzOS43MTg2OTMgNDcuMjIyODI0Ij5LZXlFcnJvcjwvdHNwYW4+PC90ZXh0Pgo8cGF0aAogICAgICAgICAgIGlkPSJwYXRoMTgyIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0ibSA3NDksMjU1IGMgMTgsLTI4IDUwLC03OSA2NywtMTA3IiAvPjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxODQiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDk0MCwxNDggaCAtNjAgdiAtMzYgaCA2MCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQxODgiCiAgICAgICAgICAgc3R5bGU9ImZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToxNC4wMDAyNDQxNHB4O2ZvbnQtZmFtaWx5OidUaW1lcyBOZXcgUm9tYW4nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246VGltZXNOZXdSb21hbjt3cml0aW5nLW1vZGU6bHItdGI7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDg4OCwxMjUuODk4NDQpIj48dHNwYW4KICAgICAgICAgICAgIGlkPSJ0c3BhbjE4NiIKICAgICAgICAgICAgIHk9IjAiCiAgICAgICAgICAgICB4PSIwIDQuNDk0MDc4MiAxNC45OTQyNjIgMjMuMjQwNDA0IDI3LjczNDQ4NCAzMi4yNDI1NjEgMzkuNzMyNjkzIj5JT0Vycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgxOTAiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDkxMCwyNTUgYyAwLC0yOCAwLC03OSAwLC0xMDciIC8+PHBhdGgKICAgICAgICAgICBpZD0icGF0aDE5MiIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gMTAyMiwxNDggaCAtNjQgdiAtMzYgaCA2NCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQxOTYiCiAgICAgICAgICAgc3R5bGU9ImZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToxNC4wMDAyNDQxNHB4O2ZvbnQtZmFtaWx5OidUaW1lcyBOZXcgUm9tYW4nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246VGltZXNOZXdSb21hbjt3cml0aW5nLW1vZGU6bHItdGI7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDk2NiwxMjUuODk4NDQpIj48dHNwYW4KICAgICAgICAgICAgIGlkPSJ0c3BhbjE5NCIKICAgICAgICAgICAgIHk9IjAiCiAgICAgICAgICAgICB4PSIwIDEwLjUwMDE4MyAxOC43NDYzMjYgMjYuOTc4NDcgMzEuNDg2NTQ5IDM1Ljk4MDYyOSA0My40ODQ3NTYiPk9TRXJyb3I8L3RzcGFuPjwvdGV4dD4KPHBhdGgKICAgICAgICAgICBpZD0icGF0aDE5OCIKICAgICAgICAgICBzdHlsZT0iZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOm1pdGVyO3N0cm9rZS1taXRlcmxpbWl0OjEwO3N0cm9rZS1kYXNoYXJyYXk6bm9uZTtzdHJva2Utb3BhY2l0eToxIgogICAgICAgICAgIGQ9Im0gOTIwLDI1NSBjIDE2LC0yOCA0NCwtNzkgNjAsLTEwNyIgLz48cGF0aAogICAgICAgICAgIGlkPSJwYXRoMjAwIgogICAgICAgICAgIHN0eWxlPSJmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjE7c3Ryb2tlLWxpbmVjYXA6YnV0dDtzdHJva2UtbGluZWpvaW46bWl0ZXI7c3Ryb2tlLW1pdGVybGltaXQ6MTA7c3Ryb2tlLWRhc2hhcnJheTpub25lO3N0cm9rZS1vcGFjaXR5OjEiCiAgICAgICAgICAgZD0iTSAxMDM5LDc2IEggOTQxIFYgNDAgaCA5OCB6IiAvPjx0ZXh0CiAgICAgICAgICAgaWQ9InRleHQyMDQiCiAgICAgICAgICAgc3R5bGU9ImZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6bm9ybWFsO2ZvbnQtc2l6ZToxNC4wMDAyNDQxNHB4O2ZvbnQtZmFtaWx5OidUaW1lcyBOZXcgUm9tYW4nOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246VGltZXNOZXdSb21hbjt3cml0aW5nLW1vZGU6bHItdGI7ZmlsbDojMDAwMDAwO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lIgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEsMCwwLC0xLDk0OC41LDUzLjg5ODQzOCkiPjx0c3BhbgogICAgICAgICAgICAgaWQ9InRzcGFuMjAyIgogICAgICAgICAgICAgeT0iMCIKICAgICAgICAgICAgIHg9IjAgMTIuNzQwMjIyIDE1LjcyMjI3NCAyMi40NzAzOTIgMjkuOTc0NTIyIDM3LjQ3ODY1MyA0Ny4yMjI4MjQgNTMuMjE0OTI4IDYxLjQ2MTA3MSA2NS45NTUxNDcgNzAuNDYzMjI2IDc3Ljk1MzM2MiI+V2luZG93c0Vycm9yPC90c3Bhbj48L3RleHQ+CjxwYXRoCiAgICAgICAgICAgaWQ9InBhdGgyMDYiCiAgICAgICAgICAgc3R5bGU9ImZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MTtzdHJva2UtbGluZWNhcDpidXR0O3N0cm9rZS1saW5lam9pbjptaXRlcjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5Om5vbmU7c3Ryb2tlLW9wYWNpdHk6MSIKICAgICAgICAgICBkPSJtIDk5MCwxMTIgYyAwLC0xMSAwLC0yNSAwLC0zNiIgLz48L2c+PC9nPjxnCiAgICAgICBpZD0iZzIwOCIgLz48L2c+PC9zdmc+"
-     ]
-    }
-   },
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![exception_hierarchy.svg](attachment:exception_hierarchy.svg)"
+    "![exception hierarchy](exception_hierarchy.svg)"
    ]
   },
   {
@@ -3122,14 +4907,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 176,
+   "execution_count": 217,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Give a number: 1\n",
+      "Give a number: 12\n",
       "You didn’t enter a number\n"
      ]
     }
@@ -3185,67 +4970,15 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "# Modules"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "<pre>\n",
+    "#### <div class=\"alert alert-info\">Exercise X (extract numbers)</div>\n",
     "\n",
+    "Write a function `extract_numbers` that gets a string as a parameter. It should return a list of numbers that can be both ints and floats. Split the string to words at whitespace using the `split()` method. Then iterate through each word, and initially try to convert to an int. If unsuccesful, then try to convert to a float. If not a number then skip the word.\n",
     "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "\n",
-    "</pre>"
+    "Example run:\n",
+    "`print(extract_numbers(\"abd 123 1.2 test 13.2 -1\"))`\n",
+    "will return\n",
+    "`[123, 1.2, 13.2, -1]`\n",
+    "<hr/>"
    ]
   }
  ],
@@ -3265,7 +4998,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.6"
+   "version": "3.6.5"
   }
  },
  "nbformat": 4,
