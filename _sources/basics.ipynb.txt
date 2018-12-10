@@ -4,6 +4,16 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "<!--NAVIGATION-->\n",
+    "\n",
+    "\n",
+    "<a href=\"https://colab.research.google.com/github/jttoivon/x/blob/master/notebooks/basics.ipynb\"><img align=\"left\" src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open in Colab\" title=\"Open and Execute in Google Colaboratory\"></a>\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "# Python"
    ]
   },
@@ -177,11 +187,13 @@
    "metadata": {},
    "source": [
     "#### <div class=\"alert alert-info\"> Exercise 1 (hello world)</div>\n",
-    "Fill in the missing piece in the solution stub to make it print the following:\n",
+    "Fill in the missing piece in the solution stub file `hello_world.py` in folder `src` to make it print the following:\n",
     "\n",
     "`Hello, world!`\n",
     "\n",
-    "Make sure you use correct indenting.\n",
+    "Make sure you use correct indenting. You can run it with command `python3 src/hello_world.py`.\n",
+    "If the output looks good, then you can test it with command `tmc test`. If the tests pass,\n",
+    "submit your solution to the server with command `tmc submit`.\n",
     "<hr/>"
    ]
   },
@@ -315,7 +327,6 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -3440,7 +3451,6 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -4578,7 +4588,6 @@
    ]
   },
   {
-   "attachments": {},
    "cell_type": "markdown",
    "metadata": {},
    "source": [
@@ -4982,6 +4991,16 @@
     "`[123, 1.2, 13.2, -1]`\n",
     "<hr/>"
    ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<!--NAVIGATION-->\n",
+    "\n",
+    "\n",
+    "<a href=\"https://colab.research.google.com/github/jttoivon/x/blob/master/notebooks/basics.ipynb\"><img align=\"left\" src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open in Colab\" title=\"Open and Execute in Google Colaboratory\"></a>\n"
+   ]
   }
  ],
  "metadata": {
@@ -5000,7 +5019,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.5"
+   "version": "3.6.6"
   }
  },
  "nbformat": 4,
