@@ -81,7 +81,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -216,18 +223,18 @@ div.nblast {
 
 /* input prompt */
 div.nbinput div.prompt pre {
-    color: #303F9F;
+    color: #307FC1;
 }
 
 /* output prompt */
 div.nboutput div.prompt pre {
-    color: #D84315;
+    color: #BF5B3D;
 }
 
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 5ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -267,9 +274,9 @@ div.nboutput div.output_area {
 
 /* input area */
 div.nbinput div.input_area {
-    border: 1px solid #cfcfcf;
+    border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f7f7f7;
+    background: #f5f5f5;
 }
 
 /* override MathJax center alignment in output cells */
@@ -277,7 +284,7 @@ div.nboutput div[class*=MathJax] {
     text-align: left !important;
 }
 
-/* override sphinx.ext.pngmath center alignment in output cells */
+/* override sphinx.ext.imgmath center alignment in output cells */
 div.nboutput div.math p {
     text-align: left;
 }
@@ -327,6 +334,40 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -343,6 +384,11 @@ div.nboutput div.output_area.stderr {
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/bayes.ipynb">bayes.ipynb</a>.
@@ -350,52 +396,25 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Naive-Bayes-classification">
 <h1>Naive Bayes classification<a class="headerlink" href="#Naive-Bayes-classification" title="Permalink to this headline">¶</a></h1>
-<p><em>Classification</em> is one form of supervised learning. The aim is to
-annotate all data points with a label. Those points that have the same
-label belong to the same class. There can be two or more labels. For
-example, a lifeforms can be classified (coarsely) with labels animal,
-plant, fungi, archaea, bacteria, protozoa, and chromista. The data
-points are observed to have certain features that can be used to predict
-their labels. For example, if it is has feathers, then it is most likely
-an animal.</p>
-<p>In supervised learning an algorithm is first given a training set of
-data points with their features and labels. Then the algorithm learns
-from these features and labels a (probabilistic) model, which can
-afterwards be used to predict the labels of previously unseen data.</p>
-<p><em>Naive Bayes classification</em> is a fast and simple to understand method.
-Its speed is due to some simplifications we make about the underlying
-probability distributions, namely, the assumption about the independence
-of features. Yet, it can be quite powerful, especially when there are
-enough features in the data.</p>
-<p>Suppose we have for each label L a probability distribution. This
-distribution gives probability for each possible combination of features
-(a feature vector):</p>
+<p><em>Classification</em> is one form of supervised learning. The aim is to annotate all data points with a label. Those points that have the same label belong to the same class. There can be two or more labels. For example, a lifeforms can be classified (coarsely) with labels animal, plant, fungi, archaea, bacteria, protozoa, and chromista. The data points are observed to have certain features that can be used to predict their labels. For example, if it is has feathers, then it is most likely an animal.</p>
+<p>In supervised learning an algorithm is first given a training set of data points with their features and labels. Then the algorithm learns from these features and labels a (probabilistic) model, which can afterwards be used to predict the labels of previously unseen data.</p>
+<p><em>Naive Bayes classification</em> is a fast and simple to understand method. Its speed is due to some simplifications we make about the underlying probability distributions, namely, the assumption about the independence of features. Yet, it can be quite powerful, especially when there are enough features in the data.</p>
+<p>Suppose we have for each label L a probability distribution. This distribution gives probability for each possible combination of features (a feature vector):</p>
 <div class="math notranslate nohighlight">
 \[P(features | L).\]</div>
-<p>The main idea in Bayesian classification is to reverse the direction of
-dependence: we want to predict the label based on the features:</p>
+<p>The main idea in Bayesian classification is to reverse the direction of dependence: we want to predict the label based on the features:</p>
 <div class="math notranslate nohighlight">
 \[P(L | features)\]</div>
-<p>This is possible by <a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">the Bayes
-theorem</a>:</p>
+<p>This is possible by <a class="reference external" href="https://en.wikipedia.org/wiki/Bayes%27_theorem">the Bayes theorem</a>:</p>
 <div class="math notranslate nohighlight">
 \[P(L | features) = \frac{P(features | L)P(L)}{P(features)}.\]</div>
-<p>Let’s assume we have to labels L1 and L2, and their associated
-distributions: <span class="math notranslate nohighlight">\(P(features | L1)\)</span> and <span class="math notranslate nohighlight">\(P(features | L2)\)</span>. If
-we have a data point with “features”, whose label we don’t know, we can
-try to predict it using the ratio of posterior probabilities:</p>
+<p>Let’s assume we have to labels L1 and L2, and their associated distributions: <span class="math notranslate nohighlight">\(P(features | L1)\)</span> and <span class="math notranslate nohighlight">\(P(features | L2)\)</span>. If we have a data point with “features”, whose label we don’t know, we can try to predict it using the ratio of posterior probabilities:</p>
 <div class="math notranslate nohighlight">
 \[\frac{P(L1 | features)}{P(L2 | features)} = \frac{P(features | L1)P(L1)}{P(features | L2)P(L2)}.\]</div>
-<p>If the ratio is greater than one, we label our data point with label L1,
-and if not, we give it label L2. The prior probabilities P(L1) and P(L2)
-of labels can be easily found out from the input data, as for each data
-point we also have its label. Same goes for the probabilities of
-features conditioned on the label.</p>
-<p>We first demonstrate naive Bayes classification using Gaussian
-distributions.</p>
+<p>If the ratio is greater than one, we label our data point with label L1, and if not, we give it label L2. The prior probabilities P(L1) and P(L2) of labels can be easily found out from the input data, as for each data point we also have its label. Same goes for the probabilities of features conditioned on the label.</p>
+<p>We first demonstrate naive Bayes classification using Gaussian distributions.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [323]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[323]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -405,8 +424,7 @@ distributions.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [324]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[324]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -429,8 +447,7 @@ distributions.</p>
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [325]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[325]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -442,12 +459,9 @@ distributions.</p>
 </pre></div>
 </div>
 </div>
-<p>Naive Bayes algorithm fitted two 2-dimensional Gaussian distribution to
-the data. The means and the variances define these distributions
-completely.</p>
+<p>Naive Bayes algorithm fitted two 2-dimensional Gaussian distribution to the data. The means and the variances define these distributions completely.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [326]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[326]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -467,12 +481,9 @@ Standard deviations: [[2.06097005 2.47716872]
  [3.33164807 2.22401384]]
 </pre></div></div>
 </div>
-<p>Let’s plot these distributions. First we define a helper function to
-draw an ellipse that gives the standard deviation in each direction from
-the origo.</p>
+<p>Let’s plot these distributions. First we define a helper function to draw an ellipse that gives the standard deviation in each direction from the origo.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [327]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[327]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -502,8 +513,7 @@ the origo.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [328]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[328]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -522,11 +532,9 @@ the origo.</p>
 <img alt="_images/bayes_11_0.png" src="_images/bayes_11_0.png" />
 </div>
 </div>
-<p><em>Accuracy score</em> gives a measure about how well we managed to predict
-the labels. The maximum value is 1.0.</p>
+<p><em>Accuracy score</em> gives a measure about how well we managed to predict the labels. The maximum value is 1.0.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [329]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[329]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -544,11 +552,9 @@ the labels. The maximum value is 1.0.</p>
 Accuracy score is 1.0
 </pre></div></div>
 </div>
-<p>The score was the best possible, which is not a surprise, since we tried
-to predict the data we had already seen!</p>
+<p>The score was the best possible, which is not a surprise, since we tried to predict the data we had already seen!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [342]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[342]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -563,8 +569,7 @@ to predict the data we had already seen!</p>
 <h2>Another example<a class="headerlink" href="#Another-example" title="Permalink to this headline">¶</a></h2>
 <p>Let’s generate some more data using multivariate normal distributions.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [331]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[331]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -596,11 +601,9 @@ to predict the data we had already seen!</p>
 <img alt="_images/bayes_18_0.png" src="_images/bayes_18_0.png" />
 </div>
 </div>
-<p>The two clusters seem to be quite separate. Let’s try naive Bayesian
-classification on this data.</p>
+<p>The two clusters seem to be quite separate. Let’s try naive Bayesian classification on this data.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [332]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[332]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -611,8 +614,7 @@ classification on this data.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [333]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[333]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -633,8 +635,7 @@ Standard deviations: [[4.52895773 4.35115634]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [334]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[334]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -665,12 +666,9 @@ Accuracy score is 0.839
 <img alt="_images/bayes_22_1.png" src="_images/bayes_22_1.png" />
 </div>
 </div>
-<p>Even thought the score is quite good, we can see from the plot that the
-algorithm didn’t have good models for the data. We can plot the models
-the algorithm used:</p>
+<p>Even thought the score is quite good, we can see from the plot that the algorithm didn’t have good models for the data. We can plot the models the algorithm used:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [335]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[335]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -690,20 +688,13 @@ the algorithm used:</p>
 <img alt="_images/bayes_24_0.png" src="_images/bayes_24_0.png" />
 </div>
 </div>
-<p>The problem with naive Bayesian classification is that it tries to model
-the data using Gaussian distributions, which are aligned along the x and
-y axes. With this example data we would have needed Gaussian
-distributions which are “tilted”.</p>
+<p>The problem with naive Bayesian classification is that it tries to model the data using Gaussian distributions, which are aligned along the x and y axes. With this example data we would have needed Gaussian distributions which are “tilted”.</p>
 </div>
 <div class="section" id="Text-classification">
 <h2>Text classification<a class="headerlink" href="#Text-classification" title="Permalink to this headline">¶</a></h2>
-<p>We next try to classificate a set of messages that were posted on a
-public forum. The messages were divided into groups by the topics. So,
-we have a data set ready for classification testing. Let’s first load
-this data using scikit-learn and print the message categories.</p>
+<p>We next try to classificate a set of messages that were posted on a public forum. The messages were divided into groups by the topics. So, we have a data set ready for classification testing. Let’s first load this data using scikit-learn and print the message categories.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [336]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[336]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -714,8 +705,7 @@ this data using scikit-learn and print the message categories.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[336]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[336]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -742,12 +732,9 @@ this data using scikit-learn and print the message categories.</p>
 </pre></div>
 </div>
 </div>
-<p>We concentrate on four message categories only. The tool
-fetch_20newsgroups allows us to easily split the data into training and
-testing data.</p>
+<p>We concentrate on four message categories only. The tool fetch_20newsgroups allows us to easily split the data into training and testing data.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [337]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[337]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -759,8 +746,7 @@ testing data.</p>
 </div>
 <p>Let’s see what we got:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [338]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[338]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -778,26 +764,11 @@ Training data: Data: &lt;class &#39;list&#39;&gt; 2364 Target: &lt;class &#39;nu
 Test data: Data: &lt;class &#39;list&#39;&gt; 1574 Target &lt;class &#39;list&#39;&gt; 1574
 </pre></div></div>
 </div>
-<p>We use as features the frequencies of each word in the dataset. That is,
-there as many features as there are distinct words in the dataset. We
-denote the number of features by <span class="math notranslate nohighlight">\(f\)</span>. As the features are now
-counts, it is sensible to use multinomial distribution instead of
-Gaussian.</p>
-<p>Let’s try to model these messages using multinomial distributions. Each
-message category has its own distribution. A multinomial distribution
-has <span class="math notranslate nohighlight">\(f\)</span> non-negative parameters
-<span class="math notranslate nohighlight">\(\theta_1,\ldots , \theta_f\)</span>, which sum up to one. For example,
-the parameter <span class="math notranslate nohighlight">\(\theta_3\)</span> might tell the the probability of the
-word “board” appearing in a message of the category this distribution is
-describing.</p>
-<p>In scikit-learn there is a class CountVectorizer that converts messages
-in form of text strings to feature vectors. We can integrate this
-conversion with the model we are using (multinomial naive Bayes), so
-that the conversion happens automatically as part of the fit method. We
-achive this integration using the make_pipeline tool.</p>
+<p>We use as features the frequencies of each word in the dataset. That is, there as many features as there are distinct words in the dataset. We denote the number of features by <span class="math notranslate nohighlight">\(f\)</span>. As the features are now counts, it is sensible to use multinomial distribution instead of Gaussian.</p>
+<p>Let’s try to model these messages using multinomial distributions. Each message category has its own distribution. A multinomial distribution has <span class="math notranslate nohighlight">\(f\)</span> non-negative parameters <span class="math notranslate nohighlight">\(\theta_1,\ldots , \theta_f\)</span>, which sum up to one. For example, the parameter <span class="math notranslate nohighlight">\(\theta_3\)</span> might tell the the probability of the word “board” appearing in a message of the category this distribution is describing.</p>
+<p>In scikit-learn there is a class CountVectorizer that converts messages in form of text strings to feature vectors. We can integrate this conversion with the model we are using (multinomial naive Bayes), so that the conversion happens automatically as part of the fit method. We achive this integration using the make_pipeline tool.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [339]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[339]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -825,8 +796,7 @@ Accuracy score is 0.920584498094028
 <p>The classifier seem to work quite well!</p>
 <p>Let’s have a closer look at the resulting feature vectors.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [340]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[340]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -896,11 +866,9 @@ Type of feature matrix: &lt;class &#39;scipy.sparse.csr.csr_matrix&#39;&gt;
   (0, 15373)    1
 </pre></div></div>
 </div>
-<p>The feature matrix is stored in sparse format, that is, only the nonzero
-counts are stored. How many words were in the first message?</p>
+<p>The feature matrix is stored in sparse format, that is, only the nonzero counts are stored. How many words were in the first message?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [341]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[341]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -957,90 +925,48 @@ as it is encrypted.
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 5 (blob_classification)</div>
-<p>Write a function blob_classification that gets feature matrix X and
-label vector y as parameters. It should then return the accuracy score
-of the prediction. Do the prediction using GaussianNB, and use
-train_test_split function from sklearn to split the dataset in to two
-equal halves: one for training and one for testing. Give parameter
-random_state=0 to the splitting function so that the result is
-deterministic. Use training set size of 75% of the whole data.</p>
+<p>Write a function blob_classification that gets feature matrix X and label vector y as parameters. It should then return the accuracy score of the prediction. Do the prediction using GaussianNB, and use train_test_split function from sklearn to split the dataset in to two equal halves: one for training and one for testing. Give parameter random_state=0 to the splitting function so that the result is deterministic. Use training set size of 75% of the whole data.</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 6 (plant classification)</div>
 <p>Write function plant_classification that does the following:</p>
 <ul class="simple">
 <li>loads the iris dataset using sklearn (sklearn.datasets.load_iris)</li>
-<li>splits the data into training and testing part using the
-train_test_split function so that the training set size is 80% of
-the whole data (give the call also the random_state=0 argument to
-make the result deterministic)</li>
+<li>splits the data into training and testing part using the train_test_split function so that the training set size is 80% of the whole data (give the call also the random_state=0 argument to make the result deterministic)</li>
 <li>use Gaussian naive Bayes to fit the training data</li>
 <li>predict labels of the test data</li>
-<li>the function should return the accuracy score of the prediction
-performance (sklearn.metrics.accuracy_score)</li>
+<li>the function should return the accuracy score of the prediction performance (sklearn.metrics.accuracy_score)</li>
 </ul>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 7 (word classification)</div>
 <p>Part 1.</p>
-<p>Write function get_features that gets a one dimensional np.array,
-containing words, as parameter. It should return a feature matrix of
-shape (n, 29), where n is the number of elements of the input array.
-There should be one feature for each of the letters in the following
-alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
+<p>Write function get_features that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
 <p>Part 2.</p>
-<p>Write function contains_valid_chars that takes a string as a parameter
-and returns the truth value of whether all the characters in the string
-belong to the alphabet or not.</p>
+<p>Write function contains_valid_chars that takes a string as a parameter and returns the truth value of whether all the characters in the string belong to the alphabet or not.</p>
 <p>Part 3.</p>
-<p>Write function get_features_and_labels() that returns the tuple (X,
-y) of the feature matrix and the target vector. Use the labels 0 and 1
-for Finnish and English, respectively. Use the supplied functions
-load_finnish() and load_english() to get the lists of words. Filter
-the lists in the following ways:</p>
+<p>Write function get_features_and_labels() that returns the tuple (X, y) of the feature matrix and the target vector. Use the labels 0 and 1 for Finnish and English, respectively. Use the supplied functions load_finnish() and load_english() to get the lists of words. Filter the lists in the following ways:</p>
 <ul class="simple">
-<li>Convert the Finnish words to lowercase, and then filter out those
-words that contain characters that don’t belong to the alphabet.</li>
-<li>For the English words first filter out those words that begin with an
-uppercase letter to get rid of proper nouns. Then proceed as with the
-Finnish words.</li>
+<li>Convert the Finnish words to lowercase, and then filter out those words that contain characters that don’t belong to the alphabet.</li>
+<li>For the English words first filter out those words that begin with an uppercase letter to get rid of proper nouns. Then proceed as with the Finnish words.</li>
 </ul>
 <p>Use get_features function you made earlier to form the feature matrix.</p>
 <p>Part 4.</p>
 <p>Create <code class="docutils literal notranslate"><span class="pre">word_classification</span></code> function that does the following:</p>
-<p>Use the function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> you made earlier to get the
-feature matrix and the labels. Use multinomial naive Bayes to do the
-classification. Get the accuracy scores using the
-<code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.cross_val_score</span></code> function; use 5-fold cross
-validation. The function should return a list of five accuracy scores.</p>
-<p>The cv parameter of cross_val_score can be either an integer, which
-specifies the number of folds, or it can be a <em>cross-validation
-generator</em> that generates the (train set,test set) pairs. What happens
-if you pass the following cross-validation generator to
-<code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter:
-<code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> you made earlier to get the feature matrix and the labels. Use multinomial naive Bayes to do the classification. Get the accuracy scores using the <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.cross_val_score</span></code> function; use 5-fold cross validation. The function should return a list of five accuracy scores.</p>
+<p>The cv parameter of cross_val_score can be either an integer, which specifies the number of folds, or it can be a <em>cross-validation generator</em> that generates the (train set,test set) pairs. What happens if you pass the following cross-validation generator to <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
 <p>Why the difference?</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 8 (spam detection)</div>
-<p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The
-files are preprocessed versions of the files from
-<a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email
-per line. The file ham.txt.gz contains emails that are non-spam, and,
-conversely, emails in file spam.txt are spam. The email headers have
-been removed, except for the subject line, and non-ascii characters have
-been deleted.</p>
+<p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file ham.txt.gz contains emails that are non-spam, and, conversely, emails in file spam.txt are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
 <p>Write function spam_detection that does the following:</p>
 <ul class="simple">
-<li>reads these files. Use function open from gzip module, since the
-files are compressed.</li>
-<li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’
-<code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
+<li>reads these files. Use function open from gzip module, since the files are compressed.</li>
+<li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
 <li>use labels 0 for ham and 1 for spam</li>
-<li>divide that feature matrix and the target label into training and
-test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code></li>
-<li>train a MultinomialNB model, and use it to predict the labels for the
-test set</li>
+<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code></li>
+<li>train a MultinomialNB model, and use it to predict the labels for the test set</li>
 </ul>
 <p>The function should return a triple consisting of</p>
 <ul class="simple">
@@ -1048,8 +974,7 @@ test set</li>
 <li>size of test sample</li>
 <li>number of misclassified sample points</li>
 </ul>
-<p>Pass the function’s random_state parameter to function
-<code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
+<p>Pass the function’s random_state parameter to function <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
 <!--NAVIGATION--></div>
 </div>
 
@@ -1098,7 +1023,9 @@ test set</li>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   

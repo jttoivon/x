@@ -81,7 +81,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -221,18 +228,18 @@ div.nblast {
 
 /* input prompt */
 div.nbinput div.prompt pre {
-    color: #303F9F;
+    color: #307FC1;
 }
 
 /* output prompt */
 div.nboutput div.prompt pre {
-    color: #D84315;
+    color: #BF5B3D;
 }
 
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 5ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -272,9 +279,9 @@ div.nboutput div.output_area {
 
 /* input area */
 div.nbinput div.input_area {
-    border: 1px solid #cfcfcf;
+    border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f7f7f7;
+    background: #f5f5f5;
 }
 
 /* override MathJax center alignment in output cells */
@@ -282,7 +289,7 @@ div.nboutput div[class*=MathJax] {
     text-align: left !important;
 }
 
-/* override sphinx.ext.pngmath center alignment in output cells */
+/* override sphinx.ext.imgmath center alignment in output cells */
 div.nboutput div.math p {
     text-align: left;
 }
@@ -332,6 +339,40 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -348,6 +389,11 @@ div.nboutput div.output_area.stderr {
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/clustering.ipynb">clustering.ipynb</a>.
@@ -355,42 +401,23 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Clustering">
 <h1>Clustering<a class="headerlink" href="#Clustering" title="Permalink to this headline">¶</a></h1>
-<p>Clustering is one of the types of unsupervised learning. It is similar
-to classification: the aim is to give a label to each data point.
-However, unlike in classification, we are not given any examples of
-labels associated with the data points. We must infer from the data,
-which data points belong to the same cluster. This can be achieved using
-the notion of distance between the data points. Data points in the same
-cluster are somehow close to each other.</p>
-<p>One of the simplest clustering methods is the <em>k-means clustering</em>. It
-aims at producing a clustering that is optimal in the following sense:</p>
+<p>Clustering is one of the types of unsupervised learning. It is similar to classification: the aim is to give a label to each data point. However, unlike in classification, we are not given any examples of labels associated with the data points. We must infer from the data, which data points belong to the same cluster. This can be achieved using the notion of distance between the data points. Data points in the same cluster are somehow close to each other.</p>
+<p>One of the simplest clustering methods is the <em>k-means clustering</em>. It aims at producing a clustering that is optimal in the following sense:</p>
 <ul class="simple">
-<li>the <em>centre of each cluster</em> is the average of all points in the
-cluster</li>
-<li>any point in a cluster is closer to its centre than to a centre of
-any other cluster</li>
+<li>the <em>centre of each cluster</em> is the average of all points in the cluster</li>
+<li>any point in a cluster is closer to its centre than to a centre of any other cluster</li>
 </ul>
-<p>The k-means clustering is first given the wanted number of clusters as a
-<em>hyperparameter</em>, say k. Next, to start the algorithm, k points from the
-data set are chosen randomly as cluster centres. Then the following
-phases are repeated iteratively:</p>
+<p>The k-means clustering is first given the wanted number of clusters as a <em>hyperparameter</em>, say k. Next, to start the algorithm, k points from the data set are chosen randomly as cluster centres. Then the following phases are repeated iteratively:</p>
 <ul class="simple">
-<li>any data point is set to belong to a cluster, whose centre is closest
-to it</li>
-<li>then for each cluster a new centre is chosen as the average of the
-data points in the cluster</li>
+<li>any data point is set to belong to a cluster, whose centre is closest to it</li>
+<li>then for each cluster a new centre is chosen as the average of the data points in the cluster</li>
 </ul>
-<p>This procedure is repeated until the clusters no longer change. This
-kind of algorithm is called an Expectation-Maximization (EM) algorithm,
-which is known to converge.</p>
+<p>This procedure is repeated until the clusters no longer change. This kind of algorithm is called an Expectation-Maximization (EM) algorithm, which is known to converge.</p>
 <div class="section" id="Simple-example">
 <h2>Simple example<a class="headerlink" href="#Simple-example" title="Permalink to this headline">¶</a></h2>
-<p>The scikit-learn library has an implementation of the k-means algorithm.
-Let’s apply it to a set of randomly generated blobs, whose labels we
-throw away.</p>
+<p>The scikit-learn library has an implementation of the k-means algorithm. Let’s apply it to a set of randomly generated blobs, whose labels we throw away.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -401,8 +428,7 @@ throw away.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -429,11 +455,9 @@ throw away.</p>
  [ 1.48663347  4.39407536]] [1 2 0 3 1 0 2 0 0 0]
 </pre></div></div>
 </div>
-<p>Now we plot these points, but without coloring the points using the
-labels:</p>
+<p>Now we plot these points, but without coloring the points using the labels:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -448,13 +472,9 @@ labels:</p>
 <img alt="_images/clustering_8_0.png" src="_images/clustering_8_0.png" />
 </div>
 </div>
-<p>(We can still discern four clusters in the data set.) Let’s see if the
-k-means algorithm can recover these clusters. First we create the
-instance of the k-means model by giving it the number of clusters 4 as a
-hyperparameter.</p>
+<p>(We can still discern four clusters in the data set.) Let’s see if the k-means algorithm can recover these clusters. First we create the instance of the k-means model by giving it the number of clusters 4 as a hyperparameter.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -477,8 +497,7 @@ hyperparameter.</p>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -494,11 +513,9 @@ hyperparameter.</p>
 <img alt="_images/clustering_11_0.png" src="_images/clustering_11_0.png" />
 </div>
 </div>
-<p>The clustering looks more or less correct. To get a more quantitative
-measure of success we can get the accuracy score.</p>
+<p>The clustering looks more or less correct. To get a more quantitative measure of success we can get the accuracy score.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -516,14 +533,9 @@ measure of success we can get the accuracy score.</p>
 Accuracy score is 0.0
 </pre></div></div>
 </div>
-<p>Oops! Even though the clusters could match almost perfectly to the
-original, their labels might be permuted. Let’s select randomly one
-point from each cluster and check their labels from the original data
-labels. Then we use this label for the whole cluster. In essence, we are
-renaming the clusters, not re-clustering the data.</p>
+<p>Oops! Even though the clusters could match almost perfectly to the original, their labels might be permuted. Let’s select randomly one point from each cluster and check their labels from the original data labels. Then we use this label for the whole cluster. In essence, we are renaming the clusters, not re-clustering the data.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -539,8 +551,7 @@ renaming the clusters, not re-clustering the data.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -558,8 +569,7 @@ renaming the clusters, not re-clustering the data.</p>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -576,17 +586,11 @@ renaming the clusters, not re-clustering the data.</p>
 Accuracy score is 0.99
 </pre></div></div>
 </div>
-<p>So, the k-means algorithm seems to work well in this case, but the can
-be several problems. Firstly, even though an EM algorithm always
-converges, it might converge to a local maximum. To avoid this, EM type
-algorithms are usually run several times, each time starting from
-different random initial values. For instance, in the scikit-learn
-implementation, the algorithms is restarted by default 10 times.</p>
+<p>So, the k-means algorithm seems to work well in this case, but the can be several problems. Firstly, even though an EM algorithm always converges, it might converge to a local maximum. To avoid this, EM type algorithms are usually run several times, each time starting from different random initial values. For instance, in the scikit-learn implementation, the algorithms is restarted by default 10 times.</p>
 <div class="section" id="Let's-see-what-happens,-if-we-set-it-to-run-only-once.">
 <h3>Let’s see what happens, if we set it to run only once.<a class="headerlink" href="#Let's-see-what-happens,-if-we-set-it-to-run-only-once." title="Permalink to this headline">¶</a></h3>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -604,11 +608,9 @@ implementation, the algorithms is restarted by default 10 times.</p>
 </div>
 <div class="section" id="More-complicated-example">
 <h2>More complicated example<a class="headerlink" href="#More-complicated-example" title="Permalink to this headline">¶</a></h2>
-<p>The k-means algorithm can have difficulties when the clusters are not
-convex shapes:</p>
+<p>The k-means algorithm can have difficulties when the clusters are not convex shapes:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -618,8 +620,7 @@ convex shapes:</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -635,8 +636,7 @@ convex shapes:</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -653,16 +653,10 @@ convex shapes:</p>
 <img alt="_images/clustering_25_0.png" src="_images/clustering_25_0.png" />
 </div>
 </div>
-<p>The clustering does not work well now, since it is not possible to
-separate the two clusters with a line. We could embed this data set into
-a higher dimensional space, where the separation is possible. And then
-apply the k-means clustering.</p>
-<p>Alternatively, we can use a different type of clustering algorithm for
-this case. The <em>DBSCAN algorithm</em> is based on densities and works well
-on data whose density in the clusters is uniform.</p>
+<p>The clustering does not work well now, since it is not possible to separate the two clusters with a line. We could embed this data set into a higher dimensional space, where the separation is possible. And then apply the k-means clustering.</p>
+<p>Alternatively, we can use a different type of clustering algorithm for this case. The <em>DBSCAN algorithm</em> is based on densities and works well on data whose density in the clusters is uniform.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -680,19 +674,13 @@ on data whose density in the clusters is uniform.</p>
 <img alt="_images/clustering_28_0.png" src="_images/clustering_28_0.png" />
 </div>
 </div>
-<p>The good news is that DBSCAN does not require the user to specify the
-number of clusters. But now the algorithm depends on another
-hyperparameter: a threshold for distance (here 0.3).</p>
+<p>The good news is that DBSCAN does not require the user to specify the number of clusters. But now the algorithm depends on another hyperparameter: a threshold for distance (here 0.3).</p>
 </div>
 <div class="section" id="Clustering-digits">
 <h2>Clustering digits<a class="headerlink" href="#Clustering-digits" title="Permalink to this headline">¶</a></h2>
-<p>Using scikit-learn we can download a set of 1797 images of handwritten
-digits with the correct labels 0,1,…,9. The images have quite a low
-resolution: 8*8=64 pixels. Let’s see how machine learning method work
-with this kind of data.</p>
+<p>Using scikit-learn we can download a set of 1797 images of handwritten digits with the correct labels 0,1,…,9. The images have quite a low resolution: 8*8=64 pixels. Let’s see how machine learning method work with this kind of data.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -703,8 +691,7 @@ with this kind of data.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -712,11 +699,9 @@ with this kind of data.</p>
 </pre></div>
 </div>
 </div>
-<p>To get an idea how these data points look like, we plot first ten of
-these.</p>
+<p>To get an idea how these data points look like, we plot first ten of these.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -735,8 +720,7 @@ these.</p>
 </div>
 <p>Let’s cluster these data points into ten clusters.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -747,8 +731,7 @@ these.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -756,11 +739,9 @@ these.</p>
 </pre></div>
 </div>
 </div>
-<p>So, we have ten cluster centres, which are images with 8x8=64 pixels in
-them. We can have a look at their appearence:</p>
+<p>So, we have ten cluster centres, which are images with 8x8=64 pixels in them. We can have a look at their appearence:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -777,11 +758,9 @@ them. We can have a look at their appearence:</p>
 <img alt="_images/clustering_38_0.png" src="_images/clustering_38_0.png" />
 </div>
 </div>
-<p>One can recognize these numbers with the exception of maybe number
-eight. What is the accuracy score of this clustering?</p>
+<p>One can recognize these numbers with the exception of maybe number eight. What is the accuracy score of this clustering?</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -805,26 +784,12 @@ Accuracy score is 0.7935447968836951
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 9 (plant clustering)</div>
-<p>Using the same iris data set that you saw earlier in the classification,
-apply k-means clustering with 3 clusters. Create a function
-<code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and
-return the accuracy_score.</p>
+<p>Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters. Create a function <code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and return the accuracy_score.</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 10 (nonconvex clusters)</div>
-<p>Read the tab separated file data.tsv from the src folder into a
-dataframe. The dataset has two features X1 and X2, and the label y.
-Cluster the feature matrix using DBSCAN using different values for the
-eps parameter. Use values in np.arange(0.05, 0.2, 0.05) for clustering.
-For each clustering, collect the accuracy score, the number of clusters,
-and the number of outliers. Return these values in a dataframe, where
-eps is the index and the columns are names as in the below example.</p>
-<p>Note that DBSCAN uses label -1 to denote outliers , that is, those data
-points that didn’t fit well in any cluster. You have to modify the
-find_permutation function to handle this: ignore the outlier data
-points from the accuracy score computation. In addition, if the number
-of clusters is not the same as the number of labels in the original
-data, set the accuracy score to NaN.</p>
+<p>Read the tab separated file data.tsv from the src folder into a dataframe. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN using different values for the eps parameter. Use values in np.arange(0.05, 0.2, 0.05) for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a dataframe, where eps is the index and the columns are names as in the below example.</p>
+<p>Note that DBSCAN uses label -1 to denote outliers , that is, those data points that didn’t fit well in any cluster. You have to modify the find_permutation function to handle this: ignore the outlier data points from the accuracy score computation. In addition, if the number of clusters is not the same as the number of labels in the original data, set the accuracy score to NaN.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     eps   Score  Clusters  Outliers
 0    0.05      ?         ?         ?
 1    0.10      ?         ?         ?
@@ -832,43 +797,23 @@ data, set the accuracy score to NaN.</p>
 3    0.20      ?         ?         ?
 </pre></div>
 </div>
-<p>Before submitting the solution, you can plot the data set (with clusters
-colored) to see what kind of data we are dealing with.</p>
+<p>Before submitting the solution, you can plot the data set (with clusters colored) to see what kind of data we are dealing with.</p>
 <p>Points are given for each correct column in the result dataframe.</p>
 </div>
 <div class="section" id="Hierarchical-clustering">
 <h2>Hierarchical clustering<a class="headerlink" href="#Hierarchical-clustering" title="Permalink to this headline">¶</a></h2>
-<p>Hierarchical clustering works by first putting each data point in their
-own cluster and then merging clusters based on some rule, until there
-are only the wanted number of clusters remaining. For this to work,
-there needs to be a distance measure between the data points. With this
-distance measure <code class="docutils literal notranslate"><span class="pre">d</span></code>, we can define another distance measure between
-the <strong>clusters</strong> U and V using one of the following methods
-(<em>linkages</em>):</p>
+<p>Hierarchical clustering works by first putting each data point in their own cluster and then merging clusters based on some rule, until there are only the wanted number of clusters remaining. For this to work, there needs to be a distance measure between the data points. With this distance measure <code class="docutils literal notranslate"><span class="pre">d</span></code>, we can define another distance measure between the <strong>clusters</strong> U and V using one of the following methods (<em>linkages</em>):</p>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">single</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \min_{u \in U, v \in V} d(u,v)\)</span></li>
 <li><code class="docutils literal notranslate"><span class="pre">complete</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \max_{u \in U, v \in V} d(u,v)\)</span></li>
-<li><code class="docutils literal notranslate"><span class="pre">average</span></code>:
-<span class="math notranslate nohighlight">\(d(U, V) := \sum_{u \in U, v \in V} \frac{d(u,v)}{|U||V|}\)</span></li>
+<li><code class="docutils literal notranslate"><span class="pre">average</span></code>: <span class="math notranslate nohighlight">\(d(U, V) := \sum_{u \in U, v \in V} \frac{d(u,v)}{|U||V|}\)</span></li>
 <li><code class="docutils literal notranslate"><span class="pre">ward</span></code>: tries to minimize the variance in each cluster</li>
 </ul>
-<p>At each iteration of the algorithm two clusters that are closest to each
-other are merged. After this the distance between the clusters are
-recomputed, and then it continues to the next iteration.</p>
-<p>Below is an example with a botanical dataset with 150 samples from three
-species. Each species appears in the dataset 50 times. Each sample point
-has 4 features, which basically dimensions of the “leaves” of the
-flower.</p>
-<p>We use the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> library
-to both to compute the clustering and to visualize the result. The
-visualization consists of two parts: the <em>heatmap</em>, whose rows and/or
-columns may be reordered so as to have the elements of the same cluster
-next to each other; and the <em>dendrogram</em>, which shows the way the
-clusters were merged. The colors gives the length of the corresponding
-features.</p>
+<p>At each iteration of the algorithm two clusters that are closest to each other are merged. After this the distance between the clusters are recomputed, and then it continues to the next iteration.</p>
+<p>Below is an example with a botanical dataset with 150 samples from three species. Each species appears in the dataset 50 times. Each sample point has 4 features, which basically dimensions of the “leaves” of the flower.</p>
+<p>We use the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> library to both to compute the clustering and to visualize the result. The visualization consists of two parts: the <em>heatmap</em>, whose rows and/or columns may be reordered so as to have the elements of the same cluster next to each other; and the <em>dendrogram</em>, which shows the way the clusters were merged. The colors gives the length of the corresponding features.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -898,53 +843,28 @@ features.</p>
 <img alt="_images/clustering_45_1.png" src="_images/clustering_45_1.png" />
 </div>
 </div>
-<p>With sharp eye and good will one can discern three clusters in the above
-heatmap and dendrogram.</p>
+<p>With sharp eye and good will one can discern three clusters in the above heatmap and dendrogram.</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise 11 (binding sites)</div>
-<p>A binding site is a piece of DNA where a certain protein prefers to
-bind. The piece of DNA can be described as a string consisting of
-letters A, C, G, and T, which corresponds to nucleotides Adenine,
-Cytosine, Guanine, and Thymine. In this exercise the length of binding
-sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>,
-and the binding sites there are classified into two classes.</p>
-<p>Part 1. Write function <code class="docutils literal notranslate"><span class="pre">toint</span></code> that converts a nucleotide to an
-integer. Use the following mapping:</p>
+<p>A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which corresponds to nucleotides Adenine, Cytosine, Guanine, and Thymine. In this exercise the length of binding sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>, and the binding sites there are classified into two classes.</p>
+<p>Part 1. Write function <code class="docutils literal notranslate"><span class="pre">toint</span></code> that converts a nucleotide to an integer. Use the following mapping:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-&gt;</span> <span class="mi">0</span>
 <span class="n">C</span> <span class="o">-&gt;</span> <span class="mi">1</span>
 <span class="n">G</span> <span class="o">-&gt;</span> <span class="mi">2</span>
 <span class="n">T</span> <span class="o">-&gt;</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<p>Write also function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that gets a filename as
-a parameter. The function should load the contents of the file into a
-DataFrame. The column <code class="docutils literal notranslate"><span class="pre">X</span></code> contains a string. Convert this column into
-a feature matrix using the above <code class="docutils literal notranslate"><span class="pre">toint</span></code> function. For example the
-column <code class="docutils literal notranslate"><span class="pre">[&quot;GGATAATA&quot;,&quot;CGATAACC&quot;]</span></code> should result to the feature matrix</p>
+<p>Write also function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that gets a filename as a parameter. The function should load the contents of the file into a DataFrame. The column <code class="docutils literal notranslate"><span class="pre">X</span></code> contains a string. Convert this column into a feature matrix using the above <code class="docutils literal notranslate"><span class="pre">toint</span></code> function. For example the column <code class="docutils literal notranslate"><span class="pre">[&quot;GGATAATA&quot;,&quot;CGATAACC&quot;]</span></code> should result to the feature matrix</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
 </pre></div>
 </div>
-<p>The function should return a pair, whose first element is the feature
-matrix and the second element is the label vector.</p>
-<p>Part 2. Create function <code class="docutils literal notranslate"><span class="pre">cluster_euclidean</span></code> that gets a filename as
-parameter. Get the features and labels using the function from part 1.
-Perform hierarchical clustering using the function
-<code class="docutils literal notranslate"><span class="pre">sklearn.cluster.AgglomerativeClustering</span></code>. Get two clusters using
-<code class="docutils literal notranslate"><span class="pre">average</span></code> linkage and <code class="docutils literal notranslate"><span class="pre">euclidean</span></code> affinity. Fit the model and
-predict the labels. The function should return the accuracy score.</p>
-<p>Part 3. Create function <code class="docutils literal notranslate"><span class="pre">cluster_hamming</span></code> that works like the function
-in part 2, except now using the
-<a class="reference external" href="https://en.wikipedia.org/wiki/Hamming_distance">hamming</a> affinity.
-However, <code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code> does not directly support this
-affinity. So, we must compute explicitly the required distance matrix
-using the function <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise_distances</span></code>. Use the
-affinity <code class="docutils literal notranslate"><span class="pre">precomputed</span></code> and give the distance matrix, instead of the
-feature matrix, to the <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> method of the model. If you want,
-you can visualize the clustering using the provided <code class="docutils literal notranslate"><span class="pre">plot</span></code> function.</p>
-<p>Which affinity (or distance) do you think is theoretically more correct
-of these two (Euclidean or Hamming)? Why?</p>
+<p>The function should return a pair, whose first element is the feature matrix and the second element is the label vector.</p>
+<p>Part 2. Create function <code class="docutils literal notranslate"><span class="pre">cluster_euclidean</span></code> that gets a filename as parameter. Get the features and labels using the function from part 1. Perform hierarchical clustering using the function <code class="docutils literal notranslate"><span class="pre">sklearn.cluster.AgglomerativeClustering</span></code>. Get two clusters using <code class="docutils literal notranslate"><span class="pre">average</span></code> linkage and <code class="docutils literal notranslate"><span class="pre">euclidean</span></code> affinity. Fit the model and predict the labels. The function should return the accuracy score.</p>
+<p>Part 3. Create function <code class="docutils literal notranslate"><span class="pre">cluster_hamming</span></code> that works like the function in part 2, except now using the <a class="reference external" href="https://en.wikipedia.org/wiki/Hamming_distance">hamming</a> affinity. However, <code class="docutils literal notranslate"><span class="pre">AgglomerativeClustering</span></code> does not directly support this affinity. So, we must compute explicitly the required distance matrix using the function <code class="docutils literal notranslate"><span class="pre">sklearn.metrics.pairwise_distances</span></code>. Use the affinity <code class="docutils literal notranslate"><span class="pre">precomputed</span></code> and give the distance matrix, instead of the feature matrix, to the <code class="docutils literal notranslate"><span class="pre">fit_predict</span></code> method of
+the model. If you want, you can visualize the clustering using the provided <code class="docutils literal notranslate"><span class="pre">plot</span></code> function.</p>
+<p>Which affinity (or distance) do you think is theoretically more correct of these two (Euclidean or Hamming)? Why?</p>
 <!--NAVIGATION--></div>
 </div>
 
@@ -993,7 +913,9 @@ of these two (Euclidean or Hamming)? Why?</p>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   

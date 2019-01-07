@@ -40,7 +40,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 117,
+   "execution_count": 3,
    "metadata": {},
    "outputs": [
     {
@@ -107,12 +107,12 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Reading textual input from the user can be achieved with the input function. The input function is given a string parameter, which is printed and prompts the user to give input. In the example below, the string entered by the user is stored the variable `name`."
+    "Reading textual input from the user can be achieved with the input function. The input function is given a string parameter, which is printed and prompts the user to give input. In the example below, the string entered by the user is stored the variable `name`. Try executing the program in the interactive notebook by pressing control-enter!"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 120,
+   "execution_count": 4,
    "metadata": {
     "scrolled": true
    },
@@ -142,8 +142,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Repetition is possible with the for loop. Note that the body of for loop is indented whith a tabulator or four spaces.\n",
-    "Unlike in some other languages, braces are not needed to denote the body of the loop. When the indentation stops the body of the loop ends."
+    "Repetition is possible with the for loop. Note that the body of for loop is indented with a tabulator or four spaces.\n",
+    "Unlike in some other languages, braces are not needed to denote the body of the loop. When the indentation stops, the body of the loop ends."
    ]
   },
   {
@@ -179,14 +179,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The range(3) expression above actually results with the sequence of integers 0, 1, and 2. So, the range is a half-open interval with the end point excluded from the range. In general, expression range(n) gives integers 0, 1, 2, ..., n-1. Modify the above program to make it also print the value of variable i at each iteration. Rerun the code with control-enter."
+    "The `range(3)` expression above actually results with the sequence of integers 0, 1, and 2. So, the range is a half-open interval with the end point excluded from the range. In general, expression range(n) gives integers 0, 1, 2, ..., n-1. Modify the above program to make it also print the value of variable i at each iteration. Rerun the code with control-enter."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 1 (hello world)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 1 (hello world)</div>\n",
     "Fill in the missing piece in the solution stub file `hello_world.py` in folder `src` to make it print the following:\n",
     "\n",
     "`Hello, world!`\n",
@@ -201,7 +201,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 2 (compliment)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 2 (compliment)</div>\n",
     "Fill in the stub solution to make the program work as follows. The program should ask the user for an input, and the print an answer as the examples below show.\n",
     "\n",
     "```\n",
@@ -268,7 +268,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Note that we did not need to introduce the variable a in any way. No type was given for the variable. Python automatically detected that the type of a must be int. We can query the type of a variable with the builtin function type:"
+    "Note that we did not need to introduce the variable `a` in any way. No type was given for the variable. Python automatically detected that the type of `a` must be `int` (an integer). We can query the type of a variable with the builtin function `type`:"
    ]
   },
   {
@@ -337,19 +337,19 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We say that a variable is a name that *refers* to a value or and object, and the assignment operator *binds* a variable name to a value."
+    "We say that a variable is a name that *refers* to a value or an object, and the assignment operator *binds* a variable name to a value."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The basic data types in Python are: int, float, complex, str (a string), bool (a boolean with values True and False), and bytes. Below are few examples of their use."
+    "The basic data types in Python are: `int`, `float`, `complex`, `str` (a string), `bool` (a boolean with values `True` and `False`), and `bytes`. Below are few examples of their use."
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 125,
+   "execution_count": 5,
    "metadata": {},
    "outputs": [
     {
@@ -367,7 +367,7 @@
     "f=1.5\n",
     "b = i==4\n",
     "print(\"Result of the comparison:\", b)\n",
-    "c=0+2j\n",
+    "c=0+2j                                 # Note that j denotes the imaginary unit of complex numbers.\n",
     "print(\"Complex multiplication:\", c*c)\n",
     "s=\"conca\" + \"tenation\"\n",
     "print(s)"
@@ -409,7 +409,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "A *byte* can represent numbers between 0 and 255. A byte consists of 8 *bits*, which can in turn represent either 0 or 1. All the data that is stored on disks or transmitted across the internet are sequences of bytes. Normally we don't have to care about bytes, since our strings and other variables are automatically converted to a sequence of bytes when needed to. An example of the correspondence between the usual data types and bytes is the characters in a string. A single character is encoded as a sequence of one or more bytes. For example, in the common [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding the character `c` corresponds to the byte with integer value 99 and the character `ä` corresponds to sequence of bytes [195, 164]. An example conversion between characters and bytes:"
+    "A *byte* is a unit of information that can represent numbers between 0 and 255. A byte consists of 8 *bits*, which can in turn represent either 0 or 1. All the data that is stored on disks or transmitted across the internet are sequences of bytes. Normally we don't have to care about bytes, since our strings and other variables are automatically converted to a sequence of bytes when needed to. An example of the correspondence between the usual data types and bytes is the characters in a string. A single character is encoded as a sequence of one or more bytes. For example, in the common [UTF-8](https://en.wikipedia.org/wiki/UTF-8) encoding the character `c` corresponds to the byte with integer value 99 and the character `ä` corresponds to sequence of bytes [195, 164]. An example conversion between characters and bytes:"
    ]
   },
   {
@@ -464,10 +464,10 @@
    "metadata": {},
    "source": [
     "#### Creating strings\n",
-    "A string is a sequence of characters commonly used to store input or output data in a program. The characters of a string are specified either between single (') or double (\") quotes. This optionaly is useful if a string needs to contain a quotation mark:\n",
+    "A string is a sequence of characters commonly used to store input or output data in a program. The characters of a string are specified either between single (`'`) or double (`\"`) quotes. This optionality is useful if, for example, a string needs to contain a quotation mark:\n",
     "\"I don't want to go!\". You can also achieve this by *escaping* the quotation mark with the backslash: 'I don\\'t want to go'.\n",
     "\n",
-    "The string can also contain other escape sequences like \\n for newline and \\t for a tabulator. See [literals](https://docs.python.org/3/reference/lexical_analysis.html#literals) for a list of all escape sequences."
+    "The string can also contain other escape sequences like `\\n` for newline and `\\t` for a tabulator. See [literals](https://docs.python.org/3/reference/lexical_analysis.html#literals) for a list of all escape sequences."
    ]
   },
   {
@@ -510,7 +510,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Although we can concatenate strings using the + operator, for effiency reasons, one should use the join method to concatenate largen number of strings:"
+    "Although we can concatenate strings using the `+` operator, for effiency reasons, one should use the `join` method to concatenate larger number of strings:"
    ]
   },
   {
@@ -589,7 +589,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Or alternatively using the newer format-method:"
+    "Or alternatively using the newer `format` method:"
    ]
   },
   {
@@ -613,7 +613,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The %i format specifier corresponds to integers and the specifier %f corresponds to floats.\n",
+    "The `%i` format specifier corresponds to integers and the specifier `%f` corresponds to floats.\n",
     "It is often useful to specify the number of decimals when printing the float:"
    ]
   },
@@ -695,7 +695,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div class=\"alert alert-warning\">Note that in Python the operator `//` performs integer division and operator `/` performs float division. The `**` operator denotes exponentiation. These operators might therefore behave differently than in many other comman languages.</div>"
+    "<div class=\"alert alert-warning\">Note that in Python the operator `//` performs integer division and operator `/` performs float division. The `**` operator denotes exponentiation. These operators might therefore behave differently than in many other common languages.</div>"
    ]
   },
   {
@@ -729,6 +729,13 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "Note that in Python there are no operators `++` or `--` unlike in some other languages."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "It turns out that the operators `+ - * / // % & | ^ >> << **` have the corresponding *augmented assignment operators* `+= -= *= /= //= %= &= |= ^= >>= <<= **=`"
    ]
   },
@@ -736,7 +743,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Another large set of statements if the flow-control statements such as if-else, for and while loops. We will look into these in the next sections."
+    "Another large set of statements is the flow-control statements such as if-else, for and while loops. We will look into these in the next sections."
    ]
   },
   {
@@ -744,7 +751,7 @@
    "metadata": {},
    "source": [
     "#### Loops for repetitive tasks\n",
-    "In Python we have two kinds of loops: while and for. We briefly saw the for loop earlier. Let's now look at the while loop. A while loop repeats a set of statements while a given condition holds. An example:"
+    "In Python we have two kinds of loops: `while` and `for`. We briefly saw the `for` loop earlier. Let's now look at the `while` loop. A `while` loop repeats a set of statements while a given condition holds. An example:"
    ]
   },
   {
@@ -810,7 +817,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Another way of repeating statements is with the for statement. An example"
+    "Another way of repeating statements is with the `for` statement. An example"
    ]
   },
   {
@@ -837,7 +844,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The for loop executes the statements in the block as many times as there are elements in the given list. At each iteration the variable i refers to another value from the list in order. Instead of the giving the list explicitly as above, we could have used the *generator* range(10) which returns values from the sequence 0,1,...,9 as the for loop asks for a new value. In the most general form the for loop goes through all the elements in an *iterable*.\n",
+    "The `for` loop executes the statements in the block as many times as there are elements in the given list. At each iteration the variable `i` refers to another value from the list in order. Instead of the giving the list explicitly as above, we could have used the *generator* `range(10)` which returns values from the sequence 0,1,...,9 as the for loop asks for a new value. In the most general form the `for` loop goes through all the elements in an *iterable*.\n",
     "Besides lists and generators there are other iterables. We will talk about iterables and generators later this week."
    ]
   },
@@ -845,17 +852,17 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "When one wants to iterate through all the elements in an iterable, then the for loop is a natural choice. But sometimes while loops offer cleaner solution. For instance, if we want\n",
-    "to go through all Fibonacci number up till a given limit, then it is easier to do with a `while` loop."
+    "When one wants to iterate through all the elements in an iterable, then the `for` loop is a natural choice. But sometimes `while` loops offer cleaner solution. For instance, if we want\n",
+    "to go through all Fibonacci numbers up till a given limit, then it is easier to do with a `while` loop."
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (multiplication table)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 4 (multiplication table)</div>\n",
     "\n",
-    "In the main function print a multiplication table, which is shown below:\n",
+    "In the `main` function print a multiplication table, which is shown below:\n",
     "```\n",
     "   1   2   3   4   5   6   7   8   9  10\n",
     "   2   4   6   8  10  12  14  16  18  20\n",
@@ -1058,12 +1065,12 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (two dice)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 5 (two dice)</div>\n",
     "\n",
     "Let us consider throwing two dice. (A dice can give a value between 1 and 6.) Use two nested `for`\n",
     "loops in the `main` function to iterate through all possible combinations the pair of dice can give. \n",
     "There are 36 possible combinations. Print all those combinations as pairs that sum to 5. \n",
-    "For example, your printout should include the pair (2,3). Print one pair per line.\n",
+    "For example, your printout should include the pair `(2,3)`. Print one pair per line.\n",
     "<hr/>"
    ]
   },
@@ -1191,7 +1198,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div class=\"alert alert-warning\">Note the terminology: in the function definition the names a and b are called *parameters* of the function; in the function call, however, 3 and 4 are called *arguments* to the function.\n",
+    "<div class=\"alert alert-warning\">Note the terminology: in the function definition the names a and b are called <strong>parameters</strong> of the function; in the function call, however, 3 and 4 are called <strong>arguments</strong> to the function.\n",
     "</div>"
    ]
   },
@@ -1263,9 +1270,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The strange looking argument notation is called *argument packing*. It packs all the given positional arguments into a tuple `t`. We will encounter tuples again later, but it suffices now to say that tuples are immutable lists. With the for loop we can iterate through all the elements in the tuple.\n",
+    "The strange looking argument notation (the star) is called *argument packing*. It packs all the given positional arguments into a tuple `t`. We will encounter tuples again later, but it suffices now to say that tuples are *immutable* lists. With the `for` loop we can iterate through all the elements in the tuple.\n",
     "\n",
-    "Conversely, there is also syntax for *argument unpacking*. It has confusingly exactly same notation as argument packing, but they are separated by the location where used. Packing happens in the parameter list of the functions definition, and unpacking happens where the function is called:"
+    "Conversely, there is also syntax for *argument unpacking*. It has confusingly exactly same notation as argument packing (star), but they are separated by the location where used. Packing happens in the parameter list of the functions definition, and unpacking happens where the function is called:"
    ]
   },
   {
@@ -1291,7 +1298,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The second call failed because the function tried to raise the list of numbers to the second power. Inside the function body we have t=([1,5,8]), where the parentheses denote a tuple with one element, a list."
+    "The second call failed because the function tried to raise the list of numbers to the second power. Inside the function body we have `t=([1,5,8])`, where the parentheses denote a tuple with one element, a list."
    ]
   },
   {
@@ -1305,7 +1312,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "One can also specify optional parameter by giving the parameters a default value. The parameters that have default values must come after those parameters that don't. We saw that the parameters of the print function were of form `print(value, ..., sep=' ', end='\\n', file=sys.stdout, flush=False)`. There were four parameters with default values. If some default values don't suit us, we give them in the function call using the name of the parameter:"
+    "One can also specify optional parameter by giving the parameters a default value. The parameters that have default values must come after those parameters that don't. We saw that the parameters of the `print` function were of form `print(value, ..., sep=' ', end='\\n', file=sys.stdout, flush=False)`. There were four parameters with default values. If some default values don't suit us, we give them in the function call using the name of the parameter:"
    ]
   },
   {
@@ -1330,7 +1337,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Note that the named arguments didn't need to be in the same order as in the function definition. Nor did we need to specify all the parameters with default values, only those we wanted to change."
+    "Note that the named arguments didn't need to be in the same order as in the function definition. Nor did we need to specify all the parameters with default values, only those we wanted to change.\n",
+    "\n",
+    "Let's go through another example of using parameters with default values:"
    ]
   },
   {
@@ -1378,14 +1387,14 @@
    "metadata": {},
    "source": [
     "#### Visibility of variables\n",
-    "Function definition creates a new namespace (also called local scope). Variables created inside this scope are not available from outside the function definition. Also, the function parameters are only visible inside the function definition. Variables that are not defined inside any function are called `global variables`.\n",
+    "Function definition creates a new *namespace* (also called local scope). Variables created inside this scope are not available from outside the function definition. Also, the function parameters are only visible inside the function definition. Variables that are not defined inside any function are called `global variables`.\n",
     "\n",
     "Global variable are readable also in local scopes, but an assignment creates a new local variable without rebinding the global variable. If we are inside a function, a local variable hides a global variable by the same name:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 154,
+   "execution_count": 6,
    "metadata": {},
    "outputs": [
     {
@@ -1398,7 +1407,7 @@
     }
    ],
    "source": [
-    "i=2\n",
+    "i=2           # global variable\n",
     "def f():\n",
     "    i=3       # this creates a new variable, it does not rebind the global i\n",
     "    print(i)  # This will print 3    \n",
@@ -1446,7 +1455,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 156,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [
     {
@@ -1481,7 +1490,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (triple square)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 6 (triple square)</div>\n",
     "\n",
     "Write two functions: `triple` and `square`. Function `triple` multiplies its parameter by three. Function `square` raises its parameter to the power of two. For example, we have equalities `triple(5)==15`\n",
     "and `square(5)==25`.\n",
@@ -1506,7 +1515,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (areas of shapes)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 7 (areas of shapes)</div>\n",
     "\n",
     "Create a program that can compute the areas of three shapes, triangles, rectangles and circles, when\n",
     "their dimensions are given.\n",
@@ -1542,7 +1551,7 @@
    "metadata": {},
    "source": [
     "### Data structures\n",
-    "The main data structures in Python are stringss, lists, tuples, dictionaries, and sets. We saw some examples of lists, when we discussed for loops. And we saw briefly tuples when we introduced argument packing and unpacking. Let's get into more details now.\n",
+    "The main data structures in Python are strings, lists, tuples, dictionaries, and sets. We saw some examples of lists, when we discussed `for` loops. And we saw briefly tuples when we introduced argument packing and unpacking. Let's get into more details now.\n",
     "\n",
     "#### Sequences\n",
     "A *list* contains arbitrary number of elements (even zero) that are stored in sequential order. The elements are separated by commas and written between brackets. The elements don't need to be of the same type. An example of a list with four values:"
@@ -1590,14 +1599,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div class=\"alert alert-warning\">Note the difference between `(3)` and `(3,)`. The first one defines an integer, and the second one defines a tuple with single element.</div>"
+    "<div class=\"alert alert-warning\">Note the difference between `(3)` and `(3,)`. Because the parentheses can also be used to group expressions, the first one defines an integer, but the second one defines a tuple with single element.</div>"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "As we can see, both lists and tuples can contain values different type.\n",
+    "As we can see, both lists and tuples can contain values of different type.\n",
     "\n",
     "List, tuples, and strings are called *sequences* in Python, and they have several commonalities:\n",
     "\n",
@@ -1606,14 +1615,14 @@
     "* Sequences can be concatenated with the `+` operator, and repeated with the `*` operator: `\"hi\"*3==\"hihihi\"`\n",
     "* Since sequences are ordered, we can refer to the elements of a sequences by integers using the *indexing* notation: `\"abcd\"[2] == \"c\"`\n",
     "* Note that the indexing begins from 0\n",
-    "* Negative integers start indexing from the end: -1 refers to the last element, -1 refers to the second last, and so on"
+    "* Negative integers start indexing from the end: -1 refers to the last element, -2 refers to the second last, and so on"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "Above we saw that we can access a single element of a sequence using indexing. If we want a subset of a sequence, we can use the *slicing* syntax. A slice consists of elements of the original sequence, and it is itself a sequence as well. A simple slice is a range of elements:"
+    "Above we saw that we can access a single element of a sequence using *indexing*. If we want a subsequence of a sequence, we can use the *slicing* syntax. A slice consists of elements of the original sequence, and it is itself a sequence as well. A simple slice is a range of elements:"
    ]
   },
   {
@@ -1666,7 +1675,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (solve quadratic)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 8 (solve quadratic)</div>\n",
     "\n",
     "In mathematics, the quadratic equation $ax^2+bx+c=0$ can be solved with the formula \n",
     "$x=\\frac{-b\\pm \\sqrt{b^2 -4ac}}{2a}$. \n",
@@ -1694,20 +1703,20 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 161,
+   "execution_count": 10,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "[11, 2, 20, 32]\n"
+      "[11, 13, 10, 32]\n"
      ]
     }
    ],
    "source": [
-    "L=[11,13,20,32]\n",
-    "L[1]=2          # Changes the third element\n",
+    "L=[11,13,22,32]\n",
+    "L[2]=10          # Changes the third element\n",
     "print(L)"
    ]
   },
@@ -1720,7 +1729,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 162,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [
     {
@@ -1740,7 +1749,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "We can also modify a list by using *mutating methods* of the list class, namely the methods `append`, `extend`, `insert`, `remove`, `pop`, `reverse`, and `sort`. Try Python's help functionality to find more about these methods: e.g. `help(list.extend)` or `help(list)`.\n",
+    "We can also modify a list by using *mutating methods* of the `list` class, namely the methods `append`, `extend`, `insert`, `remove`, `pop`, `reverse`, and `sort`. Try Python's help functionality to find more about these methods: e.g. `help(list.extend)` or `help(list)`.\n",
     "\n",
     "<div class=\"alert alert-warning\">Note that we cannot perform these modifications on tuples or strings since they are *immutable*</div>"
    ]
@@ -1749,8 +1758,8 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### Generating sequences\n",
-    "Trivial lists can be tedious to write: `[0,1,2,3,4,5,6]`. The function range creates numeric ranges automatically. The above sequence can be generated with the function call range(7). Note again that then end value is not included  in the sequence. An example of using the range function:"
+    "#### Generating numerical sequences\n",
+    "Trivial lists can be tedious to write: `[0,1,2,3,4,5,6]`. The function `range` creates numeric ranges automatically. The above sequence can be generated with the function call `range(7)`. Note again that then end value is not included  in the sequence. An example of using the `range` function:"
    ]
   },
   {
@@ -1806,14 +1815,14 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "<div class=\"alert alert-warning\">Note that using a range consumes less memory than a corresponding list. This is because in a list all the elements are stored in the memory, whereas the range generates the requested elements only when needed. For example, when the for loop asks for the next element from the range at each iteration, only a single element from the range exists in memory at the same time.</div>"
+    "<div class=\"alert alert-warning\">Note that using a range consumes less memory than the corresponding list. This is because in a list all the elements are stored in the memory, whereas the range generates the requested elements only when needed. For example, when the for loop asks for the next element from the range at each iteration, only a single element from the range exists in memory at the same time. This makes a big difference when using large ranges, like range(1000000).</div>"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The range function works in similar fashion as slices. So, for instance the step of the sequence can be given:"
+    "The `range` function works in similar fashion as slices. So, for instance the step of the sequence can be given:"
    ]
   },
   {
@@ -1870,7 +1879,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The parameter `reverse=True` can be given (both to sort and sorted) to get descending order of elements:"
+    "The parameter `reverse=True` can be given (both to `sort` and `sorted`) to get descending order of elements:"
    ]
   },
   {
@@ -1895,7 +1904,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (merge)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 9 (merge)</div>\n",
     "\n",
     "Suppose we have two lists `L1` and `L2` that contain integers which are sorted in ascending order.\n",
     "Create a function `merge` that gets these lists as parameters and returns a new sorted list `L` that has\n",
@@ -1909,7 +1918,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (detect ranges)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 10 (detect ranges)</div>\n",
     "\n",
     "Create a function named `detect_ranges` that gets a list of integers as a parameter. The function\n",
     "should then sort this list, and transform the list into another list where pairs are used for all the\n",
@@ -1922,7 +1931,7 @@
     "[2,(4,9),10,(12,14)]\n",
     "```\n",
     "\n",
-    "Note that the second element of the pair does not belong to the range. This is consistent with the way Python's `range` function works.\n",
+    "Note that the second element of the pair does not belong to the range. This is consistent with the way Python's `range` function works. You may assume that no element in the input list appears multiple times.\n",
     "<hr/>"
    ]
   },
@@ -1932,7 +1941,35 @@
    "source": [
     "#### Zipping sequences\n",
     "\n",
-    "The `zip` function combines two (or more) sequences into one sequence. If, for example, two sequences are zipped together, the resulting list contains pairs. In general, if `n` sequences are zipped together, the elements of the resulting list contains `n`-tuples. Here's an example of using the `zip` function."
+    "The `zip` function combines two (or more) sequences into one sequence. If, for example, two sequences are zipped together, the resulting sequence contains pairs. In general, if `n` sequences are zipped together, the elements of the resulting sequence contains `n`-tuples. An example of this:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<zip object at 0x7f306c0d66c8>\n",
+      "[(1, 'first'), (2, 'second'), (3, 'third')]\n"
+     ]
+    }
+   ],
+   "source": [
+    "L1=[1,2,3]\n",
+    "L2=[\"first\", \"second\", \"third\"]\n",
+    "print(zip(L1, L2))               # Note that zip does not return a list, like range\n",
+    "print(list(zip(L1, L2)))         # Convert to a list"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Here's another example of using the `zip` function."
    ]
   },
   {
@@ -1977,9 +2014,10 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (interleave)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 11 (interleave)</div>\n",
     "\n",
     "Write function `interleave` that gets arbitrary number of lists as parameters. You may assume that all the lists have equal length. The function should return one list containing all the elements from the input lists interleaved.\n",
+    "Test your function from the `main` function of the program.\n",
     "\n",
     "Example:\n",
     "`interleave([1,2,3], [20,30,40], ['a', 'b', 'c'])`\n",
@@ -1995,7 +2033,7 @@
    "source": [
     "#### Enumerating sequences\n",
     "\n",
-    "In some other programming languages one iterates through the elements using their indices (0,1, ...) in the sequence. In Python we normally don't need to think about indices when iterating, because the for loop allows simpler iteration through the elements. But sometimes you really need to know the index of the current element in the sequence. In this this one uses Python's `enumerate` function. In the next example we would like find the second occurrence of integer 5 in a list."
+    "In some other programming languages one iterates through the elements using their indices (0,1, ...) in the sequence. In Python we normally don't need to think about indices when iterating, because the `for` loop allows simpler iteration through the elements. But sometimes you really need to know the index of the current element in the sequence. In this this one uses Python's `enumerate` function. In the next example we would like find the second occurrence of integer 5 in a list."
    ]
   },
   {
@@ -2034,7 +2072,7 @@
    "metadata": {},
    "source": [
     "#### Dictionaries\n",
-    "A *dictionary* is a dynamic, unordered container. Instead of using integers to access the elements of the container, the dictionary uses *keys* to acces the stored *values*. The dictionary can be created by listing the comma separated key-value pairs in braces. Keys and values are separated by a colon. A tuple (key,value) is called an *item* of the dictionary.\n",
+    "A *dictionary* is a dynamic, unordered container. Instead of using integers to access the elements of the container, the dictionary uses *keys* to access the stored *values*. The dictionary can be created by listing the comma separated key-value pairs in braces. Keys and values are separated by a colon. A tuple (key,value) is called an *item* of the dictionary.\n",
     "\n",
     "Let's demonstrate the dictionary creation and usage:"
    ]
@@ -2131,7 +2169,7 @@
     "d.get(k[,x])\n",
     "```\n",
     "\n",
-    "Some methods change the dictionary:\n",
+    "Some methods mutate the dictionary:\n",
     "```\n",
     "d.clear()\n",
     "d.update(d1)\n",
@@ -2174,20 +2212,23 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 175,
+   "execution_count": 16,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "{1, 2, 'a'}\n",
+      "{1}\n",
+      "{'a', 1, 2}\n",
       "set()\n",
       "{7}\n"
      ]
     }
    ],
    "source": [
+    "s={1,1,1}\n",
+    "print(s)\n",
     "s=set([1,2,2,'a'])\n",
     "print(s)\n",
     "s=set()  # empty set\n",
@@ -2297,7 +2338,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (distinct characters)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 12 (distinct characters)</div>\n",
     "\n",
     "Write function `distinct_characters` that gets a list of strings as a parameter. It should return a dictionary whose keys are the strings of the input list and the corresponding values are the numbers of distinct characters in the key.\n",
     "\n",
@@ -2315,12 +2356,12 @@
    "source": [
     "#### Miscellaneous stuff\n",
     "\n",
-    "To find out whether a container includes an element, the `in` operator can be used. The operator returns a truth values. Some examples of the usage:"
+    "To find out whether a container includes an element, the `in` operator can be used. The operator returns a truth value. Some examples of the usage:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 179,
+   "execution_count": 17,
    "metadata": {},
    "outputs": [
     {
@@ -2330,7 +2371,7 @@
       "True\n",
       "True\n",
       "False\n",
-      "x text\n"
+      "True\n"
      ]
     }
    ],
@@ -2340,14 +2381,14 @@
     "print(\"b\" in d)\n",
     "s=set()\n",
     "print(1 in s)\n",
-    "print(\"x\", \"text\")"
+    "print(\"x\" in \"text\")"
    ]
   },
   {
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "As a special case, for string the `in` operator can be used to check whether a string is part of another string:"
+    "As a special case, for strings the `in` operator can be used to check whether a string is part of another string:"
    ]
   },
   {
@@ -2480,7 +2521,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (reverse dictionary)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 13 (reverse dictionary)</div>\n",
     "\n",
     "Let `d` be a dictionary that has English words as keys and a list of Finnish words as values. So, the\n",
     "dictionary can be used to find out the Finnish equivalents of an English word in the following way:\n",
@@ -2499,7 +2540,7 @@
     "{’liikuttaa’: [’move’], ’salata’: [’hide’], ’piilottaa’: [’hide’]}\n",
     "```\n",
     "\n",
-    "Be careful with synonyms!&#8718;\n",
+    "Be careful with synonyms!\n",
     "<hr/>"
    ]
   },
@@ -2507,9 +2548,9 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (find matching)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 14 (find matching)</div>\n",
     "\n",
-    "Write function `find_matching` that gets a list of strings and a search string as parameters. The function should return the indices to those elements in the input list that contain the search string.\n",
+    "Write function `find_matching` that gets a list of strings and a search string as parameters. The function should return the indices to those elements in the input list that contain the search string. Use the function `enumerate`.\n",
     "\n",
     "An example:\n",
     "`find_matching([\"sensitive\", \"engine\", \"rubbish\", \"comment\"], \"en\")`\n",
@@ -2523,7 +2564,7 @@
    "metadata": {},
    "source": [
     "### Compact way of creating data structures\n",
-    "We can now easily create complicated data structures using for loops:"
+    "We can now easily create complicated data structures using `for` loops:"
    ]
   },
   {
@@ -2589,7 +2630,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The generic from of a list comprehension is:\n",
+    "The generic form of a list comprehension is:\n",
     "`[ expression for element in iterable lc-clauses ]`.\n",
     "Let's break this syntax into pieces. The iterable can be any sequence (or something more general). The lc-clauses consists of zero or more of the following clauses:\n",
     "* for elem in iterable\n",
@@ -2623,12 +2664,12 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "If one needs only to iterate through the list once, it is more memory efficient to use a *generator expression* instead. The only thing that changes syntactically is that the surrounding brackets are replace by parentheses:"
+    "If one needs only to iterate through the list once, it is more memory efficient to use a *generator expression* instead. The only thing that changes syntactically is that the surrounding brackets are replaced by parentheses:"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 188,
+   "execution_count": 18,
    "metadata": {},
    "outputs": [
     {
@@ -2646,7 +2687,7 @@
     "                       for c in range(0,10) \n",
     "                       if a <= b <= c )\n",
     "print(sum(G))   # This iterates through all the elements from the generator\n",
-    "print(sum(G))   # It doesn't start from the beginning, so all elements are already consumed"
+    "print(sum(G))   # It doesn't restart from the beginning, so all elements are already consumed"
    ]
   },
   {
@@ -2710,7 +2751,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (two dice comprehension)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 15 (two dice comprehension)</div>\n",
     "\n",
     "Redo the earlier exercise which printed all the pairs of two dice results that sum to 5. But this time use a list comprehension.\n",
     "<hr/>"
@@ -2721,13 +2762,13 @@
    "metadata": {},
    "source": [
     "### Processing sequences\n",
-    "In this section we will go through some useful tool, are maybe familiar to you from some function programming language like *lisp* or *haskell*. These functions rely on functions being first-class objects in Python, that is, you can\n",
+    "In this section we will go through some useful tools, that are maybe familiar to you from some function programming language like *lisp* or *haskell*. These functions rely on functions being first-class objects in Python, that is, you can\n",
     "\n",
     "* pass a function as a parameter to another function\n",
     "* return a function as a return value from some function\n",
     "* store a function in a data structure or a variable\n",
     "\n",
-    "We will talk about `map`, `filter`, and `reduce` functions. We will also cover how to create functions with no name using the *lambda* expression."
+    "We will talk about `map`, `filter`, and `reduce` functions. We will also cover how to create functions with no name using the *lambda* expressions."
    ]
   },
   {
@@ -2736,7 +2777,7 @@
    "source": [
     "#### Map and lambda functions\n",
     "The `map` function gets a list and a function as parameters, and it returns a new list whose\n",
-    "elements are elements of the original list transformed by the parameter function. For this to work the parameter must take exactly one parameter and return a value. An example will clarify this concept:"
+    "elements are elements of the original list transformed by the parameter function. For this to work the parameter function must take exactly one value in and return a value out. An example will clarify this concept:"
    ]
   },
   {
@@ -2787,7 +2828,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "When one reads numerice data from a file or from the internet, the number of in string. Before they can be used in computations, they must first be converted to ints or floats.\n",
+    "When one reads numeric data from a file or from the internet, the numbers are in string form. Before they can be used in computations, they must first be converted to ints or floats.\n",
     "A simple example will showcase this."
    ]
   },
@@ -2834,7 +2875,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "It is not likely that you will need it elsewhere in your program. The solution is to use an *expression* called *lambda* define a function with no name. Because it is an expression we can put it, for instance, in a argument list of a function call. The lambda expression has the form `lambda param1,param2, ... : expression`, where after the lambda keyword you list the parameters of the function, and after the colon is the expression that uses the parameters to compute the return value of function. Let's replace the above `add_double_and_square` function with a lambda function and apply it to a list using the `map` function."
+    "It is not likely that you will need it elsewhere in your program. The solution is to use an *expression* called *lambda*  to define a function with no name. Because it is an expression, we can put it, for instance, in an argument list of a function call. The lambda expression has the form `lambda param1,param2, ... : expression`, where after the lambda keyword you list the parameters of the function, and after the colon is the expression that uses the parameters to compute the return value of the function. Let's replace the above `add_double_and_square` function with a lambda function and apply it to a list using the `map` function."
    ]
   },
   {
@@ -2859,7 +2900,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (transform)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 16 (transform)</div>\n",
     "\n",
     "Write a function `transform` that gets two strings as parameters and returns a list of integers. The function should split the strings into words, and convert these words to integer. This should give two lists of integers. Then the function should return a list whose elements are multiplication of two integers in the respective positions in the lists.\n",
     "For example\n",
@@ -2882,7 +2923,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The `filter` function takes a function and a list as parameters. But unlike with the map construct, now the function must take exactly one parameter and return a truth value (True or False). The `filter` function then creates a new list with only those elements from the original list for which the parameter function returns True. The elements for which the parameter function returns False are filtered out. An will demonstrate the `filter` function:"
+    "The `filter` function takes a function and a list as parameters. But unlike with the map construct, now the parameter function must take exactly one parameter and return a truth value (True or False). The `filter` function then creates a new list with only those elements from the original list for which the parameter function returns True. The elements for which the parameter function returns False are filtered out. An example will demonstrate the `filter` function:"
    ]
   },
   {
@@ -2917,7 +2958,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (positive list)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 17 (positive list)</div>\n",
     "\n",
     "Write a function `positive_list` that gets a list of numbers as a parameter, and returns a list with the negative numbers filtered out using the `filter` function.\n",
     "\n",
@@ -2930,7 +2971,7 @@
    "metadata": {},
    "source": [
     "#### The reduce function\n",
-    "The `sum` function that returns the sum of a numeric list, can be though to reduce a list to a single element. It does this reduction by repeated applying the `+` operator until all the list elements are consumed. For instance, the list [1,2,3,4] is reduced by the expression `(((0+1)+2)+3)+4` of repeated applications of the `+` operator. We could implement this with the following function:"
+    "The `sum` function that returns the sum of a numeric list, can be though to reduce a list to a single element. It does this reduction by repeatedly applying the `+` operator until all the list elements are consumed. For instance, the list `[1,2,3,4]` is reduced by the expression `(((0+1)+2)+3)+4` of repeated applications of the `+` operator. We could implement this with the following function:"
    ]
   },
   {
@@ -3217,7 +3258,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "The method `split(sep=None)` divides a string into pieces that are separated by the string `sep`. The pieces are returned in a list. For instance, the call 'abc--def--ghi'.split(\"--\") will result in"
+    "The method `split(sep=None)` divides a string into pieces that are separated by the string `sep`. The pieces are returned in a list. For instance, the call `'abc--def--ghi'.split(\"--\")` will result in"
    ]
   },
   {
@@ -3244,7 +3285,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (acronyms)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 18 (acronyms)</div>\n",
     "\n",
     "Write function `acronyms` which takes a string as a parameter and returns a list of acronyms. A word is an acronym if it has length at least two, and all its characters are in uppercase. Before acronym detection, delete punctuation with the `strip` method.\n",
     "\n",
@@ -3253,7 +3294,8 @@
     "print(acronyms(\"\"\"For the purposes of the EU General Data Protection Regulation (GDPR), the controller of your personal information is International Business Machines Corporation (IBM Corp.), 1 New Orchard Road, Armonk, New York, United States, unless indicated otherwise. Where IBM Corp. or a subsidiary it controls (not established in the European Economic Area (EEA)) is required to appoint a legal representative in the EEA, the representative for all such cases is IBM United Kingdom Limited, PO Box 41, North Harbour, Portsmouth, Hampshire, United Kingdom PO6 3AU.\"\"\"))\n",
     "```\n",
     "\n",
-    "This should return MISSING!!!!!!!\n",
+    "This should return\n",
+    "```['EU', 'GDPR', 'IBM', 'IBM', 'EEA', 'EEA', 'IBM', 'PO', 'PO6', '3AU']```\n",
     "<hr/>"
    ]
   },
@@ -3261,7 +3303,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (sum equation)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 19 (sum equation)</div>\n",
     "\n",
     "Write a function `sum_equation` which takes a list of positive integers as parameters and returns a string with an equation of the sum of the elements.\n",
     "\n",
@@ -3329,7 +3371,7 @@
     "This is because other modules may have a function (or other\n",
     "attribute of a module) with the same name.\n",
     "This usage of different namespace for each module prevents\n",
-    "name clashes. For example, `gzip.open`, `os.open` are not to be confused\n",
+    "name clashes. For example, functions `gzip.open`, `os.open` are not to be confused\n",
     "with the builtin `open` function."
    ]
   },
@@ -3348,7 +3390,7 @@
     "Now we can used it without the namespace specifier: `cos(1)`.\n",
     "\n",
     "Several names can be imported to the current scope with\n",
-    "from `math import name1, name2, ...`\n",
+    "`from math import name1, name2, ...`\n",
     "Or even all names of the module with `from math import *`\n",
     "The last form is sensible only in few cases, normally it just\n",
     "confuses things since the user may have no idea what names\n",
@@ -3368,7 +3410,8 @@
     "* Check if the file `mod.py` is found in any of the directories in\n",
     "the list `sys.path`. The first item in this list is the current\n",
     "directory\n",
-    "* When Python is started, the `sys.path` list is initialised with\n",
+    "\n",
+    "When Python is started, the `sys.path` list is initialised with\n",
     "the contents of the `PYTHONPATH` environment variable"
    ]
   },
@@ -3382,12 +3425,12 @@
     "Hence, it is hard to comprehend what the library includes.\n",
     "The modules therefore need to be organised somehow.\n",
     "In Python the modules can be organised into hierarchies using\n",
-    "packages.\n",
+    "*packages*.\n",
     "A package is a module that can contain other packages and\n",
     "modules.\n",
-    "For example, the `numpy` package contains subpackages core,\n",
-    "distutils, f2py, fft, lib, linalg, ma, numarray, oldnumeric,\n",
-    "random, and testing.\n",
+    "For example, the `numpy` package contains subpackages `core`,\n",
+    "`distutils`, `f2py`, `fft`, `lib`, `linalg`, `ma`, `numarray`, `oldnumeric`,\n",
+    "`random`, and `testing`.\n",
     "And package `numpy.linalg` in turn contains modules `linalg`,\n",
     "`lapack_lite` and `info`."
    ]
@@ -3399,9 +3442,9 @@
     "### Importing from packages\n",
     "\n",
     "The statement `import numpy` imports the top-level package `numpy`\n",
-    "but not its subpackages:\n",
+    "and its subpackages. \n",
     "\n",
-    "* `import numpy.linalg` imports the subpackage, and\n",
+    "* `import numpy.linalg` imports the subpackage only, and\n",
     "* `import numpy.linalg.linalg` imports the module only\n",
     "\n",
     "If we want to skip the long namespace specification, we can\n",
@@ -3422,7 +3465,19 @@
     "from numpy.linalg.linalg import det\n",
     "```\n",
     "\n",
-    "PIIRRÄ KUVA YLLÄOLEVASTA."
+    "Had we only imported the top-level package `numpy` we would have to refer to the `det` function with the full name `numpy.linalg.linalg.det`.\n",
+    "\n",
+    "Here's a recap of the module hierarchy:\n",
+    "\n",
+    "```\n",
+    "numpy    package\n",
+    "  .\n",
+    "linalg   subpackage\n",
+    "  .\n",
+    "linalg   module\n",
+    "  .\n",
+    " det     function\n",
+    "```"
    ]
   },
   {
@@ -3471,8 +3526,8 @@
     "\n",
     "Just like other objects, the module object contains its\n",
     "attributes in the dictionary `modulename.__dict__`\n",
-    "Usually a module contains at least the attributes name and\n",
-    "file . Other common attributes are `__version__`,\n",
+    "Usually a module contains at least the attributes `__name__` and\n",
+    "`__file__`. Other common attributes are `__version__`,\n",
     "`__author__` and `__doc__` , which contains the docstring of the\n",
     "module.\n",
     "If the first statement of a file is a string, this is taken as the\n",
@@ -3488,7 +3543,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\">Exercise x (usemodule) </div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 20 (usemodule) </div>\n",
     "\n",
     "Create your own module as file `triangle.py` in the `src` folder. The module should contain two functions:\n",
     "\n",
@@ -3502,1494 +3557,15 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "## Regular expressions"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Examples\n",
-    "\n",
-    "We have already seen that we can ask from a string str\n",
-    "whether it begins with some substring as follows:\n",
-    "`str.startswith(’Apple’)`.\n",
-    "If we would like to know whether it starts with `”Apple”` or\n",
-    "`”apple”`, we would have to call `startswith` method twice.\n",
-    "Regular expressions offer a simpler solution:\n",
-    "`re.match(r’[Aa]pple’, str)`.\n",
-    "The bracket notation is one example of the special syntax of\n",
-    "*regular expressions*. In this case it says that any of the\n",
-    "characters inside brackets will do: either `’A’` or `’a’`. The other\n",
-    "letters in `”pple”` will act normally. The string `r’[Aa]pple’` is\n",
-    "called a pattern.\n",
-    "\n",
-    "A more complicated example asks whether the string `str`\n",
-    "starts with either `apple` or `banana` (no matter if the first letter\n",
-    "is capital or not):\n",
-    "`re.match(r’[Aa]pple|[Bb]anana’, str)`.\n",
-    "In this example we saw a new special character `|` that denotes\n",
-    "an alternative. On either side of the bar character we have a\n",
-    "subpattern.\n",
-    "\n",
-    "A legal variable name in Python starts with a letter or an\n",
-    "underline character and the following characters can also be\n",
-    "digits.\n",
-    "So legal names are, for instance: `_hidden`, `L_value`, `A123_`.\n",
-    "But the name `2abc` is not a valid variable name.\n",
-    "Let’s see what would be the regular expression pattern to\n",
-    "recognise valid variable names:\n",
-    "`r’[A-Za-z_][A-Za-z_0-9]*\\Z’`.\n",
-    "Here we have used a shorthand for character ranges: `A-Z`.\n",
-    "This means all the characters from `A` to `Z`.\n",
-    "\n",
-    "The first character of the variable name is defined in the first\n",
-    "brackets. The subsequent characters are defined in the second\n",
-    "brackets.\n",
-    "The special character `*` means that we allow any number\n",
-    "(0,1,2, . . . ) of the previous subpattern. For example the\n",
-    "pattern `r’ba*’` allows strings `’b’`, `’ba’`, `’baa’`, `’baaa’`, and\n",
-    "so on.\n",
-    "The special syntax `\\Z` denotes the end of the string.\n",
-    "Without it we would also accept `abc$` as a valid name since\n",
-    "match normally checks only that a string starts with a pattern.\n",
-    "\n",
-    "The special notations, like `\\Z`, also cause problems with string\n",
-    "handling.\n",
-    "Remember that normally in string literals we have some\n",
-    "special notation: `\\n` stands for newline, `\\t` stands for tab, and\n",
-    "so on.\n",
-    "So, both string literals and regular expressions use similar\n",
-    "looking notations, which can create serious confusion.\n",
-    "This can be solved by using the so-called raw strings. We\n",
-    "denote a raw string by having an r letter before the first\n",
-    "quotation mark, for example `r’ab*\\Z’`.\n",
-    "When using raw strings, the newline (`\\n`), tab (`\\t`), and other\n",
-    "special string literal notations aren’t interpreted. One should\n",
-    "always use raw strings when defining regular expression\n",
-    "patterns."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Patterns\n",
-    "\n",
-    "A pattern represents a set of strings. This set can even be\n",
-    "potentially infinite.\n",
-    "They can be used to describe a set of strings that have some\n",
-    "commonality; some regular structure.\n",
-    "Regular expressions are a classical computer science topic.\n",
-    "They are very common in programming tasks. Scripting\n",
-    "languages, like Python, are very fluent in regular expressions.\n",
-    "Very complex text processing can be achieved using regular\n",
-    "expressions.\n",
-    "\n",
-    "Normal characters (letters, numbers) just represent\n",
-    "themselves, unless preceded by a backslash, which may trigger\n",
-    "some special meaning\n",
-    "Punctuation characters have special meaning, unless preceded\n",
-    "by backslash (\\), which deprives their special meaning.\n",
-    "Use \\\\ to represent a backslash character without any special\n",
-    "meaning.\n",
-    "In the following slides we will go through some of the more\n",
-    "common RE notations.\n",
-    "\n",
-    "```\n",
-    ". Matches any character\n",
-    "[...] Matches any character contained within the brackets\n",
-    "[^...] Matches any character not appearing after the hat (ˆ)\n",
-    "ˆ Matches the start of the string\n",
-    "$ Matches the end of the string\n",
-    "* Matches zero or more previous RE\n",
-    "+ Matches one or more previous RE\n",
-    "{m,n} Matches m to n occurences of previous RE\n",
-    "? Matches zero or one occurences of previous RE\n",
-    "```\n",
-    "\n",
-    "We have already seen that a `|` character denotes alternatives.\n",
-    "For example, the pattern `r’Get (on|off|ready)’` matches\n",
-    "the following strings: `”Get on”`, `”Get off”`, `”Get ready”`.\n",
-    "We can use parentheses to create groupings inside a pattern:\n",
-    "`r’(ab)+’` will match the strings `”ab”`, `”abab”`, `”ababab”`,\n",
-    "and so on.\n",
-    "These groups are also given a reference number starting from 1. \n",
-    "We can refer to groups using backreferences: `\\number`.\n",
-    "For example, we can find separated patterns that get\n",
-    "repeated: `r’([a-z]{3,}) \\1 \\1’`.\n",
-    "This will recognise, for example, the following strings: `\"aca\n",
-    "aca aca\"`, `\"turn turn turn\"`. But not the strings `\"aca\n",
-    "aba aca\"` or `\"ac ac ac\"`.\n",
-    "\n",
-    "\n",
-    "In the following, note that a hat (ˆ) as the first character\n",
-    "inside brackets will create a complement set of characters:\n",
-    "\n",
-    "```\n",
-    "`\\d` same as `[0-9]`, matches a digit\n",
-    "`\\D` same as `[ˆ0-9]`, matches anything but a digit\n",
-    "`\\s` matches a whitespace character (newline, tab, ... )\n",
-    "`\\S` matches a nonwhitespace character\n",
-    "`\\w` same as `[a-zA-Z0-9_]`, matches one alphanumeric character\n",
-    "`\\W` matches one non-alphanumeric character\n",
-    "```\n",
-    "\n",
-    "Using the above notation we can now shorten our previous\n",
-    "variable name example to `r’[a-zA-Z_]\\w*\\Z’`\n",
-    "\n",
-    "The patterns `\\A`, `\\b`, `\\B`, and `\\Z` will all match an empty\n",
-    "string, but in specific places.\n",
-    "The patterns `\\A` and `\\Z` will recognise the beginning and end\n",
-    "of the string, respectively.\n",
-    "Note that the patterns `ˆ` and `$` can in some cases match also\n",
-    "after a newline and before a newline, correspondingly.\n",
-    "So, `\\A` is distinct from `ˆ`, and `\\Z` is distinct from `$`.\n",
-    "The pattern `\\b` matches at the start or end of a word. The\n",
-    "pattern `\\B` does the reverse."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Match and search functions\n",
-    "\n",
-    "We have so far only used the re.match function which tries\n",
-    "to find a match at the beginning of a string\n",
-    "The function re.search allows to match any substring of a\n",
-    "string.\n",
-    "Example: `re.search(r'\\bback\\b', s)` will match\n",
-    "strings `\"back\"`, `\"a back, is a body part\"`, `\"get back\"`. But it\n",
-    "will not match the strings `\"backspace\"` or `\"comeback\"`.\n",
-    "\n",
-    "The function `re.search` finds only the first occurence.\n",
-    "We can use the `re.findall` function to find all occurences.\n",
-    "Let’s say we want to find all present participle words in a\n",
-    "string `s`. The present participle words have ending `'ing'`.\n",
-    "The function call would look like this:\n",
-    "`re.findall(r'\\w+ing\\b', s)`.\n",
-    "Let’s try running this:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 205,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['Doing', 'going', 'staying', 'sleeping']"
-      ]
-     },
-     "execution_count": 205,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "import re\n",
-    "s = \"Doing things, going home, staying awake, sleeping later\"\n",
-    "re.findall(r'\\w+ing\\b', s)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Let’s say we want to pick up all the integers from a string.\n",
-    "We can try that with the following function call:\n",
-    "`re.findall(r'[+-]?\\d+', s)`.\n",
-    "An example run:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 206,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['23', '-24', '-1']"
-      ]
-     },
-     "execution_count": 206,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "re.findall(r'[+-]?\\d+', \"23 + -24 = -1\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Suppose we are given a string of if/then sentences, and we\n",
-    "would like to extract the conditions from these sentences.\n",
-    "Let’s try the following function call:\n",
-    "`re.findall(r'[Ii]f (.*), then', s)`.\n",
-    "An example run:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 207,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "['I’m not in a hurry, then I should stay. On the other hand, if I leave']"
-      ]
-     },
-     "execution_count": 207,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "s = (\"If I’m not in a hurry, then I should stay. \" +\n",
-    "    \"On the other hand, if I leave, then I can sleep.\")\n",
-    "re.findall(r'[Ii]f (.*), then', s)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "But I wanted a result: `[\"I'm not in a hurry\", 'I leave']`. That\n",
-    "is, the condition from both sentences. How can this be fixed?\n",
-    "\n",
-    "The problem is that the pattern `.*` tries to match as many\n",
-    "characters as possible.\n",
-    "This is called *greedy matching*.\n",
-    "One way of solving this problem is to notice that the two\n",
-    "sentences are separated by a full-stop (.).\n",
-    "So, instead of matching all the characters, we need to match\n",
-    "everything but the dot character.\n",
-    "This can be achieved by using the complement character\n",
-    "class: `[^.]`. The hat character (`ˆ`) in the beginning of a\n",
-    "character class means the complement character class\n",
-    "\n",
-    "After the modification the function call looks like this:\n",
-    "`re.findall(r'[Ii]f ([^.]*), then', s)`.\n",
-    "Another way of solving this problem is to use a non-greedy\n",
-    "matching.\n",
-    "The repetition specifiers `+`, `*`, `?`, and `{m,n}` have\n",
-    "corresponding non-greedy versions: `+?`, `*?`, `??`, and `{m,n}?`.\n",
-    "These expressions use as few characters as possible to make\n",
-    "the whole pattern match some substring.\n",
-    "By using non-greedy version, the function call looks like this:\n",
-    "`re.findall(r’[Ii]f (.*?), then’, s)`.\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Functions in the `re` module\n",
-    "\n",
-    "Below is a list of the most common functions in the `re` module\n",
-    "\n",
-    "* re.match(pattern, str)\n",
-    "* re.search(pattern, str)\n",
-    "* re.findall(pattern, str)\n",
-    "* re.finditer(pattern, str)\n",
-    "* re.sub(pattern, replacement, str, count=0)\n",
-    "\n",
-    "Functions match and search return a match object.\n",
-    "A match object describes the found occurence.\n",
-    "The function findall returns a list of all the occurences of\n",
-    "the pattern. The elements in the list are strings.\n",
-    "The function finditer works like findall function except\n",
-    "that instead of returning a list, it returns an iterator whose\n",
-    "items are match objects.\n",
-    "The function sub replaces all the occurences of the pattern in\n",
-    "str with the string replacement and returns the new string.\n",
-    "\n",
-    "An example: The following program will replace all ”she”\n",
-    "words with ”he”\n",
-    "\n",
-    "```\n",
-    "import re\n",
-    "str = \"She goes where she wants to, she's a sheriff.\"\n",
-    "newstr = re.sub(r'\\b[Ss]he\\b', 'he', str)\n",
-    "print newstr\n",
-    "```\n",
-    "\n",
-    "This will print `he goes where he wants to, he's a sheriff.`\n",
-    "\n",
-    "The `sub` function can also use backreferences to refer to the\n",
-    "matched string. The backreferences \\1, \\2, and so on, refer\n",
-    "to the groups of the pattern, in order.\n",
-    "An example:\n",
-    "```\n",
-    "import re\n",
-    "str = \"\"\"He is the president of Russia.\n",
-    "He’s a powerful man.\"\"\"\n",
-    "newstr = re.sub(r'(\\b[Hh]e\\b)', r'\\1 (Putin)', str, 1)\n",
-    "print newstr\n",
-    "```\n",
-    "\n",
-    "This will print\n",
-    "```\n",
-    "He (Putin) is the president of Russia.\n",
-    "He’s a powerful man.\n",
-    "```"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Match object\n",
-    "\n",
-    "Functions `match`, `search`, and `finditer` use `match` objects\n",
-    "to describe the found occurence.\n",
-    "The method `groups()` of the match object returns the tuple\n",
-    "of all the substrings matched by the groups of the pattern.\n",
-    "Each pair of parentheses in the pattern creates a new group.\n",
-    "These groups are are referred to by indices 1, 2, ...\n",
-    "The group 0 is a special one: it refers to the match created by\n",
-    "the whole pattern.\n",
-    "\n",
-    "Let’s look at the match object returned by the call\n",
-    "\n",
-    "```\n",
-    "mo = re.search(r'\\d+ (\\d+) \\d+ (\\d+)',\n",
-    "'first 123 45 67 890 last')\n",
-    "```\n",
-    "\n",
-    "The call `mo.groups()` returns a tuple `(’45’, ’890’)`.\n",
-    "We can access just some individual groups by using the\n",
-    "method `group(gid, ...)`.\n",
-    "For example, the call `mo.group(1)` will return `’45’`.\n",
-    "The zeroth group will represent the whole match:\n",
-    "`’123 45 67 890’`\n",
-    "\n",
-    "In addition to accessing the strings matched by the pattern\n",
-    "and its groups, the corresponding indices of the original string\n",
-    "can be accessed:\n",
-    "\n",
-    "* The `start(gid=0)` and `end(gid=0)` methods return the start\n",
-    "and end indices of the matched group gid, correspondingly\n",
-    "* The method `span(gid)` just returns the pair of these start\n",
-    "and end indices\n",
-    "\n",
-    "The match object mo can also be used like a boolean value:\n",
-    "\n",
-    "```python\n",
-    "mo = re.search(...)\n",
-    "if mo:\n",
-    "    # do something\n",
-    "```\n",
-    "\n",
-    "will do something if a match was found.\n",
-    "Alternatively, the match object can be converted to a boolean\n",
-    "value by the call `found = bool(mo)`."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Miscellaneous stuff\n",
-    "\n",
-    "If the same pattern is used in many function calls, it may be\n",
-    "wise to precompile the pattern, mainly for efficiency reasons.\n",
-    "This can be done using the 'compile(pattern, flags=0)' function\n",
-    "in the re module. The function returns a so-called RE object.\n",
-    "The RE object has method versions of the functions found in\n",
-    "module 're'.\n",
-    "The only difference is that the first parameter is not the\n",
-    "pattern since the precompiled pattern is stored in the RE\n",
-    "object.\n",
-    "\n",
-    "The details of matching operation can be specified using\n",
-    "optional flags.\n",
-    "These flags can be given either inside the pattern or as a\n",
-    "parameter to the compile function.\n",
-    "Some of the more common flags are given in the following\n",
-    "table\n",
-    "\n",
-    "| x   | Flag |\n",
-    "|-----|--------------|\n",
-    "|`(?i)` | re.IGNORECASE|\n",
-    "|`(?m)` | re.MULTILINE|\n",
-    "|`(?s)` | re.DOTALL|\n",
-    "-------------------------\n",
-    "\n",
-    "The elements on the left can appear anywhere in the pattern\n",
-    "but preferably in the beginning.\n",
-    "On the right there are attributes of the re module that can be\n",
-    "given to the compile function as the second parameter\n",
-    "\n",
-    "The `IGNORECASE` flag makes lower- and uppercase\n",
-    "characters appear as equal.\n",
-    "The `MULTILINE` flag makes the special characters `ˆ` and `$`\n",
-    "match the beginning and end of each line in addition to the\n",
-    "beginning and end of the whole string. These flags make `\\A`\n",
-    "differ from `ˆ`, and `\\Z` differ from `$`.\n",
-    "The `DOTALL` flag makes the character class `.` (dot) also\n",
-    "accept the newline character, in addition to all the other\n",
-    "letters.\n",
-    "\n",
-    "When giving multiple flags to the compile function, the flags\n",
-    "can be separated with the `|` sign.\n",
-    "For example, `re.compile(pattern, re.MULTILINE | re.DOTALL)`.\n",
-    "This is equal to `re.compile('(?m)(?s)' + pattern)`."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (integers in brackets)</div>\n",
-    "\n",
-    "Write function `integers_in_brackets` that finds from a given string all integers that are enclosed in brackets.\n",
-    "\n",
-    "Example run:\n",
-    "`integers_in_brackets(\"  afd [asd] [12 ] [a34]  [ -43 ]tt [+12]xxx\")`\n",
-    "returns\n",
-    "`[12, -43, 12]`.\n",
-    "So there can be whitespace between the number and the brackets, but no other character besides those that make up the integer.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Basic file processing"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "A file can be opened with the `open` function. The call `open(filename, mode=\"r\")` will return a *file object*, whose type is `file`. This file object can be used to refer to a file on disk. For example, when we want to read from or write to a file, we can used the methods `read` and `write` of the file object. After the file object is no longer needed, a call to the `close` method should be made.\n",
-    "\n",
-    "We can control what kind of operations we can perform on a file with the *mode* parameter of the `open` function. Different options include opening a file for reading or writing,\n",
-    "whether the file should exists already or be created with the\n",
-    "call to open, etc. Here's a list of all the opening modes:\n",
-    "\n",
-    "| Mode | Description |\n",
-    "| ---- | ----------- |\n",
-    "| `r`  | read-only mode, file must exist |\n",
-    "| `w`  | write-only mode, creates, or overwrites an existing file |\n",
-    "| `a`  | write-only mode, write always appends to the end |\n",
-    "| `r+` | read/write mode, file must already exist |\n",
-    "| `w+` | read/write mode, creates, or overwrites an existing file |\n",
-    "| `a+` | read/write mode, write will append to end |"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "In the end of the mode string either the letter `t` or `b` can be appended. These stand for text mode and binary mode. If this letter is not given, the file type is text mode by default. \n",
-    "\n",
-    "For binary mode the contents of the file are not interpreted in any way, and the read and write methods handle bytes. (A byte consists of 8 bits and can be used to represent a number in the range 0 to 255.)\n",
-    "\n",
-    "In the text mode two interpretations happen\n",
-    "\n",
-    "* On Windows operating system the end of line in files is encoded by two characters. When the file is read these two charactes are converted to `'\\n'` character. During writes to a file this conversion happens in the opposite direction.\n",
-    "* One character is encoded in the file as one or more bytes. This conversion happens automatically during read and write operations. One common encoding between bytes and characters is utf-8. In this encoding, the Finnish character `'ä'`, for example, is encoded as the following sequence of bytes:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 208,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "b'\\xc3\\xa4'"
-      ]
-     },
-     "execution_count": 208,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "\"ä\".encode(\"utf-8\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Above the two bytes were expressed as hexadecimals. In decimal notation they would be 195 and 164. (Both in the range from 0 to 255.)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 209,
-   "metadata": {},
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "[195, 164]"
-      ]
-     },
-     "execution_count": 209,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "list(\"ä\".encode(\"utf-8\"))              # Show as a list of integers"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "What is the utf-8 encoding of the letter `'a'`?\n",
-    "\n",
-    "During this course we will only consider files containing text, so the default text mode is fine for us."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Some common file object methods\n",
-    "* `read(size)` will read size characters/bytes as a string\n",
-    "* `write(string)` will write string/bytes to a file\n",
-    "* `readline()` will read a string until and including the next newline character is met\n",
-    "* `readlines()` will return a list of all lines of a file\n",
-    "* `writelines()` will write a list of lines to a file\n",
-    "* `flush()` will try to make sure that the changes made to a file are written to disk immediately"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 210,
-   "metadata": {
-    "scrolled": true
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Line 0: {\n",
-      "Line 1:  \"cells\": [\n",
-      "Line 2:   {\n",
-      "Line 3:    \"cell_type\": \"markdown\",\n",
-      "Line 4:    \"metadata\": {},\n"
-     ]
-    }
-   ],
-   "source": [
-    "f = open(\"basics.ipynb\", \"r\") # Let's open this notebook file, \n",
-    "                              # which is essentially a text file.\n",
-    "                              # So you can open it in a texteditor as well.\n",
-    "        \n",
-    "for i in range(5):            # And read the first five lines\n",
-    "    line = f.readline()\n",
-    "    print(\"Line %i: %s\" % (i, line), end=\"\")\n",
-    "f.close()"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "It is easy to forget to close the file. One can use a *context manager* to solve this problem. A context manager is created with the `with` statement. After the indented block of the with statements exits, the file will be automatically closed."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 211,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Line 0: {\n",
-      "Line 1:  \"cells\": [\n",
-      "Line 2:   {\n",
-      "Line 3:    \"cell_type\": \"markdown\",\n",
-      "Line 4:    \"metadata\": {},\n"
-     ]
-    }
-   ],
-   "source": [
-    "with open(\"basics.ipynb\", \"r\") as f:          # the file will be automatically closed,\n",
-    "                                              # when the with block exits\n",
-    "    for i in range(5):\n",
-    "        line = f.readline()\n",
-    "        print(\"Line %i: %s\" % (i, line), end=\"\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The `file` object is iterable. This means that we can iterate through the lines in the file using a for loop, like in the below example:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 212,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "The longest line in this file has length 1002\n"
-     ]
-    }
-   ],
-   "source": [
-    "max_len = 0\n",
-    "with open(\"basics.ipynb\", \"r\") as f:\n",
-    "    for line in f:    # iterates through all the lines in the file\n",
-    "        if len(line) > max_len:\n",
-    "            max_len = len(line)\n",
-    "print(\"The longest line in this file has length %i\" % max_len)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Standard file objects\n",
-    "Python has automatically three file objects open:\n",
-    "\n",
-    "* `sys.stdin` for *standard input*\n",
-    "* `sys.stdout` for *standard output*\n",
-    "* `sys.stderr` for *standard error*\n",
-    "To read a line from a user (keyboard), you can call `sys.stdin.readline()`. To write a line to a user (screen), call `sys.stdout.write(line)`. The standard error is meant for error messages only, even though its output often goes to the same destination as standard output.\n",
-    "\n",
-    "The print function uses the file `sys.stdout` and input function uses the file `sys.stdin`. An example of usage:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 213,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Got a positive integer.\n"
-     ]
-    }
-   ],
-   "source": [
-    "import sys\n",
-    "import random\n",
-    "i=random.randint(-10,10)\n",
-    "if i >= 0:\n",
-    "    sys.stdout.write(\"Got a positive integer.\\n\")\n",
-    "else:\n",
-    "    sys.stderr.write(\"Got a negative integer.\\n\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "These standard file objects are meant to be a basic input/output mechanism in textual form. The destinations of the file objects can be changed to point\n",
-    "somewhere else than the usual keyboard and screen. Very often these are redirected to some files. For example, it is usual to point the stderr to a file where all\n",
-    "error messages are logged."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## sys module\n",
-    "\n",
-    "We saw above that the `sys` module contains the three file objects `sys.stdin`, `sys.stdout`, and `sys.stderr`. It has also few other useful attributes. The attribute `sys.path` is the list of folders that Python uses to look for imported modules. The list `sys.argv` contains the so called *command line parameters*. For example in Linux if you are using the terminal, then you can run your program with the command `python3 programname.py param1 param2 ...`. After Python has started your program, the command line parameters are visible as follows. The name of the program is in `sys.argv[0]`. The rest of the command line parameters are after the program name in this list: `sys.argv[1]==\"param1\"`, `sys.argv[2]==\"param2\"`, and so on. The command line parameters can be useful in adjusting the behaviour of your program. A few examples of these will be in the following exercises. (The terminal window is a textual interface to your computer instead of the usual graphical interface.)\n",
-    "\n",
-    "The function `sys.exit` can be used to exit immediately your program. The integer parameter given to this function is the return value of the program. Usually the return value 0 means that the program ran successfully, and non-zero integer means that an error occurred. This return value is accessible from the terminal window from where you started the program."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (word frequencies)</div>\n",
-    "\n",
-    "Create function `word_frequencies` that gets a filename as a parameter and returns a dict with the word frequencies. In the dictionary the keys are the words and the corresponding values are the number of times that word occurred in the file specified by the function parameter. Read all the lines from the file and split the lines into words using the `split()` method. Further, remove punctuation from the words using the `strip('\"[],.:?!')` method call.\n",
-    "\n",
-    "Test this function in the main function using the file `alice.txt`. The output format should be like:\n",
-    "MISSING!!!!\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (summary)</div>\n",
-    "\n",
-    "Part 1.\n",
-    "\n",
-    "Create a function called `summary` that gets a filename as a parameter. The input\n",
-    "file should contain a floating point number on each line of the file. Make your program read these\n",
-    "numbers and then return a triple containing the sum, average, and standard deviation of these numbers for the file.\n",
-    "As a remainder, the formula for corrected sample standard deviation is\n",
-    "$\\sqrt{\\frac{\\sum_{i=1}^n (x_i - \\overline x)^2}{n-1}}$,\n",
-    "where $\\overline x$ is the average.\n",
-    "\n",
-    "Example of usage from the command line:\n",
-    "`python3 src/summary.py src/example.txt src/example2.txt`\n",
-    "or\n",
-    "`python3 summary.py example.txt example2.txt`\n",
-    "if you are in the folder src.\n",
-    "\n",
-    "The output should look like this:\n",
-    "```\n",
-    "File: src/example.txt Sum: 51.400000 Average: 10.280000 Stddev: 8.904606\n",
-    "File: src/example2.txt Sum: 5446.200000 Average: 1815.400000 Stddev: 3124.294045\n",
-    "```\n",
-    "\n",
-    "Part 2.\n",
-    "\n",
-    "If some line doesn’t represent a number, you can just ignore that line. You can achieve this with the *try-except* block. An example of recovering from an exceptional situation:\n",
-    "```python\n",
-    "try:\n",
-    "    x = float(line)                 # The float constructor raises ValueError exception if conversion is no possible\n",
-    "except ValueError:\n",
-    "    # Statements in here are executed when the above conversion fails\n",
-    "```\n",
-    "We will cover more about exceptions later in the course.\n",
-    "The `main` function should call the function summary for each filename in the list `sys.argv[1:]` of command line parameters.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (file count)</div>\n",
-    "\n",
-    "Part 1.\n",
-    "\n",
-    "Create a function `file_count` that gets a filename as parameter and return a triple of numbers. The function should read the file, count the number of lines, words, and characters in the file, and return a triple with these count in this order. You get division into words by splitting at whitespace, you don't have to remove punctuation.\n",
-    "\n",
-    "Part 2.\n",
-    "\n",
-    "Create a main function that calls `file_count` for each filename in the list of command line parameters sys.argv[1:].\n",
-    "For call `python3 src/file_count file1 file2 ...`\n",
-    "the output should be\n",
-    "```\n",
-    "?      ?       ?       file1\n",
-    "?      ?       ?       file1\n",
-    "...\n",
-    "```\n",
-    "The fields are separated by tabs (`\\t`). The fields are in order: linecount, wordcount, charactercount, filename.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (file extensions)</div>\n",
-    "\n",
-    "Part 1.\n",
-    "\n",
-    "Write function `file_extensions` that gets as a parameter a filename.\n",
-    "It should read through the lines from this file. Each line contains a filename.\n",
-    "Find the extension for each filename. The function should return a pair, where the\n",
-    "first element is a list containing all filenames with no extension (no period (.) appears in the filename).\n",
-    "The second element of the pair is a dictionary with extensions as keys and corresponding values are lists with filenames having that extension.\n",
-    "\n",
-    "Sounds a bit complicated, but hopefully the next example will clarify this.\n",
-    "If the file contains the following lines\n",
-    "```\n",
-    "file1.txt\n",
-    "mydocument.pdf\n",
-    "file2.txt\n",
-    "archive.tar.gz\n",
-    "test\n",
-    "```\n",
-    "then the return value should be the pair:\n",
-    "`([\"test\"], { \"txt\" : [\"file1.txt\", \"file2.txt\"], \"pdf\" : [\"mydocument.pdf\"], \"gz\" : [\"archive.tar.gz\"] } )`\n",
-    "\n",
-    "Part 2.\n",
-    "\n",
-    "Write a main method that calls the `file_extensions` function with \"src/filenames.txt\" as the argument. Then output a line for each extension with the number of files with that extension.\n",
-    "With the example in part 1, the output should be\n",
-    "```\n",
-    "1 files with no extension\n",
-    "gz 1\n",
-    "pdf 1\n",
-    "txt 2\n",
-    "```\n",
-    "Had there been no filenames without extension then the first line would have been `0 files with no extension`. In the printout list the extensions in alphabetical order.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Objects and classes"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Python is an object-oriented programming language like Java\n",
-    "and C++.\n",
-    "But unlike Java, Python doesn’t force you to use classes,\n",
-    "inheritance and methods.\n",
-    "If you like, you can also choose the structural programming\n",
-    "paradigm with functions and modules.\n",
-    "\n",
-    "Every value in Python is an object.\n",
-    "Objects are a way to combine data and the functions that\n",
-    "handle that data.\n",
-    "This combination is called encapsulation.\n",
-    "The data items and functions of objects are called attributes,\n",
-    "and in particular the function attributes are called methods.\n",
-    "For example, the operator `+` on integers calls a method of\n",
-    "integers, and the operator `+` on strings calls a method of\n",
-    "strings.\n",
-    "\n",
-    "Functions, modules, methods, classes, etc are all first class\n",
-    "objects. This means that these objects can be\n",
-    "\n",
-    "* stored in a container\n",
-    "* passed to a function as a parameter\n",
-    "* returned by a function\n",
-    "* bound to a variable\n",
-    "\n",
-    "One can access an attribute of an object using the *dot\n",
-    "operator*: `object.attribute`.\n",
-    "For example: if `L` is a list, we can refer to the method `append`\n",
-    "with `L.append`. The method call can look, for instance, like\n",
-    "this: `L.append(4)`.\n",
-    "Because also modules are objects in Python, we can interpret\n",
-    "the expression `math.pi` as accessing the data attribute `pi` of\n",
-    "module object `math`.\n",
-    "\n",
-    "Numbers like 2 and 100 are instances of type `int`. Similarly,\n",
-    "`\"hello\"` is an instance of type `str`.\n",
-    "When we write `s=set()`, we are actually creating a new\n",
-    "instance of type `set`, and bind the resulting instance object to\n",
-    "`s`.\n",
-    "\n",
-    "A user can define his own data types.\n",
-    "These are called classes.\n",
-    "A user can call these classes like they were functions, and they\n",
-    "return a new instance object of that type.\n",
-    "Classes can be thought as recipes for creating objects.\n",
-    "\n",
-    "An example of class definition:\n",
-    "```python\n",
-    "class MyClass(object):\n",
-    "    \"\"\"Documentation string of the class\"\"\"\n",
-    "\n",
-    "    def __init__(self, param1, param2):\n",
-    "        \"This initialises an instance of type ClassName\"\n",
-    "        self.b = param1 # creates an instance attribute\n",
-    "        c = param2      # creates a local variable of the function\n",
-    "        # statements ...\n",
-    "    \n",
-    "    def f(self, param1):\n",
-    "        \"\"\"This is a method of the class\"\"\"\n",
-    "        # some statements\n",
-    "    \n",
-    "    a=1 # This creates a class attribute\n",
-    "```\n",
-    "\n",
-    "The class definition starts with the class statement.\n",
-    "With this statement you give a name for your new type, and\n",
-    "also in parentheses list the base classes of your class.\n",
-    "The next indented block is the class body.\n",
-    "After the whole class body is read, a new type is created.\n",
-    "Note that no instances are created yet.\n",
-    "All the attributes and methods of the class are defined in the\n",
-    "class body.\n",
-    "\n",
-    "The example class has two methods: `__init__` and `f`.\n",
-    "Note that their first parameter is special: `self`. It\n",
-    "corresponds to this variable of C++ or Java.\n",
-    "`__init__`\n",
-    "does the initialisation when an instance is created.\n",
-    "At instantiation with `i=MyClass(2,3)` the parameters\n",
-    "`param1` and `param2` are bound to values 2 and 3, respectively.\n",
-    "Now that we have an instance `i`, we can call its method `f`\n",
-    "with the dot operator: `i.f(1)`.\n",
-    "The parameters of `f` are bound in the following way:\n",
-    "`self=i` and `param1=1`.\n",
-    "\n",
-    "There are differences in how an assignment inside a class\n",
-    "creates variables.\n",
-    "The attribute `a` is at class level and is common for all\n",
-    "instances of the class `MyClass`.\n",
-    "The variable `c` is a local variable of the function `__init__`, and\n",
-    "cannot therefore be used outside the function.\n",
-    "The attribute `b` is specific to each instance of `MyClass`. Note\n",
-    "that `self` refers to the current instance.\n",
-    "An example: for objects `x=MyClass(1,0)` and\n",
-    "`y=MyClass(2,0)` we have `x.b != y.b`, but `x.a == y.a`.\n",
-    "\n",
-    "All methods of a class have a mandatory first parameter which\n",
-    "refers to the instance on which you called the method.\n",
-    "This parameter is usually named `self`.\n",
-    "If you want to access the class attribute `a` from a method of\n",
-    "the class, use the fully qualified form `MyClass.a`.\n",
-    "The methods whose names both begin and end with two\n",
-    "underscores are called *special methods*. For example, `__init__`\n",
-    "is a special method. These methods will be discussed in detail\n",
-    "later.\n",
-    "\n",
-    "### Instances\n",
-    "\n",
-    "We can create instances by calling a class like it were a\n",
-    "function: `i = ClassName(...)`.\n",
-    "Then parameters given in the call will be passed to the\n",
-    "`__init__` function.\n",
-    "In the `__init__` method you can create the instance specific\n",
-    "attributes.\n",
-    "If `__init__` is missing, we can create an instance without\n",
-    "giving any parameters. As a consequence, the instance has no\n",
-    "attributes.\n",
-    "Later you can (re)bind attributes with the assignment\n",
-    "`instance.attribute = new value`.\n",
-    "\n",
-    "If that attribute did not exist before, it will be added to the\n",
-    "instance with the assigned value.\n",
-    "In Python we really can add or delete attributes to/from an\n",
-    "existing instance.\n",
-    "This is possible because the attribute names and the\n",
-    "corresponding values are actually stored in a dictionary.\n",
-    "This dictionary is also an attribute of the instance and is\n",
-    "called `dict`.\n",
-    "Another standard attribute in addition to dict is called\n",
-    "`__class__`. This attribute stores the class of the instance.\n",
-    "That is, the type of the object"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Attribute lookup\n",
-    "\n",
-    "Suppose `x` is an instance of class `X`, and we want to read an\n",
-    "attribute `x.a`.\n",
-    "The lookup has three phases:\n",
-    "* First it is checked whether the attribute `a` is an attribute of\n",
-    "the instance `x`\n",
-    "* If not, then it is checked whether `a` is a class attribute of `x`’s\n",
-    "class `X`\n",
-    "* If not, then the base classes of `X` are checked\n",
-    "\n",
-    "If instead we want to bind the attribute `a`, things are much\n",
-    "simpler.\n",
-    "`x.a = value` will set the instance attribute.\n",
-    "And `X.a = value` will set the class attribute.\n",
-    "Note that if a base of `X`, the class `X`, and the instance `x` each\n",
-    "have an attribute called `a`, then `x.a` hides `X.a`, and `X.a` hides\n",
-    "the attribute of the base class."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (prepend)</div>\n",
-    "\n",
-    "Create a class called `Prepend`. We create an instance of the class by giving a string as a parameter\n",
-    "to the initializer. The initializer stores the parameter in an instance attribute `start`. The class\n",
-    "also has a method `write(s)` which prints the string `s` prepended with the `start` string.\n",
-    "An example of usage:\n",
-    "```python\n",
-    "p=Prepend(\"+++ \")\n",
-    "p.write(\"Hello\");\n",
-    "```\n",
-    "Will print\n",
-    "```\n",
-    "+++ Hello\n",
-    "```\n",
-    "\n",
-    "Try out the class in the main function.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Inheritance\n",
-    "\n",
-    "Inheritance allows us to reuse the code of an existing class `B`\n",
-    "in creating a new class `C`.\n",
-    "Let’s recap how the attribute lookup worked for classes.\n",
-    "When looking for an attribute, the lookup procedure starts\n",
-    "with the instance dictionary, and continues with the class\n",
-    "attributes.\n",
-    "If both fail, then the attribute is searched from the base\n",
-    "classes and, recursively, from their base classes.\n",
-    "\n",
-    "So, it may look like we access an attribute of a class `C`, when\n",
-    "in reality we are accessing the attribute of its base class `B`.\n",
-    "In this case we say that the class `C` inherits the attribute from\n",
-    "its base class `B`.\n",
-    "If we have attributes with the same name in both the class\n",
-    "and its base class, the attribute of the base class is hidden.\n",
-    "We say that the class `C` overrides the attribute of the base\n",
-    "class `B`.\n",
-    "Terminology: `B` is a base class and `C` is a derived class.\n",
-    "\n",
-    "Example:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 214,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Executing B.f\n",
-      "Executing C.g\n"
-     ]
-    }
-   ],
-   "source": [
-    "class B(object):\n",
-    "    def f(self):\n",
-    "        print(\"Executing B.f\")\n",
-    "    def g(self):\n",
-    "        print(\"Executing B.g\")\n",
-    "    \n",
-    "class C(B):\n",
-    "    def g(self):\n",
-    "        print(\"Executing C.g\")\n",
-    "        \n",
-    "x=C()\n",
-    "x.f() # inherited from B\n",
-    "x.g() # overridden by C"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "A derived class is sometimes also called a *subclass* and the\n",
-    "base class is called *super class*.\n",
-    "The inheritance relation of two classes `B` and `C` can be tested\n",
-    "with function `issubclass`:\n",
-    "`issubclass(C,B)==True` but `issubclass(B,C)==False`\n",
-    "Function `isinstance(obj, cls)` allows us to test whether\n",
-    "an instance has type `cls` or has an ancestor class of type `cls`.\n",
-    "Let’s create instances `x=C()` and `y=B()`.\n",
-    "Now we have `isinstance(x,B)==\n",
-    "isinstance(x,C)==isinstance(y,B)==True`.\n",
-    "But `isinstance(y,C)==False`.\n",
-    "\n",
-    "![inheritance_hierarchy.svg](inheritance_hierarchy.svg)\n",
-    "\n",
-    "`object` should be a base class or an ancestor class of every\n",
-    "other class.\n",
-    "This means that `isinstance(x, object)==True` for all\n",
-    "instances `x`.\n",
-    "\n",
-    "By deriving from an existing class we can modify and/or\n",
-    "extend its behaviour, without touching the original class.\n",
-    "For example, if we want to add one method to a list class,\n",
-    "we can use inheritance. Therefore we have to only code the\n",
-    "part that has changed and reuse the rest of the code of type\n",
-    "list.\n",
-    "Another use of inheritance is to create conceptual hierarchies.\n",
-    "For instance, later we will learn about the exception hierarchy\n",
-    "of Python.\n",
-    "Third use would be to use classes to create interfaces. There\n",
-    "can be several classes that have same interface (that is, they\n",
-    "offer the same attributes), but their behaviour or\n",
-    "implementation can be very different. This allows changing a\n",
-    "part of your program with minimal changes required elsewhere\n",
-    "in the code.\n",
-    "\n",
-    "If in the definition of the method `C.f` we need to call the\n",
-    "corresponding method of class `A`, we can use the fully qualified\n",
-    "call `A.f(...)`.\n",
-    "This is called delegation.\n",
-    "It is useful, for instance, when you want to call the init\n",
-    "method of the base class from the init of the derived\n",
-    "class to initialise the base class attributes."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Special methods\n",
-    "\n",
-    "We have already encountered one special method, namely the\n",
-    "`__init__` method.\n",
-    "This method sets the instance attributes to some initial value.\n",
-    "Its first parameter is `self`, and the subsequent parameters\n",
-    "are the ones that were passed to the call of the class.\n",
-    "The `__init__` method should return no value.\n",
-    "In the following slides the main general purpose special\n",
-    "methods are introduced.\n",
-    "They are executed when certain operations on objects are\n",
-    "performed.\n",
-    "\n",
-    "In the following, `C` is a class and `x` and `y` are its instances.\n",
-    "`__hash__` returns an int value, with the following\n",
-    "requirement: `x==y` implies `x.__hash__() == y.__hash__()`.\n",
-    "The value is used in storing objects in dictionaries and sets.\n",
-    "The instances `x` and `y` must be immutable\n",
-    "A class with `__call__` method makes its instances callable.\n",
-    "I.e. the call `x(a,b, ...)` will result in calling this special\n",
-    "method with the given parameters.\n",
-    "The method `__del__` gets called when the corresponding\n",
-    "instance gets deleted.\n",
-    "Method `__new__` is used to control the creation of new\n",
-    "instances. It can be used, for example, to create classes that\n",
-    "have only one instance.\n",
-    "\n",
-    "The method `__str__` is called when the print statement needs\n",
-    "to print the value of an instance. It returns a string. The\n",
-    "print-format expression calls this for conversion `%s`.\n",
-    "The method `__repr__` is called when the interactive interpreter\n",
-    "prints the value of an evaluated expression, and when the\n",
-    "conversion `%r` for print-format expression is used. Returns a\n",
-    "canonical representation string that (at least in theory) can be\n",
-    "used to recreate the original object.\n",
-    "Special methods `__eq__`, `__ge__`, `__gt__`, `__le__`, `__lt__`, and\n",
-    "`__ne__` get called when the corresponding operators `x==y`,\n",
-    "`x>=y`, `x>y`, `x<=y`, `x<y`, and `x!=y` are used.\n",
-    "\n",
-    "If you want the instances of your class to support the numeric\n",
-    "operations (like +, -, *, /, etc), you must define a set of\n",
-    "special methods in you class.\n",
-    "For example, the expression x+y will result in a call\n",
-    "x. add (y) which should return the result of the operation.\n",
-    "Here are a few of the most common numerical special\n",
-    "methods:\n",
-    "\n",
-    "|Method|Description|\n",
-    "|---|------------|\n",
-    "|`__add__` | addition (+) |\n",
-    "|`__sub__` | subtraction (-) |\n",
-    "|`__mul__` | multiplication (*) |\n",
-    "|`__truediv__` | division (/) |\n",
-    "|`__floordiv__` | division (//) |\n",
-    "-----------------------\n",
-    "\n",
-    "The corresponding augmented assignments += -= *= /=\n",
-    "have special methods iadd , isub , imul , idiv.\n",
-    "The conversion functions complex(), float(), int() and\n",
-    "long() call the following special methods:\n",
-    "\n",
-    "|Method|Description|\n",
-    "|------|-----------|\n",
-    "|`__complex__` | convert to a complex number|\n",
-    "|`__float__` | convert to a float|\n",
-    "|`__int__` | convert to an integer|\n",
-    "\n",
-    "In addition to the normal methods of containers, like the\n",
-    "append method of the list, there are several operations that\n",
-    "are handled by calls to special methods of the container class.\n",
-    "The test whether `x` is a member of container `c` is done by the\n",
-    "operation `x in c`. The corresponding special method call is\n",
-    "`x.__contains__(y)`.\n",
-    "Deletion of an element of container `c` can be done with the\n",
-    "operation `del c[key]`. This will result in the method call\n",
-    "`x.__delitem__`.\n",
-    "\n",
-    "Reading an item of a container `c` is done with the operation\n",
-    "`c[key]`. The corresponding method call is\n",
-    "`c.__getitem__(key)`.\n",
-    "Similarly, setting an item with `c[key]=value` results in the\n",
-    "call `c.__setitem__(key,value)`.\n",
-    "The number of elements in a container `c` can be queried with\n",
-    "the function call `len(c)`. This function call actually calls the\n",
-    "special method `c.__len__`.\n",
-    "The call `iter(c)` will call the special method `__iter__`. More\n",
-    "about the purpose of this function in the next few slides.\n"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (rational)</div>\n",
-    "\n",
-    "\n",
-    "Create a class `Rational` whose instances are rational numbers. A new rational number can be\n",
-    "created with the call to the class. For example, the call `r=Rational(1,4)` creates a rational\n",
-    "number “one quarter”. Make the instances support the following operations:\n",
-    "`+` `-` `*` `/` `<` `>` `==`\n",
-    "with their natural behaviour. Make the rationals also printable so that from the printout we can\n",
-    "clearly see that they are rational numbers.\n",
-    "<hr/>"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "## Exceptions"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "When an error occurs, what can we do?\n",
-    "\n",
-    "* Print an error message\n",
-    "* Stop the execution of a program\n",
-    "* Indicate the error by returning a special value, like -1 or None\n",
-    "* Ignore the error\n",
-    "* ...\n",
-    "\n",
-    "These solutions tend to combine the indication of a problem\n",
-    "and the reaction to the problem indication.\n",
-    "The behaviour of the program in error situations cannot the\n",
-    "changed, they are fixed in the implementation of the function.\n",
-    "When an erroneous situation is noticed, it may not be clear\n",
-    "how to handle the situation.\n",
-    "Usually the user or an instance that called a function knows\n",
-    "what to do.\n",
-    "\n",
-    "Most modern computer languages have a system called\n",
-    "exception handling. This system separates the recognition of errors and the\n",
-    "handling of these situations. We can signal an error or anomalous situation by raising an\n",
-    "exception. Exceptions can be raised in Python with the `raise` statement:\n",
-    "\n",
-    "* `raise` instance\n",
-    "* `raise` exception class [, expression]\n",
-    "\n",
-    "In the second form, if the expression exists, it is a tuple of\n",
-    "parameters given to exception class.\n",
-    "\n",
-    "The functions of the Python standard library raise exceptions\n",
-    "in error situations. Sometimes exceptions aren’t really errors. For example, when\n",
-    "an iterator runs out of elements, it will signal this by raising\n",
-    "the `StopIteration` exception.\n",
-    "Another less erroneus exception is the `Warning` exception.\n",
-    "\n",
-    "The general form of exception catching statement is the following:"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "```\n",
-    "try:\n",
-    "    # here are the statements that can cause exceptions\n",
-    "except (Exceptionname1, Exceptionname2, ...):\n",
-    "    # here we handle the exceptions\n",
-    "else:\n",
-    "    # this gets executed if try-block caused no exceptions\n",
-    "finally:\n",
-    "    # this is always executed, clean-up code\n",
-    "```\n",
-    "\n",
-    "Usually, just the try and except parts are needed."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 215,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Index does not exist\n"
-     ]
-    }
-   ],
-   "source": [
-    "L=[1,2,3]\n",
-    "try:\n",
-    "    print(L[3])\n",
-    "except IndexError:\n",
-    "    print(\"Index does not exist\")"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 216,
-   "metadata": {
-    "scrolled": true
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Give a number (non-number quits): 12\n",
-      "Give a number (non-number quits): a\n",
-      "Average is 12.0\n"
-     ]
-    }
-   ],
-   "source": [
-    "def compute_average(L):\n",
-    "    n=len(L)\n",
-    "    s=sum(L)\n",
-    "    return float(s)/n # error is noticed here !!!\n",
-    "mylist=[]\n",
-    "while True:\n",
-    "    try:\n",
-    "        x=float(input(\"Give a number (non-number quits): \"))\n",
-    "        mylist.append(x)\n",
-    "    except ValueError:\n",
-    "        break\n",
-    "try:\n",
-    "    average=compute_average(mylist)\n",
-    "    print(\"Average is\", average)\n",
-    "except ZeroDivisionError:\n",
-    "    # and the error is handled here\n",
-    "    if len(mylist) == 0:\n",
-    "        print(\"Tried to compute the average of empty list of numbers\")\n",
-    "    else:\n",
-    "        print(\"Something strange happened\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Exception hierarchy"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "In Python exceptions are objects, like all values in Python.\n",
-    "These objects are instantiated from exception classes.\n",
-    "Exception classes form naturally hierarchies:\n",
-    "\n",
-    "* New exception classes can be made by inheriting from existing exception classes and extending them\n",
-    "* The root of this hierarchy is the class Exception\n",
-    "* Python defines several base classes to derive from, and several ready-to-use exception classes"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "![exception hierarchy](exception_hierarchy.svg)"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### Too general exception specifications"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "The exception hierarchy allows to catch multiple similar\n",
-    "exceptions by catching their common base class.\n",
-    "This feature has to be used carefully. Over-general exception\n",
-    "specification, like `except Exception:`, can hide the real\n",
-    "reason for an error. Example of this:"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 217,
-   "metadata": {},
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Give a number: 12\n",
-      "You didn’t enter a number\n"
-     ]
-    }
-   ],
-   "source": [
-    "import sys\n",
-    "s=input(\"Give a number: \")\n",
-    "s=s[:-1] # strip the \\n character from the end\n",
-    "try:\n",
-    "    x=int(s)\n",
-    "    sys.stdout.wr1te(\"You entered %d\\n\" % x)\n",
-    "except Exception:\n",
-    "    print(\"You didn’t enter a number\")"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "In the previous example, if the user doesn’t enter a string that\n",
-    "represents an integer, a `ValueError` is raised by the int\n",
-    "function. Instead of catching the `ValueError`, we catch the root of the\n",
-    "exception hierarchy, namely `Exception`. This results in catching all possible exceptions.\n",
-    "But this will cause one typing error in the program to go undetected.\n",
-    "Change the exception specification from `Exception` to `ValueError` to see what this error is."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "### What is the error handling policy in Python"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "Python uses a different approach to error checking than many\n",
-    "other common languages.\n",
-    "Instead of trying to beforehand check that all the inputs are of\n",
-    "correct type and then contents of input variables are sensible\n",
-    "for some operations, Python first tries the operations and then\n",
-    "checks whether they caused any exceptions.\n",
-    "This is partly what duck typing is about: a function works for\n",
-    "a set of inputs if all the operations in the function body make\n",
-    "sense for those inputs.\n",
-    "So, that’s why the parameters of functions aren’t specified to\n",
-    "be of any certain type."
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "metadata": {},
-   "source": [
-    "#### <div class=\"alert alert-info\">Exercise X (extract numbers)</div>\n",
-    "\n",
-    "Write a function `extract_numbers` that gets a string as a parameter. It should return a list of numbers that can be both ints and floats. Split the string to words at whitespace using the `split()` method. Then iterate through each word, and initially try to convert to an int. If unsuccesful, then try to convert to a float. If not a number then skip the word.\n",
-    "\n",
-    "Example run:\n",
-    "`print(extract_numbers(\"abd 123 1.2 test 13.2 -1\"))`\n",
-    "will return\n",
-    "`[123, 1.2, 13.2, -1]`\n",
-    "<hr/>"
+    "## Summary\n",
+    "\n",
+    "* We have learned that Python's code blocks are denoted by consistent indenting, with spaces or tabs, unlike in many other languages\n",
+    "* Python's `for` loops goes through all the elements of a container without the need of worrying about the positions (indices) of the elements in the container\n",
+    "* More generally, an iterable is an object whose elements can be gone through one by one using a `for` loop. Such as `range(1,7)`\n",
+    "* Python has dynamic typing: the type of a name is known only when we run the program. The type might not be fixed, that is, if a name is created, for example, in a loop, then its type might change at each iteration.\n",
+    "* Visibility of a name: a name that refers to a variable can disappear in the middle of a code block, if a `del` statement is issued!\n",
+    "* Python is good at string handling, but remember that if you want to concatenate large number of strings, use the `join` method. Concatenating by the `+` operator multiple times is very inefficient\n",
+    "* Several useful tools exist to process sequences: `map`, `reduce`, `filter`, `zip`, `enumerate`, and `range`. The unnamed lambda function can be helpful with these tools. Note that these tools (except the `reduce`) don't return lists, but iterables, for efficiency reasons: Most often we don't want to store the result from these tools to a container (such as a list), we may only want to iterate through the result!"
    ]
   },
   {
@@ -5019,7 +3595,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.6"
+   "version": "3.6.7"
   }
  },
  "nbformat": 4,

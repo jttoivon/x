@@ -79,7 +79,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -173,6 +180,11 @@
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/notes.ipynb">notes.ipynb</a>.
@@ -181,11 +193,9 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="section" id="Tehtäviä">
 <h1>Tehtäviä<a class="headerlink" href="#Tehtäviä" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li>Mitkä metodit ovat yhteisiä dataframelle ja seriesille, ja mitkä ovat
-erillisiä.</li>
+<li>Mitkä metodit ovat yhteisiä dataframelle ja seriesille, ja mitkä ovat erillisiä.</li>
 <li>Iän ja pituuden regressointi</li>
-<li>Tulosta tiedostoon taulukkomuotoista dataa, jossa esim. sarakkeet x,
-x<strong>2 ja x</strong>3, tai kertotaulut</li>
+<li>Tulosta tiedostoon taulukkomuotoista dataa, jossa esim. sarakkeet x, x<strong>2 ja x</strong>3, tai kertotaulut</li>
 <li>Tee timantti käyttäen eye, transpose ja merge/concat -funktioita</li>
 <li>KFold:n parametrit ovat muuttuneet</li>
 <li>sklearn.cross_validation -&gt; sklearn.model_selection</li>
@@ -209,9 +219,7 @@ x<strong>2 ja x</strong>3, tai kertotaulut</li>
 <div class="section" id="Mietteitä">
 <h2>Mietteitä<a class="headerlink" href="#Mietteitä" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Pitääkö ohjelmien tarkistaa syötteiden järkevyys va voiko olettaa
-että syötteen ovat järkeviä. Jälkimmäinen vaihtoehto on
-Pythonmaisempi</li>
+<li>Pitääkö ohjelmien tarkistaa syötteiden järkevyys va voiko olettaa että syötteen ovat järkeviä. Jälkimmäinen vaihtoehto on Pythonmaisempi</li>
 </ul>
 </div>
 </div>
@@ -252,7 +260,9 @@ Pythonmaisempi</li>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   

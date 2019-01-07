@@ -80,7 +80,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -214,18 +221,18 @@ div.nblast {
 
 /* input prompt */
 div.nbinput div.prompt pre {
-    color: #303F9F;
+    color: #307FC1;
 }
 
 /* output prompt */
 div.nboutput div.prompt pre {
-    color: #D84315;
+    color: #BF5B3D;
 }
 
 /* all prompts */
 div.nbinput div.prompt,
 div.nboutput div.prompt {
-    min-width: 8ex;
+    min-width: 5ex;
     padding-top: 0.4em;
     padding-right: 0.4em;
     text-align: right;
@@ -265,9 +272,9 @@ div.nboutput div.output_area {
 
 /* input area */
 div.nbinput div.input_area {
-    border: 1px solid #cfcfcf;
+    border: 1px solid #e0e0e0;
     border-radius: 2px;
-    background: #f7f7f7;
+    background: #f5f5f5;
 }
 
 /* override MathJax center alignment in output cells */
@@ -275,7 +282,7 @@ div.nboutput div[class*=MathJax] {
     text-align: left !important;
 }
 
-/* override sphinx.ext.pngmath center alignment in output cells */
+/* override sphinx.ext.imgmath center alignment in output cells */
 div.nboutput div.math p {
     text-align: left;
 }
@@ -325,6 +332,40 @@ div.nboutput div.output_area.stderr {
 .ansi-bold { font-weight: bold; }
 .ansi-underline { text-decoration: underline; }
 
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
 /* CSS overrides for sphinx_rtd_theme */
 
 /* 24px margin */
@@ -341,6 +382,11 @@ div.nboutput div.output_area.stderr {
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/pca.ipynb">pca.ipynb</a>.
@@ -348,25 +394,12 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Principal-component-analysis">
 <h1>Principal component analysis<a class="headerlink" href="#Principal-component-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Principal component analysis is an unsupervised learning method that
-tries to detect the directions in which the vector formed data varies
-most. It first finds the direction of highest variance, and then
-proceeds to discover directions of highest variance that are orthogonal
-to those direction already found. So, for n dimensional data, it
-returns, by default, n orthogonal directions and the corresponding
-variances. These directions are called pricipal axes, and if we project
-a data point to these axes, we get the principal components of each
-axis.</p>
-<p>To use another terminology, the set of principal axes forms a base for
-the vector space where the data points reside, and the principal
-components are the coordinates of the data points in this new coordinate
-system. The PCA object has a transform method, which transforms data to
-this new coordinate system.</p>
-<p>Let’s look at an example where the data is from multi-variate Gaussian
-distribution.</p>
+<p>Principal component analysis is an unsupervised learning method that tries to detect the directions in which the vector formed data varies most. It first finds the direction of highest variance, and then proceeds to discover directions of highest variance that are orthogonal to those direction already found. So, for n dimensional data, it returns, by default, n orthogonal directions and the corresponding variances. These directions are called pricipal axes, and if we project a data point to
+these axes, we get the principal components of each axis.</p>
+<p>To use another terminology, the set of principal axes forms a base for the vector space where the data points reside, and the principal components are the coordinates of the data points in this new coordinate system. The PCA object has a transform method, which transforms data to this new coordinate system.</p>
+<p>Let’s look at an example where the data is from multi-variate Gaussian distribution.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -380,8 +413,7 @@ distribution.</p>
 </div>
 <p>First we sample data from this distribution, and then we plot it.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -406,11 +438,9 @@ distribution.</p>
 <img alt="_images/pca_4_0.png" src="_images/pca_4_0.png" />
 </div>
 </div>
-<p>Let’s first apply the PCA to the data to obtain the principal axes and
-their variances.</p>
+<p>Let’s first apply the PCA to the data to obtain the principal axes and their variances.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -439,12 +469,9 @@ Explained variance: [0.97980663 0.16031015]
 Mean: [ 0.01333067 -0.05370929]
 </pre></div></div>
 </div>
-<p>Then we draw vectors whose directions reflect those of the principal
-axes, and whose lengths are the corresponding variances. Then we plot
-the data in this new coordinate system.</p>
+<p>Then we draw vectors whose directions reflect those of the principal axes, and whose lengths are the corresponding variances. Then we plot the data in this new coordinate system.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -465,8 +492,7 @@ the data in this new coordinate system.</p>
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Out[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -481,17 +507,10 @@ the data in this new coordinate system.</p>
 <img alt="_images/pca_8_1.png" src="_images/pca_8_1.png" />
 </div>
 </div>
-<p>You may have noticed that we gave the PCA constructor a parameter with
-value 2. This parameter gives the number of principal axes we want. If
-the parameter value is n, then the algorithm return only n components
-with the highest variances and drops those components with lower
-variance. So, this algorithm can be used a dimensionality reduction
-technique. The components with low variance are assumed not to contain
-any important information.</p>
+<p>You may have noticed that we gave the PCA constructor a parameter with value 2. This parameter gives the number of principal axes we want. If the parameter value is n, then the algorithm return only n components with the highest variances and drops those components with lower variance. So, this algorithm can be used a dimensionality reduction technique. The components with low variance are assumed not to contain any important information.</p>
 <p>Let’s use PCA to project the above data to one dimension.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -519,17 +538,11 @@ any important information.</p>
 <img alt="_images/pca_10_1.png" src="_images/pca_10_1.png" />
 </div>
 </div>
-<p>The dimensionality reduction can be used, for example, to project
-high-dimensional data in two or three dimensions to allow visualization
-of data. Additionally, dimensionality reduction can be used as a
-preprocessing method to obtain only the important features from the
-data. These important features can then be used, for example, for
-regression or classification.</p>
+<p>The dimensionality reduction can be used, for example, to project high-dimensional data in two or three dimensions to allow visualization of data. Additionally, dimensionality reduction can be used as a preprocessing method to obtain only the important features from the data. These important features can then be used, for example, for regression or classification.</p>
 <div class="section" id="Example-of-feature-extraction">
 <h2>Example of feature extraction<a class="headerlink" href="#Example-of-feature-extraction" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [24]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -550,8 +563,7 @@ regression or classification.</p>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -580,8 +592,7 @@ regression or classification.</p>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -614,8 +625,7 @@ regression or classification.</p>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre>
-<span></span>In [27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -648,22 +658,15 @@ regression or classification.</p>
 <div class="admonition note">
 Exercise 12 (explained variance)</div>
 <p>Part 1.</p>
-<p>Write function explained_variance which reads the tab separated file
-“data.tsv”. It should return two lists (or 1D arrays). Then first list
-contains the variances of all the features. Then fit PCA to the data.
-The second list should consist of the explained variances returned by
-the PCA.</p>
+<p>Write function explained_variance which reads the tab separated file “data.tsv”. It should return two lists (or 1D arrays). Then first list contains the variances of all the features. Then fit PCA to the data. The second list should consist of the explained variances returned by the PCA.</p>
 <p>In the main function print these values in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The variances are: ?.??? ?.??? ...
 The explained variances after PCA are: ?.??? ?.??? ...
 </pre></div>
 </div>
-<p>Print the values with three decimal precision and separate the values by
-a space.</p>
+<p>Print the values with three decimal precision and separate the values by a space.</p>
 <p>Part 2.</p>
-<p>Plot the cumulative explained variances. The y-axis should be the
-cumulative sum, and the x-axis the number of terms in the cumulative
-sum.</p>
+<p>Plot the cumulative explained variances. The y-axis should be the cumulative sum, and the x-axis the number of terms in the cumulative sum.</p>
 <!--NAVIGATION--></div>
 </div>
 
@@ -710,7 +713,9 @@ sum.</p>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   

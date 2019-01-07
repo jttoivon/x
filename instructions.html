@@ -90,7 +90,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#3-Install-TMC-client">3 Install TMC client</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -184,6 +191,11 @@
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/instructions.ipynb">instructions.ipynb</a>.
@@ -198,8 +210,7 @@ This page was generated from <a class="reference external" href="https://github.
 <ul class="simple">
 <li>This is the recommended alternative</li>
 <li>Will take about 3.3 gigabytes of disk space</li>
-<li>Download the anaconda installer (64bits, Python 3) from
-<a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a></li>
+<li>Download the anaconda installer (64bits, Python 3) from <a class="reference external" href="https://www.anaconda.com/download">https://www.anaconda.com/download</a></li>
 <li>On command line run <code class="docutils literal notranslate"><span class="pre">bash</span> <span class="pre">nameofthedownloadedfile</span></code></li>
 <li>Follow the instructions of the installer</li>
 <li>3 minutes</li>
@@ -212,8 +223,7 @@ This page was generated from <a class="reference external" href="https://github.
 </li>
 <li><p class="first">Will take about 2.3 gigabytes of disk space</p>
 </li>
-<li><p class="first">Download miniconda installer (64bits, Python 3) from
-<a class="reference external" href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></p>
+<li><p class="first">Download miniconda installer (64bits, Python 3) from <a class="reference external" href="https://conda.io/miniconda.html">https://conda.io/miniconda.html</a></p>
 </li>
 <li><p class="first">Run the installer</p>
 <ul class="simple">
@@ -222,13 +232,10 @@ This page was generated from <a class="reference external" href="https://github.
 </li>
 <li><p class="first">Activate the miniconda environment</p>
 <ul class="simple">
-<li>With Linux and MacOS:
-<code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/miniconda/install/location/bin/activate</span></code></li>
+<li>With Linux and MacOS: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">/miniconda/install/location/bin/activate</span></code></li>
 </ul>
 </li>
-<li><p class="first">Download the
-<a class="reference external" href="https://raw.githubusercontent.com/jttoivon/x/master/requirements.txt">requirements.txt</a>
-file</p>
+<li><p class="first">Download the <a class="reference external" href="https://raw.githubusercontent.com/jttoivon/x/master/requirements.txt">requirements.txt</a> file</p>
 </li>
 <li><p class="first">Install the required packages with</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>`conda install --yes --file requirements.txt`
@@ -244,33 +251,26 @@ file</p>
 <div class="section" id="2-Log-in-to-the-course">
 <h2>2 Log in to the course<a class="headerlink" href="#2-Log-in-to-the-course" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Go to the <a class="reference external" href="https://tmc.mooc.fi/staging/org/hy/courses/106">exercise
-page</a> of the
-course</li>
-<li>If you don’t already have an account on this <strong>staging</strong> server,
-press the signup button</li>
+<li>Go to the <a class="reference external" href="https://tmc.mooc.fi/staging/org/hy/courses/106">exercise page</a> of the course</li>
+<li>If you don’t already have an account on this <strong>staging</strong> server, press the signup button</li>
+<li>Use your student number as the organizational id</li>
 <li>Choose organization Helsingin yliopisto</li>
 <li>Choose course Data Analysis with Python</li>
-<li>Register to the course</li>
 </ul>
 </div>
 <div class="section" id="3-Install-TMC-client">
 <h2>3 Install TMC client<a class="headerlink" href="#3-Install-TMC-client" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>Follow the instructions on the following page to install TMC client
-<a class="reference external" href="https://github.com/testmycode/tmc-cli">https://github.com/testmycode/tmc-cli</a></li>
-<li>After installing run command
-<code class="docutils literal notranslate"><span class="pre">./tmc</span> <span class="pre">config</span> <span class="pre">server-address=&quot;https://tmc.mooc.fi/staging&quot;</span></code></li>
+<li>Follow the instructions on the following page to install TMC client <a class="reference external" href="https://github.com/testmycode/tmc-cli">https://github.com/testmycode/tmc-cli</a></li>
+<li>After installing run command <code class="docutils literal notranslate"><span class="pre">./tmc</span> <span class="pre">config</span> <span class="pre">server-address=&quot;https://tmc.mooc.fi/staging&quot;</span></code></li>
 <li>Answer <code class="docutils literal notranslate"><span class="pre">y</span></code> to the question of using the <strong>staging</strong> server</li>
 <li>Provide login details, and use organization slug <code class="docutils literal notranslate"><span class="pre">hy</span></code></li>
-<li>Then issue command <code class="docutils literal notranslate"><span class="pre">./tmc</span> <span class="pre">download</span> <span class="pre">hy-data-analysis-in-python</span></code> to
-download the exercises</li>
+<li>Then issue command <code class="docutils literal notranslate"><span class="pre">./tmc</span> <span class="pre">download</span> <span class="pre">hy-data-analysis-in-python</span></code> to download the exercises</li>
 <li>Important commands:</li>
 <li><code class="docutils literal notranslate"><span class="pre">tmc</span></code> to show help message</li>
 <li><code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">test</span></code> to test your solution locally</li>
 <li><code class="docutils literal notranslate"><span class="pre">tmc</span> <span class="pre">submit</span></code> to submit your solution to the server for grading</li>
-<li>The above github page of the tmc-client also contains instructions on
-the use of the client</li>
+<li>The above github page of the tmc-client also contains instructions on the use of the client</li>
 </ul>
 <!--NAVIGATION--></div>
 </div>
@@ -320,7 +320,9 @@ the use of the client</li>
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   

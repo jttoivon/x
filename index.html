@@ -80,7 +80,14 @@
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
@@ -174,6 +181,11 @@
 .admonition > p:before {
     margin-right: 4px;  /* make room for the exclamation icon */
 }
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
 </style>
 <div class="section" id="welcome-to-data-analysis-with-python-s-documentation">
 <h1>Welcome to Data analysis with Python’s documentation!<a class="headerlink" href="#welcome-to-data-analysis-with-python-s-documentation" title="Permalink to this headline">¶</a></h1>
@@ -186,15 +198,29 @@
 <li class="toctree-l2"><a class="reference internal" href="instructions.html#3-Install-TMC-client">3 Install TMC client</a></li>
 </ul>
 </li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Week 1:</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="basics.html#Basic-concepts">Basic concepts</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basics.html#String-handling">String handling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="basics.html#Modules">Modules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#Regular-expressions">Regular expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#Basic-file-processing">Basic file processing</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#sys-module">sys module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#Objects-and-classes">Objects and classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="basics.html#Exceptions">Exceptions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics.html#Summary">Summary</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Week 2:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics2.html#Regular-expressions">Regular expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics2.html#Basic-file-processing">Basic file processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics2.html#sys-module">sys module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics2.html#Objects-and-classes">Objects and classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basics2.html#Exceptions">Exceptions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a><ul>
@@ -225,14 +251,16 @@
 <li class="toctree-l1"><a class="reference internal" href="pandas.html">Pandas</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Creation-and-indexing-of-series">Creation and indexing of series</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Creation-of-dataframes">Creation of dataframes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pandas.html#Accessing-columns-of-a-dataframe.-Results-in">Accessing columns of a dataframe. Results in</a></li>
-<li class="toctree-l2"><a class="reference internal" href="pandas.html#Other-indexing-and-data-selection">Other indexing and data selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pandas.html#Accessing-columns-and-rows-of-a-dataframe">Accessing columns and rows of a dataframe</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pandas.html#Alternative-indexing-and-data-selection">Alternative indexing and data selection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Summary-statistics">Summary statistics</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Missing-data">Missing data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pandas.html#String-processing">String processing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Catenating-datasets">Catenating datasets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Merging-dataframes">Merging dataframes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Aggregates-and-groupings">Aggregates and groupings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pandas.html#Time-series">Time series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pandas.html#External-information">External information</a></li>
 </ul>
 </li>
 </ul>
@@ -316,7 +344,9 @@
         <script type="text/javascript" src="_static/jquery.js"></script>
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
 
   
