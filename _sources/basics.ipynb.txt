@@ -40,19 +40,19 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
+   "execution_count": 2,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Hello world!\n"
+      "Hello world2!\n"
      ]
     }
    ],
    "source": [
-    "print(\"Hello world!\")"
+    "print(\"Hello world2!\")"
    ]
   },
   {
@@ -2121,7 +2121,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "If a key is not found in a dictionary, the indexing `d[key]` results in an error (*exception* `KeyError`). But an assignment with non-existing key causes the key to be added in the dictionary associated with the corresponding value:"
+    "If a key is not found in a dictionary, the indexing `d[key]` results in an error (*exception* `KeyError`). But an assignment with a non-existing key causes the key to be added in the dictionary associated with the corresponding value:"
    ]
   },
   {
@@ -2159,7 +2159,6 @@
     "Dictionary object contains several non-mutating methods:\n",
     "```\n",
     "d.copy()\n",
-    "d.has key(k)\n",
     "d.items()\n",
     "d.keys()\n",
     "d.values()\n",

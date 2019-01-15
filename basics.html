@@ -149,7 +149,11 @@
 <p class="caption"><span class="caption-text">Week 2:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numpy.html">NumPy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 3:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="numpy2.html">NumPy (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pandas.html">Pandas</a></li>
@@ -458,11 +462,11 @@ This page was generated from <a class="reference external" href="https://github.
 <h3>Basic input and output<a class="headerlink" href="#Basic-input-and-output" title="Permalink to this headline">¶</a></h3>
 <p>The traditional “Hello, world” program is very simple in Python. You can run the program by selecting the cell by mouse and pressing control-enter on keyboard. Try editing the string in the quotes and rerunning the program.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world!&quot;</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello world2!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -471,7 +475,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Hello world!
+Hello world2!
 </pre></div></div>
 </div>
 <p>Multiple strings can be printed. By default, they are concatenated with a space:</p>
@@ -1920,7 +1924,7 @@ value2
 </pre></div>
 </div>
 </div>
-<p>If a key is not found in a dictionary, the indexing <code class="docutils literal notranslate"><span class="pre">d[key]</span></code> results in an error (<em>exception</em> <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>). But an assignment with non-existing key causes the key to be added in the dictionary associated with the corresponding value:</p>
+<p>If a key is not found in a dictionary, the indexing <code class="docutils literal notranslate"><span class="pre">d[key]</span></code> results in an error (<em>exception</em> <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>). But an assignment with a non-existing key causes the key to be added in the dictionary associated with the corresponding value:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[172]:
 </pre></div>
@@ -1951,7 +1955,6 @@ value2
 </div>
 <p>Dictionary object contains several non-mutating methods:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">d</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">d</span><span class="o">.</span><span class="n">has</span> <span class="n">key</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
 <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
 <span class="n">d</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 <span class="n">d</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>

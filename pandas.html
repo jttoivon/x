@@ -87,9 +87,13 @@
 <li class="toctree-l1"><a class="reference internal" href="basics.html">Python</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week 2:</span></p>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="basics2.html">Python (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="numpy.html">Numpy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="numpy.html">NumPy</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Week 3:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="numpy2.html">NumPy (continues)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pandas</a><ul>
@@ -115,7 +119,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#Time-series">Time series</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#External-information">External information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Additional-information">Additional information</a></li>
 </ul>
 </li>
 </ul>
@@ -419,8 +423,8 @@ This page was generated from <a class="reference external" href="https://github.
 <h1>Pandas<a class="headerlink" href="#Pandas" title="Permalink to this headline">¶</a></h1>
 <p>In the NumPy section we dealt with some arrays, whose columns had each a special meaning. For example, the column number 0 could contain values interpreted as years, and column 1 could contain a month, and so on. It is possible to handle the data this way, but in can be hard to remember, which column number corresponds to which variable. Especially, if you later remove some column from the array, then the numbering of the remaining columns changes. One solution to this is to give a descriptive
 name to each column. These column names stay fixed and attached to their corresponding columns, even if we remove some of the columns. In addition, the rows can be given names as well, these are called <em>indices</em> in Pandas.</p>
-<p>The <em>Pandas</em> library is build on top of the NumPy library, and it provides a special kind of two dimensional data structure called <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> allows to give names to the columns, so that one can access a column using its name in place of the index of the column.</p>
-<p>First we will quickly go through few examples to see what is possible with Pandas. We start by doing some standard imports:</p>
+<p>The <a class="reference external" href="http://pandas.pydata.org/">Pandas</a> library is build on top of the NumPy library, and it provides a special kind of two dimensional data structure called <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> allows to give names to the columns, so that one can access a column using its name in place of the index of the column.</p>
+<p>First we will quickly go through few examples to see what is possible with Pandas. You may need to check some details from the Pandas <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">documentation</a> in order to complete the exercises. We start by doing some standard imports:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -1219,12 +1223,12 @@ Jones
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (read series)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. An empty line signals the end of Series.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. An empty line signals the end of Series. Malformed input should cause an exception.</p>
 <p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (operations on series)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">create_series</span></code> that get two lists of floats as parameters. Both lists should have length 3. The function should first create two Series, <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. The first series should have values from the first parameter list and have corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The second series should get its values from the second parameter list and have again the corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The function should return the pair of these Series.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">create_series</span></code> that get two lists of numbers as parameters. Both lists should have length 3. The function should first create two Series, <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. The first series should have values from the first parameter list and have corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The second series should get its values from the second parameter list and have again the corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The function should return the pair of these Series.</p>
 <p>Then, write a function <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> that gets two Series as parameters. It should add to the first Series <code class="docutils literal notranslate"><span class="pre">s1</span></code> a new value with index <code class="docutils literal notranslate"><span class="pre">d</span></code>. The new value should be the same as the value in Series <code class="docutils literal notranslate"><span class="pre">s2</span></code> with index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Then delete the element from <code class="docutils literal notranslate"><span class="pre">s2</span></code> that has index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Now the first Series should have four values, while the second list has only two values. Adding a new element to a Series can be achieved by assignment, like with dictionaries. Deletion of an element from a Series
 can be done with the <code class="docutils literal notranslate"><span class="pre">del</span></code> statement.</p>
 <p>Test these functions from the main function. Try adding together the Series returned by the <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> function. The operations on Series use the indices to keep the element-wise operations <em>aligned</em>. If for some index the operation could not be performed, the resulting value will be <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (Not A Number).</p>
@@ -1766,13 +1770,20 @@ Exercise X (cities)</div>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (powers of series)</div>
-<p>Make function <code class="docutils literal notranslate"><span class="pre">powers_of_series</span></code> that takes a Series and a positive integer <code class="docutils literal notranslate"><span class="pre">k</span></code> as parameters and returns a DataFrame. The resulting DataFrame should have to same index as the input Series. The first column of the dataFrame should be the input Series, the second column should contain the Series raised to power of two. The third column should contain the Series to the power of three, and so on until power of <code class="docutils literal notranslate"><span class="pre">k</span></code>.</p>
+<p>Make function <code class="docutils literal notranslate"><span class="pre">powers_of_series</span></code> that takes a Series and a positive integer <code class="docutils literal notranslate"><span class="pre">k</span></code> as parameters and returns a DataFrame. The resulting DataFrame should have to same index as the input Series. The first column of the dataFrame should be the input Series, the second column should contain the Series raised to power of two. The third column should contain the Series to the power of three, and so on until (and including) power of <code class="docutils literal notranslate"><span class="pre">k</span></code>. The columns should have indices from 1 to k.</p>
 <p>The values should be numbers, but the index can have any type. Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function. Example of usage:</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (municipal information)</div>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the address <a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv</a> (from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator in a tabulator and the encoding of the file is ISO-8859 (old format for certain European languages).</p>
-<p>Print the shape of the DataFrame and the column names in the following format: Shape: r,c Columns: col1, col2, …</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function load a data set of municipal information from the address <a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/statistics/municipal.tsv</a> (from <a class="reference external" href="https://pxnet2.stat.fi/PXWeb/pxweb/en/">Statistics Finland</a>). Use the function <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code>, and note that the separator is a tabulator and the encoding of the file is <code class="docutils literal notranslate"><span class="pre">latin1</span></code> (old format for certain European languages).</p>
+<p>Print the shape of the DataFrame and the column names in the following format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Shape</span><span class="p">:</span> <span class="n">r</span><span class="p">,</span><span class="n">c</span>
+<span class="n">Columns</span><span class="p">:</span>
+<span class="n">col1</span>
+<span class="n">col2</span>
+<span class="o">...</span>
+</pre></div>
+</div>
 <hr/></div>
 </div>
 <div class="section" id="Accessing-columns-and-rows-of-a-dataframe">
@@ -1996,8 +2007,9 @@ Name: Wage, dtype: int64
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (municipalities of finland)</div>
-<p>Load again the municipal information DataFrame . The rows of the DataFrame correspond to various geographical areas of Finland. The first row is about Finland as a whole, then rows from Akaa to Ääneskoski are municipalities of Finland in alphabetical order. After that some larger regions are listed.</p>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">municipalities_of_finland</span></code> that returns a DataFrame containing only rows about municipalities.</p>
+<p>Load again the municipal information DataFrame . The rows of the DataFrame correspond to various geographical areas of Finland. The first row is about Finland as a whole, then rows from Akaa to Äänekoski are municipalities of Finland in alphabetical order. After that some larger regions are listed.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">municipalities_of_finland</span></code> that returns a DataFrame containing only rows about municipalities. Give an appropriate argument for <code class="docutils literal notranslate"><span class="pre">pd.read_csv</span></code> so that it interprets the column about region name as the (row) index. This way you can index the DataFrame with the names of the regions.</p>
+<p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (swedish and foreigners)</div>
@@ -2008,12 +2020,14 @@ Exercise X (swedish and foreigners)</div>
 <li>Further take a subset of rows that have proportion of swedish speaking people and proportion of foreigners both above 5 % level</li>
 <li>From this data set take only columns about population and the proportions of Swedish speaking people and foreigners, that is three columns.</li>
 </ul>
+<p>The function should return this final DataFrame.</p>
 <p>Do you see some kind of correlation between the columns about Swedish speaking and foreign people? Do you see a correlation between the columns about the population and the proportion of Swedish speaking people in this subset?</p>
-<hr class="docutils" />
+<hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (growing municipalities)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">growing_municipalities</span></code> that gets a DataFrame as parameter and return the proportion municipalities with increasing population.</p>
-<p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function using some subset of the municipalities.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">growing_municipalities</span></code> that gets subset of municipalities (a DataFrame) as a parameter and returns the proportion municipalities with increasing population in that subset.</p>
+<p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function using some subset of the municipalities. Print the result in the following form using 1 decimal precision.</p>
+<p>Example output: Proportion of growing municipalities: 12.4%</p>
 <hr/></div>
 <div class="section" id="Alternative-indexing-and-data-selection">
 <h2>Alternative indexing and data selection<a class="headerlink" href="#Alternative-indexing-and-data-selection" title="Permalink to this headline">¶</a></h2>
@@ -2090,8 +2104,8 @@ Exercise X (subsetting with loc)</div>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (subsetting by positions)</div>
-<p>Write function `` that does the following.</p>
-<p>Read the data set of the top forty singles from the beginning of the year 1964 from <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>. Return the top 10 entries and only the columns <code class="docutils literal notranslate"><span class="pre">Artist</span></code> and <code class="docutils literal notranslate"><span class="pre">Performer</span></code>. Get these elements by their positions, that is, by using the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attribute. The function should return these as a DataFrame.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">subsetting_by_positions</span></code> that does the following.</p>
+<p>Read the data set of the top forty singles from the beginning of the year 1964 from <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>. Return the top 10 entries and only the columns <code class="docutils literal notranslate"><span class="pre">Title</span></code> and <code class="docutils literal notranslate"><span class="pre">Artist</span></code>. Get these elements by their positions, that is, by using a single call to the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attribute. The function should return these as a DataFrame.</p>
 <hr/></div>
 <div class="section" id="Summary-statistics">
 <h2>Summary statistics<a class="headerlink" href="#Summary-statistics" title="Permalink to this headline">¶</a></h2>
@@ -2240,15 +2254,27 @@ dtype: float64
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (snow depth)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">snow_depth</span></code> that reads in the weather DataFrame and returns the maximum amount of snow in the year 2017.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">snow_depth</span></code> that reads in the weather DataFrame <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv</span></code> and returns the maximum amount of snow in the year 2017.</p>
+<p>Print the result in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function in the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Max</span> <span class="n">snow</span> <span class="n">depth</span><span class="p">:</span> <span class="n">xx</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (average temperature)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">average_temperature</span></code> that returns the average temperature in July.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">average_temperature</span></code> that reads the weather data set and returns the average temperature in July.</p>
+<p>Print the result in the <code class="docutils literal notranslate"><span class="pre">main</span></code> function in the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Average</span> <span class="n">temperature</span> <span class="ow">in</span> <span class="n">July</span><span class="p">:</span> <span class="n">xx</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (below zero)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">below_zero</span></code> that returns the number of days when the temperature was below zero.</p>
+<p>Print the result in the main function in the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Number</span> <span class="n">of</span> <span class="n">days</span> <span class="n">below</span> <span class="n">zero</span><span class="p">:</span> <span class="n">xx</span>
+</pre></div>
+</div>
 <hr/></div>
 <div class="section" id="Missing-data">
 <h2>Missing data<a class="headerlink" href="#Missing-data" title="Permalink to this headline">¶</a></h2>
@@ -3370,7 +3396,7 @@ Exercise X (missing value types)</div>
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">State</th>
-<th class="head">Year of Independence</th>
+<th class="head">Year of independence</th>
 <th class="head">President</th>
 </tr>
 </thead>
@@ -3417,7 +3443,7 @@ Exercise X (missing value types)</div>
 <div class="admonition note">
 Exercise X (special missing values)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">special_missing_values</span></code> that does the following.</p>
-<p>Read the data set of the top forty singles from the beginning of the year 1964 from <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>. Return the rows that relate to those singles whose position dropped compared to last week’s position (column LW=Last Week).</p>
+<p>Read the data set of the top forty singles from the beginning of the year 1964 from <code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</span></code>. Return the rows whose singles’ position dropped compared to last week’s position (column LW=Last Week).</p>
 <p>To do this you first have to convert the special values <code class="docutils literal notranslate"><span class="pre">New</span></code> and <code class="docutils literal notranslate"><span class="pre">Re</span></code> (Re-entry) to missing values (None).</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
@@ -3574,12 +3600,13 @@ Exercise X (split date)</div>
 <span class="n">joulu</span> <span class="mi">12</span>
 </pre></div>
 </div>
-<p>Create function <code class="docutils literal notranslate"><span class="pre">split_date</span></code> that does the above and returns a DataFrame with five columns.</p>
-<p>So the first element in the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column of the original data set should be converted from <code class="docutils literal notranslate"><span class="pre">ke</span> <span class="pre">1</span> <span class="pre">tammi</span> <span class="pre">2014</span> <span class="pre">00:00</span></code> to <code class="docutils literal notranslate"><span class="pre">Wed</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">2014</span> <span class="pre">0</span></code></p>
+<p>Create function <code class="docutils literal notranslate"><span class="pre">split_date</span></code> that does the above and returns a DataFrame with five columns. You may want to use the <code class="docutils literal notranslate"><span class="pre">map</span></code> method of Series objects.</p>
+<p>So the first element in the <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column of the original data set should be converted from <code class="docutils literal notranslate"><span class="pre">ke</span> <span class="pre">1</span> <span class="pre">tammi</span> <span class="pre">2014</span> <span class="pre">00:00</span></code> to <code class="docutils literal notranslate"><span class="pre">Wed</span> <span class="pre">1</span> <span class="pre">1</span> <span class="pre">2014</span> <span class="pre">0</span></code> . Test your solution from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (cleaning data)</div>
-<p>The entries in the following table of US presidents are not uniformly formatted. Make function <code class="docutils literal notranslate"><span class="pre">cleaning_data</span></code> that reads the table from the tsv file <code class="docutils literal notranslate"><span class="pre">src/presidents</span></code> and return the cleaned version of it. Note, you must do the edits programmatically using the string edit methods, not by creating a new DataFrame by hand. The middle three columns should have an integer <code class="docutils literal notranslate"><span class="pre">dtype</span></code>.</p>
+<p>The entries in the following table of US presidents are not uniformly formatted. Make function <code class="docutils literal notranslate"><span class="pre">cleaning_data</span></code> that reads the table from the tsv file <code class="docutils literal notranslate"><span class="pre">src/presidents</span></code> and return the cleaned version of it. Note, you must do the edits programmatically using the string edit methods, not by creating a new DataFrame by hand. The middle three columns should have an integer <code class="docutils literal notranslate"><span class="pre">dtype</span></code>. The <code class="docutils literal notranslate"><span class="pre">where</span></code> method of DataFrames can be helpful, likewise the <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/api.html#string-handling">string
+methods</a> of Series objects. You get an additional point, if you manage to get the columns President and Vice-president right!</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="26%" />
@@ -3604,25 +3631,25 @@ Exercise X (cleaning data)</div>
 </ul>
 </td>
 <td>1</td>
-<td>Mike Pence</td>
+<td>Mike pence</td>
 </tr>
 <tr class="row-odd"><td>barack obama</td>
 <td>2009</td>
 <td>2017</td>
 <td>2</td>
-<td>Joe Biden</td>
+<td>joe Biden</td>
 </tr>
 <tr class="row-even"><td>bush, george</td>
 <td>2001</td>
 <td>2009</td>
 <td>2</td>
-<td>Cheney, Dick</td>
+<td>Cheney, dick</td>
 </tr>
 <tr class="row-odd"><td>Clinton, Bill</td>
 <td>1993</td>
 <td>2001</td>
 <td>two</td>
-<td>Gore, Al</td>
+<td>gore, Al</td>
 </tr>
 </tbody>
 </table>
@@ -4927,12 +4954,12 @@ Exercise X (split date continues)</div>
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (cycling weather)</div>
-<p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables.</p>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the merged DataFrame.</p>
+<p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (cycling weather)</div>
-<p>Merge the DataFrames UK top40 and the bands DataFrame (<code class="docutils literal notranslate"><span class="pre">ttps://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
+Exercise X (top bands)</div>
+<p>Merge the DataFrames UK top40 and the bands DataFrame (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
 <h2>Aggregates and groupings<a class="headerlink" href="#Aggregates-and-groupings" title="Permalink to this headline">¶</a></h2>
@@ -7555,16 +7582,88 @@ Name: Precipitation, dtype: float64
 <hr class="docutils" />
 <div class="admonition note">
 Exercise X (cyclists per day)</div>
-<p>Read and clean the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
+<p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
 <p>Part 1.</p>
-<p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame (now with the Hour column).</p>
+<p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
 <p>Part 2.</p>
-<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts, restrict this data to July of year 2017, and plot this data. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (best record company)</div>
-<p>We use again the UK top 40 data set from the first week of 1964. Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
-<hr/></div>
+<p>We use again the UK top 40 data set from the first week of 1964 (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
+<hr/><hr class="docutils" />
+<div class="admonition note">
+Exercise X (suicide fractions)</div>
+<p>Load the suicide data set from <a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a> . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">suicide_fractions</span></code> that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.</p>
+<hr/><hr class="docutils" />
+<div class="admonition note">
+Exercise X (suicide weather)</div>
+<p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise. Also download the dataset of average temperature (over years 1961-1990) in different countries from <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a> . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contain column header and which column contains row headers. Maku sure you use the country as the (row) index
+for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
+<p>The return value of the function is a tuple (suicide_rows, temperature_rows, common_rows, spearman_correlation) The output from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function should be of the following form:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Suicide</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
+<span class="n">Temperature</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
+<span class="n">Common</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
+<span class="n">Spearman</span> <span class="n">correlation</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
+</pre></div>
+</div>
+<p>You might have trouble when trying to convert the temperatures to float. The is because the negative numbers on that html page use a special <em>unicode minus sign</em>, which looks typographically nice, but the float constructor cannot interpret it as a minus sign. You can try out the following example:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\u2212</span><span class="s2">5&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">sys</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+−5
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+could not convert string to float: &#39;−5&#39;
+</pre></div></div>
+</div>
+<p>But if we explicitly convert unicode minus sign to normal minus sign, it works:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2212</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>-5.0
+</pre></div>
+</div>
+</div>
+<hr/><hr class="docutils" />
+<div class="admonition note">
+Exercise X (tidy data)</div>
+<p>Read the article <a class="reference external" href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">Tidy Data</a>. The article uses the statistical software <code class="docutils literal notranslate"><span class="pre">R</span></code> as an example, but the ideas are relevant in general.</p>
+</div>
 </div>
 <div class="section" id="Time-series">
 <h2>Time series<a class="headerlink" href="#Time-series" title="Permalink to this headline">¶</a></h2>
@@ -8317,7 +8416,7 @@ Exercise X (best record company)</div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pandas_224_0.png" src="_images/pandas_224_0.png" />
+<img alt="_images/pandas_231_0.png" src="_images/pandas_231_0.png" />
 </div>
 </div>
 <p>The graph looks a bit messy at this level of detail. We can smooth it by taking averages over a sliding window of length 30 days:</p>
@@ -8354,7 +8453,7 @@ Exercise X (best record company)</div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pandas_227_0.png" src="_images/pandas_227_0.png" />
+<img alt="_images/pandas_234_0.png" src="_images/pandas_234_0.png" />
 </div>
 </div>
 <hr class="docutils" />
@@ -8370,11 +8469,12 @@ Exercise X (bicycle timeseries)</div>
 <hr/><hr class="docutils" />
 <div class="admonition note">
 Exercise X (commute)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">commute</span></code> that does the following:</p>
-<p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, and plot the result.</p>
+<p>In function <code class="docutils literal notranslate"><span class="pre">commute</span></code> do the following:</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the index to <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code>. Return the resulting DataFrame from the function.</p>
+<p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the DataFrame. Xticklabels should be the weekdays. Don’t forget to call <code class="docutils literal notranslate"><span class="pre">show</span></code> function!</p>
 <hr/></div>
-<div class="section" id="External-information">
-<h2>External information<a class="headerlink" href="#External-information" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Additional-information">
+<h2>Additional information<a class="headerlink" href="#Additional-information" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf">Pandas cheat sheet</a></p>
 <!--NAVIGATION--></div>
 </div>
