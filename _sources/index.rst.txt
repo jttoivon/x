@@ -32,13 +32,25 @@ Welcome to Data analysis with Python's documentation!
    numpy2	     
    matplotlib
    image_processing
-   pandas
+   pandas1
    
 .. toctree::
    :maxdepth: 2
-   :caption: Machine learning:
+   :caption: Week 4:
 
+   pandas2
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Week 5:
+
+   pandas3
    linear_regression
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Week6:
+
    bayes
    clustering
    pca
