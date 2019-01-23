@@ -97,10 +97,8 @@
 <li class="toctree-l1"><a class="reference internal" href="matplotlib.html">Matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="image_processing.html">Image processing</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Pandas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Creation-and-indexing-of-series">Creation and indexing of series</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Onko-seuraava-pätkä-tarpeen?">Onko seuraava pätkä tarpeen?</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#Creation-and-indexing-of-series">Creation and indexing of series</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Summary-(week-3)">Summary (week 3)</a></li>
 </ul>
 </li>
 </ul>
@@ -415,7 +413,7 @@ name to each column. These column names stay fixed and attached to their corresp
 <p>The <a class="reference external" href="http://pandas.pydata.org/">Pandas</a> library is build on top of the NumPy library, and it provides a special kind of two dimensional data structure called <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>. The <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> allows to give names to the columns, so that one can access a column using its name in place of the index of the column.</p>
 <p>First we will quickly go through few examples to see what is possible with Pandas. You may need to check some details from the Pandas <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">documentation</a> in order to complete the exercises. We start by doing some standard imports:</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -424,7 +422,7 @@ name to each column. These column names stay fixed and attached to their corresp
 </pre></div>
 </div>
 </div>
-<p>Let’s import some weather data that is in text from in a csv (Commma Separated Values) file. The following call will fetch the data from the internet and convert it to a DataFrame:</p>
+<p>Let’s import some weather data that is in text form in a csv (Commma Separated Values) file. The following call will fetch the data from the internet and convert it to a DataFrame:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -770,7 +768,7 @@ Name: Snow depth (cm), dtype: float64
 </table>
 </div></div>
 </div>
-<p>In case you want to modify the original DataFrame, you can either assign the result to the original DataFrame, or use the <code class="docutils literal notranslate"><span class="pre">inplace</span></code> parameter of the <code class="docutils literal notranslate"><span class="pre">drop</span></code> method.</p>
+<p>In case you want to modify the original DataFrame, you can either assign the result to the original DataFrame, or use the <code class="docutils literal notranslate"><span class="pre">inplace</span></code> parameter of the <code class="docutils literal notranslate"><span class="pre">drop</span></code> method. Many of the modifying methods of the DataFrame have the <code class="docutils literal notranslate"><span class="pre">inplace</span></code> parameter.</p>
 <p>Addition of a new column works like adding a new key-value pair to a dictionary:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -886,7 +884,7 @@ Name: Snow depth (cm), dtype: float64
 <h2>Creation and indexing of series<a class="headerlink" href="#Creation-and-indexing-of-series" title="Permalink to this headline">¶</a></h2>
 <p>One can turn any one-dimensional iterable into a Series, which is a one-dimensional data structure:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -896,7 +894,7 @@ Name: Snow depth (cm), dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -910,7 +908,7 @@ dtype: int64
 </pre></div>
 </div>
 </div>
-<p>The data type of the elements in the Series is <code class="docutils literal notranslate"><span class="pre">int64</span></code>, integers representable in 64 bits.</p>
+<p>The data type of the elements in this Series is <code class="docutils literal notranslate"><span class="pre">int64</span></code>, integers representable in 64 bits.</p>
 <p>We can also attach a name to this series:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -955,7 +953,7 @@ Name: Grades, dtype: int64
 Name: Grades, dtype: int64, size: 6
 </pre></div></div>
 </div>
-<p>In addition to the values of the series, also the row indices were printed. All the accessing methods from NumPy arrays also work for the Series: indexing, slicing, and fancy indexing.</p>
+<p>In addition to the values of the series, also the row indices were printed. All the accessing methods from NumPy arrays also work for the Series: indexing, slicing, masking and fancy indexing.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
@@ -974,14 +972,25 @@ Name: Grades, dtype: int64, size: 6
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">s2</span><span class="o">=</span><span class="n">s</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">]]</span>                    <span class="c1"># Fancy indexing</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+0    1
+5    2
+dtype: int64
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1211,24 +1220,22 @@ Jones
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (read series)</div>
+Exercise 13 (read series)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">read_series</span></code> that reads input lines from the user and return a Series. Each line should contain first the index and then the corresponding value, separated by whitespace. An empty line signals the end of Series. Malformed input should cause an exception.</p>
 <p>Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (operations on series)</div>
-<p>Write function <code class="docutils literal notranslate"><span class="pre">create_series</span></code> that get two lists of numbers as parameters. Both lists should have length 3. The function should first create two Series, <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. The first series should have values from the first parameter list and have corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The second series should get its values from the second parameter list and have again the corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The function should return the pair of these Series.</p>
+Exercise 14 (operations on series)</div>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">create_series</span></code> that gets two lists of numbers as parameters. Both lists should have length 3. The function should first create two Series, <code class="docutils literal notranslate"><span class="pre">s1</span></code> and <code class="docutils literal notranslate"><span class="pre">s2</span></code>. The first series should have values from the first parameter list and have corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The second series should get its values from the second parameter list and have again the corresponding indices <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">b</span></code>, and <code class="docutils literal notranslate"><span class="pre">c</span></code>. The function should return the pair of these Series.</p>
 <p>Then, write a function <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> that gets two Series as parameters. It should add to the first Series <code class="docutils literal notranslate"><span class="pre">s1</span></code> a new value with index <code class="docutils literal notranslate"><span class="pre">d</span></code>. The new value should be the same as the value in Series <code class="docutils literal notranslate"><span class="pre">s2</span></code> with index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Then delete the element from <code class="docutils literal notranslate"><span class="pre">s2</span></code> that has index <code class="docutils literal notranslate"><span class="pre">b</span></code>. Now the first Series should have four values, while the second list has only two values. Adding a new element to a Series can be achieved by assignment, like with dictionaries. Deletion of an element from a Series
 can be done with the <code class="docutils literal notranslate"><span class="pre">del</span></code> statement.</p>
 <p>Test these functions from the main function. Try adding together the Series returned by the <code class="docutils literal notranslate"><span class="pre">modify_series</span></code> function. The operations on Series use the indices to keep the element-wise operations <em>aligned</em>. If for some index the operation could not be performed, the resulting value will be <code class="docutils literal notranslate"><span class="pre">NaN</span></code> (Not A Number).</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (inverse series)</div>
+Exercise 15 (inverse series)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">inverse_series</span></code> that get a Series as a parameter and returns a new series, whose indices and values have swapped roles. Test your function from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <p>What happens if some value appears multiple times in the original Series? What happens if you use this value to index the resulting Series?</p>
-<hr/><div class="section" id="Onko-seuraava-pätkä-tarpeen?">
-<h3>Onko seuraava pätkä tarpeen?<a class="headerlink" href="#Onko-seuraava-pätkä-tarpeen?" title="Permalink to this headline">¶</a></h3>
-<p>One may notice that there are similarities between Python’s dictionaries and Pandas’ Series, both can be thought to access values using keys. The difference is that Series requires that the indices have all the same type, and similarly, all the values have the same type. This restriction allows creation of fast data structures.</p>
+<hr/><p>One may notice that there are similarities between Python’s dictionaries and Pandas’ Series, both can be thought to access values using keys. The difference is that Series requires that the indices have all the same type, and similarly, all the values have the same type. This restriction allows creation of fast data structures.</p>
 <p>As a mark of the similaries between these two data structures, Pandas allows creation of a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object from a dictionary:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
@@ -1255,16 +1262,9 @@ Name: Presidents, dtype: object
 </pre></div>
 </div>
 </div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
-</div>
+<div class="section" id="Summary-(week-3)">
+<h2>Summary (week 3)<a class="headerlink" href="#Summary-(week-3)" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

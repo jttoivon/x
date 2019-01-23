@@ -415,7 +415,7 @@ This page was generated from <a class="reference external" href="https://github.
 <p>In color images there is third axis is for the red, green, and blue components of each pixel. For each of these color components there is a value between 0.1 and 1.0 (or between 0 and 255). The combinations of different values for the three components red, green, and blue can result in at least 16.7 million colors.</p>
 <p>Since images can be represented as multidimensional arrays, we can easily process images using NumPy functions. Let’s see examples of these.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -425,14 +425,14 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">painting</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;painting.png&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">painting</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The image consists of </span><span class="si">%i</span><span class="s2"> pixels&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">painting</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">painting</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">painting</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">painting</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -445,38 +445,20 @@ This page was generated from <a class="reference external" href="https://github.
 The image consists of 487600 pixels
 </pre></div></div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
-</pre></div>
-</div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;matplotlib.image.AxesImage at 0x7f8020015cc0&gt;
-</pre></div>
-</div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/image_processing_3_2.png" src="_images/image_processing_3_2.png" />
+<img alt="_images/image_processing_3_1.png" src="_images/image_processing_3_1.png" />
 </div>
 </div>
 <p>Because the image is now a NumPy array, we can easily perform some operations:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">painting</span><span class="p">[:,::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>              <span class="c1"># mirror the image in x direction</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
-</pre></div>
-</div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;matplotlib.image.AxesImage at 0x7f80200c9c18&gt;
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">painting</span><span class="p">[:,::</span><span class="o">-</span><span class="mi">1</span><span class="p">]);</span>              <span class="c1"># mirror the image in x direction</span>
 </pre></div>
 </div>
 </div>
@@ -484,7 +466,7 @@ The image consists of 487600 pixels
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/image_processing_5_1.png" src="_images/image_processing_5_1.png" />
+<img alt="_images/image_processing_5_0.png" src="_images/image_processing_5_0.png" />
 </div>
 </div>
 <p>In the following we set the pixels on the first 30 rows white:</p>
@@ -548,15 +530,16 @@ The image consists of 487600 pixels
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (to grayscale)</div>
+Exercise 11 (to grayscale)</div>
 <p>Part 1.</p>
-<p>Write a function <code class="docutils literal notranslate"><span class="pre">to_grayscale</span></code> that takes an RGB image (three dimensional array) and returns a two dimensional gray-scale image. The conversion to gray-scale should take an average of the red, green, and blue values and use that as the value of gray. The first axis is the x, the second is y, and the third is the color components (red, green, blue).</p>
+<p>Write a function <code class="docutils literal notranslate"><span class="pre">to_grayscale</span></code> that takes an RGB image (three dimensional array) and returns a two dimensional gray-scale image. The conversion to gray-scale should take a weighted average of the red, green, and blue values and use that as the value of gray. The first axis is the x, the second is y, and the third is the color components (red, green, blue). Use the weights 0.2126, 0.7152, and 0.0722 for red, green, and blue, respectively. These weights are so because the human eye is most
+sensitive to green color and least sensitive to blue color.</p>
 <p>In the main function you can, for example, use the provided image <code class="docutils literal notranslate"><span class="pre">src/painting.png</span></code>. Display the grayscale image with the <code class="docutils literal notranslate"><span class="pre">plt.imshow</span></code> function. You may have to call the function <code class="docutils literal notranslate"><span class="pre">plt.gray</span></code> to set the color palette (colormap) to gray. (See <code class="docutils literal notranslate"><span class="pre">help(plt.colormaps)</span></code> for more information about colormaps.)</p>
 <p>Part 2.</p>
 <p>Write functions <code class="docutils literal notranslate"><span class="pre">to_red</span></code>, <code class="docutils literal notranslate"><span class="pre">to_green</span></code>, and <code class="docutils literal notranslate"><span class="pre">to_blue</span></code> that get a three dimensional array as a parameter and return a three dimensional arrays. For instance, the function <code class="docutils literal notranslate"><span class="pre">to_red</span></code> should zero out the green and blue color components and return the result. In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function create a figure with three subfigures: the top one should be the red image, the middle one the green image, and the bottom one the blue image.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (radial fade)</div>
+Exercise 12 (radial fade)</div>
 <p>Make program that does fading of an image as earlier, except now not in horizontal direction but in radial direction. As we move away from the centre of the image, the pixels fade to black.</p>
 <p>Part1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">center</span></code> that returns coordinate pair (center_y, center_x) of the image center. Note that these coordinates might not be integers. Example of usage:</p>
@@ -613,6 +596,7 @@ Exercise X (radial fade)</div>
 <img alt="_images/image_processing_15_0.png" src="_images/image_processing_15_0.png" />
 </div>
 </div>
+<p>Let’s try to find clusters from the above image:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
@@ -637,7 +621,7 @@ Number of clusters is 12
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/image_processing_16_1.png" src="_images/image_processing_16_1.png" />
+<img alt="_images/image_processing_17_1.png" src="_images/image_processing_17_1.png" />
 </div>
 </div>
 <p>Although this method we used was very simple, it could still be used for example to automatically count number of birds or stars in an image. Of course, humans can do this easily, but when there are hundreds or thousands of images, then it is better to use machines to do this mechanical work.</p>
@@ -658,15 +642,6 @@ Number of clusters is 12
 <li><a class="reference external" href="https://scikit-image.org/">scikit-image</a></li>
 <li>In Scipy there is the subpackage <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/ndimage.html">ndimage</a> that also contains routines for processing images</li>
 </ul>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
 <!--NAVIGATION--></div>
 </div>
 </div>

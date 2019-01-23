@@ -409,7 +409,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Matplotlib">
 <h1>Matplotlib<a class="headerlink" href="#Matplotlib" title="Permalink to this headline">¶</a></h1>
-<p>To understand the data better it helps to be able to visualize it in various ways. Matplotlib is the most common low-level visualization library for Python. It can create line graphs, scatter plots, density plots, histograms, heatmaps, and so on. During this course we will not go deep into details of matplotlib, instead we have just some examples spread throughout the rest of this material of its use.</p>
+<p>To understand the data better it helps to be able to visualize it in various ways. <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> is the most common low-level visualization library for Python. It can create line graphs, scatter plots, density plots, histograms, heatmaps, and so on. During this course we will not go deep into details of matplotlib, instead we have just some examples spread throughout the rest of this material of its use.</p>
 <div class="section" id="Simple-figure">
 <h2>Simple figure<a class="headerlink" href="#Simple-figure" title="Permalink to this headline">¶</a></h2>
 <p>We will start with an example. The standard way to import matplotlib is as the abbreviation <code class="docutils literal notranslate"><span class="pre">plt</span></code>.</p>
@@ -459,15 +459,15 @@ This page was generated from <a class="reference external" href="https://github.
 <p><img alt="components of a figure" src="_images/example_figure2.png" /></p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (multiple graphs)</div>
+Exercise 9 (multiple graphs)</div>
 <p>In the above plot the x coordinates were implicitly set to the indices of the array <code class="docutils literal notranslate"><span class="pre">a</span></code>, that is, <code class="docutils literal notranslate"><span class="pre">arange(10)</span></code>. Find out from the documentation of <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> how to specify the x coordinates explicitly. Find out also how to draw multiple graphs in one figure.</p>
-<p>Make your main function plot the following two graphs. The first graphs has x coordinates 2,4,6,7 and y coordinates 4,3,5,1. The second graph has x coordinates 1,2,3,4 and y coordinates 4,2,3,1.</p>
+<p>Make your <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the following two graphs. The first graphs has x coordinates 2,4,6,7 and y coordinates 4,3,5,1. The second graph has x coordinates 1,2,3,4 and y coordinates 4,2,3,1.</p>
 <p>Add also a title and some labels for x axis and y axis. Note that in the non-interactive mode you have to call <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> for the figure to show.</p>
 <hr/></div>
 <div class="section" id="Subfigures">
 <h2>Subfigures<a class="headerlink" href="#Subfigures" title="Permalink to this headline">¶</a></h2>
-<p>One can create a figure with several subfigures using the command <code class="docutils literal notranslate"><span class="pre">plt.subfigures</span></code>. It creates a grid of subfigures, where the number of rows and column in the grid are given as parameters. It returns a pair of a figure object and an array containing the subfigures. In matplotlib the subfigures are called <code class="docutils literal notranslate"><span class="pre">axes</span></code>. Note the one letter difference: axis is singular and axes is plural of axis. So you can think of axes as a pair of axis (x and y) that defines a two dimensional figure. An example
-of this:</p>
+<p>One can create a figure with several subfigures using the command <code class="docutils literal notranslate"><span class="pre">plt.subfigures</span></code>. It creates a grid of subfigures, where the number of rows and column in the grid are given as parameters. It returns a pair of a figure object and an array containing the subfigures. In matplotlib the subfigures are called <code class="docutils literal notranslate"><span class="pre">axes</span></code>. Note the one letter difference: axis is singular and axes is plural of axis. So you can think of axes as a pair of axis (x and y) that defines a two dimensional (sub)figure. An
+example of this:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -511,14 +511,14 @@ of this:</p>
 <p>So with both random number generators and matplotlib plots you can choose between using one global object, and functions referring to it, at a time, or using several objects and their methods to refer to multiple objects at the same time.</p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (subfigures)</div>
+Exercise 10 (subfigures)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">subfigures</span></code> that creates a figure that has two subfigures (two <em>axes</em> in matplotlib parlance). The function gets an array <code class="docutils literal notranslate"><span class="pre">a</span></code> as a parameter. In the left subfigure draw using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> <em>method</em> a graph, whose x coordinates are in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and the y coordinates are in the second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. In the right subfigure draw using the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> <em>method</em> a set of points whose x coords are again in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and whose y coordinates are in the
-second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Additionally, the points should get their color from the third column of <code class="docutils literal notranslate"><span class="pre">a</span></code>, and size of the point from the fourth column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. For this, use the <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> named parameters of <code class="docutils literal notranslate"><span class="pre">scatter</span></code>, respectively</p>
+third column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Additionally, the points should get their color from the fourth column of <code class="docutils literal notranslate"><span class="pre">a</span></code>, and size of the point from the fifth column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. For this, use the <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> named parameters of <code class="docutils literal notranslate"><span class="pre">scatter</span></code>, respectively</p>
 <p>Test your function <code class="docutils literal notranslate"><span class="pre">subfigure</span></code> from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
 <hr/></div>
 <div class="section" id="Other-data-visualization-libraries-for-Python">
 <h2>Other data visualization libraries for Python<a class="headerlink" href="#Other-data-visualization-libraries-for-Python" title="Permalink to this headline">¶</a></h2>
-<p>The development of matplotlib library started already in 2003. In some ways this old age shows as figures that don’t look very pretty compared to the figures created with more modern alternatives. Here’s a list of some common modern libraries:</p>
+<p>The development of matplotlib library started already in 2003. In some ways this old age shows as figures that don’t look very pretty compared to the figures created with more modern alternatives. Also, it can be quite complicated to create a simple figure. Here’s a list of some common modern libraries:</p>
 <ul class="simple">
 <li><a class="reference external" href="https://seaborn.pydata.org/index.html">Seaborn</a> is a higher-level plotting library that is build on top of matplotlib. It allows easy creation of more complicated plots. The figures it produces also look prettier than ones created by matplotlib with its default settings.</li>
 <li><a class="reference external" href="https://bokeh.pydata.org/en/latest/">Bokeh</a> creates html pages as output that can be viewed with a web browser. Since it doesn’t create static images, like many other plotting libraries, but html pages which can containg Javascript, this allows the plots to be interactive. Interactive can here mean that you can e.g. zoom or pan the image, or you can have control elements (button, sliders, etc) that adjust the image.</li>
