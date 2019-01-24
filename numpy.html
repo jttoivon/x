@@ -1601,7 +1601,103 @@ Row sums: [25 19 15]
 <p><img alt="aggregation" src="_images/aggregation.svg" /></p>
 <div class="admonition warning">
 Note that most of the aggregation functions in NumPy have corresponding methods. In addition, Python language has builtin functions <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">any</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code> for sequences. Make sure you don’t accidentally use these for arrays, since they may have slightly different semantics, and they will be significantly slower than NumPy’s functions and methods.</div>
-<p>|Python function | NumPy function | NumPy method| |——-|—————-|————-| |sum | np.sum | a.sum| | - | np.prod | a.prod| | - | np.mean | a.mean| | - | np.std | a.std| | - | np.var | a.var| | min | np.min | a.min| | max | np.max | a.max| | - | np.argmin | a.argmin| | - | np.argmax | a.argmax| | - | np.median | -| | - | np.percentile | -| | any | np.any | a.any| | all | np.all | a.all|</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="36%" />
+<col width="34%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Python function</th>
+<th class="head">NumPy function</th>
+<th class="head">NumPy method</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>sum</td>
+<td>np.sum</td>
+<td>a.sum</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.prod</td>
+<td>a.prod</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.mean</td>
+<td>a.mean</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.std</td>
+<td>a.std</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.var</td>
+<td>a.var</td>
+</tr>
+<tr class="row-odd"><td>min</td>
+<td>np.min</td>
+<td>a.min</td>
+</tr>
+<tr class="row-even"><td>max</td>
+<td>np.max</td>
+<td>a.max</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.argmin</td>
+<td>a.argmin</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.argmax</td>
+<td>a.argmax</td>
+</tr>
+<tr class="row-odd"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.median</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+<td>np.percentile</td>
+<td><ul class="first last simple">
+<li></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>any</td>
+<td>np.any</td>
+<td>a.any</td>
+</tr>
+<tr class="row-even"><td>all</td>
+<td>np.all</td>
+<td>a.all</td>
+</tr>
+</tbody>
+</table>
 <p>Let’s measure how much slower Python’s <code class="docutils literal notranslate"><span class="pre">sum</span></code> function is compared to NumPy’s equivalent when aggrating over an array:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
