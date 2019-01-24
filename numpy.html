@@ -874,7 +874,12 @@ d has dim 2, shape (1, 4), size 4, and dtype int64:
 [[1 2 3 4]]
 </pre></div></div>
 </div>
-<p>Note above how Python printed the three dimensional array. The general rules of printing an n-dimensional array as a nested list are: * the last dimension is printed from left to right, * the second-to-last is printed from top to bottom, * the rest are also printed from top to bottom, with each slice separated from the next by an empty line.</p>
+<p>Note above how Python printed the three dimensional array. The general rules of printing an n-dimensional array as a nested list are:</p>
+<ul class="simple">
+<li>the last dimension is printed from left to right,</li>
+<li>the second-to-last is printed from top to bottom,</li>
+<li>the rest are also printed from top to bottom, with each slice separated from the next by an empty line.</li>
+</ul>
 </div>
 <div class="section" id="Indexing,-slicing-and-reshaping">
 <h2>Indexing, slicing and reshaping<a class="headerlink" href="#Indexing,-slicing-and-reshaping" title="Permalink to this headline">¶</a></h2>
@@ -1596,7 +1601,7 @@ Row sums: [25 19 15]
 <p><img alt="aggregation" src="_images/aggregation.svg" /></p>
 <div class="admonition warning">
 Note that most of the aggregation functions in NumPy have corresponding methods. In addition, Python language has builtin functions <code class="docutils literal notranslate"><span class="pre">sum</span></code>, <code class="docutils literal notranslate"><span class="pre">min</span></code>, <code class="docutils literal notranslate"><span class="pre">max</span></code>, <code class="docutils literal notranslate"><span class="pre">any</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code> for sequences. Make sure you don’t accidentally use these for arrays, since they may have slightly different semantics, and they will be significantly slower than NumPy’s functions and methods.</div>
-<p>Python function | NumPy function | NumPy method ——-|—————-|————- sum | np.sum | a.sum - | np.prod | a.prod - | np.mean | a.mean - | np.std | a.std - | np.var | a.var min | np.min | a.min max | np.max | a.max - | np.argmin | a.argmin - | np.argmax | a.argmax - | np.median | - - | np.percentile | - any | np.any | a.any all | np.all | a.all</p>
+<p>|Python function | NumPy function | NumPy method| |——-|—————-|————-| |sum | np.sum | a.sum| | - | np.prod | a.prod| | - | np.mean | a.mean| | - | np.std | a.std| | - | np.var | a.var| | min | np.min | a.min| | max | np.max | a.max| | - | np.argmin | a.argmin| | - | np.argmax | a.argmax| | - | np.median | -| | - | np.percentile | -| | any | np.any | a.any| | all | np.all | a.all|</p>
 <p>Let’s measure how much slower Python’s <code class="docutils literal notranslate"><span class="pre">sum</span></code> function is compared to NumPy’s equivalent when aggrating over an array:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:

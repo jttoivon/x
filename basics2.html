@@ -605,7 +605,28 @@ He’s a powerful man.
 <h3>Miscellaneous stuff<a class="headerlink" href="#Miscellaneous-stuff" title="Permalink to this headline">¶</a></h3>
 <p>If the same pattern is used in many function calls, it may be wise to precompile the pattern, mainly for efficiency reasons. This can be done using the <code class="docutils literal notranslate"><span class="pre">compile(pattern,</span> <span class="pre">flags=0)</span></code> function in the <code class="docutils literal notranslate"><span class="pre">re</span></code> module. The function returns a so-called RE object. The RE object has method versions of the functions found in module <code class="docutils literal notranslate"><span class="pre">re</span></code>. The only difference is that the first parameter is not the pattern since the precompiled pattern is stored in the RE object.</p>
 <p>The details of matching operation can be specified using optional flags. These flags can be given either inside the pattern or as a parameter to the compile function. Some of the more common flags are given in the following table</p>
-<p>| x | Flag | |—–|————–| |<code class="docutils literal notranslate"><span class="pre">(?i)</span></code> | re.IGNORECASE| |<code class="docutils literal notranslate"><span class="pre">(?m)</span></code> | re.MULTILINE| |<code class="docutils literal notranslate"><span class="pre">(?s)</span></code> | re.DOTALL| ————————-</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="41%" />
+<col width="59%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">x</th>
+<th class="head">Flag</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(?i)</span></code></td>
+<td>re.IGNORECASE</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal notranslate"><span class="pre">(?m)</span></code></td>
+<td>re.MULTILINE</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal notranslate"><span class="pre">(?s)</span></code></td>
+<td>re.DOTALL</td>
+</tr>
+</tbody>
+</table>
 <p>The elements on the left can appear anywhere in the pattern but preferably in the beginning. On the right there are attributes of the re module that can be given to the compile function as the second parameter</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">IGNORECASE</span></code> flag makes lower- and uppercase characters appear as equal. The <code class="docutils literal notranslate"><span class="pre">MULTILINE</span></code> flag makes the special characters <code class="docutils literal notranslate"><span class="pre">ˆ</span></code> and <code class="docutils literal notranslate"><span class="pre">$</span></code> match the beginning and end of each line in addition to the beginning and end of the whole string. These flags make <code class="docutils literal notranslate"><span class="pre">\A</span></code> differ from <code class="docutils literal notranslate"><span class="pre">ˆ</span></code>, and <code class="docutils literal notranslate"><span class="pre">\Z</span></code> differ from <code class="docutils literal notranslate"><span class="pre">$</span></code>. The <code class="docutils literal notranslate"><span class="pre">DOTALL</span></code> flag makes the character class <code class="docutils literal notranslate"><span class="pre">.</span></code> (dot) also accept the newline character, in addition to all the other letters.</p>
 <p>When giving multiple flags to the compile function, the flags can be separated with the <code class="docutils literal notranslate"><span class="pre">|</span></code> sign. For example, <code class="docutils literal notranslate"><span class="pre">re.compile(pattern,</span> <span class="pre">re.MULTILINE</span> <span class="pre">|</span> <span class="pre">re.DOTALL)</span></code>. This is equal to <code class="docutils literal notranslate"><span class="pre">re.compile('(?m)(?s)'</span> <span class="pre">+</span> <span class="pre">pattern)</span></code>.</p>
@@ -958,7 +979,12 @@ type of the object</p>
 </div>
 <div class="section" id="Attribute-lookup">
 <h3>Attribute lookup<a class="headerlink" href="#Attribute-lookup" title="Permalink to this headline">¶</a></h3>
-<p>Suppose <code class="docutils literal notranslate"><span class="pre">x</span></code> is an instance of class <code class="docutils literal notranslate"><span class="pre">X</span></code>, and we want to read an attribute <code class="docutils literal notranslate"><span class="pre">x.a</span></code>. The lookup has three phases: * First it is checked whether the attribute <code class="docutils literal notranslate"><span class="pre">a</span></code> is an attribute of the instance <code class="docutils literal notranslate"><span class="pre">x</span></code> * If not, then it is checked whether <code class="docutils literal notranslate"><span class="pre">a</span></code> is a class attribute of <code class="docutils literal notranslate"><span class="pre">x</span></code>’s class <code class="docutils literal notranslate"><span class="pre">X</span></code> * If not, then the base classes of <code class="docutils literal notranslate"><span class="pre">X</span></code> are checked</p>
+<p>Suppose <code class="docutils literal notranslate"><span class="pre">x</span></code> is an instance of class <code class="docutils literal notranslate"><span class="pre">X</span></code>, and we want to read an attribute <code class="docutils literal notranslate"><span class="pre">x.a</span></code>. The lookup has three phases:</p>
+<ul class="simple">
+<li>First it is checked whether the attribute <code class="docutils literal notranslate"><span class="pre">a</span></code> is an attribute of the instance <code class="docutils literal notranslate"><span class="pre">x</span></code></li>
+<li>If not, then it is checked whether <code class="docutils literal notranslate"><span class="pre">a</span></code> is a class attribute of <code class="docutils literal notranslate"><span class="pre">x</span></code>’s class <code class="docutils literal notranslate"><span class="pre">X</span></code></li>
+<li>If not, then the base classes of <code class="docutils literal notranslate"><span class="pre">X</span></code> are checked</li>
+</ul>
 <p>If instead we want to bind the attribute <code class="docutils literal notranslate"><span class="pre">a</span></code>, things are much simpler. <code class="docutils literal notranslate"><span class="pre">x.a</span> <span class="pre">=</span> <span class="pre">value</span></code> will set the instance attribute. And <code class="docutils literal notranslate"><span class="pre">X.a</span> <span class="pre">=</span> <span class="pre">value</span></code> will set the class attribute. Note that if a base of <code class="docutils literal notranslate"><span class="pre">X</span></code>, the class <code class="docutils literal notranslate"><span class="pre">X</span></code>, and the instance <code class="docutils literal notranslate"><span class="pre">x</span></code> each have an attribute called <code class="docutils literal notranslate"><span class="pre">a</span></code>, then <code class="docutils literal notranslate"><span class="pre">x.a</span></code> hides <code class="docutils literal notranslate"><span class="pre">X.a</span></code>, and <code class="docutils literal notranslate"><span class="pre">X.a</span></code> hides the attribute of the base class.</p>
 <hr class="docutils" />
 <div class="admonition note">
