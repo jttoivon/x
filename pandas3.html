@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ML: Linear regression" href="linear_regression.html" />
+    <link rel="next" title="Machine learning" href="linear_regression.html" />
     <link rel="prev" title="Pandas (continues)" href="pandas2.html" /> 
 
   
@@ -80,7 +80,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week 1:</span></p>
 <ul>
@@ -115,7 +116,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#Additional-information">Additional information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">ML: Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week6:</span></p>
 <ul>
@@ -414,12 +415,22 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <div class="section" id="Pandas-(continues)">
 <h1>Pandas (continues)<a class="headerlink" href="#Pandas-(continues)" title="Permalink to this headline">¶</a></h1>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="Catenating-datasets">
 <h2>Catenating datasets<a class="headerlink" href="#Catenating-datasets" title="Permalink to this headline">¶</a></h2>
-<p>We already saw in the NumPy section how we can catenate arrays along an axis: axis=0 catenates vertically and axis=1 catenates horizontally, and so on. With the DataFrames of Pandas it works similarly except that the row indices and the column names require extra attention. Also note a slight difference in the name: <code class="docutils literal notranslate"><span class="pre">np.concatenate</span></code> but <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code>.</p>
+<p>We already saw in the NumPy section how we can catenate arrays along an axis: <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> catenates vertically and <code class="docutils literal notranslate"><span class="pre">axis=1</span></code> catenates horizontally, and so on. With the DataFrames of Pandas it works similarly except that the row indices and the column names require extra attention. Also note a slight difference in the name: <code class="docutils literal notranslate"><span class="pre">np.concatenate</span></code> but <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code>.</p>
 <p>Let’s start by considering catenation along the axis 0, that is, vertical catenation. We will first make a helper function to easily create DataFrames for testing.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -431,7 +442,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <p>Next we will create some example DataFrames:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -441,7 +452,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -483,7 +494,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -493,7 +504,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -535,7 +546,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -545,7 +556,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -587,7 +598,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -597,7 +608,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -640,7 +651,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <p>In the following simple case, the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function works exactly as we expect it would:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -649,7 +660,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -702,7 +713,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <p>The next, however, will create duplicate indices:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -712,7 +723,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -764,7 +775,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -773,7 +784,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -785,7 +796,7 @@ Name: A, dtype: object
 </div>
 <p>This is not usually what we want! There are three solutions to this. Firstly, deny creation of duplicated indices by giving the <code class="docutils literal notranslate"><span class="pre">verify_integrity</span></code> parameter to the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -807,7 +818,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 <p>Secondly, we can ask for automatic renumbering of rows:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -816,7 +827,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -869,7 +880,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 <p>Thirdly, we can ask for <em>hierarchical indexing</em>. The indices can contain multiple levels, but on this course we don’t consider hierarchical indices in detail. Hierarchical indices can make a two dimensional array to work like higher dimensional array.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -879,7 +890,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -934,7 +945,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -943,7 +954,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -953,7 +964,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 <p>Everything works similarly, when we want to catenate horizontally:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -962,7 +973,7 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1011,31 +1022,16 @@ Indexes have overlapping values: Int64Index([0, 1], dtype=&#39;int64&#39;)
 </div>
 <p>We have so far assumed that when concatenating vertically the columns of both DataFrames are the same, and when joining horizontally the indices are the same. This is, however, not required:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">d</span><span class="p">])</span>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">d</span><span class="p">],</span> <span class="n">sort</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>    <span class="c1"># sort option is used to silence a deprecation message</span>
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area stderr docutils container">
-<div class="highlight"><pre>
-/home/jttoivon/anaconda3/lib/python3.6/site-packages/ipykernel_launcher.py:1: FutureWarning: Sorting because non-concatenation axis is not aligned. A future version
-of pandas will change to not sort by default.
-
-To accept the future behavior, pass &#39;sort=True&#39;.
-
-To retain the current behavior and silence the warning, pass sort=False
-
-  &#34;&#34;&#34;Entry point for launching an IPython kernel.
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1093,7 +1089,7 @@ To retain the current behavior and silence the warning, pass sort=False
 </div>
 <p>It expanded the non-existing cases with <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s. This method is called an <em>outer join</em>, which forms the union of columns in the two DataFrames. The alternative is <em>inner join</em>, which forms the intersection of columns:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1102,7 +1098,7 @@ To retain the current behavior and silence the warning, pass sort=False
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1150,7 +1146,7 @@ To retain the current behavior and silence the warning, pass sort=False
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (split date continues)</div>
+Exercise 1 (split date continues)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">split_date_continues</span></code> that does</p>
 <ul class="simple">
 <li>read the bicycle data set</li>
@@ -1164,16 +1160,17 @@ Exercise X (split date continues)</div>
 <p>Merging combines two DataFrames based on some common field.</p>
 <p>Let’s recall the earlier DataFrame about wages and ages of persons:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df</span>
+<span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;Jack&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Wage&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">])</span>
+<span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1219,7 +1216,7 @@ Exercise X (split date continues)</div>
 </div>
 <p>Now, create a new DataFrame with the occupations of persons:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1229,7 +1226,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1272,7 +1269,7 @@ Exercise X (split date continues)</div>
 </div>
 <p>The following function call will merge the two DataFrames on their common field, and, importantly, will keep the indices <em>aligned</em>. What this means is that even though the names are listed in different order in the two frames, the merge will still give correct result.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1281,7 +1278,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1330,7 +1327,7 @@ Exercise X (split date continues)</div>
 </div>
 <p>This was an example of a simple one-to-one merge, where the keys in the <code class="docutils literal notranslate"><span class="pre">Name</span></code> columns had 1-to-1 correspondence. Sometimes not all the keys appear in both DataFrames:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1340,7 +1337,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1387,7 +1384,7 @@ Exercise X (split date continues)</div>
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1396,7 +1393,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1444,7 +1441,7 @@ Exercise X (split date continues)</div>
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1453,7 +1450,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[76]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1509,7 +1506,7 @@ Exercise X (split date continues)</div>
 </div>
 <p>Also, many-to-one and many-to-many relationships can occur in merges:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1520,7 +1517,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[77]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1567,7 +1564,7 @@ Exercise X (split date continues)</div>
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1580,7 +1577,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[78]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1633,7 +1630,7 @@ Exercise X (split date continues)</div>
 </div>
 <p>All combinations with matching keys (<code class="docutils literal notranslate"><span class="pre">Name</span></code>) are created:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1643,7 +1640,7 @@ Exercise X (split date continues)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1713,20 +1710,29 @@ Exercise X (split date continues)</div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (cycling weather)</div>
+Exercise 2 (cycling weather)</div>
 <p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (top bands)</div>
-<p>Merge the DataFrames UK top40 and the bands DataFrame (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
+Exercise 3 (top bands)</div>
+<p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
 <h2>Aggregates and groupings<a class="headerlink" href="#Aggregates-and-groupings" title="Permalink to this headline">¶</a></h2>
 <p>Let us use again the weather dataset. First, we make the column names a bit more uniform and concise. For example the columns <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">m</span></code>, and <code class="docutils literal notranslate"><span class="pre">d</span></code> are not uniformly named.</p>
 <p>We can easily change the column names with the <code class="docutils literal notranslate"><span class="pre">rename</span></code> method of the DataFrame. Note that we cannot directly change the index <code class="docutils literal notranslate"><span class="pre">wh.columns</span></code> as it is immutable.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">wh</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1737,7 +1743,7 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[80]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1767,7 +1773,6 @@ Exercise X (top bands)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -1781,7 +1786,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1793,7 +1797,6 @@ Exercise X (top bands)</div>
       <td>4.4</td>
       <td>-1.0</td>
       <td>-3.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1805,7 +1808,6 @@ Exercise X (top bands)</div>
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1817,7 +1819,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1829,7 +1830,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -1837,7 +1837,7 @@ Exercise X (top bands)</div>
 </div>
 <p>Pandas has an operation that splits a DataFrame into groups, performs some operation on each of the groups, and then combines the result from each group into a resulting DataFrame. This split-apply-combine functionality is really flexible and powerful operation. In Pandas you start by calling the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method, which splits the DataFrame into groups. In the following example the rows that contain measurements from the same month belong to the same group:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1847,17 +1847,17 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[81]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7ff8972d8550&gt;
+<span></span>&lt;pandas.core.groupby.groupby.DataFrameGroupBy object at 0x7f4b70dafd68&gt;
 </pre></div>
 </div>
 </div>
-<p>Nothing happened yet, but the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object knows how the division into groups is done. We can query the number of groups in the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object:</p>
+<p>Nothing happened yet, but the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object knows how the division into groups is done. This is called a lazy operation. We can query the number of groups in the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1866,7 +1866,7 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[82]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1876,7 +1876,7 @@ Exercise X (top bands)</div>
 </div>
 <p>We can iterate through all the groups:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[83]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1905,7 +1905,7 @@ Exercise X (top bands)</div>
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1914,7 +1914,7 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[84]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1944,7 +1944,6 @@ Exercise X (top bands)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -1958,7 +1957,6 @@ Exercise X (top bands)</div>
       <td>1.5</td>
       <td>4.0</td>
       <td>-0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>32</th>
@@ -1970,7 +1968,6 @@ Exercise X (top bands)</div>
       <td>0.2</td>
       <td>5.0</td>
       <td>-0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>33</th>
@@ -1982,7 +1979,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>6.0</td>
       <td>-0.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>34</th>
@@ -1994,7 +1990,6 @@ Exercise X (top bands)</div>
       <td>2.7</td>
       <td>6.0</td>
       <td>0.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>35</th>
@@ -2006,7 +2001,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>7.0</td>
       <td>-2.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>36</th>
@@ -2018,7 +2012,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>7.0</td>
       <td>-7.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>37</th>
@@ -2030,7 +2023,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-12.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>38</th>
@@ -2042,7 +2034,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-8.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>39</th>
@@ -2054,7 +2045,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-10.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>40</th>
@@ -2066,7 +2056,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-8.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>41</th>
@@ -2078,7 +2067,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-5.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>42</th>
@@ -2090,7 +2078,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-2.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>43</th>
@@ -2102,7 +2089,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>1.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>44</th>
@@ -2114,7 +2100,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>4.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>45</th>
@@ -2126,7 +2111,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>0.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>46</th>
@@ -2138,7 +2122,6 @@ Exercise X (top bands)</div>
       <td>0.9</td>
       <td>8.0</td>
       <td>0.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>47</th>
@@ -2150,7 +2133,6 @@ Exercise X (top bands)</div>
       <td>0.2</td>
       <td>8.0</td>
       <td>1.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>48</th>
@@ -2162,7 +2144,6 @@ Exercise X (top bands)</div>
       <td>1.5</td>
       <td>5.0</td>
       <td>1.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>49</th>
@@ -2174,7 +2155,6 @@ Exercise X (top bands)</div>
       <td>1.1</td>
       <td>5.0</td>
       <td>2.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>50</th>
@@ -2186,7 +2166,6 @@ Exercise X (top bands)</div>
       <td>2.8</td>
       <td>3.0</td>
       <td>0.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>51</th>
@@ -2198,7 +2177,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>7.0</td>
       <td>-2.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>52</th>
@@ -2210,7 +2188,6 @@ Exercise X (top bands)</div>
       <td>12.2</td>
       <td>6.0</td>
       <td>-4.6</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>53</th>
@@ -2222,7 +2199,6 @@ Exercise X (top bands)</div>
       <td>0.3</td>
       <td>15.0</td>
       <td>-0.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>54</th>
@@ -2234,7 +2210,6 @@ Exercise X (top bands)</div>
       <td>-1.0</td>
       <td>13.0</td>
       <td>-5.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>55</th>
@@ -2246,7 +2221,6 @@ Exercise X (top bands)</div>
       <td>0.4</td>
       <td>13.0</td>
       <td>-5.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>56</th>
@@ -2258,7 +2232,6 @@ Exercise X (top bands)</div>
       <td>2.5</td>
       <td>12.0</td>
       <td>-2.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>57</th>
@@ -2270,7 +2243,6 @@ Exercise X (top bands)</div>
       <td>1.0</td>
       <td>14.0</td>
       <td>-2.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>58</th>
@@ -2282,7 +2254,6 @@ Exercise X (top bands)</div>
       <td>7.7</td>
       <td>13.0</td>
       <td>2.1</td>
-      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -2290,7 +2261,7 @@ Exercise X (top bands)</div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object functions a bit like a DataFrame, so some operations which are allowed for DataFrames are also allowed for the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object. For example, we can get a subset of columns:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2299,18 +2270,18 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[85]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7ff89726e048&gt;
+<span></span>&lt;pandas.core.groupby.groupby.SeriesGroupBy object at 0x7f4b70d53550&gt;
 </pre></div>
 </div>
 </div>
 <p>For each DataFrame corresponding to a group the Temperature column was chosen. Still nothing was shown, because we haven’t applied any operation on the groups.</p>
 <p>The common methods also include the aggregation methods. Let’s try to apply the <code class="docutils literal notranslate"><span class="pre">mean</span></code> aggregation:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2319,7 +2290,7 @@ Exercise X (top bands)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[86]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2342,7 +2313,7 @@ Name: Temperature, dtype: float64
 </div>
 <p>Now what happened was that after the mean aggregation was performed on each group, the results were automatically combined into a resulting DataFrame. Let’s try some other aggregation:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2351,7 +2322,7 @@ Name: Temperature, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[87]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[56]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2374,7 +2345,7 @@ Name: Precipitation, dtype: float64
 </div>
 <p>Ok, the -1.0 values in the Precipitation field are causing trouble here, let’s convert them to zeros:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2386,7 +2357,7 @@ Name: Precipitation, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[88]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[57]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2416,7 +2387,6 @@ Name: Precipitation, dtype: float64
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -2430,7 +2400,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>1</th>
@@ -2442,7 +2411,6 @@ Name: Precipitation, dtype: float64
       <td>4.4</td>
       <td>0.0</td>
       <td>-3.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
@@ -2454,7 +2422,6 @@ Name: Precipitation, dtype: float64
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>3</th>
@@ -2466,7 +2433,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>4</th>
@@ -2478,14 +2444,13 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2494,7 +2459,7 @@ Name: Precipitation, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[89]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[58]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2520,7 +2485,7 @@ Name: Precipitation, dtype: float64
 <p>The aggregations are not the only possible operations on groups. The other possibilities are filtering, transformation, and application.</p>
 <p>In <strong>filtering</strong> some of the groups can be filtered out.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2532,7 +2497,7 @@ Name: Precipitation, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[90]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[59]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2562,7 +2527,6 @@ Name: Precipitation, dtype: float64
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -2576,7 +2540,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>9.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>274</th>
@@ -2588,7 +2551,6 @@ Name: Precipitation, dtype: float64
       <td>6.4</td>
       <td>0.0</td>
       <td>9.2</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>275</th>
@@ -2600,7 +2562,6 @@ Name: Precipitation, dtype: float64
       <td>21.5</td>
       <td>0.0</td>
       <td>8.3</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>276</th>
@@ -2612,7 +2573,6 @@ Name: Precipitation, dtype: float64
       <td>12.7</td>
       <td>0.0</td>
       <td>11.2</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>277</th>
@@ -2624,7 +2584,6 @@ Name: Precipitation, dtype: float64
       <td>0.6</td>
       <td>0.0</td>
       <td>8.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>278</th>
@@ -2636,7 +2595,6 @@ Name: Precipitation, dtype: float64
       <td>0.7</td>
       <td>0.0</td>
       <td>7.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>279</th>
@@ -2648,7 +2606,6 @@ Name: Precipitation, dtype: float64
       <td>11.7</td>
       <td>0.0</td>
       <td>8.1</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>280</th>
@@ -2660,7 +2617,6 @@ Name: Precipitation, dtype: float64
       <td>14.1</td>
       <td>0.0</td>
       <td>9.3</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>281</th>
@@ -2672,7 +2628,6 @@ Name: Precipitation, dtype: float64
       <td>18.3</td>
       <td>0.0</td>
       <td>8.6</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>282</th>
@@ -2684,7 +2639,6 @@ Name: Precipitation, dtype: float64
       <td>24.2</td>
       <td>0.0</td>
       <td>8.1</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>283</th>
@@ -2696,7 +2650,6 @@ Name: Precipitation, dtype: float64
       <td>1.5</td>
       <td>0.0</td>
       <td>6.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>284</th>
@@ -2708,7 +2661,6 @@ Name: Precipitation, dtype: float64
       <td>18.1</td>
       <td>0.0</td>
       <td>6.0</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>285</th>
@@ -2720,7 +2672,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>7.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>286</th>
@@ -2732,7 +2683,6 @@ Name: Precipitation, dtype: float64
       <td>5.0</td>
       <td>0.0</td>
       <td>7.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>287</th>
@@ -2744,7 +2694,6 @@ Name: Precipitation, dtype: float64
       <td>3.3</td>
       <td>0.0</td>
       <td>8.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>288</th>
@@ -2756,7 +2705,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>10.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>289</th>
@@ -2768,7 +2716,6 @@ Name: Precipitation, dtype: float64
       <td>1.6</td>
       <td>0.0</td>
       <td>8.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>290</th>
@@ -2780,7 +2727,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>8.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>291</th>
@@ -2792,7 +2738,6 @@ Name: Precipitation, dtype: float64
       <td>0.9</td>
       <td>0.0</td>
       <td>4.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>292</th>
@@ -2804,7 +2749,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>2.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>293</th>
@@ -2816,7 +2760,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>0.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>294</th>
@@ -2828,7 +2771,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>0.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>295</th>
@@ -2840,7 +2782,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>1.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>296</th>
@@ -2852,7 +2793,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>297</th>
@@ -2864,7 +2804,6 @@ Name: Precipitation, dtype: float64
       <td>8.5</td>
       <td>0.0</td>
       <td>2.1</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>298</th>
@@ -2876,7 +2815,6 @@ Name: Precipitation, dtype: float64
       <td>12.3</td>
       <td>2.0</td>
       <td>0.3</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>299</th>
@@ -2888,7 +2826,6 @@ Name: Precipitation, dtype: float64
       <td>2.7</td>
       <td>7.0</td>
       <td>-0.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>300</th>
@@ -2900,7 +2837,6 @@ Name: Precipitation, dtype: float64
       <td>17.1</td>
       <td>4.0</td>
       <td>3.3</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>301</th>
@@ -2912,7 +2848,6 @@ Name: Precipitation, dtype: float64
       <td>3.3</td>
       <td>0.0</td>
       <td>2.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>302</th>
@@ -2924,7 +2859,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>1.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>303</th>
@@ -2936,15 +2870,14 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>-0.4</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<p>In a <strong>tranformation</strong> each group’s DataFrame is manipulated in a way that retains its shape. An example of centering values, so that the deviations from the monthly means are shown:</p>
+<p>In a <strong>transformation</strong> each group’s DataFrame is manipulated in a way that retains its shape. An example of centering values, so that the deviations from the monthly means are shown:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2955,7 +2888,7 @@ Name: Precipitation, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[91]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[60]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3542,7 +3475,7 @@ Name: Precipitation, dtype: float64
 </div>
 <p>The <strong>apply</strong> method is very generic and only requires that for each group’s DataFrame the given function returns a DataFrame, Series, or a scalar. In the following example, we sort within each group by the temperature:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -3551,7 +3484,7 @@ Name: Precipitation, dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[92]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[61]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -3582,11 +3515,9 @@ Name: Precipitation, dtype: float64
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
     <tr>
       <th>Month</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -3610,7 +3541,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>5</th>
@@ -3622,7 +3552,6 @@ Name: Precipitation, dtype: float64
       <td>0.3</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>3</th>
@@ -3634,7 +3563,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
@@ -3646,7 +3574,6 @@ Name: Precipitation, dtype: float64
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>15</th>
@@ -3658,7 +3585,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>8.0</td>
       <td>-4.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>1</th>
@@ -3670,7 +3596,6 @@ Name: Precipitation, dtype: float64
       <td>4.4</td>
       <td>0.0</td>
       <td>-3.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>24</th>
@@ -3682,7 +3607,6 @@ Name: Precipitation, dtype: float64
       <td>0.6</td>
       <td>6.0</td>
       <td>-3.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>6</th>
@@ -3694,7 +3618,6 @@ Name: Precipitation, dtype: float64
       <td>5.3</td>
       <td>10.0</td>
       <td>-3.8</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>16</th>
@@ -3706,7 +3629,6 @@ Name: Precipitation, dtype: float64
       <td>0.2</td>
       <td>8.0</td>
       <td>-3.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>11</th>
@@ -3718,7 +3640,6 @@ Name: Precipitation, dtype: float64
       <td>8.0</td>
       <td>7.0</td>
       <td>-2.8</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>14</th>
@@ -3730,7 +3651,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>8.0</td>
       <td>-2.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>23</th>
@@ -3742,7 +3662,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>6.0</td>
       <td>-2.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>20</th>
@@ -3754,7 +3673,6 @@ Name: Precipitation, dtype: float64
       <td>0.4</td>
       <td>5.0</td>
       <td>-1.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>10</th>
@@ -3766,7 +3684,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>7.0</td>
       <td>-1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>19</th>
@@ -3778,7 +3695,6 @@ Name: Precipitation, dtype: float64
       <td>0.3</td>
       <td>5.0</td>
       <td>-0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>7</th>
@@ -3790,7 +3706,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>12.0</td>
       <td>-0.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>22</th>
@@ -3802,7 +3717,6 @@ Name: Precipitation, dtype: float64
       <td>0.1</td>
       <td>6.0</td>
       <td>0.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>30</th>
@@ -3814,7 +3728,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>4.0</td>
       <td>0.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>8</th>
@@ -3826,7 +3739,6 @@ Name: Precipitation, dtype: float64
       <td>1.1</td>
       <td>12.0</td>
       <td>0.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>28</th>
@@ -3838,7 +3750,6 @@ Name: Precipitation, dtype: float64
       <td>2.6</td>
       <td>3.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>0</th>
@@ -3850,7 +3761,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>13</th>
@@ -3862,7 +3772,6 @@ Name: Precipitation, dtype: float64
       <td>0.1</td>
       <td>8.0</td>
       <td>0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>27</th>
@@ -3874,7 +3783,6 @@ Name: Precipitation, dtype: float64
       <td>1.8</td>
       <td>4.0</td>
       <td>0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>29</th>
@@ -3886,7 +3794,6 @@ Name: Precipitation, dtype: float64
       <td>5.6</td>
       <td>5.0</td>
       <td>1.0</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>21</th>
@@ -3898,7 +3805,6 @@ Name: Precipitation, dtype: float64
       <td>0.2</td>
       <td>5.0</td>
       <td>1.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>12</th>
@@ -3910,7 +3816,6 @@ Name: Precipitation, dtype: float64
       <td>0.1</td>
       <td>13.0</td>
       <td>1.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>17</th>
@@ -3922,7 +3827,6 @@ Name: Precipitation, dtype: float64
       <td>0.9</td>
       <td>8.0</td>
       <td>1.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>18</th>
@@ -3934,7 +3838,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>5.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>26</th>
@@ -3946,7 +3849,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>4.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>9</th>
@@ -3958,12 +3860,10 @@ Name: Precipitation, dtype: float64
       <td>0.3</td>
       <td>9.0</td>
       <td>1.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>...</th>
       <th>...</th>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -3984,7 +3884,6 @@ Name: Precipitation, dtype: float64
       <td>16.3</td>
       <td>0.0</td>
       <td>-0.8</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>357</th>
@@ -3996,7 +3895,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>-0.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>355</th>
@@ -4008,7 +3906,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>-0.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>338</th>
@@ -4020,7 +3917,6 @@ Name: Precipitation, dtype: float64
       <td>0.7</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>350</th>
@@ -4032,7 +3928,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>5.0</td>
       <td>0.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>358</th>
@@ -4044,7 +3939,6 @@ Name: Precipitation, dtype: float64
       <td>5.9</td>
       <td>0.0</td>
       <td>0.3</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>334</th>
@@ -4056,7 +3950,6 @@ Name: Precipitation, dtype: float64
       <td>3.4</td>
       <td>0.0</td>
       <td>0.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>352</th>
@@ -4068,7 +3961,6 @@ Name: Precipitation, dtype: float64
       <td>0.2</td>
       <td>3.0</td>
       <td>1.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>356</th>
@@ -4080,7 +3972,6 @@ Name: Precipitation, dtype: float64
       <td>7.6</td>
       <td>0.0</td>
       <td>1.2</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>337</th>
@@ -4092,7 +3983,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>1.3</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>335</th>
@@ -4104,7 +3994,6 @@ Name: Precipitation, dtype: float64
       <td>5.3</td>
       <td>5.0</td>
       <td>1.4</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>344</th>
@@ -4116,7 +4005,6 @@ Name: Precipitation, dtype: float64
       <td>1.3</td>
       <td>0.0</td>
       <td>1.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>364</th>
@@ -4128,7 +4016,6 @@ Name: Precipitation, dtype: float64
       <td>3.2</td>
       <td>0.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>346</th>
@@ -4140,7 +4027,6 @@ Name: Precipitation, dtype: float64
       <td>4.2</td>
       <td>5.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>345</th>
@@ -4152,7 +4038,6 @@ Name: Precipitation, dtype: float64
       <td>35.0</td>
       <td>0.0</td>
       <td>1.6</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>347</th>
@@ -4164,7 +4049,6 @@ Name: Precipitation, dtype: float64
       <td>5.2</td>
       <td>4.0</td>
       <td>1.6</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>348</th>
@@ -4176,7 +4060,6 @@ Name: Precipitation, dtype: float64
       <td>10.0</td>
       <td>10.0</td>
       <td>1.7</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>359</th>
@@ -4188,7 +4071,6 @@ Name: Precipitation, dtype: float64
       <td>7.8</td>
       <td>0.0</td>
       <td>1.9</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>351</th>
@@ -4200,7 +4082,6 @@ Name: Precipitation, dtype: float64
       <td>3.5</td>
       <td>5.0</td>
       <td>2.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>343</th>
@@ -4212,7 +4093,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>2.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>349</th>
@@ -4224,7 +4104,6 @@ Name: Precipitation, dtype: float64
       <td>1.3</td>
       <td>6.0</td>
       <td>2.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>363</th>
@@ -4236,7 +4115,6 @@ Name: Precipitation, dtype: float64
       <td>4.1</td>
       <td>0.0</td>
       <td>2.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>354</th>
@@ -4248,7 +4126,6 @@ Name: Precipitation, dtype: float64
       <td>0.0</td>
       <td>0.0</td>
       <td>2.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>353</th>
@@ -4260,7 +4137,6 @@ Name: Precipitation, dtype: float64
       <td>3.6</td>
       <td>3.0</td>
       <td>2.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>361</th>
@@ -4272,7 +4148,6 @@ Name: Precipitation, dtype: float64
       <td>3.7</td>
       <td>0.0</td>
       <td>2.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>360</th>
@@ -4284,7 +4159,6 @@ Name: Precipitation, dtype: float64
       <td>1.1</td>
       <td>0.0</td>
       <td>3.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>362</th>
@@ -4296,7 +4170,6 @@ Name: Precipitation, dtype: float64
       <td>7.8</td>
       <td>0.0</td>
       <td>3.8</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>342</th>
@@ -4308,7 +4181,6 @@ Name: Precipitation, dtype: float64
       <td>0.2</td>
       <td>0.0</td>
       <td>4.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>336</th>
@@ -4320,7 +4192,6 @@ Name: Precipitation, dtype: float64
       <td>7.2</td>
       <td>0.0</td>
       <td>5.0</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>341</th>
@@ -4332,16 +4203,15 @@ Name: Precipitation, dtype: float64
       <td>2.0</td>
       <td>0.0</td>
       <td>5.2</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
-<p>365 rows × 9 columns</p>
+<p>365 rows × 8 columns</p>
 </div></div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (cyclists per day)</div>
+Exercise 4 (cyclists per day)</div>
 <p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
 <p>Part 1.</p>
 <p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
@@ -4349,18 +4219,18 @@ Exercise X (cyclists per day)</div>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (best record company)</div>
-<p>We use again the UK top 40 data set from the first week of 1964 (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
+Exercise 5 (best record company)</div>
+<p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (suicide fractions)</div>
-<p>Load the suicide data set from <a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a> . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
+Exercise 6 (suicide fractions)</div>
+<p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a>) . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">suicide_fractions</span></code> that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (suicide weather)</div>
-<p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise. Also download the dataset of average temperature (over years 1961-1990) in different countries from <a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a> . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contain column header and which column contains row headers. Maku sure you use the country as the (row) index
-for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
+Exercise 7 (suicide weather)</div>
+<p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise. Also download the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contain column header and which column contains
+row headers. Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
 <p>The return value of the function is a tuple (suicide_rows, temperature_rows, common_rows, spearman_correlation) The output from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function should be of the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Suicide</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
 <span class="n">Temperature</span> <span class="n">DataFrame</span> <span class="n">has</span> <span class="n">x</span> <span class="n">rows</span>
@@ -4370,7 +4240,7 @@ for both of the DataFrames. What is the <a class="reference external" href="http
 </div>
 <p>You might have trouble when trying to convert the temperatures to float. The is because the negative numbers on that html page use a special <em>unicode minus sign</em>, which looks typographically nice, but the float constructor cannot interpret it as a minus sign. You can try out the following example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[62]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4402,7 +4272,7 @@ could not convert string to float: &#39;−5&#39;
 </div>
 <p>But if we explicitly convert unicode minus sign to normal minus sign, it works:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4411,7 +4281,7 @@ could not convert string to float: &#39;−5&#39;
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[63]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -4419,17 +4289,13 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 </div>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise X (tidy data)</div>
-<p>Read the article <a class="reference external" href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">Tidy Data</a>. The article uses the statistical software <code class="docutils literal notranslate"><span class="pre">R</span></code> as an example, but the ideas are relevant in general.</p>
-</div>
+<hr/></div>
 </div>
 <div class="section" id="Time-series">
 <h2>Time series<a class="headerlink" href="#Time-series" title="Permalink to this headline">¶</a></h2>
 <p>Let’s make a copy of the DataFrame that we can mess with:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4439,19 +4305,19 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[108]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[64]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
 <span></span>Index([&#39;Year&#39;, &#39;Month&#39;, &#39;Day&#39;, &#39;Time&#39;, &#39;Time zone&#39;, &#39;Precipitation&#39;, &#39;Snow&#39;,
-       &#39;Temperature&#39;, &#39;Rainy&#39;],
+       &#39;Temperature&#39;],
       dtype=&#39;object&#39;)
 </pre></div>
 </div>
 </div>
 <p>The column names <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>, and <code class="docutils literal notranslate"><span class="pre">Day</span></code> are now in appropriate form for the <code class="docutils literal notranslate"><span class="pre">to_datetime</span></code> function. It can convert these fields into a timestamp series, which we will add to the DataFrame.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4461,7 +4327,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[109]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[65]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4491,7 +4357,6 @@ Exercise X (tidy data)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
       <th>Date</th>
     </tr>
   </thead>
@@ -4506,7 +4371,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>0.6</td>
-      <td>False</td>
       <td>2017-01-01</td>
     </tr>
     <tr>
@@ -4519,7 +4383,6 @@ Exercise X (tidy data)</div>
       <td>4.4</td>
       <td>-1.0</td>
       <td>-3.9</td>
-      <td>False</td>
       <td>2017-01-02</td>
     </tr>
     <tr>
@@ -4532,7 +4395,6 @@ Exercise X (tidy data)</div>
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
       <td>2017-01-03</td>
     </tr>
     <tr>
@@ -4545,7 +4407,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
       <td>2017-01-04</td>
     </tr>
     <tr>
@@ -4558,7 +4419,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
       <td>2017-01-05</td>
     </tr>
   </tbody>
@@ -4567,7 +4427,7 @@ Exercise X (tidy data)</div>
 </div>
 <p>We can now drop the useless fields:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4577,7 +4437,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[110]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[66]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4604,7 +4464,6 @@ Exercise X (tidy data)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
       <th>Date</th>
     </tr>
   </thead>
@@ -4616,7 +4475,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>0.6</td>
-      <td>False</td>
       <td>2017-01-01</td>
     </tr>
     <tr>
@@ -4626,7 +4484,6 @@ Exercise X (tidy data)</div>
       <td>4.4</td>
       <td>-1.0</td>
       <td>-3.9</td>
-      <td>False</td>
       <td>2017-01-02</td>
     </tr>
     <tr>
@@ -4636,7 +4493,6 @@ Exercise X (tidy data)</div>
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
       <td>2017-01-03</td>
     </tr>
     <tr>
@@ -4646,7 +4502,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
       <td>2017-01-04</td>
     </tr>
     <tr>
@@ -4656,7 +4511,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
       <td>2017-01-05</td>
     </tr>
   </tbody>
@@ -4665,7 +4519,7 @@ Exercise X (tidy data)</div>
 </div>
 <p>The following method call will set the Date field as the index of the DataFrame.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4675,7 +4529,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[111]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[67]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4702,11 +4556,9 @@ Exercise X (tidy data)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -4722,7 +4574,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-02</th>
@@ -4731,7 +4582,6 @@ Exercise X (tidy data)</div>
       <td>4.4</td>
       <td>-1.0</td>
       <td>-3.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-03</th>
@@ -4740,7 +4590,6 @@ Exercise X (tidy data)</div>
       <td>6.6</td>
       <td>7.0</td>
       <td>-6.5</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>2017-01-04</th>
@@ -4749,7 +4598,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>13.0</td>
       <td>-12.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-05</th>
@@ -4758,7 +4606,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>10.0</td>
       <td>-17.8</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -4766,7 +4613,7 @@ Exercise X (tidy data)</div>
 </div>
 <p>We can now easily get a set of rows using date slices:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -4775,7 +4622,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[97]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[68]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -4802,11 +4649,9 @@ Exercise X (tidy data)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
     <tr>
       <th>Date</th>
-      <th></th>
       <th></th>
       <th></th>
       <th></th>
@@ -4822,7 +4667,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-2.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-16</th>
@@ -4831,7 +4675,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>8.0</td>
       <td>-4.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-17</th>
@@ -4840,7 +4683,6 @@ Exercise X (tidy data)</div>
       <td>0.2</td>
       <td>8.0</td>
       <td>-3.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-18</th>
@@ -4849,7 +4691,6 @@ Exercise X (tidy data)</div>
       <td>0.9</td>
       <td>8.0</td>
       <td>1.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-19</th>
@@ -4858,7 +4699,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>5.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-20</th>
@@ -4867,7 +4707,6 @@ Exercise X (tidy data)</div>
       <td>0.3</td>
       <td>5.0</td>
       <td>-0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-21</th>
@@ -4876,7 +4715,6 @@ Exercise X (tidy data)</div>
       <td>0.4</td>
       <td>5.0</td>
       <td>-1.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-22</th>
@@ -4885,7 +4723,6 @@ Exercise X (tidy data)</div>
       <td>0.2</td>
       <td>5.0</td>
       <td>1.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-23</th>
@@ -4894,7 +4731,6 @@ Exercise X (tidy data)</div>
       <td>0.1</td>
       <td>6.0</td>
       <td>0.1</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-24</th>
@@ -4903,7 +4739,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>6.0</td>
       <td>-2.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-25</th>
@@ -4912,7 +4747,6 @@ Exercise X (tidy data)</div>
       <td>0.6</td>
       <td>6.0</td>
       <td>-3.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-26</th>
@@ -4921,7 +4755,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>6.0</td>
       <td>1.9</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-27</th>
@@ -4930,7 +4763,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>4.0</td>
       <td>1.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-28</th>
@@ -4939,7 +4771,6 @@ Exercise X (tidy data)</div>
       <td>1.8</td>
       <td>4.0</td>
       <td>0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-29</th>
@@ -4948,7 +4779,6 @@ Exercise X (tidy data)</div>
       <td>2.6</td>
       <td>3.0</td>
       <td>0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-01-30</th>
@@ -4957,7 +4787,6 @@ Exercise X (tidy data)</div>
       <td>5.6</td>
       <td>5.0</td>
       <td>1.0</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>2017-01-31</th>
@@ -4966,7 +4795,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>4.0</td>
       <td>0.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-02-01</th>
@@ -4975,7 +4803,6 @@ Exercise X (tidy data)</div>
       <td>1.5</td>
       <td>4.0</td>
       <td>-0.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-02-02</th>
@@ -4984,7 +4811,6 @@ Exercise X (tidy data)</div>
       <td>0.2</td>
       <td>5.0</td>
       <td>-0.8</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-02-03</th>
@@ -4993,15 +4819,14 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>6.0</td>
       <td>-0.2</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
 </div></div>
 </div>
-<p>By using the <code class="docutils literal notranslate"><span class="pre">date_range</span></code> function even more complicated sets can be formed. The following gets all the mondays of July:</p>
+<p>By using the <code class="docutils literal notranslate"><span class="pre">date_range</span></code> function even more complicated sets can be formed. The following gets all the Mondays of July:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5011,7 +4836,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[112]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[69]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -5022,7 +4847,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5031,7 +4856,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[114]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[70]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -5047,7 +4872,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5056,7 +4881,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[99]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[71]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -5083,7 +4908,6 @@ Exercise X (tidy data)</div>
       <th>Precipitation</th>
       <th>Snow</th>
       <th>Temperature</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -5094,7 +4918,6 @@ Exercise X (tidy data)</div>
       <td>2.2</td>
       <td>-1.0</td>
       <td>14.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-07-10</th>
@@ -5103,7 +4926,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>18.0</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-07-17</th>
@@ -5112,7 +4934,6 @@ Exercise X (tidy data)</div>
       <td>2.7</td>
       <td>-1.0</td>
       <td>15.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-07-24</th>
@@ -5121,7 +4942,6 @@ Exercise X (tidy data)</div>
       <td>-1.0</td>
       <td>-1.0</td>
       <td>15.7</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2017-07-31</th>
@@ -5130,7 +4950,6 @@ Exercise X (tidy data)</div>
       <td>0.1</td>
       <td>-1.0</td>
       <td>17.8</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -5138,7 +4957,7 @@ Exercise X (tidy data)</div>
 </div>
 <p>The following finds all the business days (Monday to Friday) of July:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5147,7 +4966,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[100]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[72]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -5161,9 +4980,9 @@ Exercise X (tidy data)</div>
 </pre></div>
 </div>
 </div>
-<p>We can get a general idea about the Temperature column by plotting it. Note how the index time series is shown nicely on the x-axis.</p>
+<p>We can get a general idea about the <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> column by plotting it. Note how the index time series is shown nicely on the x-axis.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[101]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5176,12 +4995,12 @@ Exercise X (tidy data)</div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pandas3_98_0.png" src="_images/pandas3_98_0.png" />
+<img alt="_images/pandas3_99_0.png" src="_images/pandas3_99_0.png" />
 </div>
 </div>
 <p>The graph looks a bit messy at this level of detail. We can smooth it by taking averages over a sliding window of length 30 days:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5191,7 +5010,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[102]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[74]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -5200,7 +5019,7 @@ Exercise X (tidy data)</div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[103]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[75]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -5213,38 +5032,36 @@ Exercise X (tidy data)</div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pandas3_101_0.png" src="_images/pandas3_101_0.png" />
+<img alt="_images/pandas3_102_0.png" src="_images/pandas3_102_0.png" />
 </div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise X (bicycle timeseries)</div>
+Exercise 8 (bicycle timeseries)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> that</p>
 <ul class="simple">
 <li>reads the data set</li>
 <li>cleans it</li>
-<li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex</li>
+<li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names)</li>
 <li>returns the new DataFrame</li>
 </ul>
 <hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise X (commute)</div>
+Exercise 9 (commute)</div>
 <p>In function <code class="docutils literal notranslate"><span class="pre">commute</span></code> do the following:</p>
-<p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the index to <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code>. Return the resulting DataFrame from the function.</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> column to numbers from one to seven. Then set the column <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> as the (row) index. Return the resulting DataFrame from the function.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the DataFrame. Xticklabels should be the weekdays. Don’t forget to call <code class="docutils literal notranslate"><span class="pre">show</span></code> function!</p>
+<p>If you want the xticklabels to be <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code> instead of numbers, then it may get a bit messy. There seems to be a problem with non-numeric <code class="docutils literal notranslate"><span class="pre">x</span></code> values. You could try the following after plotting, but you don’t have to:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weekdays</span><span class="o">=</span><span class="s2">&quot;x mon tue wed thu fri sat sun&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">weekdays</span><span class="p">)</span>
+</pre></div>
+</div>
 <hr/></div>
 <div class="section" id="Additional-information">
 <h2>Additional information<a class="headerlink" href="#Additional-information" title="Permalink to this headline">¶</a></h2>
-<p><a class="reference external" href="https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf">Pandas cheat sheet</a></p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
-</pre></div>
-</div>
-</div>
+<p><a class="reference external" href="https://github.com/pandas-dev/pandas/blob/master/doc/cheatsheet/Pandas_Cheat_Sheet.pdf">Pandas cheat sheet</a> Summary of most important Pandas’ functions and methods.</p>
+<p>Read the article <a class="reference external" href="https://www.jstatsoft.org/article/view/v059i10/v59i10.pdf">Tidy Data</a>. The article uses the statistical software R as an example, but the ideas are relevant in general. Pandas operations maintain data in the tidy format.</p>
+<p>Pandas handles only one dimensional data (Series) and two dimensional data (DataFrame). While you can use <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html#hierarchical-indexing-multiindex">hierarchical indices</a> to simulate higher dimensional arrays, you should use the <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">xarray</a> library, if you need proper higher-dimensional arrays with labels. It is basically a cross between NumPy and Pandas.</p>
 </div>
 </div>
 
@@ -5256,7 +5073,7 @@ Exercise X (commute)</div>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="linear_regression.html" class="btn btn-neutral float-right" title="ML: Linear regression" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="linear_regression.html" class="btn btn-neutral float-right" title="Machine learning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="pandas2.html" class="btn btn-neutral" title="Pandas (continues)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

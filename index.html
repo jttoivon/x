@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to Data analysis with Python’s documentation! &mdash; Data analysis with Python  documentation</title>
+  <title>Welcome to Data analysis with Python - Beta! &mdash; Data analysis with Python  documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Instructions" href="instructions.html" /> 
+    <link rel="next" title="Initializing course environment" href="instructions.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,7 +79,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week 1:</span></p>
 <ul>
@@ -104,7 +105,7 @@
 <p class="caption"><span class="caption-text">Week 5:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pandas3.html">Pandas (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">ML: Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week6:</span></p>
 <ul>
@@ -156,7 +157,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to Data analysis with Python’s documentation!</li>
+      <li>Welcome to Data analysis with Python - Beta!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -199,15 +200,161 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="welcome-to-data-analysis-with-python-s-documentation">
-<h1>Welcome to Data analysis with Python’s documentation!<a class="headerlink" href="#welcome-to-data-analysis-with-python-s-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-data-analysis-with-python-beta">
+<h1>Welcome to Data analysis with Python - Beta!<a class="headerlink" href="#welcome-to-data-analysis-with-python-beta" title="Permalink to this headline">¶</a></h1>
+<p>Note! This course instance is only for approved beta testers.</p>
+<p>In this course an overview is given of different phases
+of the data analysis pipeline using Python and its data analysis
+ecosystem. What is typically done in data analysis? We assume that data is already
+available, so we only need to download it. After downloading the
+data it needs to be cleaned to enable further analysis. In the
+cleaning phase the data is converted to some uniform and consistent
+format. After which the data can be
+* combined or divided into smaller chunks
+* grouped or sorted,
+* condensed into small number of summary statistics
+* numerical or string operations can be performed on the data
+The point is to manipulate the data into a form that enables discovery
+of relationships and regularities among the elements of data.
+Visualization of data often helps to get a better understanding of the data.
+Another useful tool for data analysis is machine learning,
+where a mathematical or statistical model
+is fitted to the data. These models can then be used to make predictions
+of new data, or can be used to explain or describe the current data.</p>
+<p>Python is a popular, easy to learn programming language.
+It is commonly used in the field of data analysis, because
+there are very efficient libraries available to process large amounts of data.
+This so called <em>data analysis stack</em> includes libraries such
+of NumPy, Pandas, Matplotlib and SciPy that we will familiarize ourselves
+with during this course.</p>
+<p>No previous knowledge of Python is needed as will start with
+a quick introduction to Python. It is however assumed that
+you have good programming skills in some language.
+In addition, linear algebra and probability calculus are prerequisites
+of this course.
+The course lasts for seven weeks and gives 5 credit units.
+It is recommended that you do this course in the end of bachelor
+degree or in the beginning of masters degree; preferably
+before the course “Introduction to Data Analysis”.</p>
+<div class="section" id="passing-the-course">
+<h2>Passing the course<a class="headerlink" href="#passing-the-course" title="Permalink to this headline">¶</a></h2>
+<p>From the weekly programming exercises you need to get 80% of the points.
+If you succeed in this, then you can start doing the project work
+(approximately 1 cu of work). After the project work and
+its peer reviewing is done, the you can take part in the final
+exam. The final exam consists of multiple choice questions on the
+themes discussed in the exercises. The final grade will be based
+on the project work, its peer review, and the exam.</p>
+<p>Note that this course requires a lot of work! Depending on your background
+it can take something between 5 to 18 hours per week.
+In addition to reading the course material, you sometimes may need to consult
+the online documentation of Python or its various libraries.</p>
+</div>
+<div class="section" id="schedule">
+<h2>Schedule<a class="headerlink" href="#schedule" title="Permalink to this headline">¶</a></h2>
+<p>Every week there are 15 - 20 programming exercises that you must
+solve and then submit to the TMC system for checking.
+In order to continue with next week’s exercises you
+need to get 80% of the points from exercises of the previous week.
+Note that from some exercises it is possible to get more that one point.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="14%" />
+<col width="36%" />
+<col width="50%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Week</th>
+<th class="head">Deadline</th>
+<th class="head">Theme</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>1.1.2019 23.59</td>
+<td>Basics of Python I</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>1.1.2019 23.59</td>
+<td>Basics of Python II,
+NumPy I</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>1.1.2019 23.59</td>
+<td>NumPy II,
+Visualization,
+Image processing,
+Data Analysis
+with Pandas I</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>1.1.2019 23.59</td>
+<td>Data Analysis
+with Pandas II</td>
+</tr>
+<tr class="row-even"><td>5</td>
+<td>1.1.2019 23.59</td>
+<td>Data Analysis
+with Pandas III,
+Machine learning I</td>
+</tr>
+<tr class="row-odd"><td>6</td>
+<td>1.1.2019 23.59</td>
+<td>Machine learning II,
+Project</td>
+</tr>
+<tr class="row-even"><td>7</td>
+<td>1.1.2019 23.59</td>
+<td>Project continues</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="software-libraries-used">
+<h2>Software libraries used<a class="headerlink" href="#software-libraries-used" title="Permalink to this headline">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2">Library</th>
+<th class="head" rowspan="2">Documentation</th>
+</tr>
+<tr class="row-even"></tr>
+</thead>
+<tbody valign="top">
+<tr class="row-odd"><td>numpy</td>
+<td><a class="reference external" href="https://docs.scipy.org/doc/numpy/">doc</a></td>
+</tr>
+<tr class="row-even"><td>pandas</td>
+<td><a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/">doc</a></td>
+</tr>
+<tr class="row-odd"><td>matplotlib</td>
+<td><a class="reference external" href="https://matplotlib.org/api/api_overview.html">doc</a></td>
+</tr>
+<tr class="row-even"><td>scikit-learn</td>
+<td><a class="reference external" href="https://scikit-learn.org/stable/">doc</a></td>
+</tr>
+<tr class="row-odd"><td>scipy</td>
+<td><a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/">doc</a></td>
+</tr>
+</tbody>
+</table>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="instructions.html#1-Install-Python-and-the-needed-external-packages">1 Install Python and the needed external packages</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructions.html#2-Log-in-to-the-course">2 Log in to the course</a></li>
 <li class="toctree-l2"><a class="reference internal" href="instructions.html#3-Install-TMC-client">3 Install TMC client</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#ipython">IPython</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#jupyter-notebook">Jupyter notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#executing-a-file-containing-python-code">Executing a file containing Python code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tools.html#correct-software-versions">Correct software versions</a></li>
 </ul>
 </li>
 </ul>
@@ -302,9 +449,10 @@
 <li class="toctree-l2"><a class="reference internal" href="pandas3.html#Additional-information">Additional information</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">ML: Linear regression</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="linear_regression.html#Multiple-features">Multiple features</a></li>
-<li class="toctree-l2"><a class="reference internal" href="linear_regression.html#Polynomial-regression">Polynomial regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression.html#Linear-regression">Linear regression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression.html#Additional-information">Additional information</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linear_regression.html#Summary-(week-5)">Summary (week 5)</a></li>
 </ul>
 </li>
 </ul>
@@ -331,6 +479,7 @@
 </ul>
 </div>
 </div>
+</div>
 <div class="section" id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
@@ -348,7 +497,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="instructions.html" class="btn btn-neutral float-right" title="Instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="instructions.html" class="btn btn-neutral float-right" title="Initializing course environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

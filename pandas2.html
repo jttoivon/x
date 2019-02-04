@@ -80,7 +80,8 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="instructions.html">Instructions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week 1:</span></p>
 <ul>
@@ -119,7 +120,7 @@
 <p class="caption"><span class="caption-text">Week 5:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pandas3.html">Pandas (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">ML: Linear regression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week6:</span></p>
 <ul>
@@ -419,7 +420,7 @@ This page was generated from <a class="reference external" href="https://github.
 <!--NAVIGATION--><div class="section" id="Pandas-(continues)">
 <h1>Pandas (continues)<a class="headerlink" href="#Pandas-(continues)" title="Permalink to this headline">¶</a></h1>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -440,7 +441,7 @@ This page was generated from <a class="reference external" href="https://github.
 <h3>Creating DataFrames from a NumPy array<a class="headerlink" href="#Creating-DataFrames-from-a-NumPy-array" title="Permalink to this headline">¶</a></h3>
 <p>In the following example a DataFrame with 2 rows and 3 column is created. The row and column indices are given explicitly.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -450,7 +451,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -480,15 +481,15 @@ This page was generated from <a class="reference external" href="https://github.
   <tbody>
     <tr>
       <th>a</th>
-      <td>1.218073</td>
-      <td>0.445573</td>
-      <td>-0.535462</td>
+      <td>0.571596</td>
+      <td>0.795476</td>
+      <td>-1.274353</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.483612</td>
-      <td>0.571807</td>
-      <td>-0.126999</td>
+      <td>0.348421</td>
+      <td>1.108820</td>
+      <td>0.290175</td>
     </tr>
   </tbody>
 </table>
@@ -496,7 +497,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <p>Note that now both the rows and columns can be accessed using the special <code class="docutils literal notranslate"><span class="pre">Index</span></code> object:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -505,7 +506,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -514,7 +515,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -523,7 +524,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -533,7 +534,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <p>If either <code class="docutils literal notranslate"><span class="pre">columns</span></code> or <code class="docutils literal notranslate"><span class="pre">index</span></code> argument is left out, then an integer index will be used:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -543,7 +544,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -573,15 +574,15 @@ This page was generated from <a class="reference external" href="https://github.
   <tbody>
     <tr>
       <th>a</th>
-      <td>0.252244</td>
-      <td>-1.340047</td>
-      <td>0.630363</td>
+      <td>1.491080</td>
+      <td>-1.138345</td>
+      <td>0.565323</td>
     </tr>
     <tr>
       <th>b</th>
-      <td>0.377241</td>
-      <td>-0.878361</td>
-      <td>2.388678</td>
+      <td>-1.657992</td>
+      <td>0.547394</td>
+      <td>-0.010131</td>
     </tr>
   </tbody>
 </table>
@@ -611,7 +612,7 @@ This page was generated from <a class="reference external" href="https://github.
 <h3>Creating DataFrames from columns<a class="headerlink" href="#Creating-DataFrames-from-columns" title="Permalink to this headline">¶</a></h3>
 <p>A column can be specified as a list, an NumPy array, or a Pandas’ Series. The names of the columns can be given either with the <code class="docutils literal notranslate"><span class="pre">columns</span></code> parameter, or if Series objects are used, then the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute of each Series is used as the column name.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -621,7 +622,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -633,7 +634,7 @@ dtype: int64
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -643,7 +644,7 @@ dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -656,7 +657,7 @@ Name: b, dtype: int64
 </div>
 <p>Give the column name explicitly:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -665,7 +666,7 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -709,7 +710,7 @@ Name: b, dtype: int64
 </div>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute of Series s2 as the column name:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -718,7 +719,7 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -762,7 +763,7 @@ Name: b, dtype: int64
 </div>
 <p>If using multiple columns, then they must be given as the dictionary, whose keys give the column names and values are the actual column content.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -771,7 +772,7 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -822,7 +823,7 @@ Name: b, dtype: int64
 <h3>Creating DataFrames from rows<a class="headerlink" href="#Creating-DataFrames-from-rows" title="Permalink to this headline">¶</a></h3>
 <p>We can give a list of rows as a parameter to the DataFrame constructor. If we want to give names for the columns, then either the rows can be dictionaries, where the key is the column name and the values are the elements of the DataFrame on that row and column, or the column must be given explicitly. An example of this:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -832,7 +833,7 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -878,7 +879,7 @@ Name: b, dtype: int64
 </div>
 <p>Or:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -888,7 +889,7 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -989,7 +990,7 @@ Exercise 3 (municipal information)</div>
 <p>It depends!</p>
 <p>If an integer is used, then it specifies a column of the DataFrame in the case the <strong>explicit</strong> indices for the column contain that integer. In any other case an error will result. For example, with the above DataFrame, the following indexing will not work, because the explicit column index consist of the column names “Name” and “Wage” which are not integers.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1011,7 +1012,7 @@ Key error
 </div>
 <p>The following will however work.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1020,7 +1021,7 @@ Key error
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1032,7 +1033,7 @@ Name: Wage, dtype: int64
 </div>
 <p>As does the fancy indexing:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1041,7 +1042,7 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1084,7 +1085,7 @@ Name: Wage, dtype: int64
 </div>
 <p>If one indexes with a slice or a boolean mask, then the <strong>rows</strong> are referred to. Examples of these:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1093,7 +1094,7 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1132,7 +1133,7 @@ Name: Wage, dtype: int64
 </div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1141,7 +1142,7 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1181,7 +1182,7 @@ Name: Wage, dtype: int64
 </div>
 <p>If some of the above calls return a Series object, then you can chain the bracket calls to get a single value from the DataFrame:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1190,7 +1191,7 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[41]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1236,7 +1237,7 @@ Exercise 6 (growing municipalities)</div>
 <p>Pandas DataFrames have attributes <code class="docutils literal notranslate"><span class="pre">loc</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc</span></code> that have the above qualities. You can use <code class="docutils literal notranslate"><span class="pre">loc</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attributes and forget everything about the previous section. Or you can use these attributes and sometimes use the methods from the previous section as shortcuts if you understand them well.</p>
 <p>The difference between <code class="docutils literal notranslate"><span class="pre">loc</span></code> and <code class="docutils literal notranslate"><span class="pre">iloc</span></code> attributes is that the former uses explicit indices and the latter uses the implicit integer indices. Examples of use:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1245,7 +1246,7 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[42]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1254,7 +1255,7 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1263,7 +1264,7 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[43]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1272,7 +1273,7 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1281,7 +1282,7 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[44]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1305,8 +1306,17 @@ Exercise 8 (subsetting by positions)</div>
 <div class="section" id="Summary-statistics">
 <h2>Summary statistics<a class="headerlink" href="#Summary-statistics" title="Permalink to this headline">¶</a></h2>
 <p>The summary statistic methods work in a similar way as their counter parts in NumPy. By default, the aggregation is done over columns.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">wh</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1316,21 +1326,20 @@ Exercise 8 (subsetting by positions)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
 <span></span>Precipitation amount (mm)    1.966301
 Snow depth (cm)              0.966480
 Air temperature (degC)       6.527123
-Rainy                        0.158904
 dtype: float64
 </pre></div>
 </div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object gives different summary statistics for each (numeric) column. The result is a DataFrame. This method gives a good overview of the data.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object gives different summary statistics for each (numeric) column. The result is a DataFrame. This method gives a good overview of the data, and is typically used in the exploratory data analysis phase.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1339,7 +1348,7 @@ dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[46]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1476,7 +1485,7 @@ Exercise 11 (below zero)</div>
 <p>You may have noticed something strange in the output of the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method. First, the minimum value in both precipitation and snow depth fields is -1. The special value -1 means that on that day there was absolutely no snow or rain, whereas the value 0 might indicate that the value was close to zero. Secondly, the snow depth column has count 358, whereas the other columns have count 365, one measurement/value for each day of the year. How is this possible? Every field in a DataFrame should
 have the same number of rows. Let’s use the <code class="docutils literal notranslate"><span class="pre">unique</span></code> method of the Series object to find out, which different values are used in this column:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1485,7 +1494,7 @@ have the same number of rows. Let’s use the <code class="docutils literal notr
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[47]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1498,7 +1507,7 @@ have the same number of rows. Let’s use the <code class="docutils literal notr
 other problem.</p>
 <p>Note that only float types allow the <code class="docutils literal notranslate"><span class="pre">nan</span></code> value (in Python, NumPy or Pandas). So, if we try to create an integer series with missing values, its dtype gets promoted to <code class="docutils literal notranslate"><span class="pre">float</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1507,7 +1516,7 @@ other problem.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[48]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1519,7 +1528,7 @@ dtype: int64
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1528,7 +1537,7 @@ dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[49]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1542,7 +1551,7 @@ dtype: float64
 </div>
 <p>For non-numeric types the special value <code class="docutils literal notranslate"><span class="pre">None</span></code> is used to denote a missing value, and the dtype is promoted to <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1551,7 +1560,7 @@ dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -1565,7 +1574,7 @@ dtype: object
 <p>Pandas excludes the missing values from the summary statistics, like we saw in the previous section. Pandas also provides some functions to handle missing values.</p>
 <p>The missing values can be located with the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> method:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1574,7 +1583,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[51]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -1604,13 +1613,11 @@ dtype: object
       <th>Precipitation amount (mm)</th>
       <th>Snow depth (cm)</th>
       <th>Air temperature (degC)</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1630,11 +1637,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1654,11 +1659,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1678,11 +1681,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1702,11 +1703,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1726,11 +1725,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1750,11 +1747,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1774,11 +1769,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1798,11 +1791,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1822,11 +1813,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1846,11 +1835,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1870,11 +1857,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1894,11 +1879,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1918,11 +1901,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1942,11 +1923,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -1966,11 +1945,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>...</th>
-      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -1990,11 +1967,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>336</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2014,11 +1989,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>338</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2038,11 +2011,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>340</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2062,11 +2033,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>342</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2086,11 +2055,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>344</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2110,11 +2077,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>346</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2134,11 +2099,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>348</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2158,11 +2121,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>350</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2182,11 +2143,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>352</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2206,11 +2165,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>354</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2230,11 +2187,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>356</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2254,11 +2209,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>358</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2278,11 +2231,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>360</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2302,11 +2253,9 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>362</th>
-      <td>False</td>
       <td>False</td>
       <td>False</td>
       <td>False</td>
@@ -2326,7 +2275,6 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>364</th>
@@ -2338,16 +2286,15 @@ dtype: object
       <td>False</td>
       <td>False</td>
       <td>False</td>
-      <td>False</td>
     </tr>
   </tbody>
 </table>
-<p>365 rows × 9 columns</p>
+<p>365 rows × 8 columns</p>
 </div></div>
 </div>
 <p>This is not very useful as we cannot directly use the mask to index the DataFrame. We can, however, combine it with the <code class="docutils literal notranslate"><span class="pre">any</span></code> method to find out all the rows that contain at least one missing value:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2356,7 +2303,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[52]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2386,7 +2333,6 @@ dtype: object
       <th>Precipitation amount (mm)</th>
       <th>Snow depth (cm)</th>
       <th>Air temperature (degC)</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -2400,7 +2346,6 @@ dtype: object
       <td>1.8</td>
       <td>NaN</td>
       <td>3.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>163</th>
@@ -2412,7 +2357,6 @@ dtype: object
       <td>0.6</td>
       <td>NaN</td>
       <td>12.6</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>308</th>
@@ -2424,7 +2368,6 @@ dtype: object
       <td>0.2</td>
       <td>NaN</td>
       <td>8.4</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>309</th>
@@ -2436,7 +2379,6 @@ dtype: object
       <td>2.0</td>
       <td>NaN</td>
       <td>7.5</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>313</th>
@@ -2448,7 +2390,6 @@ dtype: object
       <td>3.6</td>
       <td>NaN</td>
       <td>7.2</td>
-      <td>False</td>
     </tr>
     <tr>
       <th>321</th>
@@ -2460,7 +2401,6 @@ dtype: object
       <td>11.3</td>
       <td>NaN</td>
       <td>5.9</td>
-      <td>True</td>
     </tr>
     <tr>
       <th>328</th>
@@ -2472,7 +2412,6 @@ dtype: object
       <td>8.5</td>
       <td>NaN</td>
       <td>4.2</td>
-      <td>True</td>
     </tr>
   </tbody>
 </table>
@@ -2481,7 +2420,7 @@ dtype: object
 <p>The <code class="docutils literal notranslate"><span class="pre">notnull</span></code> method works conversively to the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> method.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dropna</span></code> method of a DataFrame drops columns or rows that contain missing values from the DataFrame, depending on the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2490,16 +2429,16 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[53]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(358, 9)
+<span></span>(358, 8)
 </pre></div>
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2508,11 +2447,11 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[54]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(365, 8)
+<span></span>(365, 7)
 </pre></div>
 </div>
 </div>
@@ -2525,7 +2464,7 @@ dtype: object
 </ul>
 <p>For example, for the weather data we could use forward fill</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2535,7 +2474,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
@@ -2565,7 +2504,6 @@ dtype: object
       <th>Precipitation amount (mm)</th>
       <th>Snow depth (cm)</th>
       <th>Air temperature (degC)</th>
-      <th>Rainy</th>
     </tr>
   </thead>
   <tbody>
@@ -2652,7 +2590,7 @@ Exercise 15 (last week)</div>
 <h2>String processing<a class="headerlink" href="#String-processing" title="Permalink to this headline">¶</a></h2>
 <p>If the elements in a column are strings, then the vectorized versions of Python’s string processing methods are available. These are accessed through the <code class="docutils literal notranslate"><span class="pre">str</span></code> attribute of a Series or a DataFrame. For example, to capitalize all the strings of a Series, we can use the <code class="docutils literal notranslate"><span class="pre">str.capitalize</span></code> method:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2662,7 +2600,7 @@ Exercise 15 (last week)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2676,7 +2614,7 @@ dtype: object
 </div>
 <p>One can find all the available methods by pressing the tab key after the text <code class="docutils literal notranslate"><span class="pre">names.str.</span></code> in a Python prompt. Try it in below cell!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2686,7 +2624,7 @@ dtype: object
 </div>
 <p>We can split a column or Series into several columns using the <code class="docutils literal notranslate"><span class="pre">split</span></code> method. For example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2696,7 +2634,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -2710,7 +2648,7 @@ dtype: object
 </div>
 <p>This is not exactly what we wanted: now each element is a list. We need to use the <code class="docutils literal notranslate"><span class="pre">expand</span></code> parameter to split into columns:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2719,7 +2657,7 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
 </pre></div>
 </div>
 <div class="output_area rendered_html docutils container">
