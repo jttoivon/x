@@ -411,7 +411,7 @@ This page was generated from <a class="reference external" href="https://github.
 <h1>ML: Naive Bayes classification<a class="headerlink" href="#ML:-Naive-Bayes-classification" title="Permalink to this headline">¶</a></h1>
 <p><em>Classification</em> is one form of supervised learning. The aim is to annotate all data points with a label. Those points that have the same label belong to the same class. There can be two or more labels. For example, a lifeforms can be classified (coarsely) with labels animal, plant, fungi, archaea, bacteria, protozoa, and chromista. The data points are observed to have certain features that can be used to predict their labels. For example, if it is has feathers, then it is most likely an animal.</p>
 <p>In supervised learning an algorithm is first given a training set of data points with their features and labels. Then the algorithm learns from these features and labels a (probabilistic) model, which can afterwards be used to predict the labels of previously unseen data.</p>
-<p><em>Naive Bayes classification</em> is a fast and simple to understand method. Its speed is due to some simplifications we make about the underlying probability distributions, namely, the assumption about the independence of features. Yet, it can be quite powerful, especially when there are enough features in the data.</p>
+<p><em>Naive Bayes classification</em> is a fast and simple to understand classification method. Its speed is due to some simplifications we make about the underlying probability distributions, namely, the assumption about the independence of features. Yet, it can be quite powerful, especially when there are enough features in the data.</p>
 <p>Suppose we have for each label L a probability distribution. This distribution gives probability for each possible combination of features (a feature vector):</p>
 <div class="math notranslate nohighlight">
 \[P(features | L).\]</div>
@@ -525,6 +525,7 @@ Standard deviations: [[2.06097005 2.47716872]
 </pre></div>
 </div>
 </div>
+<p>Then we do the actual plotting:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[328]:
 </pre></div>
@@ -542,7 +543,7 @@ Standard deviations: [[2.06097005 2.47716872]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/bayes_11_0.png" src="_images/bayes_11_0.png" />
+<img alt="_images/bayes_12_0.png" src="_images/bayes_12_0.png" />
 </div>
 </div>
 <p><em>Accuracy score</em> gives a measure about how well we managed to predict the labels. The maximum value is 1.0.</p>
@@ -565,19 +566,7 @@ Standard deviations: [[2.06097005 2.47716872]
 Accuracy score is 1.0
 </pre></div></div>
 </div>
-<p>The score was the best possible, which is not a surprise, since we tried to predict the data we had already seen!</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[342]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1"># These densities based on samples don&#39;t look good.</span>
-<span class="c1">#data1=np.random.multivariate_normal(model.theta_[0], np.identity(2)*model.sigma_[0], size=1000)</span>
-<span class="c1">#data1 = pd.DataFrame(data1, columns=[&#39;x&#39;,&#39;y&#39;])</span>
-<span class="c1">#sns.kdeplot(data1.x, data1.y)</span>
-</pre></div>
-</div>
-</div>
+<p>The score was the best possible, which is not a surprise, since we tried to predict the data we had already seen! Later we will split our data into two parts: one for learning the model and the other for testing its predictive skills.</p>
 <div class="section" id="Another-example">
 <h2>Another example<a class="headerlink" href="#Another-example" title="Permalink to this headline">¶</a></h2>
 <p>Let’s generate some more data using multivariate normal distributions.</p>
@@ -593,14 +582,8 @@ Accuracy score is 1.0
 <span class="n">n</span><span class="o">=</span><span class="mi">500</span>
 <span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean1</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
 <span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">multivariate_normal</span><span class="p">(</span><span class="n">mean2</span><span class="p">,</span> <span class="n">cov</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
-<span class="c1">#print(type(x1), x1.shape)</span>
-<span class="c1">#print(x1[:5])</span>
 <span class="n">X</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x1</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">x2</span><span class="o">.</span><span class="n">T</span><span class="p">])</span>
-<span class="c1">#print(X[:5])</span>
 <span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">([[</span><span class="mi">0</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">n</span><span class="p">])</span><span class="o">.</span><span class="n">T</span>
-<span class="c1">#y=np.hstack([y1,y2])</span>
-<span class="c1">#plt.hist2d(X[:,0], X[:,1], bins=100, cmap=&#39;Blues&#39;);</span>
-<span class="c1">#plt.scatter(X[:,0], X[:,1], c=y)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:</span><span class="n">n</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[:</span><span class="n">n</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">X</span><span class="p">[</span><span class="n">n</span><span class="p">:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">();</span>
@@ -705,7 +688,7 @@ Accuracy score is 0.839
 </div>
 <div class="section" id="Text-classification">
 <h2>Text classification<a class="headerlink" href="#Text-classification" title="Permalink to this headline">¶</a></h2>
-<p>We next try to classificate a set of messages that were posted on a public forum. The messages were divided into groups by the topics. So, we have a data set ready for classification testing. Let’s first load this data using scikit-learn and print the message categories.</p>
+<p>We next try to classify a set of messages that were posted on a public forum. The messages were divided into groups by the topics. So, we have a data set ready for classification testing. Let’s first load this data using scikit-learn and print the message categories.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[336]:
 </pre></div>
@@ -745,7 +728,7 @@ Accuracy score is 0.839
 </pre></div>
 </div>
 </div>
-<p>We concentrate on four message categories only. The tool fetch_20newsgroups allows us to easily split the data into training and testing data.</p>
+<p>We concentrate on four message categories only. The tool <code class="docutils literal notranslate"><span class="pre">fetch_20newsgroups</span></code> allows us to easily split the data into training and testing data.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[337]:
 </pre></div>
@@ -779,7 +762,7 @@ Test data: Data: &lt;class &#39;list&#39;&gt; 1574 Target &lt;class &#39;list&#3
 </div>
 <p>We use as features the frequencies of each word in the dataset. That is, there as many features as there are distinct words in the dataset. We denote the number of features by <span class="math notranslate nohighlight">\(f\)</span>. As the features are now counts, it is sensible to use multinomial distribution instead of Gaussian.</p>
 <p>Let’s try to model these messages using multinomial distributions. Each message category has its own distribution. A multinomial distribution has <span class="math notranslate nohighlight">\(f\)</span> non-negative parameters <span class="math notranslate nohighlight">\(\theta_1,\ldots , \theta_f\)</span>, which sum up to one. For example, the parameter <span class="math notranslate nohighlight">\(\theta_3\)</span> might tell the the probability of the word “board” appearing in a message of the category this distribution is describing.</p>
-<p>In scikit-learn there is a class CountVectorizer that converts messages in form of text strings to feature vectors. We can integrate this conversion with the model we are using (multinomial naive Bayes), so that the conversion happens automatically as part of the fit method. We achive this integration using the make_pipeline tool.</p>
+<p>In scikit-learn there is a class <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> that converts messages in form of text strings to feature vectors. We can integrate this conversion with the model we are using (multinomial naive Bayes), so that the conversion happens automatically as part of the <code class="docutils literal notranslate"><span class="pre">fit</span></code> method. We achive this integration using the <code class="docutils literal notranslate"><span class="pre">make_pipeline</span></code> tool.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[339]:
 </pre></div>
@@ -806,7 +789,7 @@ Test data: Data: &lt;class &#39;list&#39;&gt; 1574 Target &lt;class &#39;list&#3
 Accuracy score is 0.920584498094028
 </pre></div></div>
 </div>
-<p>The classifier seem to work quite well!</p>
+<p>The classifier seem to work quite well! Notice that now we used separate data for testing the model.</p>
 <p>Let’s have a closer look at the resulting feature vectors.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[340]:
@@ -937,49 +920,55 @@ as it is encrypted.
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 5 (blob_classification)</div>
-<p>Write a function blob_classification that gets feature matrix X and label vector y as parameters. It should then return the accuracy score of the prediction. Do the prediction using GaussianNB, and use train_test_split function from sklearn to split the dataset in to two equal halves: one for training and one for testing. Give parameter random_state=0 to the splitting function so that the result is deterministic. Use training set size of 75% of the whole data.</p>
-<hr class="docutils" />
+Exercise 1 (blob_classification)</div>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">blob_classification</span></code> that gets feature matrix X and label vector y as parameters. It should then return the accuracy score of the prediction. Do the prediction using <code class="docutils literal notranslate"><span class="pre">GaussianNB</span></code>, and use <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function from <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> to split the dataset in to two equal halves: one for training and one for testing. Give parameter <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> to the splitting function so that the result is deterministic. Use training set size of 75% of the whole data.</p>
+<hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise 6 (plant classification)</div>
-<p>Write function plant_classification that does the following:</p>
-<ul class="simple">
-<li>loads the iris dataset using sklearn (sklearn.datasets.load_iris)</li>
-<li>splits the data into training and testing part using the train_test_split function so that the training set size is 80% of the whole data (give the call also the random_state=0 argument to make the result deterministic)</li>
-<li>use Gaussian naive Bayes to fit the training data</li>
-<li>predict labels of the test data</li>
-<li>the function should return the accuracy score of the prediction performance (sklearn.metrics.accuracy_score)</li>
+Exercise 2 (plant classification)</div>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">plant_classification</span></code> that does the following:</p>
+<ul>
+<li><p class="first">loads the iris dataset using sklearn (<code class="docutils literal notranslate"><span class="pre">sklearn.datasets.load_iris</span></code>)</p>
+</li>
+<li><p class="first">splits the data into training and testing part using the <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function so that the training set size is 80% of the whole data (give the call also the <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> argument to make the result deterministic)</p>
+</li>
+<li><p class="first">use Gaussian naive Bayes to fit the training data</p>
+</li>
+<li><p class="first">predict labels of the test data</p>
+</li>
+<li><p class="first">the function should return the accuracy score of the prediction performance (<code class="docutils literal notranslate"><span class="pre">sklearn.metrics.accuracy_score</span></code>)</p>
+<hr/></li>
 </ul>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 7 (word classification)</div>
+Exercise 3 (word classification)</div>
 <p>Part 1.</p>
-<p>Write function get_features that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">get_features</span></code> that gets a one dimensional np.array, containing words, as parameter. It should return a feature matrix of shape (n, 29), where n is the number of elements of the input array. There should be one feature for each of the letters in the following alphabet: “abcdefghijklmnopqrstuvwxyzäö-“.</p>
 <p>Part 2.</p>
-<p>Write function contains_valid_chars that takes a string as a parameter and returns the truth value of whether all the characters in the string belong to the alphabet or not.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">contains_valid_chars</span></code> that takes a string as a parameter and returns the truth value of whether all the characters in the string belong to the alphabet or not.</p>
 <p>Part 3.</p>
-<p>Write function get_features_and_labels() that returns the tuple (X, y) of the feature matrix and the target vector. Use the labels 0 and 1 for Finnish and English, respectively. Use the supplied functions load_finnish() and load_english() to get the lists of words. Filter the lists in the following ways:</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that returns the tuple (X, y) of the feature matrix and the target vector. Use the labels 0 and 1 for Finnish and English, respectively. Use the supplied functions load_finnish() and load_english() to get the lists of words. Filter the lists in the following ways:</p>
 <ul class="simple">
 <li>Convert the Finnish words to lowercase, and then filter out those words that contain characters that don’t belong to the alphabet.</li>
 <li>For the English words first filter out those words that begin with an uppercase letter to get rid of proper nouns. Then proceed as with the Finnish words.</li>
 </ul>
 <p>Use get_features function you made earlier to form the feature matrix.</p>
 <p>Part 4.</p>
+<p>We have earlier seen examples where we split the data into learning part and testing part. This way we can test whether the model can really be used to predict unseen data. However, it can be that we had bad luck and the split produced very biased learning and test datas. To counter this, we can perform the split several times and take as the final result the average from the different splits. This is called <a class="reference external" href="https://en.wikipedia.org/wiki/Cross-validation_(statistics)">cross validation</a>.</p>
 <p>Create <code class="docutils literal notranslate"><span class="pre">word_classification</span></code> function that does the following:</p>
 <p>Use the function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> you made earlier to get the feature matrix and the labels. Use multinomial naive Bayes to do the classification. Get the accuracy scores using the <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.cross_val_score</span></code> function; use 5-fold cross validation. The function should return a list of five accuracy scores.</p>
-<p>The cv parameter of cross_val_score can be either an integer, which specifies the number of folds, or it can be a <em>cross-validation generator</em> that generates the (train set,test set) pairs. What happens if you pass the following cross-validation generator to <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
+<p>The cv parameter of <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> can be either an integer, which specifies the number of folds, or it can be a <em>cross-validation generator</em> that generates the (train set,test set) pairs. What happens if you pass the following cross-validation generator to <code class="docutils literal notranslate"><span class="pre">cross_val_score</span></code> as a parameter: <code class="docutils literal notranslate"><span class="pre">sklearn.model_selection.KFold(n_splits=5,</span> <span class="pre">shuffle=True,</span> <span class="pre">random_state=0)</span></code>.</p>
 <p>Why the difference?</p>
-<hr class="docutils" />
+<hr/><hr class="docutils" />
 <div class="admonition note">
-Exercise 8 (spam detection)</div>
+Exercise 4 (spam detection)</div>
 <p>In the src folder there are two files: ham.txt.gz and spam.txt.gz. The files are preprocessed versions of the files from <a class="reference external" href="https://spamassassin.apache.org/old/publiccorpus/">https://spamassassin.apache.org/old/publiccorpus/</a>. There is one email per line. The file ham.txt.gz contains emails that are non-spam, and, conversely, emails in file spam.txt are spam. The email headers have been removed, except for the subject line, and non-ascii characters have been deleted.</p>
-<p>Write function spam_detection that does the following:</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">spam_detection</span></code> that does the following:</p>
 <ul class="simple">
 <li>reads these files. Use function open from gzip module, since the files are compressed.</li>
 <li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
 <li>use labels 0 for ham and 1 for spam</li>
 <li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code></li>
-<li>train a MultinomialNB model, and use it to predict the labels for the test set</li>
+<li>train a <code class="docutils literal notranslate"><span class="pre">MultinomialNB</span></code> model, and use it to predict the labels for the test set</li>
 </ul>
 <p>The function should return a triple consisting of</p>
 <ul class="simple">
@@ -988,7 +977,7 @@ Exercise 8 (spam detection)</div>
 <li>number of misclassified sample points</li>
 </ul>
 <p>Pass the function’s random_state parameter to function <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>.</p>
-<!--NAVIGATION--></div>
+<hr/><!--NAVIGATION--></div>
 </div>
 
 

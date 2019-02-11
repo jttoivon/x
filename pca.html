@@ -112,7 +112,11 @@
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">ML: Naive Bayes classification</a></li>
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">ML: Clustering</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ML: Principal component analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Example-of-feature-extraction">Example of feature extraction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Principal-component-analysis">Principal component analysis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Example-of-feature-extraction">Example of feature extraction</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Summary-(week-6)">Summary (week 6)</a></li>
 </ul>
 </li>
 </ul>
@@ -407,12 +411,14 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="ML:-Principal-component-analysis">
 <h1>ML: Principal component analysis<a class="headerlink" href="#ML:-Principal-component-analysis" title="Permalink to this headline">¶</a></h1>
-<p>Principal component analysis is an unsupervised learning method that tries to detect the directions in which the vector formed data varies most. It first finds the direction of highest variance, and then proceeds to discover directions of highest variance that are orthogonal to those direction already found. So, for n dimensional data, it returns, by default, n orthogonal directions and the corresponding variances. These directions are called pricipal axes, and if we project a data point to
-these axes, we get the principal components of each axis.</p>
-<p>To use another terminology, the set of principal axes forms a base for the vector space where the data points reside, and the principal components are the coordinates of the data points in this new coordinate system. The PCA object has a transform method, which transforms data to this new coordinate system.</p>
+<div class="section" id="Principal-component-analysis">
+<h2>Principal component analysis<a class="headerlink" href="#Principal-component-analysis" title="Permalink to this headline">¶</a></h2>
+<p>Principal component analysis is an unsupervised learning method that tries to detect the directions in which the vector formed data varies most. It first finds the direction of highest variance, and then proceeds to discover directions of highest variance that are orthogonal to those direction already found. So, for n dimensional data, it returns, by default, n orthogonal directions and the corresponding variances. These directions are called <em>pricipal axes</em>, and if we project a data point to
+these axes, we get the <em>principal components</em> of each axis.</p>
+<p>To use another terminology, the set of principal axes forms a base for the vector space where the data points reside, and the principal components are the coordinates of the data points in this new coordinate system. The <code class="docutils literal notranslate"><span class="pre">PCA</span></code> class in the scikit-learn library has a <code class="docutils literal notranslate"><span class="pre">transform</span></code> method, which transforms data to this new coordinate system.</p>
 <p>Let’s look at an example where the data is from multi-variate Gaussian distribution.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -426,7 +432,7 @@ these axes, we get the principal components of each axis.</p>
 </div>
 <p>First we sample data from this distribution, and then we plot it.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -453,7 +459,7 @@ these axes, we get the principal components of each axis.</p>
 </div>
 <p>Let’s first apply the PCA to the data to obtain the principal axes and their variances.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -478,13 +484,13 @@ these axes, we get the principal components of each axis.</p>
 <div class="highlight"><pre>
 Principal axes: [[-0.73072907 -0.68266758]
  [-0.68266758  0.73072907]]
-Explained variance: [0.97980663 0.16031015]
+Explained variance: [ 0.97980663  0.16031015]
 Mean: [ 0.01333067 -0.05370929]
 </pre></div></div>
 </div>
 <p>Then we draw vectors whose directions reflect those of the principal axes, and whose lengths are the corresponding variances. Then we plot the data in this new coordinate system.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -500,16 +506,7 @@ Mean: [ 0.01333067 -0.05370929]
 <span class="k">for</span> <span class="n">l</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.16</span><span class="p">],</span> <span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">]),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">1.0</span><span class="p">])]):</span>
     <span class="n">arrow</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span> <span class="n">v</span><span class="o">*</span><span class="n">l</span><span class="o">*</span><span class="mi">3</span><span class="p">,</span> <span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">)</span>
-<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Transformed&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
-</div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Text(0.5,1,&#39;Transformed&#39;)
+<span class="n">axes</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Transformed&quot;</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -517,13 +514,13 @@ Mean: [ 0.01333067 -0.05370929]
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/pca_8_1.png" src="_images/pca_8_1.png" />
+<img alt="_images/pca_8_0.png" src="_images/pca_8_0.png" />
 </div>
 </div>
-<p>You may have noticed that we gave the PCA constructor a parameter with value 2. This parameter gives the number of principal axes we want. If the parameter value is n, then the algorithm return only n components with the highest variances and drops those components with lower variance. So, this algorithm can be used a dimensionality reduction technique. The components with low variance are assumed not to contain any important information.</p>
+<p>You may have noticed that we gave the PCA constructor a parameter with value 2. This parameter gives the number of principal axes we want. If the parameter value is n, then the algorithm returns only n components with the highest variances and drops those components with lower variance. So, this algorithm can be used a dimensionality reduction technique. The components with low variance are assumed not to contain any important information.</p>
 <p>Let’s use PCA to project the above data to one dimension.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -553,7 +550,7 @@ Mean: [ 0.01333067 -0.05370929]
 </div>
 <p>The dimensionality reduction can be used, for example, to project high-dimensional data in two or three dimensions to allow visualization of data. Additionally, dimensionality reduction can be used as a preprocessing method to obtain only the important features from the data. These important features can then be used, for example, for regression or classification.</p>
 <div class="section" id="Example-of-feature-extraction">
-<h2>Example of feature extraction<a class="headerlink" href="#Example-of-feature-extraction" title="Permalink to this headline">¶</a></h2>
+<h3>Example of feature extraction<a class="headerlink" href="#Example-of-feature-extraction" title="Permalink to this headline">¶</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
@@ -669,9 +666,9 @@ Mean: [ 0.01333067 -0.05370929]
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 12 (explained variance)</div>
+Exercise 8 (explained variance)</div>
 <p>Part 1.</p>
-<p>Write function explained_variance which reads the tab separated file “data.tsv”. It should return two lists (or 1D arrays). Then first list contains the variances of all the features. Then fit PCA to the data. The second list should consist of the explained variances returned by the PCA.</p>
+<p>Write function <code class="docutils literal notranslate"><span class="pre">explained_variance</span></code> which reads the tab separated file “data.tsv”. The data contains 10 features. Then fit PCA to the data. The function should return two lists (or 1D arrays). The first list should contain the variances of all the features. The second list should consist of the explained variances returned by the PCA.</p>
 <p>In the main function print these values in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>The variances are: ?.??? ?.??? ...
 The explained variances after PCA are: ?.??? ?.??? ...
@@ -680,6 +677,19 @@ The explained variances after PCA are: ?.??? ?.??? ...
 <p>Print the values with three decimal precision and separate the values by a space.</p>
 <p>Part 2.</p>
 <p>Plot the cumulative explained variances. The y-axis should be the cumulative sum, and the x-axis the number of terms in the cumulative sum.</p>
+<hr/></div>
+</div>
+<div class="section" id="Summary-(week-6)">
+<h2>Summary (week 6)<a class="headerlink" href="#Summary-(week-6)" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>We got to know another supervised learning method, namely, naive Bayes classification</li>
+<li>We saw examples of naive Bayes classification where either Gaussian or multinomial distribution was used to model the features of samples belonging to a class</li>
+<li>We saw how to use cross validation to asses prediction abilities of a model. This allows us to be sure that the model is not overfitting.</li>
+<li>In the clustering section we saw examples of using k-means, DBSCAN, and hierarchical clustering methods. They have different approaches to clustering, and each have different strengths.</li>
+<li>Clustering is based on the notion of distance between the points in the data.</li>
+<li>Principal component analysis is another example of unsupervised learning</li>
+<li>It can reduce the dimensionality of a data by throwing away those dimensions where the variability is low.</li>
+</ul>
 <!--NAVIGATION--></div>
 </div>
 

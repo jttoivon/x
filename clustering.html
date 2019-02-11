@@ -112,10 +112,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bayes.html">ML: Naive Bayes classification</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ML: Clustering</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#Simple-example">Simple example</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Let's-see-what-happens,-if-we-set-it-to-run-only-once.">Let’s see what happens, if we set it to run only once.</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#Simple-example">Simple example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#More-complicated-example">More complicated example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Clustering-digits">Clustering digits</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Hierarchical-clustering">Hierarchical clustering</a></li>
@@ -414,13 +411,13 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="ML:-Clustering">
 <h1>ML: Clustering<a class="headerlink" href="#ML:-Clustering" title="Permalink to this headline">¶</a></h1>
-<p>Clustering is one of the types of unsupervised learning. It is similar to classification: the aim is to give a label to each data point. However, unlike in classification, we are not given any examples of labels associated with the data points. We must infer from the data, which data points belong to the same cluster. This can be achieved using the notion of distance between the data points. Data points in the same cluster are somehow close to each other.</p>
+<p>Clustering is one of the types of unsupervised learning. It is similar to classification: the aim is to give a label to each data point. However, unlike in classification, we are not given any examples of labels associated with the data points. We must infer from the data, which data points belong to the same cluster. This can be achieved using some notion of distance between the data points. Data points in the same cluster are somehow close to each other.</p>
 <p>One of the simplest clustering methods is the <em>k-means clustering</em>. It aims at producing a clustering that is optimal in the following sense:</p>
 <ul class="simple">
 <li>the <em>centre of each cluster</em> is the average of all points in the cluster</li>
 <li>any point in a cluster is closer to its centre than to a centre of any other cluster</li>
 </ul>
-<p>The k-means clustering is first given the wanted number of clusters as a <em>hyperparameter</em>, say k. Next, to start the algorithm, k points from the data set are chosen randomly as cluster centres. Then the following phases are repeated iteratively:</p>
+<p>The k-means clustering is first given the wanted number of clusters, say k, as a <em>hyperparameter</em>. Next, to start the algorithm, k points from the data set are chosen randomly as cluster centres. Then the following phases are repeated iteratively:</p>
 <ul class="simple">
 <li>any data point is set to belong to a cluster, whose centre is closest to it</li>
 <li>then for each cluster a new centre is chosen as the average of the data points in the cluster</li>
@@ -485,7 +482,7 @@ This page was generated from <a class="reference external" href="https://github.
 <img alt="_images/clustering_8_0.png" src="_images/clustering_8_0.png" />
 </div>
 </div>
-<p>(We can still discern four clusters in the data set.) Let’s see if the k-means algorithm can recover these clusters. First we create the instance of the k-means model by giving it the number of clusters 4 as a hyperparameter.</p>
+<p>We can still discern four clusters in the data set. Let’s see if the k-means algorithm can recover these clusters. First we create the instance of the k-means model by giving it the number of clusters 4 as a hyperparameter.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
@@ -600,24 +597,6 @@ Accuracy score is 0.99
 </pre></div></div>
 </div>
 <p>So, the k-means algorithm seems to work well in this case, but the can be several problems. Firstly, even though an EM algorithm always converges, it might converge to a local maximum. To avoid this, EM type algorithms are usually run several times, each time starting from different random initial values. For instance, in the scikit-learn implementation, the algorithms is restarted by default 10 times.</p>
-<div class="section" id="Let's-see-what-happens,-if-we-set-it-to-run-only-once.">
-<h3>Let’s see what happens, if we set it to run only once.<a class="headerlink" href="#Let's-see-what-happens,-if-we-set-it-to-run-only-once." title="Permalink to this headline">¶</a></h3>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="c1">#model = KMeans(4, n_init=1, random_state=13, init=&quot;random&quot;)</span>
-<span class="c1">#model.fit(X)</span>
-<span class="c1">#permutation2 = find_permutation(4, y, model.labels_)</span>
-<span class="c1">##print(model.cluster_centers_)</span>
-<span class="c1">#plt.scatter(X[:,0],X[:,1], c=model.labels_);</span>
-<span class="c1">#plt.scatter(model.cluster_centers_[:,0], model.cluster_centers_[:,1], s=100, color=&quot;red&quot;);</span>
-<span class="c1">#print(&quot;Accuracy score is&quot;, accuracy_score(y, [ permutation2[label] for label in model.labels_]))</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="More-complicated-example">
 <h2>More complicated example<a class="headerlink" href="#More-complicated-example" title="Permalink to this headline">¶</a></h2>
@@ -645,7 +624,7 @@ Accuracy score is 0.99
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_24_0.png" src="_images/clustering_24_0.png" />
+<img alt="_images/clustering_22_0.png" src="_images/clustering_22_0.png" />
 </div>
 </div>
 <div class="nbinput docutils container">
@@ -663,7 +642,7 @@ Accuracy score is 0.99
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_25_0.png" src="_images/clustering_25_0.png" />
+<img alt="_images/clustering_23_0.png" src="_images/clustering_23_0.png" />
 </div>
 </div>
 <p>The clustering does not work well now, since it is not possible to separate the two clusters with a line. We could embed this data set into a higher dimensional space, where the separation is possible. And then apply the k-means clustering.</p>
@@ -684,14 +663,14 @@ Accuracy score is 0.99
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_28_0.png" src="_images/clustering_28_0.png" />
+<img alt="_images/clustering_26_0.png" src="_images/clustering_26_0.png" />
 </div>
 </div>
 <p>The good news is that DBSCAN does not require the user to specify the number of clusters. But now the algorithm depends on another hyperparameter: a threshold for distance (here 0.3).</p>
 </div>
 <div class="section" id="Clustering-digits">
 <h2>Clustering digits<a class="headerlink" href="#Clustering-digits" title="Permalink to this headline">¶</a></h2>
-<p>Using scikit-learn we can download a set of 1797 images of handwritten digits with the correct labels 0,1,…,9. The images have quite a low resolution: 8*8=64 pixels. Let’s see how machine learning method work with this kind of data.</p>
+<p>Using scikit-learn we can download a set of 1797 images of handwritten digits with the correct labels 0,1,…,9. The images have quite a low resolution: 8*8=64 pixels. Let’s see how our machine learning method work with this kind of data.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[45]:
 </pre></div>
@@ -728,7 +707,7 @@ Accuracy score is 0.99
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_34_0.png" src="_images/clustering_34_0.png" />
+<img alt="_images/clustering_32_0.png" src="_images/clustering_32_0.png" />
 </div>
 </div>
 <p>Let’s cluster these data points into ten clusters.</p>
@@ -768,7 +747,7 @@ Accuracy score is 0.99
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_38_0.png" src="_images/clustering_38_0.png" />
+<img alt="_images/clustering_36_0.png" src="_images/clustering_36_0.png" />
 </div>
 </div>
 <p>One can recognize these numbers with the exception of maybe number eight. What is the accuracy score of this clustering?</p>
@@ -796,12 +775,12 @@ Accuracy score is 0.7935447968836951
 <p>This is quite a good result for such a simple algorithm!</p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 9 (plant clustering)</div>
-<p>Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters. Create a function <code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and return the accuracy_score.</p>
+Exercise 5 (plant clustering)</div>
+<p>Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters. Create a function <code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and returns the accuracy_score.</p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 10 (nonconvex clusters)</div>
-<p>Read the tab separated file data.tsv from the src folder into a dataframe. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN using different values for the eps parameter. Use values in np.arange(0.05, 0.2, 0.05) for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a dataframe, where eps is the index and the columns are names as in the below example.</p>
+Exercise 6 (nonconvex clusters)</div>
+<p>Read the tab separated file data.tsv from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder into a DataFrame. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN with different values for the eps parameter. Use values in <code class="docutils literal notranslate"><span class="pre">np.arange(0.05,</span> <span class="pre">0.2,</span> <span class="pre">0.05)</span></code> for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a DataFrame, where <code class="docutils literal notranslate"><span class="pre">eps</span></code> is the index and the columns are names as in the below example.</p>
 <p>Note that DBSCAN uses label -1 to denote outliers , that is, those data points that didn’t fit well in any cluster. You have to modify the find_permutation function to handle this: ignore the outlier data points from the accuracy score computation. In addition, if the number of clusters is not the same as the number of labels in the original data, set the accuracy score to NaN.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     eps   Score  Clusters  Outliers
 0    0.05      ?         ?         ?
@@ -811,8 +790,8 @@ Exercise 10 (nonconvex clusters)</div>
 </pre></div>
 </div>
 <p>Before submitting the solution, you can plot the data set (with clusters colored) to see what kind of data we are dealing with.</p>
-<p>Points are given for each correct column in the result dataframe.</p>
-</div>
+<p>Points are given for each correct column in the result DataFrame.</p>
+<hr/></div>
 <div class="section" id="Hierarchical-clustering">
 <h2>Hierarchical clustering<a class="headerlink" href="#Hierarchical-clustering" title="Permalink to this headline">¶</a></h2>
 <p>Hierarchical clustering works by first putting each data point in their own cluster and then merging clusters based on some rule, until there are only the wanted number of clusters remaining. For this to work, there needs to be a distance measure between the data points. With this distance measure <code class="docutils literal notranslate"><span class="pre">d</span></code>, we can define another distance measure between the <strong>clusters</strong> U and V using one of the following methods (<em>linkages</em>):</p>
@@ -823,8 +802,8 @@ Exercise 10 (nonconvex clusters)</div>
 <li><code class="docutils literal notranslate"><span class="pre">ward</span></code>: tries to minimize the variance in each cluster</li>
 </ul>
 <p>At each iteration of the algorithm two clusters that are closest to each other are merged. After this the distance between the clusters are recomputed, and then it continues to the next iteration.</p>
-<p>Below is an example with a botanical dataset with 150 samples from three species. Each species appears in the dataset 50 times. Each sample point has 4 features, which basically dimensions of the “leaves” of the flower.</p>
-<p>We use the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> library to both to compute the clustering and to visualize the result. The visualization consists of two parts: the <em>heatmap</em>, whose rows and/or columns may be reordered so as to have the elements of the same cluster next to each other; and the <em>dendrogram</em>, which shows the way the clusters were merged. The colors gives the length of the corresponding features.</p>
+<p>Below is an example with a botanical dataset with 150 samples from three species. Each species appears in the dataset 50 times. Each sample point has 4 features, which are basically dimensions of the “leaves” of the flower.</p>
+<p>We use the <a class="reference external" href="https://seaborn.pydata.org/index.html">seaborn</a> library to both to compute the clustering and to visualize the result. The visualization consists of two parts: the <em>heatmap</em>, whose rows and/or columns may be reordered so as to have the elements of the same cluster next to each other; and the <em>dendrogram</em>, which shows the way the clusters were merged. The colors give the length of the corresponding features.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[50]:
 </pre></div>
@@ -853,14 +832,14 @@ Exercise 10 (nonconvex clusters)</div>
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/clustering_45_1.png" src="_images/clustering_45_1.png" />
+<img alt="_images/clustering_43_1.png" src="_images/clustering_43_1.png" />
 </div>
 </div>
 <p>With sharp eye and good will one can discern three clusters in the above heatmap and dendrogram.</p>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 11 (binding sites)</div>
-<p>A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which corresponds to nucleotides Adenine, Cytosine, Guanine, and Thymine. In this exercise the length of binding sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>, and the binding sites there are classified into two classes.</p>
+Exercise 7 (binding sites)</div>
+<p>A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which correspond to nucleotides Adenine, Cytosine, Guanine, and Thymine. In this exercise the length of binding sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>, and the binding sites there are classified into two classes.</p>
 <p>Part 1. Write function <code class="docutils literal notranslate"><span class="pre">toint</span></code> that converts a nucleotide to an integer. Use the following mapping:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-&gt;</span> <span class="mi">0</span>
 <span class="n">C</span> <span class="o">-&gt;</span> <span class="mi">1</span>
