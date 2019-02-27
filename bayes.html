@@ -971,7 +971,7 @@ Exercise 4 (spam detection)</div>
 <li>reads these files. Use function open from gzip module, since the files are compressed.</li>
 <li>forms the combined feature matrix using <code class="docutils literal notranslate"><span class="pre">CountVectorizer</span></code> class’ <code class="docutils literal notranslate"><span class="pre">fit_transform</span></code> method.</li>
 <li>use labels 0 for ham and 1 for spam</li>
-<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code></li>
+<li>divide that feature matrix and the target label into training and test sets, using <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code>. Use 75% of the data for training</li>
 <li>train a <code class="docutils literal notranslate"><span class="pre">MultinomialNB</span></code> model, and use it to predict the labels for the test set</li>
 </ul>
 <p>The function should return a triple consisting of</p>
