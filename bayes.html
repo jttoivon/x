@@ -362,7 +362,7 @@ This page was generated from <a class="reference external" href="https://github.
 \[\frac{P(L1 | features)}{P(L2 | features)} = \frac{P(features | L1)P(L1)}{P(features | L2)P(L2)}.\]</div>
 <p>If the ratio is greater than one, we label our data point with label L1, and if not, we give it label L2. The prior probabilities P(L1) and P(L2) of labels can be easily found out from the input data, as for each data point we also have its label. Same goes for the probabilities of features conditioned on the label.</p>
 <p>We first demonstrate naive Bayes classification using Gaussian distributions.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -371,20 +371,6 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-1-08f5ba222204&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> seaborn <span class="ansi-green-fg">as</span> sns
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'seaborn'
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -408,18 +394,18 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-2-21bd85837381&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>datasets <span class="ansi-green-fg">import</span> make_blobs
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>datasets <span class="ansi-green-fg">import</span> make_blobs
 <span class="ansi-green-intense-fg ansi-bold">      2</span> X<span class="ansi-blue-fg">,</span>y <span class="ansi-blue-fg">=</span> make_blobs<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> centers<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> random_state<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> cluster_std<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1.5</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">=</span>colors<span class="ansi-blue-fg">[</span>y<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> s<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> <span class="ansi-green-fg">for</span> label<span class="ansi-blue-fg">,</span> c <span class="ansi-green-fg">in</span> enumerate<span class="ansi-blue-fg">(</span>colors<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
 </pre></div></div>
 </div>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
@@ -431,23 +417,6 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-3-38c8883c9da4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>naive_bayes <span class="ansi-green-fg">import</span> GaussianNB
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>naive_bayes <span class="ansi-green-fg">import</span> MultinomialNB
-<span class="ansi-green-intense-fg ansi-bold">      3</span> model <span class="ansi-blue-fg">=</span> GaussianNB<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-red-fg">#model = MultinomialNB()</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
-</pre></div></div>
 </div>
 <p>Naive Bayes algorithm fitted two 2-dimensional Gaussian distribution to the data. The means and the variances define these distributions completely.</p>
 <div class="nbinput docutils container">
@@ -465,13 +434,10 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-4-d0ecd7f4c38a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Means:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Standard deviations:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
+Means: [[-1.64939095 -9.36891451]
+ [ 1.29327924 -1.24101221]]
+Standard deviations: [[ 2.06097005  2.47716872]
+ [ 3.33164807  2.22401384]]
 </pre></div></div>
 </div>
 <p>Let’s plot these distributions. First we define a helper function to draw an ellipse that gives the standard deviation in each direction from the origo.</p>
@@ -556,11 +522,11 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-7-0f86c689b648&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> acc<span class="ansi-blue-fg">=</span>accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span>y_fitted<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>acc<span class="ansi-blue-fg">=</span>accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span>y_fitted<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
+<span class="ansi-red-fg">NameError</span>: name 'accuracy_score' is not defined
 </pre></div></div>
 </div>
 <p>The score was the best possible, which is not a surprise, since we tried to predict the data we had already seen! Later we will split our data into two parts: one for learning the model and the other for testing its predictive skills.</p>
@@ -605,7 +571,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div></div>
 </div>
 <p>The two clusters seem to be quite separate. Let’s try naive Bayesian classification on this data.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
@@ -615,21 +581,6 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">);</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-9-caec06e99fce&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>model <span class="ansi-blue-fg">=</span> GaussianNB<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-red-fg">#model = MultinomialNB()</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'GaussianNB' is not defined
-</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -646,13 +597,10 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-10-d0ecd7f4c38a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Means:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>theta_<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Standard deviations:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>sigma_<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
+Means: [[-1.64939095 -9.36891451]
+ [ 1.29327924 -1.24101221]]
+Standard deviations: [[ 2.06097005  2.47716872]
+ [ 3.33164807  2.22401384]]
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -680,13 +628,13 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-11-7a8817e5ebad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> y_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>colors<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span>colors<span class="ansi-blue-fg">[</span>y_fitted<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"0"</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"blue"</span><span class="ansi-blue-fg">,</span> label<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"1"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
 </pre></div></div>
 </div>
 <p>Even thought the score is quite good, we can see from the plot that the algorithm didn’t have good models for the data. We can plot the models the algorithm used:</p>
@@ -737,23 +685,45 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 </div>
-<div class="nboutput nblast docutils container">
+<div class="nboutput docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-13-32f477ba45c1&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>datasets <span class="ansi-green-fg">import</span> fetch_20newsgroups
-<span class="ansi-green-intense-fg ansi-bold">      2</span> data <span class="ansi-blue-fg">=</span> fetch_20newsgroups<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> data<span class="ansi-blue-fg">.</span>target_names
-
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
+Downloading 20news dataset. This may take a few minutes.
+Downloading dataset from https://ndownloader.figshare.com/files/5975967 (14 MB)
 </pre></div></div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>['alt.atheism',
+ 'comp.graphics',
+ 'comp.os.ms-windows.misc',
+ 'comp.sys.ibm.pc.hardware',
+ 'comp.sys.mac.hardware',
+ 'comp.windows.x',
+ 'misc.forsale',
+ 'rec.autos',
+ 'rec.motorcycles',
+ 'rec.sport.baseball',
+ 'rec.sport.hockey',
+ 'sci.crypt',
+ 'sci.electronics',
+ 'sci.med',
+ 'sci.space',
+ 'soc.religion.christian',
+ 'talk.politics.guns',
+ 'talk.politics.mideast',
+ 'talk.politics.misc',
+ 'talk.religion.misc']
+</pre></div>
+</div>
+</div>
 <p>We concentrate on four message categories only. The tool <code class="docutils literal notranslate"><span class="pre">fetch_20newsgroups</span></code> allows us to easily split the data into training and testing data.</p>
-<div class="nbinput docutils container">
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
@@ -763,21 +733,6 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="n">test</span> <span class="o">=</span> <span class="n">fetch_20newsgroups</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="s1">'test'</span><span class="p">,</span> <span class="n">categories</span><span class="o">=</span><span class="n">categories</span><span class="p">)</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-14-07041aef6203&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> categories <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'comp.graphics'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'rec.autos'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'sci.electronics'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'sci.crypt'</span><span class="ansi-blue-fg">]</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>train <span class="ansi-blue-fg">=</span> fetch_20newsgroups<span class="ansi-blue-fg">(</span>subset<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'train'</span><span class="ansi-blue-fg">,</span> categories<span class="ansi-blue-fg">=</span>categories<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> test <span class="ansi-blue-fg">=</span> fetch_20newsgroups<span class="ansi-blue-fg">(</span>subset<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">'test'</span><span class="ansi-blue-fg">,</span> categories<span class="ansi-blue-fg">=</span>categories<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'fetch_20newsgroups' is not defined
-</pre></div></div>
 </div>
 <p>Let’s see what we got:</p>
 <div class="nbinput docutils container">
@@ -795,13 +750,8 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-15-e5c2edc1fdf8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Training data:"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Data:"</span><span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> len<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Target:"</span><span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> len<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Test data:"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Data:"</span><span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> len<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Target"</span><span class="ansi-blue-fg">,</span> str<span class="ansi-blue-fg">(</span>type<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> len<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'train' is not defined
+Training data: Data: &lt;class 'list'&gt; 2364 Target: &lt;class 'numpy.ndarray'&gt; 2364
+Test data: Data: &lt;class 'list'&gt; 1574 Target &lt;class 'list'&gt; 1574
 </pre></div></div>
 </div>
 <p>We use as features the frequencies of each word in the dataset. That is, there as many features as there are distinct words in the dataset. We denote the number of features by <span class="math notranslate nohighlight">\(f\)</span>. As the features are now counts, it is sensible to use multinomial distribution instead of Gaussian.</p>
@@ -831,15 +781,13 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-16-c9e0e66d6afa&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg">#from sklearn.feature_extraction.text import TfidfVectorizer  # an alternative feature extractor</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>feature_extraction<span class="ansi-blue-fg">.</span>text <span class="ansi-green-fg">import</span> CountVectorizer
-<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>naive_bayes <span class="ansi-green-fg">import</span> MultinomialNB
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>pipeline <span class="ansi-green-fg">import</span> make_pipeline
-<span class="ansi-green-intense-fg ansi-bold">      5</span>
+<span class="ansi-green-intense-fg ansi-bold">      8</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">,</span> train<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span> labels_fitted <span class="ansi-blue-fg">=</span> model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>test<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">---&gt; 10</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> accuracy_score<span class="ansi-blue-fg">(</span>labels_fitted<span class="ansi-blue-fg">,</span> test<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
+<span class="ansi-red-fg">NameError</span>: name 'accuracy_score' is not defined
 </pre></div></div>
 </div>
 <p>The classifier seem to work quite well! Notice that now we used separate data for testing the model.</p>
@@ -861,15 +809,58 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-17-9544cf53d8f4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>vec<span class="ansi-blue-fg">=</span>CountVectorizer<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> features<span class="ansi-blue-fg">=</span>vec<span class="ansi-blue-fg">.</span>fit_transform<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Type of feature matrix:"</span><span class="ansi-blue-fg">,</span> type<span class="ansi-blue-fg">(</span>features<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>features<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>        <span class="ansi-red-fg"># print the features of the first sample point</span>
-
-<span class="ansi-red-fg">NameError</span>: name 'CountVectorizer' is not defined
+Type of feature matrix: &lt;class 'scipy.sparse.csr.csr_matrix'&gt;
+  (0, 20579)    1
+  (0, 19220)    1
+  (0, 29697)    1
+  (0, 6320)     1
+  (0, 25926)    1
+  (0, 34222)    1
+  (0, 31398)    1
+  (0, 17883)    1
+  (0, 16809)    1
+  (0, 34425)    1
+  (0, 23460)    1
+  (0, 21787)    1
+  (0, 11068)    1
+  (0, 29494)    1
+  (0, 29505)    1
+  (0, 18436)    1
+  (0, 24025)    1
+  (0, 25336)    1
+  (0, 12577)    1
+  (0, 27517)    1
+  (0, 30641)    1
+  (0, 5980)     1
+  (0, 29104)    1
+  (0, 27521)    1
+  (0, 11100)    1
+  :     :
+  (0, 17310)    1
+  (0, 25400)    1
+  (0, 23118)    1
+  (0, 31686)    6
+  (0, 27158)    1
+  (0, 18085)    1
+  (0, 12580)    1
+  (0, 2100)     1
+  (0, 20381)    1
+  (0, 32729)    1
+  (0, 23854)    2
+  (0, 11079)    1
+  (0, 15109)    2
+  (0, 20509)    1
+  (0, 23858)    1
+  (0, 26624)    1
+  (0, 30377)    1
+  (0, 16034)    1
+  (0, 19099)    1
+  (0, 13317)    6
+  (0, 34790)    6
+  (0, 9553)     4
+  (0, 21852)    5
+  (0, 18962)    3
+  (0, 15373)    1
 </pre></div></div>
 </div>
 <p>The feature matrix is stored in sparse format, that is, only the nonzero counts are stored. How many words were in the first message?</p>
@@ -892,16 +883,40 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-18-1d83566bbde9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Number of words:"</span><span class="ansi-blue-fg">,</span> features<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> col <span class="ansi-blue-fg">=</span> vec<span class="ansi-blue-fg">.</span>vocabulary_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"it"</span><span class="ansi-blue-fg">]</span>   <span class="ansi-red-fg"># Get the column of 'it' word in the feature matrix</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Word 'it' appears in the first message %i times."</span> <span class="ansi-blue-fg">%</span> features<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> col<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span>train<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># Let's print the corresponding message as well</span>
+Number of words: 177
+Word 'it' appears in the first message 2 times.
 
-<span class="ansi-red-fg">NameError</span>: name 'features' is not defined
+From: jgfoot@minerva.cis.yale.edu (Josh A. Goldfoot)
+Subject: Re: Organized Lobbying for Cryptography
+Organization: Yale University
+Lines: 21
+Distribution: inet
+Reply-To: jgfoot@minerva.cis.yale.edu
+NNTP-Posting-Host: minerva.cis.yale.edu
+X-Newsreader: TIN [version 1.1 Minerva PL9]
+
+Shaun P. Hughes (sphughes@sfsuvax1.sfsu.edu) wrote:
+: In article &lt;1r3jgbINN35i@eli.CS.YALE.EDU&gt; jgfoot@minerva.cis.yale.edu writes:
+[deletion]
+: &gt;Perhaps these encryption-only types would defend the digitized porn if it
+: &gt;was posted encrypted?
+: &gt;
+: &gt;These issues are not as seperable as you maintain.
+: &gt;
+
+: Now why would anyone "post" anything encrypted? Encryption is only of
+: use between persons who know how to decrypt the data.
+
+: And why should I care what other people look at?
+
+I was responding to another person (Tarl Neustaedter) who held that the
+EFF wasn't the best organization to fight for crytography rights since the
+EFF also supports the right to distribute pornography over the internet,
+something some Crypto people might object to. In other words, he's
+implying that there are people who will protect any speech, just  as long
+as it is encrypted.
+
+
 </pre></div></div>
 </div>
 <hr class="docutils"/>
