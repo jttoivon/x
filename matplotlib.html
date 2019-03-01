@@ -1,88 +1,45 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Matplotlib &mdash; Data analysis with Python  documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Image processing" href="image_processing.html" />
-    <link rel="prev" title="NumPy (continues)" href="numpy2.html" /> 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Matplotlib — Data analysis with Python  documentation</title>
+<script src="_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript"></script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="_static/language_data.js" type="text/javascript"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="_static/js/theme.js" type="text/javascript"></script>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="image_processing.html" rel="next" title="Image processing"/>
+<link href="numpy2.html" rel="prev" title="NumPy (continues)"/>
 </head>
-
 <body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="index.html" class="icon icon-home"> Data analysis with Python
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="index.html"> Data analysis with Python
           
 
           
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
@@ -123,70 +80,28 @@
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">ML: Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pca.html">ML: Principal component analysis</a></li>
 </ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Data analysis with Python</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Matplotlib</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/matplotlib.ipynb.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="index.html">Data analysis with Python</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="index.html">Docs</a> »</li>
+<li>Matplotlib</li>
+<li class="wy-breadcrumbs-aside">
+<a href="_sources/matplotlib.ipynb.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 <style>
 /* CSS for nbsphinx extension */
 
@@ -410,7 +325,7 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/matplotlib.ipynb">matplotlib.ipynb</a>.
-<span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/matplotlib.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/x/blob/master/matplotlib.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Matplotlib">
 <h1>Matplotlib<a class="headerlink" href="#Matplotlib" title="Permalink to this headline">¶</a></h1>
@@ -439,12 +354,12 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-1-5601a8c46fd5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-red-fg"># This is needed so that the plotted figures appear embedded in this notebook:</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline               &#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'matplotlib'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'inline               '</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
 <span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2305</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
+<span class="ansi-green-intense-fg ansi-bold">   2305</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'local_ns'</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
 <span class="ansi-green-intense-fg ansi-bold">   2306</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">-&gt; 2307</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">   2308</span>             <span class="ansi-green-fg">return</span> result
@@ -453,34 +368,34 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/decorator.py:decorator-gen-108&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it's overkill for just that one bit of state.</span>
 <span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    188</span>
 <span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Available matplotlib backends: %s"</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    101</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3365</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">   3365</span>         """
 <span class="ansi-green-intense-fg ansi-bold">   3366</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
 <span class="ansi-green-fg">-&gt; 3367</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">   3368</span>
-<span class="ansi-green-intense-fg ansi-bold">   3369</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   3369</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">'inline'</span><span class="ansi-blue-fg">:</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
-<span class="ansi-green-intense-fg ansi-bold">    274</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    274</span>     """
 <span class="ansi-green-intense-fg ansi-bold">    275</span>
 <span class="ansi-green-fg">--&gt; 276</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
 <span class="ansi-green-intense-fg ansi-bold">    277</span>
-<span class="ansi-green-intense-fg ansi-bold">    278</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    278</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">'auto'</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'matplotlib'
 </pre></div></div>
 </div>
 <p>Let’s first have some data to visualize:</p>
@@ -503,7 +418,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-2-d1ec0b68ad71&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>array<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">7</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">7</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">9</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;np&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'np' is not defined
 </pre></div></div>
 </div>
 <p>Below the <code class="docutils literal notranslate"><span class="pre">plot</span></code> function does the actual drawing of the graph, the rest of the function calls adjust some details of the figure. Make sure you understand how the values in the array <code class="docutils literal notranslate"><span class="pre">a</span></code> correspond to the features in the figure!</p>
@@ -513,9 +428,9 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>                <span class="c1"># plot the points in the array a</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;My first figure&quot;</span><span class="p">)</span>  <span class="c1"># Add a title to the figure</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;My x-axis&quot;</span><span class="p">)</span>    <span class="c1"># Give a label to the x-axis</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;My y-axis&quot;</span><span class="p">);</span>    <span class="c1"># Give a label to the y-axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"My first figure"</span><span class="p">)</span>  <span class="c1"># Add a title to the figure</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"My x-axis"</span><span class="p">)</span>    <span class="c1"># Give a label to the x-axis</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"My y-axis"</span><span class="p">);</span>    <span class="c1"># Give a label to the y-axis</span>
 </pre></div>
 </div>
 </div>
@@ -528,18 +443,17 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-3-0dd8bd14b392&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">)</span>                <span class="ansi-red-fg"># plot the points in the array a</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;My first figure&#34;</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># Add a title to the figure</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>xlabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;My x-axis&#34;</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># Give a label to the x-axis</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>ylabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;My y-axis&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>    <span class="ansi-red-fg"># Give a label to the y-axis</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>title<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"My first figure"</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># Add a title to the figure</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>xlabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"My x-axis"</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># Give a label to the x-axis</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>ylabel<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"My y-axis"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>    <span class="ansi-red-fg"># Give a label to the y-axis</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>The key components of any matplotlib figure and the terminology is shown in the below image. The toplevel object is <code class="docutils literal notranslate"><span class="pre">figure</span></code> and it can contain one or more <code class="docutils literal notranslate"><span class="pre">subfigures</span></code>, which are strangely called <code class="docutils literal notranslate"><span class="pre">axes</span></code> in matplotlib.</p>
-<p><img alt="components of a figure" src="_images/example_figure2.png" /></p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 9 (multiple graphs)</div>
+<p><img alt="components of a figure" src="_images/example_figure2.png"/></p>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-9-(multiple-graphs)">Exercise 9 (multiple graphs)</a></div>
 <p>In the above plot the x coordinates were implicitly set to the indices of the array <code class="docutils literal notranslate"><span class="pre">a</span></code>, that is, <code class="docutils literal notranslate"><span class="pre">arange(10)</span></code>. Find out from the documentation of <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> how to specify the x coordinates explicitly. Find out also how to draw multiple graphs in one figure.</p>
 <p>Make your <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the following two graphs. The first graphs has x coordinates 2,4,6,7 and y coordinates 4,3,5,1. The second graph has x coordinates 1,2,3,4 and y coordinates 4,2,3,1.</p>
 <p>Add also a title and some labels for x axis and y axis. Note that in the non-interactive mode you have to call <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> for the figure to show.</p>
@@ -576,15 +490,14 @@ Exercise 9 (multiple graphs)</div>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> ax<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>np<span class="ansi-blue-fg">.</span>arange<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>     <span class="ansi-red-fg"># top right</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> ax<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">**</span>np<span class="ansi-blue-fg">.</span>arange<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># bottom left</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>Note that in this notebook we have used both the function <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code> and the similar method <code class="docutils literal notranslate"><span class="pre">plot</span></code> of the axes object. The functions in <code class="docutils literal notranslate"><span class="pre">plt</span></code> namespace refer to the global variables that tell what is the current figure and what is the current axes. If we want to refer to multiple figures and/or axes’ at the same, we cannot use the function in <code class="docutils literal notranslate"><span class="pre">plt</span></code>. Instead, we can refer to each <code class="docutils literal notranslate"><span class="pre">figure</span></code> or <code class="docutils literal notranslate"><span class="pre">axes</span></code> object and use their methods to do the drawing.</p>
 <p>Note the similarity to the random number generators in Python: the function like <code class="docutils literal notranslate"><span class="pre">np.random.randn</span></code> use the global random number generator. But if you want to use multiple random number generators at the same time, you first have to create the generators using the call <code class="docutils literal notranslate"><span class="pre">rng1=np.random.RandomState(seed)</span></code> and then use the <em>method</em> <code class="docutils literal notranslate"><span class="pre">rng1.randn</span></code>.</p>
 <p>So with both random number generators and matplotlib plots you can choose between using one global object, and functions referring to it, at a time, or using several objects and their methods to refer to multiple objects at the same time.</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 10 (subfigures)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-10-(subfigures)">Exercise 10 (subfigures)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">subfigures</span></code> that creates a figure that has two subfigures (two <em>axes</em> in matplotlib parlance). The function gets an array <code class="docutils literal notranslate"><span class="pre">a</span></code> as a parameter. In the left subfigure draw using the <code class="docutils literal notranslate"><span class="pre">plot</span></code> <em>method</em> a graph, whose x coordinates are in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and the y coordinates are in the second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. In the right subfigure draw using the <code class="docutils literal notranslate"><span class="pre">scatter</span></code> <em>method</em> a set of points whose x coords are again in the first column of <code class="docutils literal notranslate"><span class="pre">a</span></code> and whose y coordinates are in the
 second column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. Additionally, the points should get their color from the third column of <code class="docutils literal notranslate"><span class="pre">a</span></code>, and size of the point from the fourth column of <code class="docutils literal notranslate"><span class="pre">a</span></code>. For this, use the <code class="docutils literal notranslate"><span class="pre">c</span></code> and <code class="docutils literal notranslate"><span class="pre">s</span></code> named parameters of <code class="docutils literal notranslate"><span class="pre">scatter</span></code>, respectively</p>
 <p>Test your function <code class="docutils literal notranslate"><span class="pre">subfigure</span></code> from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function.</p>
@@ -599,54 +512,31 @@ second column of <code class="docutils literal notranslate"><span class="pre">a<
 </ul>
 <!--NAVIGATION--></div>
 </div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="image_processing.html" class="btn btn-neutral float-right" title="Image processing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="numpy2.html" class="btn btn-neutral float-left" title="NumPy (continues)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2019, Jarkko Toivonen
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="image_processing.html" rel="next" title="Image processing">Next <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="numpy2.html" rel="prev" title="NumPy (continues)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2018-2019, Jarkko Toivonen
 
     </p>
-  </div>
+</div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
-   
-
 </body>
 </html>

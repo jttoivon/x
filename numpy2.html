@@ -1,88 +1,45 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>NumPy (continues) &mdash; Data analysis with Python  documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Matplotlib" href="matplotlib.html" />
-    <link rel="prev" title="NumPy" href="numpy.html" /> 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NumPy (continues) — Data analysis with Python  documentation</title>
+<script src="_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript"></script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="_static/language_data.js" type="text/javascript"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="_static/js/theme.js" type="text/javascript"></script>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="matplotlib.html" rel="next" title="Matplotlib"/>
+<link href="numpy.html" rel="prev" title="NumPy"/>
 </head>
-
 <body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="index.html" class="icon icon-home"> Data analysis with Python
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="index.html"> Data analysis with Python
           
 
           
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
@@ -125,70 +82,28 @@
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">ML: Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pca.html">ML: Principal component analysis</a></li>
 </ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Data analysis with Python</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>NumPy (continues)</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/numpy2.ipynb.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="index.html">Data analysis with Python</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="index.html">Docs</a> »</li>
+<li>NumPy (continues)</li>
+<li class="wy-breadcrumbs-aside">
+<a href="_sources/numpy2.ipynb.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 <style>
 /* CSS for nbsphinx extension */
 
@@ -412,7 +327,7 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/numpy2.ipynb">numpy2.ipynb</a>.
-<span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/numpy2.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/x/blob/master/numpy2.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="NumPy-(continues)">
 <h1>NumPy (continues)<a class="headerlink" href="#NumPy-(continues)" title="Permalink to this headline">¶</a></h1>
@@ -511,7 +426,7 @@ True
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="n">a</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&quot;</span><span class="p">)[</span><span class="s1">&#39;Air temperature (degC)&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">a</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv"</span><span class="p">)[</span><span class="s1">'Air temperature (degC)'</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 </div>
 </div>
@@ -524,9 +439,9 @@ True
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-6-4b457e8fbd82&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
-<span class="ansi-green-intense-fg ansi-bold">      2</span> a<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;Air temperature (degC)&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>values
+<span class="ansi-green-intense-fg ansi-bold">      2</span> a<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'Air temperature (degC)'</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>values
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'pandas'
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -552,7 +467,7 @@ True
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of days with the temperature below zero&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">))</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Number of days with the temperature below zero"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -625,9 +540,8 @@ Number of days with the temperature below zero 0
 </pre></div></div>
 </div>
 <p>Compare this result with the original array <code class="docutils literal notranslate"><span class="pre">a</span></code> to make sure you understand what’s going on!</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 1 (column comparison)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-1-(column-comparison)">Exercise 1 (column comparison)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">column_comparison</span></code> that gets a two dimensional array as parameter. The function should return a new array containing those rows from the input that have the value in the second column larger than in the second last column. You may assume that the input contains at least two columns. Don’t use loops, but instead vectorized operations. Try out your function in the main function.</p>
 <p>For array</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">8</span> <span class="mi">9</span> <span class="mi">3</span> <span class="mi">8</span> <span class="mi">8</span><span class="p">]</span>
@@ -643,9 +557,8 @@ Exercise 1 (column comparison)</div>
 <span class="p">[</span><span class="mi">7</span> <span class="mi">8</span> <span class="mi">1</span> <span class="mi">6</span> <span class="mi">2</span><span class="p">]]</span>
 </pre></div>
 </div>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 2 (first half second half)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-2-(first-half-second-half)">Exercise 2 (first half second half)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">first_half_second_half</span></code> that gets a two dimensional array of shape <code class="docutils literal notranslate"><span class="pre">(n,2*m)</span></code> as a parameter. The input array has <code class="docutils literal notranslate"><span class="pre">2*m</span></code> columns. The output from the function should be a matrix with those rows from the input that have the sum of the first <code class="docutils literal notranslate"><span class="pre">m</span></code> elements larger than the sum of the last <code class="docutils literal notranslate"><span class="pre">m</span></code> elements on the row. Your solution should call the <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> function or the corresponding method exactly twice.</p>
 <hr/></div>
 <div class="section" id="Fancy-indexing">
@@ -926,9 +839,9 @@ Exercise 2 (first half second half)</div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Array a:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Array a:"</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
 <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argsort</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Indices:&quot;</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Indices:"</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -959,9 +872,8 @@ Indices: [1 0 3 2 4]
 [1 2 3 4 5]
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 3 (most frequent first)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-3-(most-frequent-first)">Exercise 3 (most frequent first)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">most_frequent_first</span></code> that gets a two dimensional array and an index <code class="docutils literal notranslate"><span class="pre">c</span></code> of a column as parameters. The function should then return the array whose rows are sorted so that those rows with the most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code> come first, then come the rows with the second most frequent element in column <code class="docutils literal notranslate"><span class="pre">c</span></code>, and so on.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span>
@@ -994,7 +906,7 @@ Exercise 3 (most frequent first)</div>
 <div class="section" id="Matrix-operations">
 <h2>Matrix operations<a class="headerlink" href="#Matrix-operations" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> operator in NumPy corresponds to the element-wise product of two arrays. However, very often we would like to use the <em>matrix multiplication</em>. As a reminder, if <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are two matrices with shapes <span class="math notranslate nohighlight">\(n \times k\)</span> and <span class="math notranslate nohighlight">\(k \times m\)</span> respectively, then the matrix product of <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> is the matrix <span class="math notranslate nohighlight">\(c\)</span> with shape <span class="math notranslate nohighlight">\(n \times m\)</span>, where <span class="math notranslate nohighlight">\(c_{ij} = \sum_{h=1}^k a_{ih} b_{hj}\)</span> for <span class="math notranslate nohighlight">\(1 \le i \le n\)</span> and <span class="math notranslate nohighlight">\(1 \le j \le m\)</span>. In NumPy we
-can compute the matrix product using the <code class="docutils literal notranslate"><span class="pre">np.matmul</span></code> function or the <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> operator. An example of this:</p>
+can compute the matrix product using the <code class="docutils literal notranslate"><span class="pre">np.matmul</span></code> function or the <code class="docutils literal notranslate"><span class="pre">@</span></code> operator. An example of this:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
@@ -1026,7 +938,7 @@ can compute the matrix product using the <code class="docutils literal notransla
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">c</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
-<span class="n">info</span><span class="p">(</span><span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
+<span class="n">info</span><span class="p">(</span><span class="s2">"c"</span><span class="p">,</span> <span class="n">c</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1039,9 +951,9 @@ can compute the matrix product using the <code class="docutils literal notransla
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-27-645bd7bfb8a3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> c<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>matmul<span class="ansi-blue-fg">(</span>a<span class="ansi-blue-fg">,</span>b<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;c&#34;</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>info<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"c"</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;info&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'info' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1082,11 +994,11 @@ can compute the matrix product using the <code class="docutils literal notransla
 <span></span><span class="n">s</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">],</span>
  <span class="p">[</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
  <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original matrix:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Original matrix:"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
 <span class="n">s_inv</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Inverted matrix:&quot;</span><span class="p">,</span> <span class="n">s_inv</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix product:&quot;</span><span class="p">,</span> <span class="n">s</span> <span class="o">@</span> <span class="n">s_inv</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>                            <span class="c1"># This should be pretty close to the identity matrix np.eye(3)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Matrix product the other way:&quot;</span><span class="p">,</span> <span class="n">s_inv</span> <span class="o">@</span> <span class="n">s</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>                            <span class="c1"># Same here</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Inverted matrix:"</span><span class="p">,</span> <span class="n">s_inv</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Matrix product:"</span><span class="p">,</span> <span class="n">s</span> <span class="o">@</span> <span class="n">s_inv</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>                            <span class="c1"># This should be pretty close to the identity matrix np.eye(3)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Matrix product the other way:"</span><span class="p">,</span> <span class="n">s_inv</span> <span class="o">@</span> <span class="n">s</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">"</span><span class="se">\n</span><span class="s2">"</span><span class="p">)</span>                            <span class="c1"># Same here</span>
 </pre></div>
 </div>
 </div>
@@ -1135,17 +1047,15 @@ Matrix product the other way:
 [ 1.  4.  2.]
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 4 (matrix power)</div>
-<p>Repeat the functionality of the NumPy function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.matrix_power</span></code>, which raises a square matrix of shape (m,m) to the <code class="docutils literal notranslate"><span class="pre">n</span></code>th power. Here the multiplication is the matrix multiplication. Square matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> raised to power <code class="docutils literal notranslate"><span class="pre">n</span></code> is therefore <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&#64;</span> <span class="pre">a</span> <span class="pre">&#64;</span> <span class="pre">...</span> <span class="pre">&#64;</span> <span class="pre">a</span></code> where <code class="docutils literal notranslate"><span class="pre">a</span></code> is repeated <code class="docutils literal notranslate"><span class="pre">n</span></code> times. When n is zero then <span class="math notranslate nohighlight">\(a^0\)</span> is equal to <code class="docutils literal notranslate"><span class="pre">np.eye(m)</span></code>.</p>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-4-(matrix-power)">Exercise 4 (matrix power)</a></div>
+<p>Repeat the functionality of the NumPy function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.matrix_power</span></code>, which raises a square matrix of shape (m,m) to the <code class="docutils literal notranslate"><span class="pre">n</span></code>th power. Here the multiplication is the matrix multiplication. Square matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> raised to power <code class="docutils literal notranslate"><span class="pre">n</span></code> is therefore <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">@</span> <span class="pre">a</span> <span class="pre">@</span> <span class="pre">...</span> <span class="pre">@</span> <span class="pre">a</span></code> where <code class="docutils literal notranslate"><span class="pre">a</span></code> is repeated <code class="docutils literal notranslate"><span class="pre">n</span></code> times. When n is zero then <span class="math notranslate nohighlight">\(a^0\)</span> is equal to <code class="docutils literal notranslate"><span class="pre">np.eye(m)</span></code>.</p>
 <p>Part 1.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">matrix_power</span></code> that gets as first argument a square matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> and as second argument a non-negative integer <code class="docutils literal notranslate"><span class="pre">n</span></code>. The function should return the matrix <code class="docutils literal notranslate"><span class="pre">a</span></code> multiplied by itself <code class="docutils literal notranslate"><span class="pre">n-1</span></code> times. Use Python’s reduce function and a generator expression.</p>
 <p>Part 2.</p>
 <p>Extend the <code class="docutils literal notranslate"><span class="pre">matrix_power</span></code> function. For negative powers, we define <span class="math notranslate nohighlight">\(a^{-1}\)</span> to be equal to the multiplicative inverse of <code class="docutils literal notranslate"><span class="pre">a</span></code>. You can use NumPy’s function <code class="docutils literal notranslate"><span class="pre">numpy.linalg.inv</span></code> for this. And you may assume that the input matrix is invertible.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 5 (correlation)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-5-(correlation)">Exercise 5 (correlation)</a></div>
 <p>Load the iris dataset using the provided function <code class="docutils literal notranslate"><span class="pre">load()</span></code> in the stub solution. The four columns of the returned array correspond to</p>
 <ul class="simple">
 <li>sepal length (cm)</li>
@@ -1169,17 +1079,14 @@ a_{n1}x_1 + a_{n2}x_2 + \cdots a_{nm}x_m = b_n\\\end{split}\]</div>
 <div class="math notranslate nohighlight">
 \[A \cdot x = b\]</div>
 <p>where <span class="math notranslate nohighlight">\(A\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,m)</span></code>, the unknown <span class="math notranslate nohighlight">\(x\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(m,1)</span></code>, and <span class="math notranslate nohighlight">\(b\)</span> has shape <code class="docutils literal notranslate"><span class="pre">(n,1)</span></code>.</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 6 (meeting lines)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-6-(meeting-lines)">Exercise 6 (meeting lines)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">meeting_lines</span></code> that gets the coefficients of two lines as parameters and returns the point where the two lines meet. The equations for the lines are <span class="math notranslate nohighlight">\(y=a_1x + b_1\)</span> and <span class="math notranslate nohighlight">\(y=a_2x + b_2\)</span>. Use the <code class="docutils literal notranslate"><span class="pre">np.linalg.solve</span></code> function. Create a main function to test your solution.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 7 (meeting planes)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-7-(meeting-planes)">Exercise 7 (meeting planes)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">meeting_planes</span></code> that gets the coefficients of three planes as parameters and returns the point where the planes meet. The equations for the planes are: <span class="math notranslate nohighlight">\(z =a_1y + b_1x+ c_1\)</span>, <span class="math notranslate nohighlight">\(z =a_2y + b_2x+ c_2\)</span>, and <span class="math notranslate nohighlight">\(z =a_3y + b_3x+ c_3\)</span>.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 8 (almost meeting lines)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-8-(almost-meeting-lines)">Exercise 8 (almost meeting lines)</a></div>
 <p>In the earlier “meeting lines” exercise there is a problem if the lines don’t meet at all. Extend that solution so that it tells the meeting point if it exists, and otherwise finds the point that is closest to the both lines. You can use the <code class="docutils literal notranslate"><span class="pre">numpy.linalg.lstsq</span></code> for this.</p>
 <p>Example of usage:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x</span><span class="p">),</span> <span class="n">exact</span> <span class="o">=</span> <span class="n">almost_meeting_lines</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
@@ -1189,54 +1096,31 @@ Exercise 8 (almost meeting lines)</div>
 </div>
 <hr/><!--NAVIGATION--></div>
 </div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="matplotlib.html" class="btn btn-neutral float-right" title="Matplotlib" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="numpy.html" class="btn btn-neutral float-left" title="NumPy" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2019, Jarkko Toivonen
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="matplotlib.html" rel="next" title="Matplotlib">Next <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="numpy.html" rel="prev" title="NumPy"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2018-2019, Jarkko Toivonen
 
     </p>
-  </div>
+</div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
-   
-
 </body>
 </html>

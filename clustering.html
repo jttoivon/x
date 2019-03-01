@@ -1,88 +1,45 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>ML: Clustering &mdash; Data analysis with Python  documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ML: Principal component analysis" href="pca.html" />
-    <link rel="prev" title="ML: Naive Bayes classification" href="bayes.html" /> 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ML: Clustering — Data analysis with Python  documentation</title>
+<script src="_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript"></script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="_static/language_data.js" type="text/javascript"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="_static/js/theme.js" type="text/javascript"></script>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="pca.html" rel="next" title="ML: Principal component analysis"/>
+<link href="bayes.html" rel="prev" title="ML: Naive Bayes classification"/>
 </head>
-
 <body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="index.html" class="icon icon-home"> Data analysis with Python
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="index.html"> Data analysis with Python
           
 
           
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
@@ -124,70 +81,28 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pca.html">ML: Principal component analysis</a></li>
 </ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Data analysis with Python</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>ML: Clustering</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/clustering.ipynb.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="index.html">Data analysis with Python</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="index.html">Docs</a> »</li>
+<li>ML: Clustering</li>
+<li class="wy-breadcrumbs-aside">
+<a href="_sources/clustering.ipynb.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 <style>
 /* CSS for nbsphinx extension */
 
@@ -411,13 +326,13 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/clustering.ipynb">clustering.ipynb</a>.
-<span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/clustering.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/x/blob/master/clustering.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col width="34%" />
-<col width="36%" />
-<col width="31%" />
+<col width="34%"/>
+<col width="36%"/>
+<col width="31%"/>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference external" href="#Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></td>
@@ -464,9 +379,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-1-3f4764b47b06&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
-<span class="ansi-green-intense-fg ansi-bold">      3</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'matplotlib'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'inline'</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'matplotlib'
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -492,7 +407,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span> X<span class="ansi-blue-fg">,</span>y <span class="ansi-blue-fg">=</span> make_blobs<span class="ansi-blue-fg">(</span>centers<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span> n_samples<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">200</span><span class="ansi-blue-fg">,</span> random_state<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span> cluster_std<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.7</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>y<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <p>Now we plot these points, but without coloring the points using the labels:</p>
@@ -515,7 +430,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-3-5a189fb9a031&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>We can still discern four clusters in the data set. Let’s see if the k-means algorithm can recover these clusters. First we create the instance of the k-means model by giving it the number of clusters 4 as a hyperparameter.</p>
@@ -544,7 +459,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -553,7 +468,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">c</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">);</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">);</span> <span class="c1"># Show the centres</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span> <span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">);</span> <span class="c1"># Show the centres</span>
 </pre></div>
 </div>
 </div>
@@ -566,9 +481,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-5-f1b4c0483e7a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">=</span>model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> s<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;red&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span> <span class="ansi-red-fg"># Show the centres</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> s<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"red"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span> <span class="ansi-red-fg"># Show the centres</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>The clustering looks more or less correct. To get a more quantitative measure of success we can get the accuracy score.</p>
@@ -579,7 +494,7 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">accuracy_score</span>
 <span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy score is"</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -593,9 +508,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-6-5547f719acd3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>metrics <span class="ansi-green-fg">import</span> accuracy_score
 <span class="ansi-green-intense-fg ansi-bold">      2</span> acc<span class="ansi-blue-fg">=</span>accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Accuracy score is&#34;</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <p>Oops! Even though the clusters could match almost perfectly to the original, their labels might be permuted. Let’s select randomly one point from each cluster and check their labels from the original data labels. Then we use this label for the whole cluster. In essence, we are renaming the clusters, not re-clustering the data.</p>
@@ -629,7 +544,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> range<span class="ansi-blue-fg">(</span>n_clusters<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span>         idx <span class="ansi-blue-fg">=</span> labels <span class="ansi-blue-fg">==</span> i
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'scipy'
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -653,7 +568,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>permutation <span class="ansi-blue-fg">=</span> find_permutation<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>permutation<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;find_permutation&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'find_permutation' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -662,7 +577,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">new_labels</span> <span class="o">=</span> <span class="p">[</span> <span class="n">permutation</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">]</span>   <span class="c1"># permute the labels</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy score is"</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">new_labels</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -675,9 +590,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-9-647fdfbe8c7f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>new_labels <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">[</span> permutation<span class="ansi-blue-fg">[</span>label<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> label <span class="ansi-green-fg">in</span> model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">]</span>   <span class="ansi-red-fg"># permute the labels</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Accuracy score is&#34;</span><span class="ansi-blue-fg">,</span> accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span> new_labels<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> accuracy_score<span class="ansi-blue-fg">(</span>y<span class="ansi-blue-fg">,</span> new_labels<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;model&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
 </pre></div></div>
 </div>
 <p>So, the k-means algorithm seems to work well in this case, but the can be several problems. Firstly, even though an EM algorithm always converges, it might converge to a local maximum. To avoid this, EM type algorithms are usually run several times, each time starting from different random initial values. For instance, in the scikit-learn implementation, the algorithms is restarted by default 10 times.</p>
@@ -706,7 +621,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>datasets <span class="ansi-green-fg">import</span> make_moons
 <span class="ansi-green-intense-fg ansi-bold">      2</span> X<span class="ansi-blue-fg">,</span>y <span class="ansi-blue-fg">=</span> make_moons<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">200</span><span class="ansi-blue-fg">,</span> noise<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.05</span><span class="ansi-blue-fg">,</span> random_state<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -728,7 +643,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-11-913a12f5715a&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -754,7 +669,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">=</span>model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;KMeans&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'KMeans' is not defined
 </pre></div></div>
 </div>
 <p>The clustering does not work well now, since it is not possible to separate the two clusters with a line. We could embed this data set into a higher dimensional space, where the separation is possible. And then apply the k-means clustering.</p>
@@ -784,7 +699,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> X<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> c<span class="ansi-blue-fg">=</span>model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <p>The good news is that DBSCAN does not require the user to specify the number of clusters. But now the algorithm depends on another hyperparameter: a threshold for distance (here 0.3).</p>
@@ -815,7 +730,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span> digits <span class="ansi-blue-fg">=</span> load_digits<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> digits<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">.</span>shape
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <p>To get an idea how these data points look like, we plot first ten of these.</p>
@@ -826,7 +741,7 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]))</span>
 <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">data</span><span class="p">[:</span><span class="mi">10</span><span class="p">]):</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digit</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digit</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -840,9 +755,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-15-99df9ff4a1c6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fig<span class="ansi-blue-fg">,</span> axes <span class="ansi-blue-fg">=</span> plt<span class="ansi-blue-fg">.</span>subplots<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> subplot_kw<span class="ansi-blue-fg">=</span>dict<span class="ansi-blue-fg">(</span>xticks<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> yticks<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">for</span> ax<span class="ansi-blue-fg">,</span> digit <span class="ansi-green-fg">in</span> zip<span class="ansi-blue-fg">(</span>axes<span class="ansi-blue-fg">.</span>flat<span class="ansi-blue-fg">,</span> digits<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     ax<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>digit<span class="ansi-blue-fg">.</span>reshape<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> cmap<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;gray&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     ax<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>digit<span class="ansi-blue-fg">.</span>reshape<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> cmap<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"gray"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>Let’s cluster these data points into ten clusters.</p>
@@ -869,7 +784,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>digits<span class="ansi-blue-fg">.</span>data<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">.</span>shape
 
-<span class="ansi-red-fg">NameError</span>: name &#39;KMeans&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'KMeans' is not defined
 </pre></div></div>
 </div>
 <p>So, we have ten cluster centres, which are images with 8x8=64 pixels in them. We can have a look at their appearence:</p>
@@ -880,7 +795,7 @@ This page was generated from <a class="reference external" href="https://github.
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="n">subplot_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">xticks</span><span class="o">=</span><span class="p">[],</span> <span class="n">yticks</span><span class="o">=</span><span class="p">[]))</span>
 <span class="k">for</span> <span class="n">ax</span><span class="p">,</span> <span class="n">digit</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flat</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">cluster_centers_</span><span class="p">):</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digit</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;gray&quot;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">digit</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">8</span><span class="p">),</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"gray"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -894,9 +809,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-17-2c2acd792882&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>fig<span class="ansi-blue-fg">,</span> axes <span class="ansi-blue-fg">=</span> plt<span class="ansi-blue-fg">.</span>subplots<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span> subplot_kw<span class="ansi-blue-fg">=</span>dict<span class="ansi-blue-fg">(</span>xticks<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> yticks<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">for</span> ax<span class="ansi-blue-fg">,</span> digit <span class="ansi-green-fg">in</span> zip<span class="ansi-blue-fg">(</span>axes<span class="ansi-blue-fg">.</span>flat<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>cluster_centers_<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>     ax<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>digit<span class="ansi-blue-fg">.</span>reshape<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> cmap<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;gray&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>     ax<span class="ansi-blue-fg">.</span>imshow<span class="ansi-blue-fg">(</span>digit<span class="ansi-blue-fg">.</span>reshape<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">8</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> cmap<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"gray"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>One can recognize these numbers with the exception of maybe number eight. What is the accuracy score of this clustering?</p>
@@ -908,7 +823,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span></span><span class="n">permutation3</span> <span class="o">=</span> <span class="n">find_permutation</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">permutation3</span><span class="p">)</span>
 <span class="n">acc</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">digits</span><span class="o">.</span><span class="n">target</span><span class="p">,</span> <span class="p">[</span> <span class="n">permutation3</span><span class="p">[</span><span class="n">label</span><span class="p">]</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">labels_</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy score is&quot;</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Accuracy score is"</span><span class="p">,</span> <span class="n">acc</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -923,19 +838,17 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>permutation3 <span class="ansi-blue-fg">=</span> find_permutation<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span> digits<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span>permutation3<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> acc <span class="ansi-blue-fg">=</span> accuracy_score<span class="ansi-blue-fg">(</span>digits<span class="ansi-blue-fg">.</span>target<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span> permutation3<span class="ansi-blue-fg">[</span>label<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> label <span class="ansi-green-fg">in</span> model<span class="ansi-blue-fg">.</span>labels_<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Accuracy score is&#34;</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Accuracy score is"</span><span class="ansi-blue-fg">,</span> acc<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;find_permutation&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'find_permutation' is not defined
 </pre></div></div>
 </div>
 <p>This is quite a good result for such a simple algorithm!</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 5 (plant clustering)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-5-(plant-clustering)">Exercise 5 (plant clustering)</a></div>
 <p>Using the same iris data set that you saw earlier in the classification, apply k-means clustering with 3 clusters. Create a function <code class="docutils literal notranslate"><span class="pre">plant_clustering</span></code> that loads the iris data set, clusters the data and returns the accuracy_score.</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 6 (nonconvex clusters)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-6-(nonconvex-clusters)">Exercise 6 (nonconvex clusters)</a></div>
 <p>Read the tab separated file data.tsv from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder into a DataFrame. The dataset has two features X1 and X2, and the label y. Cluster the feature matrix using DBSCAN with different values for the eps parameter. Use values in <code class="docutils literal notranslate"><span class="pre">np.arange(0.05,</span> <span class="pre">0.2,</span> <span class="pre">0.05)</span></code> for clustering. For each clustering, collect the accuracy score, the number of clusters, and the number of outliers. Return these values in a DataFrame, where <code class="docutils literal notranslate"><span class="pre">eps</span></code> is the index and the columns are names as in the below example.</p>
 <p>Note that DBSCAN uses label -1 to denote outliers , that is, those data points that didn’t fit well in any cluster. You have to modify the find_permutation function to handle this: ignore the outlier data points from the accuracy score computation. In addition, if the number of clusters is not the same as the number of labels in the original data, set the accuracy score to NaN.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>     eps   Score  Clusters  Outliers
@@ -966,12 +879,12 @@ Exercise 6 (nonconvex clusters)</div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span><span class="p">;</span> <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">color_codes</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;iris&quot;</span><span class="p">)</span>
-<span class="n">species</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;species&quot;</span><span class="p">)</span>   <span class="c1"># Remove the species column</span>
+<span class="n">iris</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s2">"iris"</span><span class="p">)</span>
+<span class="n">species</span> <span class="o">=</span> <span class="n">iris</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">"species"</span><span class="p">)</span>   <span class="c1"># Remove the species column</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">species</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>         <span class="c1"># The samples seems to be from these three species</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">clustermap</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">&quot;ward&quot;</span><span class="p">,</span> <span class="n">col_cluster</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;label&#39;</span><span class="p">:</span> <span class="s1">&#39;centimeters&#39;</span><span class="p">});</span> <span class="c1"># Cluster only the rows</span>
-<span class="c1">#plt.colorbar().ax.set_title(&#39;This is a title&#39;)</span>
-<span class="c1">#plt.gca().images[-1].colorbar.ax.set_title(&quot;title&quot;)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">clustermap</span><span class="p">(</span><span class="n">iris</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s2">"ward"</span><span class="p">,</span> <span class="n">col_cluster</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">cbar_kws</span><span class="o">=</span><span class="p">{</span><span class="s1">'label'</span><span class="p">:</span> <span class="s1">'centimeters'</span><span class="p">});</span> <span class="c1"># Cluster only the rows</span>
+<span class="c1">#plt.colorbar().ax.set_title('This is a title')</span>
+<span class="c1">#plt.gca().images[-1].colorbar.ax.set_title("title")</span>
 
 </pre></div>
 </div>
@@ -985,18 +898,17 @@ Exercise 6 (nonconvex clusters)</div>
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-19-15ba3f0a4191&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> seaborn <span class="ansi-green-fg">as</span> sns<span class="ansi-blue-fg">;</span> sns<span class="ansi-blue-fg">.</span>set<span class="ansi-blue-fg">(</span>color_codes<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> iris <span class="ansi-blue-fg">=</span> sns<span class="ansi-blue-fg">.</span>load_dataset<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;iris&#34;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> species <span class="ansi-blue-fg">=</span> iris<span class="ansi-blue-fg">.</span>pop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;species&#34;</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># Remove the species column</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> iris <span class="ansi-blue-fg">=</span> sns<span class="ansi-blue-fg">.</span>load_dataset<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"iris"</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> species <span class="ansi-blue-fg">=</span> iris<span class="ansi-blue-fg">.</span>pop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"species"</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># Remove the species column</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span>species<span class="ansi-blue-fg">.</span>unique<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>         <span class="ansi-red-fg"># The samples seems to be from these three species</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> sns<span class="ansi-blue-fg">.</span>clustermap<span class="ansi-blue-fg">(</span>iris<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;ward&#34;</span><span class="ansi-blue-fg">,</span> col_cluster<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> cbar_kws<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#39;label&#39;</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">&#39;centimeters&#39;</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span> <span class="ansi-red-fg"># Cluster only the rows</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> sns<span class="ansi-blue-fg">.</span>clustermap<span class="ansi-blue-fg">(</span>iris<span class="ansi-blue-fg">,</span> method<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"ward"</span><span class="ansi-blue-fg">,</span> col_cluster<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">,</span> cbar_kws<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">'label'</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">'centimeters'</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span> <span class="ansi-red-fg"># Cluster only the rows</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'seaborn'
 </pre></div></div>
 </div>
 <p>With sharp eye and good will one can discern three clusters in the above heatmap and dendrogram.</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 7 (binding sites)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-7-(binding-sites)">Exercise 7 (binding sites)</a></div>
 <p>A binding site is a piece of DNA where a certain protein prefers to bind. The piece of DNA can be described as a string consisting of letters A, C, G, and T, which correspond to nucleotides Adenine, Cytosine, Guanine, and Thymine. In this exercise the length of binding sites is eight nucleotides. They are stored in the file <code class="docutils literal notranslate"><span class="pre">data.seq</span></code>, and the binding sites there are classified into two classes.</p>
 <p>Part 1. Write function <code class="docutils literal notranslate"><span class="pre">toint</span></code> that converts a nucleotide to an integer. Use the following mapping:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">-&gt;</span> <span class="mi">0</span>
@@ -1005,7 +917,7 @@ Exercise 7 (binding sites)</div>
 <span class="n">T</span> <span class="o">-&gt;</span> <span class="mi">3</span>
 </pre></div>
 </div>
-<p>Write also function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that gets a filename as a parameter. The function should load the contents of the file into a DataFrame. The column <code class="docutils literal notranslate"><span class="pre">X</span></code> contains a string. Convert this column into a feature matrix using the above <code class="docutils literal notranslate"><span class="pre">toint</span></code> function. For example the column <code class="docutils literal notranslate"><span class="pre">[&quot;GGATAATA&quot;,&quot;CGATAACC&quot;]</span></code> should result to the feature matrix</p>
+<p>Write also function <code class="docutils literal notranslate"><span class="pre">get_features_and_labels</span></code> that gets a filename as a parameter. The function should load the contents of the file into a DataFrame. The column <code class="docutils literal notranslate"><span class="pre">X</span></code> contains a string. Convert this column into a feature matrix using the above <code class="docutils literal notranslate"><span class="pre">toint</span></code> function. For example the column <code class="docutils literal notranslate"><span class="pre">["GGATAATA","CGATAACC"]</span></code> should result to the feature matrix</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
 <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span>
 </pre></div>
@@ -1017,54 +929,31 @@ to the <code class="docutils literal notranslate"><span class="pre">fit_predict<
 <p>Which affinity (or distance) do you think is theoretically more correct of these two (Euclidean or Hamming)? Why?</p>
 <!--NAVIGATION--></div>
 </div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="pca.html" class="btn btn-neutral float-right" title="ML: Principal component analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="bayes.html" class="btn btn-neutral float-left" title="ML: Naive Bayes classification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2019, Jarkko Toivonen
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="pca.html" rel="next" title="ML: Principal component analysis">Next <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="bayes.html" rel="prev" title="ML: Naive Bayes classification"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2018-2019, Jarkko Toivonen
 
     </p>
-  </div>
+</div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
-   
-
 </body>
 </html>

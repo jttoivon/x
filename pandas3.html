@@ -1,88 +1,45 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Pandas (continues) &mdash; Data analysis with Python  documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Machine learning" href="linear_regression.html" />
-    <link rel="prev" title="Pandas (continues)" href="pandas2.html" /> 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pandas (continues) — Data analysis with Python  documentation</title>
+<script src="_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript"></script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="_static/language_data.js" type="text/javascript"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="_static/js/theme.js" type="text/javascript"></script>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="linear_regression.html" rel="next" title="Machine learning"/>
+<link href="pandas2.html" rel="prev" title="Pandas (continues)"/>
 </head>
-
 <body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="index.html" class="icon icon-home"> Data analysis with Python
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="index.html"> Data analysis with Python
           
 
           
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
@@ -128,70 +85,28 @@
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">ML: Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pca.html">ML: Principal component analysis</a></li>
 </ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Data analysis with Python</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Pandas (continues)</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/pandas3.ipynb.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="index.html">Data analysis with Python</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="index.html">Docs</a> »</li>
+<li>Pandas (continues)</li>
+<li class="wy-breadcrumbs-aside">
+<a href="_sources/pandas3.ipynb.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 <style>
 /* CSS for nbsphinx extension */
 
@@ -415,13 +330,13 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/pandas3.ipynb">pandas3.ipynb</a>.
-<span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/pandas3.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/x/blob/master/pandas3.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col width="35%" />
-<col width="34%" />
-<col width="32%" />
+<col width="35%"/>
+<col width="34%"/>
+<col width="32%"/>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference external" href="#Exercise-1-(split-date-continues)">Exercise 1 (split date continues)</a></td>
@@ -461,7 +376,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
 <span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'pandas'
 </pre></div></div>
 </div>
 <div class="section" id="Catenating-datasets">
@@ -485,7 +400,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">a</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span></span><span class="n">a</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">"AB"</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">a</span>
 </pre></div>
 </div>
@@ -498,7 +413,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-3-45207f2bb694&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;AB&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>a<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"AB"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> a
 
 <span class="ansi-green-fg">&lt;ipython-input-2-65e2be0031c2&gt;</span> in <span class="ansi-cyan-fg">makedf</span><span class="ansi-blue-fg">(cols, ind)</span>
@@ -506,7 +421,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span>     data <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span>c <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span>str<span class="ansi-blue-fg">(</span>c<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> str<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> ind<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> c <span class="ansi-green-fg">in</span> cols<span class="ansi-blue-fg">}</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> ind<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -514,7 +429,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">b</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">&quot;AB&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span></span><span class="n">b</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">"AB"</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="n">b</span>
 </pre></div>
 </div>
@@ -527,7 +442,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-4-2e9e80bcbb07&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>b<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;AB&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>b<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"AB"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> b
 
 <span class="ansi-green-fg">&lt;ipython-input-2-65e2be0031c2&gt;</span> in <span class="ansi-cyan-fg">makedf</span><span class="ansi-blue-fg">(cols, ind)</span>
@@ -535,7 +450,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span>     data <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span>c <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span>str<span class="ansi-blue-fg">(</span>c<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> str<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> ind<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> c <span class="ansi-green-fg">in</span> cols<span class="ansi-blue-fg">}</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> ind<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -543,7 +458,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">c</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">&quot;CD&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+<span></span><span class="n">c</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">"CD"</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
 <span class="n">c</span>
 </pre></div>
 </div>
@@ -556,7 +471,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-5-d1bdd1c3d8f2&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>c<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;CD&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>c<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"CD"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> c
 
 <span class="ansi-green-fg">&lt;ipython-input-2-65e2be0031c2&gt;</span> in <span class="ansi-cyan-fg">makedf</span><span class="ansi-blue-fg">(cols, ind)</span>
@@ -564,7 +479,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span>     data <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span>c <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span>str<span class="ansi-blue-fg">(</span>c<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> str<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> ind<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> c <span class="ansi-green-fg">in</span> cols<span class="ansi-blue-fg">}</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> ind<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -572,7 +487,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">d</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">&quot;BC&quot;</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span></span><span class="n">d</span><span class="o">=</span><span class="n">makedf</span><span class="p">(</span><span class="s2">"BC"</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 <span class="n">d</span>
 </pre></div>
 </div>
@@ -585,7 +500,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-6-432982b989d6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>d<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;BC&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>d<span class="ansi-blue-fg">=</span>makedf<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"BC"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> d
 
 <span class="ansi-green-fg">&lt;ipython-input-2-65e2be0031c2&gt;</span> in <span class="ansi-cyan-fg">makedf</span><span class="ansi-blue-fg">(cols, ind)</span>
@@ -593,7 +508,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      2</span>     data <span class="ansi-blue-fg">=</span> <span class="ansi-blue-fg">{</span>c <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span>str<span class="ansi-blue-fg">(</span>c<span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">+</span> str<span class="ansi-blue-fg">(</span>i<span class="ansi-blue-fg">)</span> <span class="ansi-green-fg">for</span> i <span class="ansi-green-fg">in</span> ind<span class="ansi-blue-fg">]</span> <span class="ansi-green-fg">for</span> c <span class="ansi-green-fg">in</span> cols<span class="ansi-blue-fg">}</span>
 <span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">return</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>data<span class="ansi-blue-fg">,</span> ind<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>In the following simple case, the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function works exactly as we expect it would:</p>
@@ -616,7 +531,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-7-721be5cb29e8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>b<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># The default axis is 0</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>The next, however, will create duplicate indices:</p>
@@ -641,7 +556,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>a<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> r
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -649,7 +564,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">r</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;A&quot;</span><span class="p">]</span>
+<span></span><span class="n">r</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="s2">"A"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -661,9 +576,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-9-80c78fd4577c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">&#34;A&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">"A"</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;r&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'r' is not defined
 </pre></div></div>
 </div>
 <p>This is not usually what we want! There are three solutions to this. Firstly, deny creation of duplicated indices by giving the <code class="docutils literal notranslate"><span class="pre">verify_integrity</span></code> parameter to the <code class="docutils literal notranslate"><span class="pre">concat</span></code> function:</p>
@@ -694,7 +609,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">import</span> sys
 <span class="ansi-green-intense-fg ansi-bold">      5</span>     print<span class="ansi-blue-fg">(</span>e<span class="ansi-blue-fg">,</span> file<span class="ansi-blue-fg">=</span>sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>Secondly, we can ask for automatic renumbering of rows:</p>
@@ -717,7 +632,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-11-d6ff967559c0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>a<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> ignore_index<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>Thirdly, we can ask for <em>hierarchical indexing</em>. The indices can contain multiple levels, but on this course we don’t consider hierarchical indices in detail. Hierarchical indices can make a two dimensional array to work like higher dimensional array.</p>
@@ -726,7 +641,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">r2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;first&#39;</span><span class="p">,</span> <span class="s1">&#39;second&#39;</span><span class="p">])</span>
+<span></span><span class="n">r2</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">a</span><span class="p">],</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">'first'</span><span class="p">,</span> <span class="s1">'second'</span><span class="p">])</span>
 <span class="n">r2</span>
 </pre></div>
 </div>
@@ -739,10 +654,10 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-12-dbcb5cba8b81&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r2<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>a<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> keys<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;first&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;second&#39;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r2<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>a<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> keys<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'first'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'second'</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> r2
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -750,7 +665,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">r2</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">][</span><span class="s2">&quot;first&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+<span></span><span class="n">r2</span><span class="p">[</span><span class="s2">"A"</span><span class="p">][</span><span class="s2">"first"</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -762,9 +677,9 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-13-2607369d6b1e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;A&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;first&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"A"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"first"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;r2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'r2' is not defined
 </pre></div></div>
 </div>
 <p>Everything works similarly, when we want to catenate horizontally:</p>
@@ -787,7 +702,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-14-3c39dd9245e9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>c<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>We have so far assumed that when concatenating vertically the columns of both DataFrames are the same, and when joining horizontally the indices are the same. This is, however, not required:</p>
@@ -810,7 +725,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-green-fg">&lt;ipython-input-15-67a87fd06ba9&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>d<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> sort<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>    <span class="ansi-red-fg"># sort option is used to silence a deprecation message</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>It expanded the non-existing cases with <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s. This method is called an <em>outer join</em>, which forms the union of columns in the two DataFrames. The alternative is <em>inner join</em>, which forms the intersection of columns:</p>
@@ -819,7 +734,7 @@ This page was generated from <a class="reference external" href="https://github.
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">d</span><span class="p">],</span> <span class="n">join</span><span class="o">=</span><span class="s2">&quot;inner&quot;</span><span class="p">)</span>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">a</span><span class="p">,</span><span class="n">d</span><span class="p">],</span> <span class="n">join</span><span class="o">=</span><span class="s2">"inner"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -831,14 +746,13 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-16-b5a803da3c4e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>d<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> join<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;inner&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>a<span class="ansi-blue-fg">,</span>d<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> join<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"inner"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 1 (split date continues)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-1-(split-date-continues)">Exercise 1 (split date continues)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">split_date_continues</span></code> that does</p>
 <ul class="simple">
 <li>read the bicycle data set</li>
@@ -856,7 +770,7 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1000</span><span class="p">,</span> <span class="s2">&quot;Jack&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="mi">29</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Wage&quot;</span><span class="p">,</span> <span class="s2">&quot;Name&quot;</span><span class="p">,</span> <span class="s2">&quot;Age&quot;</span><span class="p">])</span>
+<span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="mi">1000</span><span class="p">,</span> <span class="s2">"Jack"</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span> <span class="p">[</span><span class="mi">1500</span><span class="p">,</span> <span class="s2">"John"</span><span class="p">,</span> <span class="mi">29</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Wage"</span><span class="p">,</span> <span class="s2">"Name"</span><span class="p">,</span> <span class="s2">"Age"</span><span class="p">])</span>
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -869,10 +783,10 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-17-edad3c1a4365&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Jack&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1500</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;John&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">29</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Name&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Age&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Jack"</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1500</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"John"</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">29</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Wage"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Name"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Age"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> df
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>Now, create a new DataFrame with the occupations of persons:</p>
@@ -881,7 +795,7 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;John&quot;</span><span class="p">,</span> <span class="s2">&quot;Jack&quot;</span><span class="p">],</span> <span class="s2">&quot;Occupation&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Plumber&quot;</span><span class="p">,</span> <span class="s2">&quot;Carpenter&quot;</span><span class="p">]})</span>
+<span></span><span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Name"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"John"</span><span class="p">,</span> <span class="s2">"Jack"</span><span class="p">],</span> <span class="s2">"Occupation"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"Plumber"</span><span class="p">,</span> <span class="s2">"Carpenter"</span><span class="p">]})</span>
 <span class="n">df2</span>
 </pre></div>
 </div>
@@ -894,10 +808,10 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-18-c85784b6b117&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df2 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;Name&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;John&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Jack&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Occupation&#34;</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Plumber&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Carpenter&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df2 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">"Name"</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"John"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Jack"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Occupation"</span><span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Plumber"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Carpenter"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> df2
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>The following function call will merge the two DataFrames on their common field, and, importantly, will keep the indices <em>aligned</em>. What this means is that even though the names are listed in different order in the two frames, the merge will still give correct result.</p>
@@ -920,7 +834,7 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-green-fg">&lt;ipython-input-19-eb7da5eaf32c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>merge<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> df2<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>This was an example of a simple one-to-one merge, where the keys in the <code class="docutils literal notranslate"><span class="pre">Name</span></code> columns had 1-to-1 correspondence. Sometimes not all the keys appear in both DataFrames:</p>
@@ -929,7 +843,7 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df2</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s2">&quot;Name&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;James&quot;</span><span class="p">],</span> <span class="s2">&quot;Occupation&quot;</span><span class="p">:[</span><span class="s2">&quot;Painter&quot;</span><span class="p">]})],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span></span><span class="n">df3</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df2</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span> <span class="s2">"Name"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"James"</span><span class="p">],</span> <span class="s2">"Occupation"</span><span class="p">:[</span><span class="s2">"Painter"</span><span class="p">]})],</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">df3</span>
 </pre></div>
 </div>
@@ -942,10 +856,10 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-20-3912f47277db&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df3 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>df2<span class="ansi-blue-fg">,</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span> <span class="ansi-blue-fg">&#34;Name&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;James&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Occupation&#34;</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Painter&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> ignore_index<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df3 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>concat<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>df2<span class="ansi-blue-fg">,</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span> <span class="ansi-blue-fg">"Name"</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"James"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Occupation"</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Painter"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> ignore_index<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> df3
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -967,7 +881,7 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-green-fg">&lt;ipython-input-21-972fb6ae98cd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>merge<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> df3<span class="ansi-blue-fg">)</span>                <span class="ansi-red-fg"># By default an inner join is computed</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -975,7 +889,7 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">&quot;outer&quot;</span><span class="p">)</span>   <span class="c1"># Outer join</span>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">df3</span><span class="p">,</span> <span class="n">how</span><span class="o">=</span><span class="s2">"outer"</span><span class="p">)</span>   <span class="c1"># Outer join</span>
 </pre></div>
 </div>
 </div>
@@ -987,9 +901,9 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-22-e484e2c528b0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>merge<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> df3<span class="ansi-blue-fg">,</span> how<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;outer&#34;</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># Outer join</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>merge<span class="ansi-blue-fg">(</span>df<span class="ansi-blue-fg">,</span> df3<span class="ansi-blue-fg">,</span> how<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"outer"</span><span class="ansi-blue-fg">)</span>   <span class="ansi-red-fg"># Outer join</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>Also, many-to-one and many-to-many relationships can occur in merges:</p>
@@ -998,8 +912,8 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">books</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Title&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;War and Peace&quot;</span><span class="p">,</span> <span class="s2">&quot;Good Omens&quot;</span><span class="p">,</span> <span class="s2">&quot;Good Omens&quot;</span><span class="p">]</span> <span class="p">,</span>
-                      <span class="s2">&quot;Author&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Tolstoi&quot;</span><span class="p">,</span> <span class="s2">&quot;Terry Pratchett&quot;</span><span class="p">,</span> <span class="s2">&quot;Neil Gaiman&quot;</span><span class="p">]})</span>
+<span></span><span class="n">books</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Title"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"War and Peace"</span><span class="p">,</span> <span class="s2">"Good Omens"</span><span class="p">,</span> <span class="s2">"Good Omens"</span><span class="p">]</span> <span class="p">,</span>
+                      <span class="s2">"Author"</span> <span class="p">:</span> <span class="p">[</span><span class="s2">"Tolstoi"</span><span class="p">,</span> <span class="s2">"Terry Pratchett"</span><span class="p">,</span> <span class="s2">"Neil Gaiman"</span><span class="p">]})</span>
 <span class="n">books</span>
 </pre></div>
 </div>
@@ -1012,11 +926,11 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-23-c92a7b741eb3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> books = pd.DataFrame({&#34;Title&#34; : [&#34;War and Peace&#34;, &#34;Good Omens&#34;, &#34;Good Omens&#34;] ,
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                       &#34;Author&#34; : [&#34;Tolstoi&#34;, &#34;Terry Pratchett&#34;, &#34;Neil Gaiman&#34;]})
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> books = pd.DataFrame({"Title" : ["War and Peace", "Good Omens", "Good Omens"] ,
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                       "Author" : ["Tolstoi", "Terry Pratchett", "Neil Gaiman"]})
 <span class="ansi-green-intense-fg ansi-bold">      3</span> books
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1024,10 +938,10 @@ Exercise 1 (split date continues)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">collections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s2">&quot;Oodi&quot;</span><span class="p">,</span> <span class="s2">&quot;War and Peace&quot;</span><span class="p">],</span>
-                           <span class="p">[</span><span class="s2">&quot;Oodi&quot;</span><span class="p">,</span> <span class="s2">&quot;Good Omens&quot;</span><span class="p">],</span>
-                           <span class="p">[</span><span class="s2">&quot;Pasila&quot;</span><span class="p">,</span> <span class="s2">&quot;Good Omens&quot;</span><span class="p">],</span>
-                           <span class="p">[</span><span class="s2">&quot;Kallio&quot;</span><span class="p">,</span> <span class="s2">&quot;War and Peace&quot;</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Library&quot;</span><span class="p">,</span> <span class="s2">&quot;Title&quot;</span><span class="p">])</span>
+<span></span><span class="n">collections</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="s2">"Oodi"</span><span class="p">,</span> <span class="s2">"War and Peace"</span><span class="p">],</span>
+                           <span class="p">[</span><span class="s2">"Oodi"</span><span class="p">,</span> <span class="s2">"Good Omens"</span><span class="p">],</span>
+                           <span class="p">[</span><span class="s2">"Pasila"</span><span class="p">,</span> <span class="s2">"Good Omens"</span><span class="p">],</span>
+                           <span class="p">[</span><span class="s2">"Kallio"</span><span class="p">,</span> <span class="s2">"War and Peace"</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Library"</span><span class="p">,</span> <span class="s2">"Title"</span><span class="p">])</span>
 <span class="n">collections</span>
 </pre></div>
 </div>
@@ -1040,13 +954,13 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-24-371e3d10fac5&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> collections = pd.DataFrame([[&#34;Oodi&#34;, &#34;War and Peace&#34;],
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                            <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Oodi&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Good Omens&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span>                            <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Pasila&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Good Omens&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span>                            [&#34;Kallio&#34;, &#34;War and Peace&#34;]], columns=[&#34;Library&#34;, &#34;Title&#34;])
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> collections = pd.DataFrame([["Oodi", "War and Peace"],
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                            <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Oodi"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Good Omens"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span>                            <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Pasila"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Good Omens"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>                            ["Kallio", "War and Peace"]], columns=["Library", "Title"])
 <span class="ansi-green-intense-fg ansi-bold">      5</span> collections
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>All combinations with matching keys (<code class="docutils literal notranslate"><span class="pre">Name</span></code>) are created:</p>
@@ -1071,17 +985,15 @@ Exercise 1 (split date continues)</div>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>libraries_with_books_by <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>merge<span class="ansi-blue-fg">(</span>books<span class="ansi-blue-fg">,</span> collections<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> libraries_with_books_by
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 2 (cycling weather)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-2-(cycling-weather)">Exercise 2 (cycling weather)</a></div>
 <p>Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns ‘m’, ‘d’, ‘Time’, and ‘Time zone’.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather</span></code> that reads the data sets and returns the resulting DataFrame.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 3 (top bands)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-3-(top-bands)">Exercise 3 (top bands)</a></div>
 <p>Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<code class="docutils literal notranslate"><span class="pre">https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv</span></code>).</p>
 <hr/></div>
 <div class="section" id="Aggregates-and-groupings">
@@ -1093,7 +1005,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&quot;</span><span class="p">)</span>
+<span></span><span class="n">wh</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">"https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1105,9 +1017,9 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-26-39d3653b3107&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1115,8 +1027,8 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh3</span> <span class="o">=</span> <span class="n">wh</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;m&quot;</span><span class="p">:</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span> <span class="s2">&quot;Precipitation amount (mm)&quot;</span> <span class="p">:</span> <span class="s2">&quot;Precipitation&quot;</span><span class="p">,</span>
-                         <span class="s2">&quot;Snow depth (cm)&quot;</span> <span class="p">:</span> <span class="s2">&quot;Snow&quot;</span><span class="p">,</span> <span class="s2">&quot;Air temperature (degC)&quot;</span> <span class="p">:</span> <span class="s2">&quot;Temperature&quot;</span><span class="p">})</span>
+<span></span><span class="n">wh3</span> <span class="o">=</span> <span class="n">wh</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">"m"</span><span class="p">:</span> <span class="s2">"Month"</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">:</span> <span class="s2">"Day"</span><span class="p">,</span> <span class="s2">"Precipitation amount (mm)"</span> <span class="p">:</span> <span class="s2">"Precipitation"</span><span class="p">,</span>
+                         <span class="s2">"Snow depth (cm)"</span> <span class="p">:</span> <span class="s2">"Snow"</span><span class="p">,</span> <span class="s2">"Air temperature (degC)"</span> <span class="p">:</span> <span class="s2">"Temperature"</span><span class="p">})</span>
 <span class="n">wh3</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1129,11 +1041,11 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-27-b1f95056c28d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> wh3 = wh.rename(columns={&#34;m&#34;: &#34;Month&#34;, &#34;d&#34;: &#34;Day&#34;, &#34;Precipitation amount (mm)&#34; : &#34;Precipitation&#34;,
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                          &#34;Snow depth (cm)&#34; : &#34;Snow&#34;, &#34;Air temperature (degC)&#34; : &#34;Temperature&#34;})
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> wh3 = wh.rename(columns={"m": "Month", "d": "Day", "Precipitation amount (mm)" : "Precipitation",
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>                          "Snow depth (cm)" : "Snow", "Air temperature (degC)" : "Temperature"})
 <span class="ansi-green-intense-fg ansi-bold">      3</span> wh3<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh' is not defined
 </pre></div></div>
 </div>
 <p>Pandas has an operation that splits a DataFrame into groups, performs some operation on each of the groups, and then combines the result from each group into a resulting DataFrame. This split-apply-combine functionality is really flexible and powerful operation. In Pandas you start by calling the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> method, which splits the DataFrame into groups. In the following example the rows that contain measurements from the same month belong to the same group:</p>
@@ -1142,7 +1054,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">groups</span> <span class="o">=</span> <span class="n">wh3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span>
+<span></span><span class="n">groups</span> <span class="o">=</span> <span class="n">wh3</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)</span>
 <span class="n">groups</span>
 </pre></div>
 </div>
@@ -1155,10 +1067,10 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-28-3409694fc500&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups <span class="ansi-blue-fg">=</span> wh3<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups <span class="ansi-blue-fg">=</span> wh3<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> groups
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh3&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh3' is not defined
 </pre></div></div>
 </div>
 <p>Nothing happened yet, but the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object knows how the division into groups is done. This is called a lazy operation. We can query the number of groups in the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object:</p>
@@ -1181,7 +1093,7 @@ Exercise 3 (top bands)</div>
 <span class="ansi-green-fg">&lt;ipython-input-29-da47f9f7bd6b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>len<span class="ansi-blue-fg">(</span>groups<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <p>We can iterate through all the groups:</p>
@@ -1206,7 +1118,7 @@ Exercise 3 (top bands)</div>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">for</span> key<span class="ansi-blue-fg">,</span> group <span class="ansi-green-fg">in</span> groups<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span>     print<span class="ansi-blue-fg">(</span>key<span class="ansi-blue-fg">,</span> len<span class="ansi-blue-fg">(</span>group<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1228,7 +1140,7 @@ Exercise 3 (top bands)</div>
 <span class="ansi-green-fg">&lt;ipython-input-31-8cc4fa4802dc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">.</span>get_group<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">)</span>                 <span class="ansi-red-fg"># Group with index two is February</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object functions a bit like a DataFrame, so some operations which are allowed for DataFrames are also allowed for the <code class="docutils literal notranslate"><span class="pre">groupby</span></code> object. For example, we can get a subset of columns:</p>
@@ -1237,7 +1149,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">&quot;Temperature&quot;</span><span class="p">]</span>
+<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">"Temperature"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1249,9 +1161,9 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-32-e33eda77ac40&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Temperature&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Temperature"</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <p>For each DataFrame corresponding to a group the Temperature column was chosen. Still nothing was shown, because we haven’t applied any operation on the groups.</p>
@@ -1261,7 +1173,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">&quot;Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">"Temperature"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1273,9 +1185,9 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-33-25b41f7730dd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Temperature&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Temperature"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <p>Now what happened was that after the mean aggregation was performed on each group, the results were automatically combined into a resulting DataFrame. Let’s try some other aggregation:</p>
@@ -1284,7 +1196,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">&quot;Precipitation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span></span><span class="n">groups</span><span class="p">[</span><span class="s2">"Precipitation"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1296,9 +1208,9 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-34-880ab53f4d10&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Precipitation&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>groups<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Precipitation"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;groups&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'groups' is not defined
 </pre></div></div>
 </div>
 <p>Ok, the -1.0 values in the Precipitation field are causing trouble here, let’s convert them to zeros:</p>
@@ -1308,8 +1220,8 @@ Exercise 3 (top bands)</div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">wh4</span> <span class="o">=</span> <span class="n">wh3</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">wh4</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">wh4</span><span class="o">.</span><span class="n">Precipitation</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Precipitation&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">wh4</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">wh4</span><span class="o">.</span><span class="n">Snow</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Snow&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">wh4</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">wh4</span><span class="o">.</span><span class="n">Precipitation</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Precipitation"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">wh4</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">wh4</span><span class="o">.</span><span class="n">Snow</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="s2">"Snow"</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">wh4</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1323,11 +1235,11 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-35-8ea4c5fac199&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh4 <span class="ansi-blue-fg">=</span> wh3<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> wh4<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span>wh4<span class="ansi-blue-fg">.</span>Precipitation <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Precipitation&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> wh4<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span>wh4<span class="ansi-blue-fg">.</span>Snow <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Snow&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> wh4<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span>wh4<span class="ansi-blue-fg">.</span>Precipitation <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Precipitation"</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> wh4<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span>wh4<span class="ansi-blue-fg">.</span>Snow <span class="ansi-blue-fg">==</span> <span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Snow"</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> <span class="ansi-cyan-fg">0</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> wh4<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh3&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh3' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1335,7 +1247,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)[</span><span class="s2">&quot;Precipitation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span></span><span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)[</span><span class="s2">"Precipitation"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1347,9 +1259,9 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-36-da2577679b9b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Precipitation&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Precipitation"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh4&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh4' is not defined
 </pre></div></div>
 </div>
 <div class="section" id="Other-ways-to-operate-on-groups">
@@ -1362,9 +1274,9 @@ Exercise 3 (top bands)</div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="k">def</span> <span class="nf">myfilter</span><span class="p">(</span><span class="n">df</span><span class="p">):</span>                                     <span class="c1"># The filter function must return a boolean value</span>
-    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Precipitation&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">150</span>
+    <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Precipitation"</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="o">&gt;=</span> <span class="mi">150</span>
 
-<span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">myfilter</span><span class="p">)</span>                 <span class="c1"># Filter out months with total precipitation less that 150 mm</span>
+<span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">myfilter</span><span class="p">)</span>                 <span class="c1"># Filter out months with total precipitation less that 150 mm</span>
 </pre></div>
 </div>
 </div>
@@ -1376,11 +1288,11 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-37-b152d0db0a07&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span class="ansi-green-fg">return</span> df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Precipitation&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">150</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span>     <span class="ansi-green-fg">return</span> df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Precipitation"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>sum<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span> <span class="ansi-blue-fg">&gt;=</span> <span class="ansi-cyan-fg">150</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span>
-<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>filter<span class="ansi-blue-fg">(</span>myfilter<span class="ansi-blue-fg">)</span>                 <span class="ansi-red-fg"># Filter out months with total precipitation less that 150 mm</span>
+<span class="ansi-green-fg">----&gt; 4</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>filter<span class="ansi-blue-fg">(</span>myfilter<span class="ansi-blue-fg">)</span>                 <span class="ansi-red-fg"># Filter out months with total precipitation less that 150 mm</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh4&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh4' is not defined
 </pre></div></div>
 </div>
 <p>In a <strong>transformation</strong> each group’s DataFrame is manipulated in a way that retains its shape. An example of centering values, so that the deviations from the monthly means are shown:</p>
@@ -1390,7 +1302,7 @@ Exercise 3 (top bands)</div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">wh4</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">],</span>
-           <span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)[[</span><span class="s2">&quot;Precipitation&quot;</span><span class="p">,</span> <span class="s2">&quot;Snow&quot;</span><span class="p">,</span> <span class="s2">&quot;Temperature&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">())],</span>
+           <span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)[[</span><span class="s2">"Precipitation"</span><span class="p">,</span> <span class="s2">"Snow"</span><span class="p">,</span> <span class="s2">"Temperature"</span><span class="p">]]</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span> <span class="o">-</span> <span class="n">x</span><span class="o">.</span><span class="n">mean</span><span class="p">())],</span>
           <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1404,10 +1316,10 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-38-dd1d59b67612&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> pd.concat([wh4.iloc[:, 0:3],
-</span><span class="ansi-green-intense-fg ansi-bold">      2</span>            wh4.groupby(&#34;Month&#34;)[[&#34;Precipitation&#34;, &#34;Snow&#34;, &#34;Temperature&#34;]].transform(lambda x : x - x.mean())],
+</span><span class="ansi-green-intense-fg ansi-bold">      2</span>            wh4.groupby("Month")[["Precipitation", "Snow", "Temperature"]].transform(lambda x : x - x.mean())],
 <span class="ansi-green-intense-fg ansi-bold">      3</span>           axis=1)
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>The <strong>apply</strong> method is very generic and only requires that for each group’s DataFrame the given function returns a DataFrame, Series, or a scalar. In the following example, we sort within each group by the temperature:</p>
@@ -1416,7 +1328,7 @@ Exercise 3 (top bands)</div>
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;Month&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span> <span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;Temperature&quot;</span><span class="p">))</span>
+<span></span><span class="n">wh4</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">"Month"</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">df</span> <span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"Temperature"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1428,31 +1340,27 @@ Exercise 3 (top bands)</div>
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-39-357bf3f22cf6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>apply<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">lambda</span> df <span class="ansi-blue-fg">:</span> df<span class="ansi-blue-fg">.</span>sort_values<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Temperature&#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh4<span class="ansi-blue-fg">.</span>groupby<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>apply<span class="ansi-blue-fg">(</span><span class="ansi-green-fg">lambda</span> df <span class="ansi-blue-fg">:</span> df<span class="ansi-blue-fg">.</span>sort_values<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Temperature"</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh4&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh4' is not defined
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 4 (cyclists per day)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-4-(cyclists-per-day)">Exercise 4 (cyclists per day)</a></div>
 <p>Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.</p>
 <p>Part 1.</p>
 <p>Make function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code> that does the above. The function should return a DataFrame.</p>
 <p>Part 2.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function, using the function <code class="docutils literal notranslate"><span class="pre">cyclists_per_day</span></code>, get the daily counts. Drop the columns Hour and Weekday. The index of the DataFrame now consists of tuples (Year, Month, Day). Then restrict this data to August of year 2017, and plot this data. Don’t forget to call the <code class="docutils literal notranslate"><span class="pre">plt.show</span></code> function of matplotlib. The x-axis should have ticks from 1 to 31, and there should be a curve to each measuring station. Can you spot the weekends?</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 5 (best record company)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-5-(best-record-company)">Exercise 5 (best record company)</a></div>
 <p>We use again the UK top 40 data set from the first week of 1964 in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv</a> ). Here we define “goodness” of a record company (<code class="docutils literal notranslate"><span class="pre">Publisher</span></code>) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function <code class="docutils literal notranslate"><span class="pre">best_record_company</span></code>.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 6 (suicide fractions)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-6-(suicide-fractions)">Exercise 6 (suicide fractions)</a></div>
 <p>Load the suicide data set from <code class="docutils literal notranslate"><span class="pre">src</span></code> folder (<a class="reference external" href="https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv">https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv</a>) . This data was originally downloaded from <a class="reference external" href="https://www.kaggle.com/szamil/who-suicide-statistics">Kaggle</a>. Kaggle contains lots of interesting open data sets.</p>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">suicide_fractions</span></code> that loads the data set and returns a Series that has the country as the (row) index and as the column the fraction of suicides per population in that country. In more detail, this fraction is the average of suicide fractions. The information about year, sex and age is not used.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 7 (suicide weather)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-7-(suicide-weather)">Exercise 7 (suicide weather)</a></div>
 <p>Copy the function <code class="docutils literal notranslate"><span class="pre">suicide</span> <span class="pre">fractions</span></code> from the previous exercise.</p>
 <p>Implement function <code class="docutils literal notranslate"><span class="pre">suicide_weather</span></code> as described below. Download the dataset of average temperature (over years 1961-1990) in different countries from <code class="docutils literal notranslate"><span class="pre">src/List_of_countries_by_average_yearly_temperature.html</span></code> (<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature">https://en.wikipedia.org/wiki/List_of_countries_by_average_yearly_temperature</a>) . You can use the function <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> to get all the tables from a html page. By default <code class="docutils literal notranslate"><span class="pre">pd.read_html</span></code> does not know which row contains column headers and which column contains row headers.
 Maku sure you use the country as the (row) index for both of the DataFrames. What is the <a class="reference external" href="https://en.wikipedia.org/wiki/Spearman%27s_rank_correlation_coefficient">Spearman correlation</a> between these variables? Use the <code class="docutils literal notranslate"><span class="pre">corr</span></code> method of Series object. Note the the two Series need not be sorted as the indices of the rows (country names) are used to align them.</p>
@@ -1469,7 +1377,7 @@ Maku sure you use the country as the (row) index for both of the DataFrames. Wha
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">s</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\u2212</span><span class="s2">5&quot;</span>
+<span></span><span class="n">s</span><span class="o">=</span><span class="s2">"</span><span class="se">\u2212</span><span class="s2">5"</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
 <span class="k">try</span><span class="p">:</span>
     <span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -1492,7 +1400,7 @@ Maku sure you use the country as the (row) index for both of the DataFrames. Wha
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-could not convert string to float: &#39;−5&#39;
+could not convert string to float: '−5'
 </pre></div></div>
 </div>
 <p>But if we explicitly convert unicode minus sign to normal minus sign, it works:</p>
@@ -1501,7 +1409,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\u2212</span><span class="s2">&quot;</span><span class="p">,</span> <span class="s2">&quot;-&quot;</span><span class="p">))</span>
+<span></span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"</span><span class="se">\u2212</span><span class="s2">"</span><span class="p">,</span> <span class="s2">"-"</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -1541,7 +1449,7 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2 <span class="ansi-blue-fg">=</span> wh3<span class="ansi-blue-fg">.</span>copy<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">.</span>columns
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh3&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh3' is not defined
 </pre></div></div>
 </div>
 <p>The column names <code class="docutils literal notranslate"><span class="pre">Year</span></code>, <code class="docutils literal notranslate"><span class="pre">Month</span></code>, and <code class="docutils literal notranslate"><span class="pre">Day</span></code> are now in appropriate form for the <code class="docutils literal notranslate"><span class="pre">to_datetime</span></code> function. It can convert these fields into a timestamp series, which we will add to the DataFrame.</p>
@@ -1550,7 +1458,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh2</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">wh2</span><span class="p">[[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">]])</span>
+<span></span><span class="n">wh2</span><span class="p">[</span><span class="s2">"Date"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">wh2</span><span class="p">[[</span><span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Month"</span><span class="p">,</span> <span class="s2">"Day"</span><span class="p">]])</span>
 <span class="n">wh2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1563,10 +1471,10 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-43-0149bd47697e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Date&#34;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>to_datetime<span class="ansi-blue-fg">(</span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Year&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Day&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Date"</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>to_datetime<span class="ansi-blue-fg">(</span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Year"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Day"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>We can now drop the useless fields:</p>
@@ -1575,7 +1483,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh2</span><span class="o">=</span><span class="n">wh2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">])</span>
+<span></span><span class="n">wh2</span><span class="o">=</span><span class="n">wh2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"Year"</span><span class="p">,</span> <span class="s2">"Month"</span><span class="p">,</span> <span class="s2">"Day"</span><span class="p">])</span>
 <span class="n">wh2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1588,10 +1496,10 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-44-5b4c357b6a1b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">=</span>wh2<span class="ansi-blue-fg">.</span>drop<span class="ansi-blue-fg">(</span>columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Year&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Month&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Day&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">=</span>wh2<span class="ansi-blue-fg">.</span>drop<span class="ansi-blue-fg">(</span>columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Year"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Month"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Day"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <p>The following method call will set the Date field as the index of the DataFrame.</p>
@@ -1600,7 +1508,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh2</span> <span class="o">=</span> <span class="n">wh2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">&quot;Date&quot;</span><span class="p">)</span>
+<span></span><span class="n">wh2</span> <span class="o">=</span> <span class="n">wh2</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s2">"Date"</span><span class="p">)</span>
 <span class="n">wh2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -1613,10 +1521,10 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-45-79a49fd7a1c0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2 <span class="ansi-blue-fg">=</span> wh2<span class="ansi-blue-fg">.</span>set_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Date&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2 <span class="ansi-blue-fg">=</span> wh2<span class="ansi-blue-fg">.</span>set_index<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Date"</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">.</span>head<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <p>We can now easily get a set of rows using date slices:</p>
@@ -1625,7 +1533,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">wh2</span><span class="p">[</span><span class="s2">&quot;2017-01-15&quot;</span><span class="p">:</span><span class="s2">&quot;2017-02-03&quot;</span><span class="p">]</span>
+<span></span><span class="n">wh2</span><span class="p">[</span><span class="s2">"2017-01-15"</span><span class="p">:</span><span class="s2">"2017-02-03"</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
@@ -1637,9 +1545,9 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-46-85f7dffc21d7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;2017-01-15&#34;</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">&#34;2017-02-03&#34;</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"2017-01-15"</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">"2017-02-03"</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <p>By using the <code class="docutils literal notranslate"><span class="pre">date_range</span></code> function even more complicated sets can be formed. The following gets all the Mondays of July:</p>
@@ -1648,7 +1556,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">r</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2017-07-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2017-07-31&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;w-mon&quot;</span><span class="p">)</span>
+<span></span><span class="n">r</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">"2017-07-01"</span><span class="p">,</span> <span class="s2">"2017-07-31"</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">"w-mon"</span><span class="p">)</span>
 <span class="n">r</span>
 </pre></div>
 </div>
@@ -1661,10 +1569,10 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-47-39601269edec&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>date_range<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;2017-07-01&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;2017-07-31&#34;</span><span class="ansi-blue-fg">,</span> freq<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;w-mon&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>r<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>date_range<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"2017-07-01"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"2017-07-31"</span><span class="ansi-blue-fg">,</span> freq<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"w-mon"</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> r
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1686,7 +1594,7 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-green-fg">&lt;ipython-input-48-ffec805ccd20&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">.</span>index<span class="ansi-blue-fg">.</span>difference<span class="ansi-blue-fg">(</span>r<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1708,7 +1616,7 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-green-fg">&lt;ipython-input-49-1c054c599e4f&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span>r<span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">]</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <p>The following finds all the business days (Monday to Friday) of July:</p>
@@ -1717,7 +1625,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">&quot;2017-07-01&quot;</span><span class="p">,</span> <span class="s2">&quot;2017-07-31&quot;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span></span><span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="s2">"2017-07-01"</span><span class="p">,</span> <span class="s2">"2017-07-31"</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s2">"b"</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1729,9 +1637,9 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-50-16b52828c638&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>date_range<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;2017-07-01&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;2017-07-31&#34;</span><span class="ansi-blue-fg">,</span> freq<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;b&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>date_range<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"2017-07-01"</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"2017-07-31"</span><span class="ansi-blue-fg">,</span> freq<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"b"</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
 <p>We can get a general idea about the <code class="docutils literal notranslate"><span class="pre">Temperature</span></code> column by plotting it. Note how the index time series is shown nicely on the x-axis.</p>
@@ -1741,7 +1649,7 @@ could not convert string to float: &#39;−5&#39;
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="n">wh2</span><span class="p">[</span><span class="s2">&quot;Temperature&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
+<span class="n">wh2</span><span class="p">[</span><span class="s2">"Temperature"</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
 </div>
@@ -1753,11 +1661,11 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-51-b2b485702d72&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;matplotlib&#39;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Temperature&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>get_ipython<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>run_line_magic<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">'matplotlib'</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'inline'</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">"Temperature"</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">run_line_magic</span><span class="ansi-blue-fg">(self, magic_name, line, _stack_depth)</span>
-<span class="ansi-green-intense-fg ansi-bold">   2305</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#39;local_ns&#39;</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
+<span class="ansi-green-intense-fg ansi-bold">   2305</span>                 kwargs<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">'local_ns'</span><span class="ansi-blue-fg">]</span> <span class="ansi-blue-fg">=</span> sys<span class="ansi-blue-fg">.</span>_getframe<span class="ansi-blue-fg">(</span>stack_depth<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>f_locals
 <span class="ansi-green-intense-fg ansi-bold">   2306</span>             <span class="ansi-green-fg">with</span> self<span class="ansi-blue-fg">.</span>builtin_trap<span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">-&gt; 2307</span><span class="ansi-red-fg">                 </span>result <span class="ansi-blue-fg">=</span> fn<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>args<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>kwargs<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">   2308</span>             <span class="ansi-green-fg">return</span> result
@@ -1766,34 +1674,34 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-green-fg">&lt;/home/travis/virtualenv/python3.6.3/lib/python3.6/site-packages/decorator.py:decorator-gen-108&gt;</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/magic.py</span> in <span class="ansi-cyan-fg">&lt;lambda&gt;</span><span class="ansi-blue-fg">(f, *a, **k)</span>
-<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it&#39;s overkill for just that one bit of state.</span>
+<span class="ansi-green-intense-fg ansi-bold">    185</span>     <span class="ansi-red-fg"># but it's overkill for just that one bit of state.</span>
 <span class="ansi-green-intense-fg ansi-bold">    186</span>     <span class="ansi-green-fg">def</span> magic_deco<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">--&gt; 187</span><span class="ansi-red-fg">         </span>call <span class="ansi-blue-fg">=</span> <span class="ansi-green-fg">lambda</span> f<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">:</span> f<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">*</span>a<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">**</span>k<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    188</span>
 <span class="ansi-green-intense-fg ansi-bold">    189</span>         <span class="ansi-green-fg">if</span> callable<span class="ansi-blue-fg">(</span>arg<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">:</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/magics/pylab.py</span> in <span class="ansi-cyan-fg">matplotlib</span><span class="ansi-blue-fg">(self, line)</span>
-<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Available matplotlib backends: %s&#34;</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     97</span>             print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Available matplotlib backends: %s"</span> <span class="ansi-blue-fg">%</span> backends_list<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">     98</span>         <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span>
 <span class="ansi-green-fg">---&gt; 99</span><span class="ansi-red-fg">             </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> self<span class="ansi-blue-fg">.</span>shell<span class="ansi-blue-fg">.</span>enable_matplotlib<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    100</span>             self<span class="ansi-blue-fg">.</span>_show_matplotlib_backend<span class="ansi-blue-fg">(</span>args<span class="ansi-blue-fg">.</span>gui<span class="ansi-blue-fg">,</span> backend<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">    101</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/interactiveshell.py</span> in <span class="ansi-cyan-fg">enable_matplotlib</span><span class="ansi-blue-fg">(self, gui)</span>
-<span class="ansi-green-intense-fg ansi-bold">   3365</span>         &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">   3365</span>         """
 <span class="ansi-green-intense-fg ansi-bold">   3366</span>         <span class="ansi-green-fg">from</span> IPython<span class="ansi-blue-fg">.</span>core <span class="ansi-green-fg">import</span> pylabtools <span class="ansi-green-fg">as</span> pt
 <span class="ansi-green-fg">-&gt; 3367</span><span class="ansi-red-fg">         </span>gui<span class="ansi-blue-fg">,</span> backend <span class="ansi-blue-fg">=</span> pt<span class="ansi-blue-fg">.</span>find_gui_and_backend<span class="ansi-blue-fg">(</span>gui<span class="ansi-blue-fg">,</span> self<span class="ansi-blue-fg">.</span>pylab_gui_select<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">   3368</span>
-<span class="ansi-green-intense-fg ansi-bold">   3369</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;inline&#39;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">   3369</span>         <span class="ansi-green-fg">if</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">'inline'</span><span class="ansi-blue-fg">:</span>
 
 <span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/IPython/core/pylabtools.py</span> in <span class="ansi-cyan-fg">find_gui_and_backend</span><span class="ansi-blue-fg">(gui, gui_select)</span>
-<span class="ansi-green-intense-fg ansi-bold">    274</span>     &#34;&#34;&#34;
+<span class="ansi-green-intense-fg ansi-bold">    274</span>     """
 <span class="ansi-green-intense-fg ansi-bold">    275</span>
 <span class="ansi-green-fg">--&gt; 276</span><span class="ansi-red-fg">     </span><span class="ansi-green-fg">import</span> matplotlib
 <span class="ansi-green-intense-fg ansi-bold">    277</span>
-<span class="ansi-green-intense-fg ansi-bold">    278</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">&#39;auto&#39;</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    278</span>     <span class="ansi-green-fg">if</span> gui <span class="ansi-green-fg">and</span> gui <span class="ansi-blue-fg">!=</span> <span class="ansi-blue-fg">'auto'</span><span class="ansi-blue-fg">:</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'matplotlib'
 </pre></div></div>
 </div>
 <p>The graph looks a bit messy at this level of detail. We can smooth it by taking averages over a sliding window of length 30 days:</p>
@@ -1818,7 +1726,7 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>rolling <span class="ansi-blue-fg">=</span> wh2<span class="ansi-blue-fg">.</span>Temperature<span class="ansi-blue-fg">.</span>rolling<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">30</span><span class="ansi-blue-fg">,</span> center<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> rolling
 
-<span class="ansi-red-fg">NameError</span>: name &#39;wh2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'wh2' is not defined
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1826,7 +1734,7 @@ could not convert string to float: &#39;−5&#39;
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;Temperature&quot;</span> <span class="p">:</span> <span class="n">wh2</span><span class="o">.</span><span class="n">Temperature</span><span class="p">,</span> <span class="s2">&quot;Rolling mean&quot;</span> <span class="p">:</span> <span class="n">rolling</span><span class="o">.</span><span class="n">mean</span><span class="p">()})</span>
+<span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">"Temperature"</span> <span class="p">:</span> <span class="n">wh2</span><span class="o">.</span><span class="n">Temperature</span><span class="p">,</span> <span class="s2">"Rolling mean"</span> <span class="p">:</span> <span class="n">rolling</span><span class="o">.</span><span class="n">mean</span><span class="p">()})</span>
 <span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -1839,15 +1747,14 @@ could not convert string to float: &#39;−5&#39;
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-53-91c4c1b088c0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>data <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;Temperature&#34;</span> <span class="ansi-blue-fg">:</span> wh2<span class="ansi-blue-fg">.</span>Temperature<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Rolling mean&#34;</span> <span class="ansi-blue-fg">:</span> rolling<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>data <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">"Temperature"</span> <span class="ansi-blue-fg">:</span> wh2<span class="ansi-blue-fg">.</span>Temperature<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">"Rolling mean"</span> <span class="ansi-blue-fg">:</span> rolling<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> data<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'pd' is not defined
 </pre></div></div>
 </div>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 8 (bicycle timeseries)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-8-(bicycle-timeseries)">Exercise 8 (bicycle timeseries)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> that</p>
 <ul class="simple">
 <li>reads the data set</li>
@@ -1855,14 +1762,13 @@ Exercise 8 (bicycle timeseries)</div>
 <li>turns its <code class="docutils literal notranslate"><span class="pre">Päivämäärä</span></code> column into (row) DatetimeIndex (that is, to row names)</li>
 <li>returns the new DataFrame</li>
 </ul>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 9 (commute)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-9-(commute)">Exercise 9 (commute)</a></div>
 <p>In function <code class="docutils literal notranslate"><span class="pre">commute</span></code> do the following:</p>
 <p>Use the function <code class="docutils literal notranslate"><span class="pre">bicycle_timeseries</span></code> to get the bicycle data. Restrict to August 2017, group by the weekday, aggregate by summing. Set the <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> column to numbers from one to seven. Then set the column <code class="docutils literal notranslate"><span class="pre">Weekday</span></code> as the (row) index. Return the resulting DataFrame from the function.</p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">main</span></code> function plot the DataFrame. Xticklabels should be the weekdays. Don’t forget to call <code class="docutils literal notranslate"><span class="pre">show</span></code> function!</p>
 <p>If you want the xticklabels to be <code class="docutils literal notranslate"><span class="pre">['Mon',</span> <span class="pre">'Tue',</span> <span class="pre">'Wed',</span> <span class="pre">'Thu',</span> <span class="pre">'Fr',</span> <span class="pre">'Sat',</span> <span class="pre">'Sun']</span></code> instead of numbers, then it may get a bit messy. There seems to be a problem with non-numeric <code class="docutils literal notranslate"><span class="pre">x</span></code> values. You could try the following after plotting, but you don’t have to:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weekdays</span><span class="o">=</span><span class="s2">&quot;x mon tue wed thu fri sat sun&quot;</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">weekdays</span><span class="o">=</span><span class="s2">"x mon tue wed thu fri sat sun"</span><span class="o">.</span><span class="n">title</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">weekdays</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1874,54 +1780,31 @@ Exercise 9 (commute)</div>
 <p>Pandas handles only one dimensional data (Series) and two dimensional data (DataFrame). While you can use <a class="reference external" href="http://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html#hierarchical-indexing-multiindex">hierarchical indices</a> to simulate higher dimensional arrays, you should use the <a class="reference external" href="http://xarray.pydata.org/en/stable/index.html">xarray</a> library, if you need proper higher-dimensional arrays with labels. It is basically a cross between NumPy and Pandas.</p>
 <!--NAVIGATION--></div>
 </div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="linear_regression.html" class="btn btn-neutral float-right" title="Machine learning" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pandas2.html" class="btn btn-neutral float-left" title="Pandas (continues)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2019, Jarkko Toivonen
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="linear_regression.html" rel="next" title="Machine learning">Next <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="pandas2.html" rel="prev" title="Pandas (continues)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2018-2019, Jarkko Toivonen
 
     </p>
-  </div>
+</div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
-   
-
 </body>
 </html>

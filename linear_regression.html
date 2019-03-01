@@ -1,88 +1,45 @@
-
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Machine learning &mdash; Data analysis with Python  documentation</title>
-  
-
-  
-  
-  
-  
-
-  
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="ML: Naive Bayes classification" href="bayes.html" />
-    <link rel="prev" title="Pandas (continues)" href="pandas3.html" /> 
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Machine learning — Data analysis with Python  documentation</title>
+<script src="_static/js/modernizr.min.js" type="text/javascript"></script>
+<script data-url_root="./" id="documentation_options" src="_static/documentation_options.js" type="text/javascript"></script>
+<script src="_static/jquery.js" type="text/javascript"></script>
+<script src="_static/underscore.js" type="text/javascript"></script>
+<script src="_static/doctools.js" type="text/javascript"></script>
+<script src="_static/language_data.js" type="text/javascript"></script>
+<script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+<script src="_static/js/theme.js" type="text/javascript"></script>
+<link href="_static/css/theme.css" rel="stylesheet" type="text/css"/>
+<link href="_static/pygments.css" rel="stylesheet" type="text/css"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="bayes.html" rel="next" title="ML: Naive Bayes classification"/>
+<link href="pandas3.html" rel="prev" title="Pandas (continues)"/>
 </head>
-
 <body class="wy-body-for-nav">
-
-   
-  <div class="wy-grid-for-nav">
-    
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="index.html" class="icon icon-home"> Data analysis with Python
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="index.html"> Data analysis with Python
           
 
           
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+<form action="search.html" class="wy-form" id="rtd-search-form" method="get">
+<input name="q" placeholder="Search docs" type="text"/>
+<input name="check_keywords" type="hidden" value="yes"/>
+<input name="area" type="hidden" value="default"/>
+</form>
 </div>
-
-          
-        </div>
-
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Contents:</span></p>
+</div>
+<div aria-label="main navigation" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="instructions.html">Initializing course environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools.html">Running Python code</a></li>
@@ -127,70 +84,28 @@
 <li class="toctree-l1"><a class="reference internal" href="clustering.html">ML: Clustering</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pca.html">ML: Principal component analysis</a></li>
 </ul>
-
-            
-          
-        </div>
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Data analysis with Python</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html">Docs</a> &raquo;</li>
-        
-      <li>Machine learning</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="_sources/linear_regression.ipynb.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-            
-  
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="top navigation" class="wy-nav-top">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="index.html">Data analysis with Python</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content">
+<div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a href="index.html">Docs</a> »</li>
+<li>Machine learning</li>
+<li class="wy-breadcrumbs-aside">
+<a href="_sources/linear_regression.ipynb.txt" rel="nofollow"> View page source</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div itemprop="articleBody">
 <style>
 /* CSS for nbsphinx extension */
 
@@ -414,13 +329,13 @@ div.rendered_html tbody tr:hover {
 </style>
 <div class="admonition note">
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/linear_regression.ipynb">linear_regression.ipynb</a>.
-<span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/linear_regression.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
+<span class="raw-html"><br/><a href="https://colab.research.google.com/github/jttoivon/x/blob/master/linear_regression.ipynb"><img align="left" alt="Open in Colab" src="https://colab.research.google.com/assets/colab-badge.svg" title="Open and Execute in Google Colaboratory"/></a></span>
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><table border="1" class="docutils">
 <colgroup>
-<col width="36%" />
-<col width="26%" />
-<col width="38%" />
+<col width="36%"/>
+<col width="26%"/>
+<col width="38%"/>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><a class="reference external" href="#Exercise-10-(linear-regression)">Exercise 10 (linear regression)</a></td>
@@ -428,8 +343,8 @@ This page was generated from <a class="reference external" href="https://github.
 <td><a class="reference external" href="#Exercise-12-(coefficient-of-determination)">Exercise 12 (coefficient of determination)</a></td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="#Exercise-13-(cycling-weather-continues)">Exercise 13 (cycling weather continues)</a></td>
-<td>&#160;</td>
-<td>&#160;</td>
+<td> </td>
+<td> </td>
 </tr>
 </tbody>
 </table>
@@ -464,7 +379,7 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 <span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
 <span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> sklearn   <span class="ansi-red-fg"># This imports the scikit-learn library</span>
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'matplotlib'
 </pre></div></div>
 </div>
 <p>Then we create some data with approximately the relationship <span class="math notranslate nohighlight">\(y=2x+1\)</span>, with normally distributed errors.</p>
@@ -517,7 +432,7 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 <span class="ansi-green-fg">&lt;ipython-input-3-a35af2a4e137&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>linear_model <span class="ansi-green-fg">import</span> LinearRegression
 
-<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named 'sklearn'
 </pre></div></div>
 </div>
 <p>Now we can fit a line through the data points (x, y):</p>
@@ -526,14 +441,14 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">)</span>
+<span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">'o'</span><span class="p">)</span>
 <span class="n">model</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">y</span><span class="p">)</span>
 <span class="n">xfit</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
 <span class="n">yfit</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xfit</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xfit</span><span class="p">,</span><span class="n">yfit</span><span class="p">)</span>
 <span class="c1"># The following will draw as many line segments as there are columns in matrices x and y</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])]),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;red&quot;</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">x</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">y</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])]),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">);</span>
 </pre></div>
 </div>
 </div>
@@ -545,13 +460,13 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-4-10064b0ce08e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span>y<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;o&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span>y<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">'o'</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> model<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span>np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> xfit<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> yfit<span class="ansi-blue-fg">=</span>model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>xfit<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>The linear regression tries to minimize the sum of squared errors <span class="math notranslate nohighlight">\(\sum_i (y[i] - \hat{y}[i])^2\)</span>; this is the sum of the lengths of the red line segments in the above plot. The estimated values <span class="math notranslate nohighlight">\(\hat{y}[i]\)</span> are denoted by <code class="docutils literal notranslate"><span class="pre">yfit[i]</span></code> in the above code.</p>
@@ -560,9 +475,9 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Parameters:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coefficient:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Parameters:"</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Coefficient:"</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">coef_</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Intercept:"</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -574,11 +489,11 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 <span class="ansi-red-fg">---------------------------------------------------------------------------</span>
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-5-bdf5862ca6fd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Parameters:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Coefficient:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Intercept:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Parameters:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Coefficient:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Intercept:"</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;model&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'model' is not defined
 </pre></div></div>
 </div>
 <p>In this case, the coefficient is the slope of the fitted line, and the intercept is the point where the fitted line intersects with the y-axis.</p>
@@ -626,7 +541,7 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <span class="ansi-green-intense-fg ansi-bold">      3</span> model2<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> model2<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">,</span> model2<span class="ansi-blue-fg">.</span>intercept_
 
-<span class="ansi-red-fg">NameError</span>: name &#39;LinearRegression&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'LinearRegression' is not defined
 </pre></div></div>
 </div>
 <p>Let’s print the various components involved.</p>
@@ -636,10 +551,10 @@ Note that in scikit-learn the attributes of the model that store the learned par
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">b</span><span class="o">=</span><span class="n">model2</span><span class="o">.</span><span class="n">coef_</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;product:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"x:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"b:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"y:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">y</span><span class="p">[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"product:</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">matmul</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">b</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -652,12 +567,12 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
 <span class="ansi-green-fg">&lt;ipython-input-8-31d4749b34cd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>b<span class="ansi-blue-fg">=</span>model2<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span>
-<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;x:\n&#34;</span><span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;b:\n&#34;</span><span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;y:\n&#34;</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;product:\n&#34;</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>matmul<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"x:\n"</span><span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"b:\n"</span><span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"y:\n"</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"product:\n"</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>matmul<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;model2&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'model2' is not defined
 </pre></div></div>
 </div>
 </div>
@@ -672,7 +587,7 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
 <span></span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span><span class="mi">150</span><span class="p">,</span><span class="mi">50</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="mf">0.15</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">20</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">5</span><span class="o">*</span><span class="n">x</span> <span class="o">-</span> <span class="mi">4</span> <span class="o">+</span> <span class="mi">5000</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
 <span class="n">model_linear</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">model_squared</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">model_cubic</span><span class="o">=</span><span class="n">LinearRegression</span><span class="p">(</span><span class="n">fit_intercept</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -685,12 +600,12 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <span class="n">yf_linear</span><span class="o">=</span><span class="n">model_linear</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 <span class="n">yf_squared</span><span class="o">=</span><span class="n">model_squared</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">x2</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 <span class="n">yf_cubic</span><span class="o">=</span><span class="n">model_cubic</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">([</span><span class="n">x</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">x3</span><span class="p">])</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_linear</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;linear&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_squared</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;squared&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_cubic</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">&quot;cubic&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_linear</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"linear"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_squared</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"squared"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">xf</span><span class="p">,</span><span class="n">yf_cubic</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"cubic"</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Coefficients:&quot;</span><span class="p">,</span> <span class="n">model_cubic</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Intercept:&quot;</span><span class="p">,</span> <span class="n">model_cubic</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Coefficients:"</span><span class="p">,</span> <span class="n">model_cubic</span><span class="o">.</span><span class="n">coef_</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Intercept:"</span><span class="p">,</span> <span class="n">model_cubic</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -704,24 +619,22 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <span class="ansi-green-fg">&lt;ipython-input-9-9d5effadf1c8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
 <span class="ansi-green-intense-fg ansi-bold">      1</span> x<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">150</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      2</span> y<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.15</span><span class="ansi-blue-fg">*</span>x<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">*</span>x<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">*</span>x <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">4</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">5000</span><span class="ansi-blue-fg">*</span>np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randn<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;black&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">"black"</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      4</span> model_linear<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 <span class="ansi-green-intense-fg ansi-bold">      5</span> model_squared<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 
-<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+<span class="ansi-red-fg">NameError</span>: name 'plt' is not defined
 </pre></div></div>
 </div>
 <p>Linear and squared are not enough to explain the data, but the linear regression manages to fit quite well a polynomial curve to the data points, when cubic variables are included!</p>
-<hr class="docutils" />
-<div class="admonition note">
-Exercise 10 (linear regression)</div>
+<hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-10-(linear-regression)">Exercise 10 (linear regression)</a></div>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">fit_line</span></code> that gets one dimensional arrays <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code> as parameters. The function should return the tuple <code class="docutils literal notranslate"><span class="pre">(slope,</span> <span class="pre">intercept)</span></code> of the fitted line. Write a main program that tests the <code class="docutils literal notranslate"><span class="pre">fit_line</span></code> function with some example arrays. The main function should produce output in the following form:</p>
 <p>Slope: 1.0 Intercept: 1.16666666667</p>
 <p>Part 2.</p>
 <p>Modify your program to plot the fitted line using matplotlib, in addition to the textual output. Plot also the original data points.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 11 (mystery data)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-11-(mystery-data)">Exercise 11 (mystery data)</a></div>
 <p>Read the tab separated file <code class="docutils literal notranslate"><span class="pre">mystery_data.tsv</span></code>. Its first five columns define the features, and the last column is the response. Use scikit-learns’s <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> to fit this data. Implement function <code class="docutils literal notranslate"><span class="pre">mystery_data</span></code> that reads this file and learns and returns the regression coefficients for the five features. You don’t have to fit the intercept. The <code class="docutils literal notranslate"><span class="pre">main</span></code> method will print output in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X1</span> <span class="ow">is</span> <span class="o">...</span>
 <span class="n">Coefficient</span> <span class="n">of</span> <span class="n">X2</span> <span class="ow">is</span> <span class="o">...</span>
@@ -731,9 +644,8 @@ Exercise 11 (mystery data)</div>
 </pre></div>
 </div>
 <p>Which features you think are needed to explain the response Y?</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 12 (coefficient of determination)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-12-(coefficient-of-determination)">Exercise 12 (coefficient of determination)</a></div>
 <p>Using the same data as in the previous exercise, instead of printing the regression coefficients, print the <em>coefficient of determination</em>. The coefficient of determination, denoted by R2, tells how well the linear regression fits the data. The maximum value of the coefficient of determination is 1. That means the best possible fit.</p>
 <p>Part 1.</p>
 <p>Using all the features (X1 to X5), fit the data using a linear regression. Get the coefficient of determination using the <code class="docutils literal notranslate"><span class="pre">score</span></code> method of the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> class. Write a function <code class="docutils literal notranslate"><span class="pre">coefficient_of_determination</span></code> to do all this. It should return a list containing the R2-score as the only value.</p>
@@ -749,17 +661,16 @@ Exercise 12 (coefficient of determination)</div>
 </pre></div>
 </div>
 <p>How small can the R2-score be? Experiment both with fitting the intercept and without fitting the intercept.</p>
-<hr/><hr class="docutils" />
-<div class="admonition note">
-Exercise 13 (cycling weather continues)</div>
+<hr/><hr class="docutils"/>
+<div class="admonition note"><a id="Exercise-13-(cycling-weather-continues)">Exercise 13 (cycling weather continues)</a></div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">cycling_weather_continues</span></code> that tries to explain with linear regression the variable of a cycling measuring station’s counts using the weather data from corresponding day. The function should take the name of a (cycling) measuring station as a parameter and return the regression coefficients and the score. In more detail:</p>
 <p>Read the weather data set from the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. Use forward fill to fill the missing values. Read the cycling data set from folder <code class="docutils literal notranslate"><span class="pre">src</span></code> and restrict it to year 2017. Further, get the sums of cycling counts for each day. Merge the two datasets by the year, month, and day. In the linear regression use as explanatory variables the following columns <code class="docutils literal notranslate"><span class="pre">'Precipitation</span> <span class="pre">amount</span> <span class="pre">(mm)'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Snow</span> <span class="pre">depth</span> <span class="pre">(cm)'</span></code>, and <code class="docutils literal notranslate"><span class="pre">'Air</span> <span class="pre">temperature</span> <span class="pre">(degC)'</span></code>. Explain the variable (measuring station), whose name is
 given as a parameter to the function <code class="docutils literal notranslate"><span class="pre">cycling_weather_continues</span></code>. Fit also the intercept. The function should return a pair, whose first element is the regression coefficients and the second element is the score. Above, you may need to use the method <code class="docutils literal notranslate"><span class="pre">reset_index</span></code> (its counterpart is the method <code class="docutils literal notranslate"><span class="pre">set_index</span></code>).</p>
 <p>The output from the <code class="docutils literal notranslate"><span class="pre">main</span></code> function should be in the following form:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Measuring</span> <span class="n">station</span><span class="p">:</span> <span class="n">x</span>
-<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">&#39;precipitation&#39;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
-<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">&#39;snow depth&#39;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
-<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">&#39;temperature&#39;</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
+<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">'precipitation'</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
+<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">'snow depth'</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
+<span class="n">Regression</span> <span class="n">coefficient</span> <span class="k">for</span> <span class="n">variable</span> <span class="s1">'temperature'</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">x</span>
 <span class="n">Score</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">xx</span>
 </pre></div>
 </div>
@@ -776,7 +687,7 @@ given as a parameter to the function <code class="docutils literal notranslate">
 <h2>Summary (week 5)<a class="headerlink" href="#Summary-(week-5)" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> and <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> can both combine two DataFrames, but the way the combining is done differs. The function <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> concatenates based on <em>indices</em> of DataFrames, whereas <code class="docutils literal notranslate"><span class="pre">pd.merge</span></code> combines based on the <em>content</em> of common variable(s).</li>
-<li>The option <code class="docutils literal notranslate"><span class="pre">join=&quot;outer</span></code> to <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> can create missing values, but <code class="docutils literal notranslate"><span class="pre">join=inner</span></code> cannot. The former gives the union of indices and the latter gives the intersection of indices.</li>
+<li>The option <code class="docutils literal notranslate"><span class="pre">join="outer</span></code> to <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> can create missing values, but <code class="docutils literal notranslate"><span class="pre">join=inner</span></code> cannot. The former gives the union of indices and the latter gives the intersection of indices.</li>
 <li>With <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> overlapping indices can:<ul>
 <li>cause an error</li>
 <li>cause renumbering of indices</li>
@@ -805,54 +716,31 @@ given as a parameter to the function <code class="docutils literal notranslate">
 </ul>
 <!--NAVIGATION--></div>
 </div>
-
-
-           </div>
-           
-          </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="bayes.html" class="btn btn-neutral float-right" title="ML: Naive Bayes classification" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="pandas3.html" class="btn btn-neutral float-left" title="Pandas (continues)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        &copy; Copyright 2018-2019, Jarkko Toivonen
+</div>
+</div>
+<footer>
+<div aria-label="footer navigation" class="rst-footer-buttons" role="navigation">
+<a accesskey="n" class="btn btn-neutral float-right" href="bayes.html" rel="next" title="ML: Naive Bayes classification">Next <span class="fa fa-arrow-circle-right"></span></a>
+<a accesskey="p" class="btn btn-neutral float-left" href="pandas3.html" rel="prev" title="Pandas (continues)"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+</div>
+<hr/>
+<div role="contentinfo">
+<p>
+        © Copyright 2018-2019, Jarkko Toivonen
 
     </p>
-  </div>
+</div>
   Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-  
-
-
-  <script type="text/javascript">
+</div>
+</div>
+</section>
+</div>
+<script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-
-  
-  
-    
-   
-
 </body>
 </html>
