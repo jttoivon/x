@@ -4,6 +4,23 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
+    "<!--NAVIGATION-->\n",
+    "\n",
+    "\n",
+    "<a href=\"https://colab.research.google.com/github/jttoivon/x/blob/master/pandas3.ipynb\"><img align=\"left\" src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open in Colab\" title=\"Open and Execute in Google Colaboratory\"></a>\n",
+    "\n",
+    "|   |   |   |\n",
+    "|---|---|---|\n",
+    "| [Exercise 1 (split date continues)](<#Exercise-1-(split-date-continues&#41;>) | [Exercise 2 (cycling weather)](<#Exercise-2-(cycling-weather&#41;>) | [Exercise 3 (top bands)](<#Exercise-3-(top-bands&#41;>) |\n",
+    "| [Exercise 4 (cyclists per day)](<#Exercise-4-(cyclists-per-day&#41;>) | [Exercise 5 (best record company)](<#Exercise-5-(best-record-company&#41;>) | [Exercise 6 (suicide fractions)](<#Exercise-6-(suicide-fractions&#41;>) |\n",
+    "| [Exercise 7 (suicide weather)](<#Exercise-7-(suicide-weather&#41;>) | [Exercise 8 (bicycle timeseries)](<#Exercise-8-(bicycle-timeseries&#41;>) | [Exercise 9 (commute)](<#Exercise-9-(commute&#41;>) |\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
     "# Pandas (continues)"
    ]
   },
@@ -242,7 +259,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 1 (split date continues)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 1 (split date continues)</div>\n",
     "\n",
     "Write function `split_date_continues` that does\n",
     "\n",
@@ -406,7 +423,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 2 (cycling weather)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 2 (cycling weather)</div>\n",
     "\n",
     "Merge the cycling and weather data sets along the columns year, month, and day. Note that the names of these columns might be different in the two tables. Then drop useless columns 'm', 'd', 'Time', and 'Time zone'.\n",
     "\n",
@@ -419,7 +436,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 3 (top bands)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 3 (top bands)</div>\n",
     "\n",
     "Merge the DataFrames UK top40 and the bands DataFrame that are downloaded in the `src` folder (`https://www.cs.helsinki.fi/u/jttoivon/dap/data/bands.tsv`).\n",
     "\n",
@@ -660,7 +677,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 4 (cyclists per day)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 4 (cyclists per day)</div>\n",
     "\n",
     "Read, clean and parse the bicycle data set as usual. Group the rows by year, month, and day. Get the sum for each group.\n",
     "\n",
@@ -679,7 +696,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 5 (best record company)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 5 (best record company)</div>\n",
     "\n",
     "We use again the UK top 40 data set from the first week of 1964 in the `src` folder (https://www.cs.helsinki.fi/u/jttoivon/dap/data/UK-top40-1964-1-2.tsv ). Here we define \"goodness\" of a record company (`Publisher`) based on the sum of the weeks of chart (WoC) of its singles. Return a DataFrame of the singles by the best record company (a subset of rows of the original DataFrame). Do this with function `best_record_company`.\n",
     "\n",
@@ -690,7 +707,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 6 (suicide fractions)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 6 (suicide fractions)</div>\n",
     "\n",
     "Load the suicide data set from `src` folder (https://www.cs.helsinki.fi/u/jttoivon/dap/data/kaggle/who_suicide_statistics.csv) . This data was originally downloaded from [Kaggle](https://www.kaggle.com/szamil/who-suicide-statistics). Kaggle contains lots of interesting open data sets.\n",
     "\n",
@@ -703,7 +720,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 7 (suicide weather)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 7 (suicide weather)</div>\n",
     "\n",
     "Copy the function `suicide fractions` from the previous exercise. \n",
     "\n",
@@ -955,7 +972,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 8 (bicycle timeseries)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 8 (bicycle timeseries)</div>\n",
     "\n",
     "Write function `bicycle_timeseries` that\n",
     "\n",
@@ -971,7 +988,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "#### <div class=\"alert alert-info\"> Exercise 9 (commute)</div>\n",
+    "#### <div class=\"alert alert-info\">Exercise 9 (commute)</div>\n",
     "\n",
     "In function `commute` do the following:\n",
     "\n",
@@ -1006,6 +1023,16 @@
     "\n",
     "Pandas handles only one dimensional data (Series) and two dimensional data (DataFrame). While you can use [hierarchical indices](http://pandas.pydata.org/pandas-docs/stable/user_guide/advanced.html#hierarchical-indexing-multiindex) to simulate higher dimensional arrays, you should use the [xarray](http://xarray.pydata.org/en/stable/index.html) library, if you need proper higher-dimensional arrays with labels. It is basically a cross between NumPy and Pandas.\n",
     "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<!--NAVIGATION-->\n",
+    "\n",
+    "\n",
+    "<a href=\"https://colab.research.google.com/github/jttoivon/x/blob/master/pandas3.ipynb\"><img align=\"left\" src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open in Colab\" title=\"Open and Execute in Google Colaboratory\"></a>\n"
    ]
   }
  ],

@@ -411,7 +411,24 @@ div.rendered_html tbody tr:hover {
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/bayes.ipynb">bayes.ipynb</a>.
 <span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/bayes.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
 <span class="raw-html"><br/></span></div>
-<!--NAVIGATION--><div class="section" id="ML:-Naive-Bayes-classification">
+<!--NAVIGATION--><table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="34%" />
+<col width="33%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-1-(blob_classification)">Exercise 1 (blob_classification)</a></td>
+<td><a class="reference external" href="#Exercise-2-(plant-classification)">Exercise 2 (plant classification)</a></td>
+<td><a class="reference external" href="#Exercise-3-(word-classification)">Exercise 3 (word classification)</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-4-(spam-detection)">Exercise 4 (spam detection)</a></td>
+<td>&#160;</td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="ML:-Naive-Bayes-classification">
 <h1>ML: Naive Bayes classification<a class="headerlink" href="#ML:-Naive-Bayes-classification" title="Permalink to this headline">¶</a></h1>
 <p><em>Classification</em> is one form of supervised learning. The aim is to annotate all data points with a label. Those points that have the same label belong to the same class. There can be two or more labels. For example, a lifeforms can be classified (coarsely) with labels animal, plant, fungi, archaea, bacteria, protozoa, and chromista. The data points are observed to have certain features that can be used to predict their labels. For example, if it is has feathers, then it is most likely an animal.</p>
 <p>In supervised learning an algorithm is first given a training set of data points with their features and labels. Then the algorithm learns from these features and labels a (probabilistic) model, which can afterwards be used to predict the labels of previously unseen data.</p>
@@ -974,7 +991,7 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 <hr class="docutils" />
 <div class="admonition note">
-Exercise 1 (blob_classification)</div>
+Exercise 1 (blob classification)</div>
 <p>Write function <code class="docutils literal notranslate"><span class="pre">blob_classification</span></code> that gets feature matrix X and label vector y as parameters. It should then return the accuracy score of the prediction. Do the prediction using <code class="docutils literal notranslate"><span class="pre">GaussianNB</span></code>, and use <code class="docutils literal notranslate"><span class="pre">train_test_split</span></code> function from <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> to split the dataset in to two equal halves: one for training and one for testing. Give parameter <code class="docutils literal notranslate"><span class="pre">random_state=0</span></code> to the splitting function so that the result is deterministic. Use training set size of 75% of the whole data.</p>
 <hr/><hr class="docutils" />
 <div class="admonition note">

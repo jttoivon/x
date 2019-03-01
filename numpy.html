@@ -427,7 +427,24 @@ div.rendered_html tbody tr:hover {
 This page was generated from <a class="reference external" href="https://github.com/jttoivon/x/blob/master/numpy.ipynb">numpy.ipynb</a>.
 <span class="raw-html"><br/><a href='https://colab.research.google.com/github/jttoivon/x/blob/master/numpy.ipynb'><img align='left' src='https://colab.research.google.com/assets/colab-badge.svg' alt='Open in Colab' title='Open and Execute in Google Colaboratory' /></a></span>
 <span class="raw-html"><br/></span></div>
-<!--NAVIGATION--><div class="section" id="NumPy">
+<!--NAVIGATION--><table border="1" class="docutils">
+<colgroup>
+<col width="28%" />
+<col width="33%" />
+<col width="39%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference external" href="#Exercise-11-(rows-and-columns)">Exercise 11 (rows and columns)</a></td>
+<td><a class="reference external" href="#Exercise-12-(row-and-column-vectors)">Exercise 12 (row and column vectors)</a></td>
+<td><a class="reference external" href="#Exercise-13-(diamond)">Exercise 13 (diamond)</a></td>
+</tr>
+<tr class="row-even"><td><a class="reference external" href="#Exercise-14-(vector-lengths)">Exercise 14 (vector lengths)</a></td>
+<td><a class="reference external" href="#Exercise-15-(vector-angles)">Exercise 15 (vector angles)</a></td>
+<td><a class="reference external" href="#Exercise-16-(multiplication-table-revisited)">Exercise 16 (multiplication table revisited)</a></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="NumPy">
 <h1>NumPy<a class="headerlink" href="#NumPy" title="Permalink to this headline">¶</a></h1>
 <p><a class="reference external" href="https://docs.scipy.org/doc/numpy/">NumPy</a> is a Python library for handling multi-dimensional arrays. It contains both the data structures needed for the storing and accessing arrays, and operations and functions for computation using these arrays. Although the arrays are usually used for storing numbers, other type of data can be stored as well, such as strings. Unlike lists in core Python, NumPy’s fundamental data structure, the array, must have the same data type for all its elements. The
 homogeneity of arrays allows highly optimized functions that use arrays as their inputs and outputs.</p>
@@ -624,10 +641,10 @@ to features. We see more of this kind of data in the chapters on Pandas and Scik
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[  6.93665323e-310,   2.44729766e-316,   0.00000000e+000,
+<span></span>array([[  6.90409702e-310,   6.90409702e-310,   0.00000000e+000,
           0.00000000e+000],
-       [  0.00000000e+000,   0.00000000e+000,   1.39511671e-075,
-          1.63041663e-322]])
+       [  0.00000000e+000,   0.00000000e+000,   1.95218670e-110,
+          6.51546336e+252]])
 </pre></div>
 </div>
 </div>
@@ -711,9 +728,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0.09095568,  0.3569292 ,  0.40090265,  0.19548273],
-       [ 0.97699703,  0.46867053,  0.58301576,  0.82068671],
-       [ 0.34382497,  0.49126309,  0.53219065,  0.380592  ]])
+<span></span>array([[ 0.86708704,  0.76888763,  0.67411077,  0.66479508],
+       [ 0.84276215,  0.32793801,  0.26431003,  0.35457047],
+       [ 0.24626807,  0.35791459,  0.08648428,  0.54527029]])
 </pre></div>
 </div>
 </div>
@@ -731,9 +748,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 0.20810495,  0.13454706,  0.31683721, -0.07554252],
-       [-0.2727172 ,  2.43601153, -0.13787993, -1.43683075],
-       [-1.74274287,  0.51062391, -0.63922256, -1.07988074]])
+<span></span>array([[-0.62736784,  0.21498041, -0.18872264,  0.73675392],
+       [-1.52850096,  0.12893291, -0.11823704,  0.21473034],
+       [-0.64742754, -0.12704029, -2.4218058 ,  0.08356279]])
 </pre></div>
 </div>
 </div>
@@ -751,9 +768,9 @@ real data (sampling). NumPy can easily produces arrays of wanted shape filled wi
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([[ 4,  8,  8,  5],
-       [ 8,  3,  2, -2],
-       [-1,  1,  7, -2]])
+<span></span>array([[6, 7, 2, 4],
+       [0, 8, 4, 6],
+       [4, 9, 2, 3]])
 </pre></div>
 </div>
 </div>
@@ -1719,7 +1736,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-3.66 µs ± 25.3 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
+3.61 µs ± 24.5 ns per loop (mean ± std. dev. of 7 runs, 100000 loops each)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
@@ -1736,7 +1753,7 @@ Note that most of the aggregation functions in NumPy have corresponding methods.
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-89.2 µs ± 253 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
+87.9 µs ± 261 ns per loop (mean ± std. dev. of 7 runs, 10000 loops each)
 </pre></div></div>
 </div>
 <p>The speed of NumPy is partly due to the fact that its arrays must have same type for all the elements. This requirement allows some efficient optimizations.</p>
