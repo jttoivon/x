@@ -486,7 +486,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 <p>We have so far only used the <code class="docutils literal notranslate"><span class="pre">re.match</span></code> function which tries to find a match at the beginning of a string The function <code class="docutils literal notranslate"><span class="pre">re.search</span></code> allows to match any substring of a string. Example: <code class="docutils literal notranslate"><span class="pre">re.search(r'\bback\b',</span> <span class="pre">s)</span></code> will match strings <code class="docutils literal notranslate"><span class="pre">&quot;back&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;a</span> <span class="pre">back,</span> <span class="pre">is</span> <span class="pre">a</span> <span class="pre">body</span> <span class="pre">part&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;get</span> <span class="pre">back&quot;</span></code>. But it will not match the strings <code class="docutils literal notranslate"><span class="pre">&quot;backspace&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;comeback&quot;</span></code>.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">re.search</span></code> finds only the first occurence. We can use the <code class="docutils literal notranslate"><span class="pre">re.findall</span></code> function to find all occurences. Let’s say we want to find all present participle words in a string <code class="docutils literal notranslate"><span class="pre">s</span></code>. The present participle words have ending <code class="docutils literal notranslate"><span class="pre">'ing'</span></code>. The function call would look like this: <code class="docutils literal notranslate"><span class="pre">re.findall(r'\w+ing\b',</span> <span class="pre">s)</span></code>. Let’s try running this:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[205]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -497,7 +497,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[205]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -507,7 +507,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 </div>
 <p>Let’s say we want to pick up all the integers from a string. We can try that with the following function call: <code class="docutils literal notranslate"><span class="pre">re.findall(r'[+-]?\d+',</span> <span class="pre">s)</span></code>. An example run:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[206]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -516,7 +516,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[206]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -526,7 +526,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 </div>
 <p>Suppose we are given a string of if/then sentences, and we would like to extract the conditions from these sentences. Let’s try the following function call: <code class="docutils literal notranslate"><span class="pre">re.findall(r'[Ii]f</span> <span class="pre">(.*),</span> <span class="pre">then',</span> <span class="pre">s)</span></code>. An example run:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[207]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -537,7 +537,7 @@ patterns that get repeated: <code class="docutils literal notranslate"><span cla
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[207]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -686,7 +686,7 @@ Exercise 1 (integers in brackets)</div>
 <li>One character is encoded in the file as one or more bytes. This conversion happens automatically during read and write operations. One common encoding between bytes and characters is utf-8. In this encoding, the Finnish character <code class="docutils literal notranslate"><span class="pre">'ä'</span></code>, for example, is encoded as the following sequence of bytes:</li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[208]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -695,7 +695,7 @@ Exercise 1 (integers in brackets)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[208]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -705,7 +705,7 @@ Exercise 1 (integers in brackets)</div>
 </div>
 <p>Above the two bytes were expressed as hexadecimals. In decimal notation they would be 195 and 164. (Both in the range from 0 to 255.)</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[209]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -714,7 +714,7 @@ Exercise 1 (integers in brackets)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[209]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area highlight-none notranslate"><div class="highlight"><pre>
@@ -735,7 +735,7 @@ Exercise 1 (integers in brackets)</div>
 <li><code class="docutils literal notranslate"><span class="pre">flush()</span></code> will try to make sure that the changes made to a file are written to disk immediately</li>
 </ul>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[210]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -764,7 +764,7 @@ Line 4:    &#34;metadata&#34;: {},
 </div>
 <p>It is easy to forget to close the file. One can use a <em>context manager</em> to solve this problem. A context manager is created with the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement. After the indented block of the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement exits, the file will be automatically closed.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[211]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -790,7 +790,7 @@ Line 4:    &#34;metadata&#34;: {},
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">file</span></code> object is iterable. This means that we can iterate through the lines in the file using a for loop, like in the below example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[212]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -808,7 +808,7 @@ Line 4:    &#34;metadata&#34;: {},
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-The longest line in this file has length 1002
+The longest line in this file has length 836
 </pre></div></div>
 </div>
 </div>
@@ -822,7 +822,7 @@ The longest line in this file has length 1002
 </ul>
 <p>The print function uses the file <code class="docutils literal notranslate"><span class="pre">sys.stdout</span></code> and input function uses the file <code class="docutils literal notranslate"><span class="pre">sys.stdin</span></code>. An example of usage:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[213]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1011,7 +1011,7 @@ Exercise 8 (prepend)</div>
 <p>So, it may look like we access an attribute of a class <code class="docutils literal notranslate"><span class="pre">C</span></code>, when in reality we are accessing the attribute of its base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. In this case we say that the class <code class="docutils literal notranslate"><span class="pre">C</span></code> <em>inherits</em> the attribute from its base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. If we have attributes with the same name in both the class and its base class, the attribute of the base class is hidden. We say that the class <code class="docutils literal notranslate"><span class="pre">C</span></code> overrides the attribute of the base class <code class="docutils literal notranslate"><span class="pre">B</span></code>. Terminology: <code class="docutils literal notranslate"><span class="pre">B</span></code> is a base class and <code class="docutils literal notranslate"><span class="pre">C</span></code> is a derived class.</p>
 <p>Example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[214]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1140,7 +1140,7 @@ Exercise 9 (rational)</div>
 </div>
 <p>Usually, just the try and except parts are needed.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[215]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1161,7 +1161,7 @@ Index does not exist
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[216]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1193,9 +1193,23 @@ Index does not exist
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Give a number (non-number quits): 12
-Give a number (non-number quits): a
-Average is 12.0
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-12-62abfbaab021&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">         </span>x<span class="ansi-blue-fg">=</span>float<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Give a number (non-number quits): &#34;</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      9</span>         mylist<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">except</span> ValueError<span class="ansi-blue-fg">:</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
+<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">&#34;raw_input was called, but this frontend does not support input requests.&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div></div>
 </div>
 <div class="section" id="Exception-hierarchy">
@@ -1212,7 +1226,7 @@ Average is 12.0
 <h3>Too general exception specifications<a class="headerlink" href="#Too-general-exception-specifications" title="Permalink to this headline">¶</a></h3>
 <p>The exception hierarchy allows to catch multiple similar exceptions by catching their common base class. This feature has to be used carefully. Over-general exception specification, like <code class="docutils literal notranslate"><span class="pre">except</span> <span class="pre">Exception:</span></code>, can hide the real reason for an error. Example of this:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[217]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1232,8 +1246,23 @@ Average is 12.0
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Give a number: 12
-You didn’t enter a number
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-5823ed9136ad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> sys
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>s<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Give a number: &#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> s<span class="ansi-blue-fg">=</span>s<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-red-fg"># strip the \n character from the end</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     x<span class="ansi-blue-fg">=</span>int<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-green-fg">~/virtualenv/python3.6.3/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
+<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
+<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">&#34;raw_input was called, but this frontend does not support input requests.&#34;</span>
+<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
+<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
+
+<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div></div>
 </div>
 <p>In the previous example, if the user doesn’t enter a string that represents an integer, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised by the <code class="docutils literal notranslate"><span class="pre">int</span></code> function. Instead of catching the <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>, we catch the root of the exception hierarchy, namely <code class="docutils literal notranslate"><span class="pre">Exception</span></code>. This results in catching all possible exceptions. But this will cause one typing error in the program to go undetected. Change the exception specification from <code class="docutils literal notranslate"><span class="pre">Exception</span></code> to <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> to see what this error is.</p>
@@ -1271,7 +1300,7 @@ Exercise 10 (extract numbers)</div>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Jarkko Toivonen
+        &copy; Copyright 2018-2019, Jarkko Toivonen
 
     </p>
   </div>

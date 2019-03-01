@@ -423,7 +423,7 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="raw-html"><br/></span></div>
 <!--NAVIGATION--><div class="section" id="Pandas-(continues)">
 <h1>Pandas (continues)<a class="headerlink" href="#Pandas-(continues)" title="Permalink to this headline">¶</a></h1>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
@@ -432,6 +432,20 @@ This page was generated from <a class="reference external" href="https://github.
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-baf368f80de7&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> pandas <span class="ansi-green-fg">as</span> pd
+<span class="ansi-green-intense-fg ansi-bold">      2</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div></div>
 </div>
 <div class="section" id="Creation-of-dataframes">
 <h2>Creation of dataframes<a class="headerlink" href="#Creation-of-dataframes" title="Permalink to this headline">¶</a></h2>
@@ -455,49 +469,18 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-2-cdb7902c654b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randn<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;First&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Second&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Third&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> index<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;a&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;b&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> df
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>First</th>
-      <th>Second</th>
-      <th>Third</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>0.571596</td>
-      <td>0.795476</td>
-      <td>-1.274353</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>0.348421</td>
-      <td>1.108820</td>
-      <td>0.290175</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Note that now both the rows and columns can be accessed using the special <code class="docutils literal notranslate"><span class="pre">Index</span></code> object:</p>
 <div class="nbinput docutils container">
@@ -510,13 +493,17 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Index([&#39;a&#39;, &#39;b&#39;], dtype=&#39;object&#39;)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-41caf29222cf&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">.</span>index                            <span class="ansi-red-fg"># These are the &#34;row names&#34;</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -528,13 +515,17 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Index([&#39;First&#39;, &#39;Second&#39;, &#39;Third&#39;], dtype=&#39;object&#39;)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-612752a41ee0&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">.</span>columns                          <span class="ansi-red-fg"># These are the &#34;column names&#34;</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>If either <code class="docutils literal notranslate"><span class="pre">columns</span></code> or <code class="docutils literal notranslate"><span class="pre">index</span></code> argument is left out, then an integer index will be used:</p>
 <div class="nbinput docutils container">
@@ -548,49 +539,18 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-274b093bbc44&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df2<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randn<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">,</span> index<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;a&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;b&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> df2
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>a</th>
-      <td>1.491080</td>
-      <td>-1.138345</td>
-      <td>0.565323</td>
-    </tr>
-    <tr>
-      <th>b</th>
-      <td>-1.657992</td>
-      <td>0.547394</td>
-      <td>-0.010131</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Now the column index is an object similar to Python’s builtin <code class="docutils literal notranslate"><span class="pre">range</span></code> type:</p>
 <div class="nbinput docutils container">
@@ -603,13 +563,17 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>RangeIndex(start=0, stop=3, step=1)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-6-2f66b0aae6b6&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df2<span class="ansi-blue-fg">.</span>columns
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df2&#39; is not defined
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Creating-DataFrames-from-columns">
@@ -626,16 +590,18 @@ This page was generated from <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    1
-1    2
-2    3
-dtype: int64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-c7079dd22f5b&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>s1 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> s1
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -648,16 +614,18 @@ dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    4
-1    5
-2    6
-Name: b, dtype: int64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-4d4aac99b9ae&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>s2 <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">4</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">6</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> name<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;b&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> s2
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Give the column name explicitly:</p>
 <div class="nbinput docutils container">
@@ -670,47 +638,17 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-8b8893ca503d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>s1<span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;a&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">name</span></code> attribute of Series s2 as the column name:</p>
 <div class="nbinput docutils container">
@@ -723,47 +661,17 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-10-1f93426c4fbd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span>s2<span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>b</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>6</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>If using multiple columns, then they must be given as the dictionary, whose keys give the column names and values are the actual column content.</p>
 <div class="nbinput docutils container">
@@ -776,56 +684,22 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-11-4aa081ae0c44&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;a&#34;</span><span class="ansi-blue-fg">:</span> s1<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;b&#34;</span><span class="ansi-blue-fg">:</span> s2<span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>6</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 </div>
 <div class="section" id="Creating-DataFrames-from-rows">
 <h3>Creating DataFrames from rows<a class="headerlink" href="#Creating-DataFrames-from-rows" title="Permalink to this headline">¶</a></h3>
-<p>We can give a list of rows as a parameter to the DataFrame constructor. If we want to give names for the columns, then either the rows can be dictionaries, where the key is the column name and the values are the elements of the DataFrame on that row and column, or the column must be given explicitly. An example of this:</p>
+<p>We can give a list of rows as a parameter to the DataFrame constructor. Each row is given as a dict, list, Series, or NumPy array. If we want to give names for the columns, then either the rows must be dictionaries, where the key is the column name and the values are the elements of the DataFrame on that row and column, or else the column names must be given explicitly. An example of this:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
@@ -837,49 +711,18 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-12-96e36471e62c&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">=</span>pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;Wage&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Name&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">&#34;Jack&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Age&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">{</span><span class="ansi-blue-fg">&#34;Wage&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">1500</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Name&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-blue-fg">&#34;John&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Age&#34;</span> <span class="ansi-blue-fg">:</span> <span class="ansi-cyan-fg">29</span><span class="ansi-blue-fg">}</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> df
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Age</th>
-      <th>Name</th>
-      <th>Wage</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>21</td>
-      <td>Jack</td>
-      <td>1000</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>29</td>
-      <td>John</td>
-      <td>1500</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Or:</p>
 <div class="nbinput docutils container">
@@ -893,49 +736,18 @@ Name: b, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-13-edad3c1a4365&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>DataFrame<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1000</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Jack&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">21</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1500</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;John&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-cyan-fg">29</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> columns<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Name&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Age&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> df
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wage</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1000</td>
-      <td>Jack</td>
-      <td>21</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1500</td>
-      <td>John</td>
-      <td>29</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <div class="admonition warning">
 <p class="admonition-title fa fa-exclamation-circle">Note that the order of columns is not always the same order as they were in the parameter list. In this case you can use the <code class="docutils literal notranslate"><span class="pre">columns</span></code> parameter to specify the exact order.</p>
@@ -1009,9 +821,18 @@ Exercise 3 (municipal information)</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area stderr docutils container">
+<div class="output_area docutils container">
 <div class="highlight"><pre>
-Key error
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-14-20f7ffdcb2e4&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg">     </span>df<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">except</span> KeyError<span class="ansi-blue-fg">:</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span>     <span class="ansi-green-fg">import</span> sys
+<span class="ansi-green-intense-fg ansi-bold">      5</span>     print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Key error&#34;</span><span class="ansi-blue-fg">,</span> file<span class="ansi-blue-fg">=</span>sys<span class="ansi-blue-fg">.</span>stderr<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
 </pre></div></div>
 </div>
 <p>The following will however work.</p>
@@ -1025,15 +846,17 @@ Key error
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    1000
-1    1500
-Name: Wage, dtype: int64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-15-94129760fedc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>As does the fancy indexing:</p>
 <div class="nbinput docutils container">
@@ -1046,46 +869,17 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-16-2296a39d59ec&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Name&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wage</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1000</td>
-      <td>Jack</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>1500</td>
-      <td>John</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>If one indexes with a slice or a boolean mask, then the <strong>rows</strong> are referred to. Examples of these:</p>
 <div class="nbinput docutils container">
@@ -1098,43 +892,17 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-17-4e3c7e537584&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">:</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span>                           <span class="ansi-red-fg"># slice</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wage</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1000</td>
-      <td>Jack</td>
-      <td>21</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
@@ -1146,43 +914,17 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-18-85114ff24cbd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span>df<span class="ansi-blue-fg">.</span>Wage <span class="ansi-blue-fg">&gt;</span> <span class="ansi-cyan-fg">1200</span><span class="ansi-blue-fg">]</span>               <span class="ansi-red-fg"># boolean mask</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Wage</th>
-      <th>Name</th>
-      <th>Age</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>1</th>
-      <td>1500</td>
-      <td>John</td>
-      <td>29</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>If some of the above calls return a Series object, then you can chain the bracket calls to get a single value from the DataFrame:</p>
 <div class="nbinput docutils container">
@@ -1195,13 +937,17 @@ Name: Wage, dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>1500
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-19-eae3ab75ed43&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span>                    <span class="ansi-red-fg"># Note order of dimensions</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>But there is a better way to achieve this, which we will see in the next section.</p>
 <hr class="docutils" />
@@ -1250,13 +996,17 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>1500
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-20-a040be334feb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -1268,13 +1018,17 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>29
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-21-4be68fde7137&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">.</span>iloc<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span>             <span class="ansi-red-fg"># Right lower corner of the DataFrame</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
@@ -1286,15 +1040,17 @@ Exercise 6 (growing municipalities)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Name    John
-Wage    1500
-Name: 1, dtype: object
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-22-ab603eacc957&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>df<span class="ansi-blue-fg">.</span>loc<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Name&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Wage&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">]</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;df&#39; is not defined
+</pre></div></div>
 </div>
 <p>With <code class="docutils literal notranslate"><span class="pre">iloc</span></code> everything works like with NumPy arrays: indexing, slicing, fancy indexing, masking and their combinations. With <code class="docutils literal notranslate"><span class="pre">loc</span></code> it is the same but now the names in the explicit indices are used for specifying rows and columns. Make sure your understand why the above examples work as they do!</p>
 <hr class="docutils" />
@@ -1310,8 +1066,8 @@ Exercise 8 (subsetting by positions)</div>
 <div class="section" id="Summary-statistics">
 <h2>Summary statistics<a class="headerlink" href="#Summary-statistics" title="Permalink to this headline">¶</a></h2>
 <p>The summary statistic methods work in a similar way as their counter parts in NumPy. By default, the aggregation is done over columns.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1319,8 +1075,21 @@ Exercise 8 (subsetting by positions)</div>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-23-39d3653b3107&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>read_csv<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;https://www.cs.helsinki.fi/u/jttoivon/dap/data/fmi/kumpula-weather-2017.csv&#34;</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
+</div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[24]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1330,20 +1099,22 @@ Exercise 8 (subsetting by positions)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>Precipitation amount (mm)    1.966301
-Snow depth (cm)              0.966480
-Air temperature (degC)       6.527123
-dtype: float64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-24-bf653097dd00&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh2 <span class="ansi-blue-fg">=</span> wh<span class="ansi-blue-fg">.</span>drop<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Year&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;m&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;d&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> axis<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>  <span class="ansi-red-fg"># taking averages over these is not very interesting</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> wh2<span class="ansi-blue-fg">.</span>mean<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">describe</span></code> method of the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object gives different summary statistics for each (numeric) column. The result is a DataFrame. This method gives a good overview of the data, and is typically used in the exploratory data analysis phase.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[25]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1352,112 +1123,17 @@ dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-25-7250af062165&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">.</span>describe<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>m</th>
-      <th>d</th>
-      <th>Precipitation amount (mm)</th>
-      <th>Snow depth (cm)</th>
-      <th>Air temperature (degC)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>365.0</td>
-      <td>365.000000</td>
-      <td>365.000000</td>
-      <td>365.000000</td>
-      <td>358.000000</td>
-      <td>365.000000</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>2017.0</td>
-      <td>6.526027</td>
-      <td>15.720548</td>
-      <td>1.966301</td>
-      <td>0.966480</td>
-      <td>6.527123</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>0.0</td>
-      <td>3.452584</td>
-      <td>8.808321</td>
-      <td>4.858423</td>
-      <td>3.717472</td>
-      <td>7.183934</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>2017.0</td>
-      <td>1.000000</td>
-      <td>1.000000</td>
-      <td>-1.000000</td>
-      <td>-1.000000</td>
-      <td>-17.800000</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>2017.0</td>
-      <td>4.000000</td>
-      <td>8.000000</td>
-      <td>-1.000000</td>
-      <td>-1.000000</td>
-      <td>1.200000</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>2017.0</td>
-      <td>7.000000</td>
-      <td>16.000000</td>
-      <td>0.200000</td>
-      <td>-1.000000</td>
-      <td>4.800000</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>2017.0</td>
-      <td>10.000000</td>
-      <td>23.000000</td>
-      <td>2.700000</td>
-      <td>0.000000</td>
-      <td>12.900000</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>2017.0</td>
-      <td>12.000000</td>
-      <td>31.000000</td>
-      <td>35.000000</td>
-      <td>15.000000</td>
-      <td>19.600000</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -1489,7 +1165,7 @@ Exercise 11 (below zero)</div>
 <p>You may have noticed something strange in the output of the <code class="docutils literal notranslate"><span class="pre">describe</span></code> method. First, the minimum value in both precipitation and snow depth fields is -1. The special value -1 means that on that day there was absolutely no snow or rain, whereas the value 0 might indicate that the value was close to zero. Secondly, the snow depth column has count 358, whereas the other columns have count 365, one measurement/value for each day of the year. How is this possible? Every field in a DataFrame should
 have the same number of rows. Let’s use the <code class="docutils literal notranslate"><span class="pre">unique</span></code> method of the Series object to find out, which different values are used in this column:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1498,20 +1174,23 @@ have the same number of rows. Let’s use the <code class="docutils literal notr
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>array([-1.,  7., 13., 10., 12.,  9.,  8.,  5.,  6.,  4.,  3., 15., 14.,
-        2., nan,  0.])
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-26-83a2186a462d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Snow depth (cm)&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">.</span>unique<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">float</span></code> type allows a special value <code class="docutils literal notranslate"><span class="pre">nan</span></code> (Not A Number), in addition to normal floating point numbers. This value can represent the result from an illegal operation. For example, the operation 0/0 can either cause an exception to occur or just silently produce a <code class="docutils literal notranslate"><span class="pre">nan</span></code>. In Pandas <code class="docutils literal notranslate"><span class="pre">nan</span></code> can be used to represent a missing value. In the weather DataFrame the <code class="docutils literal notranslate"><span class="pre">nan</span></code> value tells us that the measurement from that day is not available, possibly due to a broken measuring instrument or some
 other problem.</p>
 <p>Note that only float types allow the <code class="docutils literal notranslate"><span class="pre">nan</span></code> value (in Python, NumPy or Pandas). So, if we try to create an integer series with missing values, its dtype gets promoted to <code class="docutils literal notranslate"><span class="pre">float</span></code>:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[27]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1520,19 +1199,20 @@ other problem.</p>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    1
-1    3
-2    2
-dtype: int64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-27-0af633f6c6cb&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1541,21 +1221,21 @@ dtype: int64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    1.0
-1    3.0
-2    2.0
-3    NaN
-dtype: float64
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-28-89c723f67b4d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">3</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">2</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>nan<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>For non-numeric types the special value <code class="docutils literal notranslate"><span class="pre">None</span></code> is used to denote a missing value, and the dtype is promoted to <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1564,21 +1244,22 @@ dtype: float64
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0    jack
-1     joe
-2    None
-dtype: object
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-29-7fed15a1edfc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;jack&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;joe&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-green-fg">None</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>Pandas excludes the missing values from the summary statistics, like we saw in the previous section. Pandas also provides some functions to handle missing values.</p>
 <p>The missing values can be located with the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> method:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -1587,718 +1268,21 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-30-f5de96407d80&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">.</span>isnull<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>      <span class="ansi-red-fg"># returns a boolean mask DataFrame</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>m</th>
-      <th>d</th>
-      <th>Time</th>
-      <th>Time zone</th>
-      <th>Precipitation amount (mm)</th>
-      <th>Snow depth (cm)</th>
-      <th>Air temperature (degC)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>335</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>336</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>337</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>338</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>339</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>340</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>341</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>342</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>343</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>344</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>345</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>346</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>347</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>348</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>349</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>350</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>351</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>352</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>353</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>354</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>355</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>356</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>357</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>358</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>359</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>360</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>361</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>362</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>363</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-    <tr>
-      <th>364</th>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-      <td>False</td>
-    </tr>
-  </tbody>
-</table>
-<p>365 rows × 8 columns</p>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>This is not very useful as we cannot directly use the mask to index the DataFrame. We can, however, combine it with the <code class="docutils literal notranslate"><span class="pre">any</span></code> method to find out all the rows that contain at least one missing value:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[31]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2307,124 +1291,22 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-31-c90e89e0ce69&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">[</span>wh<span class="ansi-blue-fg">.</span>isnull<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>any<span class="ansi-blue-fg">(</span>axis<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>m</th>
-      <th>d</th>
-      <th>Time</th>
-      <th>Time zone</th>
-      <th>Precipitation amount (mm)</th>
-      <th>Snow depth (cm)</th>
-      <th>Air temperature (degC)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>74</th>
-      <td>2017</td>
-      <td>3</td>
-      <td>16</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>1.8</td>
-      <td>NaN</td>
-      <td>3.4</td>
-    </tr>
-    <tr>
-      <th>163</th>
-      <td>2017</td>
-      <td>6</td>
-      <td>13</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>0.6</td>
-      <td>NaN</td>
-      <td>12.6</td>
-    </tr>
-    <tr>
-      <th>308</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>5</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>0.2</td>
-      <td>NaN</td>
-      <td>8.4</td>
-    </tr>
-    <tr>
-      <th>309</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>6</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>2.0</td>
-      <td>NaN</td>
-      <td>7.5</td>
-    </tr>
-    <tr>
-      <th>313</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>10</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>3.6</td>
-      <td>NaN</td>
-      <td>7.2</td>
-    </tr>
-    <tr>
-      <th>321</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>18</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>11.3</td>
-      <td>NaN</td>
-      <td>5.9</td>
-    </tr>
-    <tr>
-      <th>328</th>
-      <td>2017</td>
-      <td>11</td>
-      <td>25</td>
-      <td>00:00</td>
-      <td>UTC</td>
-      <td>8.5</td>
-      <td>NaN</td>
-      <td>4.2</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">notnull</span></code> method works conversively to the <code class="docutils literal notranslate"><span class="pre">isnull</span></code> method.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">dropna</span></code> method of a DataFrame drops columns or rows that contain missing values from the DataFrame, depending on the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[32]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2433,16 +1315,20 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(358, 8)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-32-c63431c25be3&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">.</span>dropna<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>shape   <span class="ansi-red-fg"># Default axis is 0</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[33]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2451,13 +1337,17 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(365, 7)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-33-6f6d85e5bc23&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh<span class="ansi-blue-fg">.</span>dropna<span class="ansi-blue-fg">(</span>axis<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>shape <span class="ansi-red-fg"># Drops the columns containing missing values</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">how</span></code> and <code class="docutils literal notranslate"><span class="pre">thresh</span></code> parameters of the <code class="docutils literal notranslate"><span class="pre">dropna</span></code> method allow one to specify how many values need to be missing in order for the row/column to be dropped.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">fillna</span></code> method allows to fill the missing values with some constant or interpolated values. The <code class="docutils literal notranslate"><span class="pre">method</span></code> parameter can be:</p>
@@ -2468,7 +1358,7 @@ dtype: object
 </ul>
 <p>For example, for the weather data we could use forward fill</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[34]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2478,42 +1368,18 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-34-9591f71a8c97&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>wh <span class="ansi-blue-fg">=</span> wh<span class="ansi-blue-fg">.</span>fillna<span class="ansi-blue-fg">(</span>method<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#39;ffill&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> wh<span class="ansi-blue-fg">[</span>wh<span class="ansi-blue-fg">.</span>isnull<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">.</span>any<span class="ansi-blue-fg">(</span>axis<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">]</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Year</th>
-      <th>m</th>
-      <th>d</th>
-      <th>Time</th>
-      <th>Time zone</th>
-      <th>Precipitation amount (mm)</th>
-      <th>Snow depth (cm)</th>
-      <th>Air temperature (degC)</th>
-    </tr>
-  </thead>
-  <tbody>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;wh&#39; is not defined
+</pre></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">interpolate</span></code> method, which we will not cover here, offers more elaborate ways to interpolate the missing values from their neighbouring non-missing values.</p>
 <hr class="docutils" />
@@ -2594,7 +1460,7 @@ Exercise 15 (last week)</div>
 <h2>String processing<a class="headerlink" href="#String-processing" title="Permalink to this headline">¶</a></h2>
 <p>If the elements in a column are strings, then the vectorized versions of Python’s string processing methods are available. These are accessed through the <code class="docutils literal notranslate"><span class="pre">str</span></code> attribute of a Series or a DataFrame. For example, to capitalize all the strings of a Series, we can use the <code class="docutils literal notranslate"><span class="pre">str.capitalize</span></code> method:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[35]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2604,21 +1470,22 @@ Exercise 15 (last week)</div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0      Donald
-1     Theresa
-2      Angela
-3    Vladimir
-dtype: object
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-35-bf8c37f49a07&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>names <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;donald&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;theresa&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;angela&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;vladimir&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> names<span class="ansi-blue-fg">.</span>str<span class="ansi-blue-fg">.</span>capitalize<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>One can find all the available methods by pressing the tab key after the text <code class="docutils literal notranslate"><span class="pre">names.str.</span></code> in a Python prompt. Try it in below cell!</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[36]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2628,7 +1495,7 @@ dtype: object
 </div>
 <p>We can split a column or Series into several columns using the <code class="docutils literal notranslate"><span class="pre">split</span></code> method. For example:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[37]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2638,21 +1505,22 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[39]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>0      [Donald, Trump]
-1       [Theresa, May]
-2     [Angela, Merkel]
-3    [Vladimir, Putin]
-dtype: object
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-37-f6e8d5a516dc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>full_names <span class="ansi-blue-fg">=</span> pd<span class="ansi-blue-fg">.</span>Series<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">&#34;Donald Trump&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Theresa May&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Angela Merkel&#34;</span><span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#34;Vladimir Putin&#34;</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> full_names<span class="ansi-blue-fg">.</span>str<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;pd&#39; is not defined
+</pre></div></div>
 </div>
 <p>This is not exactly what we wanted: now each element is a list. We need to use the <code class="docutils literal notranslate"><span class="pre">expand</span></code> parameter to split into columns:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[38]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -2661,56 +1529,17 @@ dtype: object
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[40]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area rendered_html docutils container">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-38-1b80b4ae908d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>full_names<span class="ansi-blue-fg">.</span>str<span class="ansi-blue-fg">.</span>split<span class="ansi-blue-fg">(</span>expand<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Donald</td>
-      <td>Trump</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Theresa</td>
-      <td>May</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Angela</td>
-      <td>Merkel</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Vladimir</td>
-      <td>Putin</td>
-    </tr>
-  </tbody>
-</table>
-</div></div>
+<span class="ansi-red-fg">NameError</span>: name &#39;full_names&#39; is not defined
+</pre></div></div>
 </div>
 <hr class="docutils" />
 <div class="admonition note">
@@ -2834,7 +1663,7 @@ methods</a> of Series objects. You get an additional point, if you manage to get
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Jarkko Toivonen
+        &copy; Copyright 2018-2019, Jarkko Toivonen
 
     </p>
   </div>

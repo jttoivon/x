@@ -424,8 +424,8 @@ This page was generated from <a class="reference external" href="https://github.
 and this relationship is approximately linear for kids (ages between 1 and 16). Another way of thinking about regression is fitting a curve to the observed data points. If we have only one explanatory variable, then this is easy to visualize, as we shall see below.</p>
 <p>We can apply the linear regression easily with the <a class="reference external" href="https://scikit-learn.org/stable/">scikit-learn</a> package. Let’s go through some examples.</p>
 <p>First we make the usual standard imports.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -435,9 +435,24 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-1-06c9e024558e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> numpy <span class="ansi-green-fg">as</span> np
+<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">import</span> matplotlib<span class="ansi-blue-fg">.</span>pyplot <span class="ansi-green-fg">as</span> plt
+<span class="ansi-green-intense-fg ansi-bold">      3</span> <span class="ansi-green-fg">import</span> sklearn   <span class="ansi-red-fg"># This imports the scikit-learn library</span>
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;matplotlib&#39;
+</pre></div></div>
+</div>
 <p>Then we create some data with approximately the relationship <span class="math notranslate nohighlight">\(y=2x+1\)</span>, with normally distributed errors.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -455,19 +470,19 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-[ 0.          0.52631579  1.05263158  1.57894737  2.10526316  2.63157895
-  3.15789474  3.68421053  4.21052632  4.73684211  5.26315789  5.78947368
-  6.31578947  6.84210526  7.36842105  7.89473684  8.42105263  8.94736842
-  9.47368421 10.        ]
-[ 2.76405235  2.45278879  4.08400114  6.39878794  7.07808431  5.28588001
-  8.26587789  8.21706384  9.31783378 10.88428271 11.67035936 14.03322088
- 14.39261667 14.80588554 16.18070534 17.12314801 19.33618434 18.68957858
- 20.26043612 20.14590426]
+[  0.           0.52631579   1.05263158   1.57894737   2.10526316
+   2.63157895   3.15789474   3.68421053   4.21052632   4.73684211
+   5.26315789   5.78947368   6.31578947   6.84210526   7.36842105
+   7.89473684   8.42105263   8.94736842   9.47368421  10.        ]
+[  2.76405235   2.45278879   4.08400114   6.39878794   7.07808431
+   5.28588001   8.26587789   8.21706384   9.31783378  10.88428271
+  11.67035936  14.03322088  14.39261667  14.80588554  16.18070534
+  17.12314801  19.33618434  18.68957858  20.26043612  20.14590426]
 </pre></div></div>
 </div>
 <p>Next we import the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> class.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -475,9 +490,22 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">ModuleNotFoundError</span>                       Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-3-a35af2a4e137&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span><span class="ansi-green-fg">from</span> sklearn<span class="ansi-blue-fg">.</span>linear_model <span class="ansi-green-fg">import</span> LinearRegression
+
+<span class="ansi-red-fg">ModuleNotFoundError</span>: No module named &#39;sklearn&#39;
+</pre></div></div>
+</div>
 <p>Now we can fit a line through the data points (x, y):</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -496,12 +524,22 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/linear_regression_9_0.png" src="_images/linear_regression_9_0.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-4-10064b0ce08e&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>plot<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span>y<span class="ansi-blue-fg">,</span> <span class="ansi-blue-fg">&#39;o&#39;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> model<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> model<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span>np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> xfit<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">10</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">100</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> yfit<span class="ansi-blue-fg">=</span>model<span class="ansi-blue-fg">.</span>predict<span class="ansi-blue-fg">(</span>xfit<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div></div>
 </div>
 <p>The linear regression tries to minimize the sum of squared errors <span class="math notranslate nohighlight">\(\sum_i (y[i] - \hat{y}[i])^2\)</span>; this is the sum of the lengths of the red line segments in the above plot. The estimated values <span class="math notranslate nohighlight">\(\hat{y}[i]\)</span> are denoted by <code class="docutils literal notranslate"><span class="pre">yfit[i]</span></code> in the above code.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -516,9 +554,14 @@ and this relationship is approximately linear for kids (ages between 1 and 16). 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Parameters: [1.88627741] 2.1379475205341283
-Coefficient: 1.8862774144823018
-Intercept: 2.1379475205341283
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-5-bdf5862ca6fd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Parameters:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Coefficient:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">[</span><span class="ansi-cyan-fg">0</span><span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;Intercept:&#34;</span><span class="ansi-blue-fg">,</span> model<span class="ansi-blue-fg">.</span>intercept_<span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;model&#39; is not defined
 </pre></div></div>
 </div>
 <p>In this case, the coefficient is the slope of the fitted line, and the intercept is the point where the fitted line intersects with the y-axis.</p>
@@ -529,7 +572,7 @@ Note that in scikit-learn the attributes of the model that store the learned par
 <h3>Multiple features<a class="headerlink" href="#Multiple-features" title="Permalink to this headline">¶</a></h3>
 <p>The previous example had only one explanatory variable. Sometimes this is called a <em>simple linear regression</em>. The next example illustrates a more complex regression with multiple explanatory variables.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -542,7 +585,7 @@ Note that in scikit-learn the attributes of the model that store the learned par
 </div>
 <p>Let’s try to fit a linear model to these points:</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -554,17 +597,24 @@ Note that in scikit-learn the attributes of the model that store the learned par
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
-<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
-<span></span>(array([5.69493795e+00, 3.36972233e+00, 4.20919214e-03]), 0.0)
-</pre></div>
-</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-7-51ae79d6fd26&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>model2<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">False</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> x<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>vstack<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">[</span>sample1<span class="ansi-blue-fg">,</span>sample2<span class="ansi-blue-fg">,</span>sample3<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> model2<span class="ansi-blue-fg">.</span>fit<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> model2<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">,</span> model2<span class="ansi-blue-fg">.</span>intercept_
+
+<span class="ansi-red-fg">NameError</span>: name &#39;LinearRegression&#39; is not defined
+</pre></div></div>
 </div>
 <p>Let’s print the various components involved.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -581,22 +631,16 @@ Note that in scikit-learn the attributes of the model that store the learned par
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-x:
- [[ 1  2  3]
- [ 4  5  6]
- [ 7  8 10]]
-b:
- [[5.69493795e+00]
- [3.36972233e+00]
- [4.20919214e-03]]
-y:
- [[12.44701018]
- [39.6536186 ]
- [66.8644362 ]]
-product:
- [[12.44701018]
- [39.6536186 ]
- [66.8644362 ]]
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-8-31d4749b34cd&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>b<span class="ansi-blue-fg">=</span>model2<span class="ansi-blue-fg">.</span>coef_<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;x:\n&#34;</span><span class="ansi-blue-fg">,</span> x<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      3</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;b:\n&#34;</span><span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;y:\n&#34;</span><span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>newaxis<span class="ansi-blue-fg">]</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> print<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#34;product:\n&#34;</span><span class="ansi-blue-fg">,</span> np<span class="ansi-blue-fg">.</span>matmul<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> b<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;model2&#39; is not defined
 </pre></div></div>
 </div>
 </div>
@@ -605,7 +649,7 @@ product:
 <p>It may perhaps come as a surprise that one can fit a polynomial curve to data points using linear regression. The trick is to add new explanatory variables to the model. Below we have a single feature x with associated y values given by third degree polynomial, with some (gaussian) noise added. It is clear from the below plot that we cannot explain the data well with a linear function. We add two new features: <span class="math notranslate nohighlight">\(x^2\)</span> and <span class="math notranslate nohighlight">\(x^3\)</span>. Now the model has three explanatory variables,
 <span class="math notranslate nohighlight">\(x, x^2\)</span> and <span class="math notranslate nohighlight">\(x^3\)</span>. The linear regression will find the coefficients for these variables.</p>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
@@ -633,21 +677,22 @@ product:
 </pre></div>
 </div>
 </div>
-<div class="nboutput docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Coefficients: [-19.23135699 -19.10028669   0.14609221]
-Intercept: -1488.9056772937038
-</pre></div></div>
-</div>
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<img alt="_images/linear_regression_22_1.png" src="_images/linear_regression_22_1.png" />
-</div>
+<div class="highlight"><pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-fg">&lt;ipython-input-9-9d5effadf1c8&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
+<span class="ansi-green-intense-fg ansi-bold">      1</span> x<span class="ansi-blue-fg">=</span>np<span class="ansi-blue-fg">.</span>linspace<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">150</span><span class="ansi-blue-fg">,</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      2</span> y<span class="ansi-blue-fg">=</span><span class="ansi-cyan-fg">0.15</span><span class="ansi-blue-fg">*</span>x<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">3</span> <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">20</span><span class="ansi-blue-fg">*</span>x<span class="ansi-blue-fg">**</span><span class="ansi-cyan-fg">2</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">5</span><span class="ansi-blue-fg">*</span>x <span class="ansi-blue-fg">-</span> <span class="ansi-cyan-fg">4</span> <span class="ansi-blue-fg">+</span> <span class="ansi-cyan-fg">5000</span><span class="ansi-blue-fg">*</span>np<span class="ansi-blue-fg">.</span>random<span class="ansi-blue-fg">.</span>randn<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">50</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-fg">----&gt; 3</span><span class="ansi-red-fg"> </span>plt<span class="ansi-blue-fg">.</span>scatter<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">,</span> y<span class="ansi-blue-fg">,</span> color<span class="ansi-blue-fg">=</span><span class="ansi-blue-fg">&#34;black&#34;</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      4</span> model_linear<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+<span class="ansi-green-intense-fg ansi-bold">      5</span> model_squared<span class="ansi-blue-fg">=</span>LinearRegression<span class="ansi-blue-fg">(</span>fit_intercept<span class="ansi-blue-fg">=</span><span class="ansi-green-fg">True</span><span class="ansi-blue-fg">)</span>
+
+<span class="ansi-red-fg">NameError</span>: name &#39;plt&#39; is not defined
+</pre></div></div>
 </div>
 <p>Linear and squared are not enough to explain the data, but the linear regression manages to fit quite well a polynomial curve to the data points, when cubic variables are included!</p>
 <hr class="docutils" />
@@ -764,7 +809,7 @@ given as a parameter to the function <code class="docutils literal notranslate">
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2018, Jarkko Toivonen
+        &copy; Copyright 2018-2019, Jarkko Toivonen
 
     </p>
   </div>
