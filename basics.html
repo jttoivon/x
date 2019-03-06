@@ -127,7 +127,7 @@
 <p class="caption"><span class="caption-text">Week 5:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pandas3.html">Pandas (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning: linear regression</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week6:</span></p>
 <ul>
@@ -1836,7 +1836,7 @@ On Sunday it was sunny and the temperature was 11 degrees celsius.
 <hr/></div>
 <div class="section" id="Enumerating-sequences">
 <h4>Enumerating sequences<a class="headerlink" href="#Enumerating-sequences" title="Permalink to this headline">¶</a></h4>
-<p>In some other programming languages one iterates through the elements using their indices (0,1, …) in the sequence. In Python we normally don’t need to think about indices when iterating, because the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop allows simpler iteration through the elements. But sometimes you really need to know the index of the current element in the sequence. In this this one uses Python’s <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> function. In the next example we would like find the second occurrence of integer 5 in a list.</p>
+<p>In some other programming languages one iterates through the elements using their indices (0,1, …) in the sequence. In Python we normally don’t need to think about indices when iterating, because the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop allows simpler iteration through the elements. But sometimes you really need to know the index of the current element in the sequence. In this case one uses Python’s <code class="docutils literal notranslate"><span class="pre">enumerate</span></code> function. In the next example we would like find the second occurrence of integer 5 in a list.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[55]:
 </pre></div>
@@ -2266,7 +2266,11 @@ reverse_dictionary(d)
 [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
 </pre></div></div>
 </div>
-<p>The generic form of a list comprehension is: <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">expression</span> <span class="pre">for</span> <span class="pre">element</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">lc-clauses</span> <span class="pre">]</span></code>. Let’s break this syntax into pieces. The iterable can be any sequence (or something more general). The lc-clauses consists of zero or more of the following clauses: * for elem in iterable * if expression</p>
+<p>The generic form of a list comprehension is: <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">expression</span> <span class="pre">for</span> <span class="pre">element</span> <span class="pre">in</span> <span class="pre">iterable</span> <span class="pre">lc-clauses</span> <span class="pre">]</span></code>. Let’s break this syntax into pieces. The iterable can be any sequence (or something more general). The lc-clauses consists of zero or more of the following clauses:</p>
+<ul class="simple">
+<li>for elem in iterable</li>
+<li>if expression</li>
+</ul>
 <p>A more complicated example. How would you describe these numbers?</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[73]:
@@ -2407,7 +2411,7 @@ Note above that one can only iterate through the generator once.</div>
 [24, 8, -2]
 </pre></div></div>
 </div>
-<p>When one reads numeric data from a file or from the internet, the numbers are in string form. Before they can be used in computations, they must first be converted to ints or floats. A simple example will showcase this.</p>
+<p>When one reads numeric data from a file or from the internet, the numbers are usually in string form. Before they can be used in computations, they must first be converted to ints or floats. A simple example will showcase this.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[79]:
 </pre></div>
@@ -2754,12 +2758,12 @@ If you want to build a string out of smaller strings, then first put the small s
 </div>
 <div class="section" id="Breaking-the-namespace">
 <h3>Breaking the namespace<a class="headerlink" href="#Breaking-the-namespace" title="Permalink to this headline">¶</a></h3>
-<p>If the cosine is needed a lot, then it might be tedious to always specify the namespace, especially if the name of the namespace/module is long. For these cases there is another way of importing modules. Bring a name to the current scope with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">cos</span></code> statement. Now we can used it without the namespace specifier: <code class="docutils literal notranslate"><span class="pre">cos(1)</span></code>.</p>
+<p>If the cosine is needed a lot, then it might be tedious to always specify the namespace, especially if the name of the namespace/module is long. For these cases there is another way of importing modules. Bring a name to the current scope with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">cos</span></code> statement. Now we can use it without the namespace specifier: <code class="docutils literal notranslate"><span class="pre">cos(1)</span></code>.</p>
 <p>Several names can be imported to the current scope with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">name1,</span> <span class="pre">name2,</span> <span class="pre">...</span></code> Or even all names of the module with <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">math</span> <span class="pre">import</span> <span class="pre">*</span></code> The last form is sensible only in few cases, normally it just confuses things since the user may have no idea what names will be imported.</p>
 </div>
 <div class="section" id="Module-lookup">
 <h3>Module lookup<a class="headerlink" href="#Module-lookup" title="Permalink to this headline">¶</a></h3>
-<p>When we try to import a module mod with the import statement, the lookup proceeds in the following order:</p>
+<p>When we try to import a module <code class="docutils literal notranslate"><span class="pre">mod</span></code> with the import statement, the lookup proceeds in the following order:</p>
 <ul class="simple">
 <li>Check if it is a builtin module</li>
 <li>Check if the file <code class="docutils literal notranslate"><span class="pre">mod.py</span></code> is found in any of the directories in the list <code class="docutils literal notranslate"><span class="pre">sys.path</span></code>. The first item in this list is the current directory</li>
@@ -2823,6 +2827,26 @@ visible to all modules. All variables belong to some module namespace.</p>
 <p>Just like other objects, the module object contains its attributes in the dictionary <code class="docutils literal notranslate"><span class="pre">modulename.__dict__</span></code> Usually a module contains at least the attributes <code class="docutils literal notranslate"><span class="pre">__name__</span></code> and <code class="docutils literal notranslate"><span class="pre">__file__</span></code>. Other common attributes are <code class="docutils literal notranslate"><span class="pre">__version__</span></code>, <code class="docutils literal notranslate"><span class="pre">__author__</span></code> and <code class="docutils literal notranslate"><span class="pre">__doc__</span></code> , which contains the docstring of the module. If the first statement of a file is a string, this is taken as the docstring for that module. Note that the docstring of the module really must be the first non-empty non-comment line. The
 attribute <code class="docutils literal notranslate"><span class="pre">__file__</span></code> is always the filename of the module.</p>
 <p>The module attribute <code class="docutils literal notranslate"><span class="pre">__name__</span></code> has value <code class="docutils literal notranslate"><span class="pre">“__main__”</span></code> if we in are the main program, otherwise some other module has imported us and name equals <code class="docutils literal notranslate"><span class="pre">__file__</span></code>.</p>
+<p>In Python it is possible to put statements on the top-level of our module <code class="docutils literal notranslate"><span class="pre">mod</span></code> so that they don’t belong to any function. For instance like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>But if somebody imports our module with <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mod</span></code>, then all the statements at the top-level will be executed. This may be surprising to the user who imported the module. The user will usually say, explicitly when he/she wants to execute some code from the imported module.</p>
+<p>It is better style to put these statements inside some function. If they don’t fit in any other function, then you can use, for example, the function named <code class="docutils literal notranslate"><span class="pre">main</span></code>, like this:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">"__main__"</span><span class="p">:</span>    <span class="c1"># We call main only when this module is not being imported, but directly executed</span>
+    <span class="n">main</span><span class="p">()</span>                    <span class="c1"># for example with 'python3 mod.py'</span>
+</pre></div>
+</div>
+<p>You probably have seen this mechanism used in the exercise stubs. Note that in Python the <code class="docutils literal notranslate"><span class="pre">main</span></code> has no special meaning, it is just our convention to use it here. Now if somebody imports <code class="docutils literal notranslate"><span class="pre">mod</span></code>, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop won’t be automatically executed. If we want, we can call it explicitly with <code class="docutils literal notranslate"><span class="pre">mod.main()</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">"Hello"</span><span class="p">)</span>
+</pre></div>
+</div>
 <hr class="docutils"/>
 <div class="admonition note"><a id="Exercise-20-(usemodule)">Exercise 20 (usemodule)</a></div>
 <p>Create your own module as file <code class="docutils literal notranslate"><span class="pre">triangle.py</span></code> in the <code class="docutils literal notranslate"><span class="pre">src</span></code> folder. The module should contain two functions:</p>

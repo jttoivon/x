@@ -79,6 +79,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#What-is-the-error-handling-policy-in-Python">What is the error handling policy in Python</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#Sequences,-iterables,-generators:-revisited">Sequences, iterables, generators: revisited</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="numpy.html">NumPy</a></li>
@@ -97,7 +98,7 @@
 <p class="caption"><span class="caption-text">Week 5:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pandas3.html">Pandas (continues)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linear_regression.html">Machine learning: linear regression</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Week6:</span></p>
 <ul>
@@ -778,9 +779,9 @@ The longest line in this file has length 1046
 <div class="nboutput nblast docutils container">
 <div class="prompt empty docutils container">
 </div>
-<div class="output_area docutils container">
+<div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Got a positive integer.
+Got a negative integer.
 </pre></div></div>
 </div>
 <p>These standard file objects are meant to be a basic input/output mechanism in textual form. The destinations of the file objects can be changed to point somewhere else than the usual keyboard and screen. Very often these are redirected to some files. For example, it is usual to point the stderr to a file where all error messages are logged.</p>
@@ -1125,23 +1126,9 @@ Index does not exist
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-12-62abfbaab021&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      6</span> <span class="ansi-green-fg">while</span> <span class="ansi-green-fg">True</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      7</span>     <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-fg">----&gt; 8</span><span class="ansi-red-fg">         </span>x<span class="ansi-blue-fg">=</span>float<span class="ansi-blue-fg">(</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number (non-number quits): "</span><span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      9</span>         mylist<span class="ansi-blue-fg">.</span>append<span class="ansi-blue-fg">(</span>x<span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     10</span>     <span class="ansi-green-fg">except</span> ValueError<span class="ansi-blue-fg">:</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give a number (non-number quits): 2
+Give a number (non-number quits): a
+Average is 2.0
 </pre></div></div>
 </div>
 <div class="section" id="Exception-hierarchy">
@@ -1178,23 +1165,8 @@ Index does not exist
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">StdinNotImplementedError</span>                  Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-13-5823ed9136ad&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-intense-fg ansi-bold">      1</span> <span class="ansi-green-fg">import</span> sys
-<span class="ansi-green-fg">----&gt; 2</span><span class="ansi-red-fg"> </span>s<span class="ansi-blue-fg">=</span>input<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">"Give a number: "</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">      3</span> s<span class="ansi-blue-fg">=</span>s<span class="ansi-blue-fg">[</span><span class="ansi-blue-fg">:</span><span class="ansi-blue-fg">-</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">]</span> <span class="ansi-red-fg"># strip the \n character from the end</span>
-<span class="ansi-green-intense-fg ansi-bold">      4</span> <span class="ansi-green-fg">try</span><span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">      5</span>     x<span class="ansi-blue-fg">=</span>int<span class="ansi-blue-fg">(</span>s<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-green-fg">~/virtualenv/python3.6.7/lib/python3.6/site-packages/ipykernel/kernelbase.py</span> in <span class="ansi-cyan-fg">raw_input</span><span class="ansi-blue-fg">(self, prompt)</span>
-<span class="ansi-green-intense-fg ansi-bold">    846</span>         <span class="ansi-green-fg">if</span> <span class="ansi-green-fg">not</span> self<span class="ansi-blue-fg">.</span>_allow_stdin<span class="ansi-blue-fg">:</span>
-<span class="ansi-green-intense-fg ansi-bold">    847</span>             raise StdinNotImplementedError(
-<span class="ansi-green-fg">--&gt; 848</span><span class="ansi-red-fg">                 </span><span class="ansi-blue-fg">"raw_input was called, but this frontend does not support input requests."</span>
-<span class="ansi-green-intense-fg ansi-bold">    849</span>             )
-<span class="ansi-green-intense-fg ansi-bold">    850</span>         return self._input_request(str(prompt),
-
-<span class="ansi-red-fg">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+Give a number: 2
+You didn’t enter a number
 </pre></div></div>
 </div>
 <p>In the previous example, if the user doesn’t enter a string that represents an integer, a <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> is raised by the <code class="docutils literal notranslate"><span class="pre">int</span></code> function. Instead of catching the <code class="docutils literal notranslate"><span class="pre">ValueError</span></code>, we catch the root of the exception hierarchy, namely <code class="docutils literal notranslate"><span class="pre">Exception</span></code>. This results in catching all possible exceptions. But this will cause one typing error in the program to go undetected. Change the exception specification from <code class="docutils literal notranslate"><span class="pre">Exception</span></code> to <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> to see what this error is.</p>
@@ -1207,8 +1179,134 @@ of functions aren’t specified to be of any certain type.</p>
 <div class="admonition note"><a id="Exercise-10-(extract-numbers)">Exercise 10 (extract numbers)</a></div>
 <p>Write a function <code class="docutils literal notranslate"><span class="pre">extract_numbers</span></code> that gets a string as a parameter. It should return a list of numbers that can be both ints and floats. Split the string to words at whitespace using the <code class="docutils literal notranslate"><span class="pre">split()</span></code> method. Then iterate through each word, and initially try to convert to an int. If unsuccesful, then try to convert to a float. If not a number then skip the word.</p>
 <p>Example run: <code class="docutils literal notranslate"><span class="pre">print(extract_numbers("abd</span> <span class="pre">123</span> <span class="pre">1.2</span> <span class="pre">test</span> <span class="pre">13.2</span> <span class="pre">-1"))</span></code> will return <code class="docutils literal notranslate"><span class="pre">[123,</span> <span class="pre">1.2,</span> <span class="pre">13.2,</span> <span class="pre">-1]</span></code></p>
-<hr/><!--NAVIGATION--></div>
+<hr/></div>
 </div>
+<div class="section" id="Sequences,-iterables,-generators:-revisited">
+<h2>Sequences, iterables, generators: revisited<a class="headerlink" href="#Sequences,-iterables,-generators:-revisited" title="Permalink to this headline">¶</a></h2>
+<p>In simple terms, a container is <em>iterable</em>, if we can go through all its elements using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop. All the sequences are iterable, but there are other iterable objects as well. We can even create iterable types ourselves. In our class there needs to be a special method <code class="docutils literal notranslate"><span class="pre">__iter__</span></code> that returns an <em>iterator</em> for the container. An iterator is an object that has method <code class="docutils literal notranslate"><span class="pre">__next__</span></code>, which returns the next element from the container. Let’s have a look at a simple example where the container
+and its iterator is the same class.</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">class</span> <span class="nc">WeekdayIterator</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">"""Iterator over the weekdays."""</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span>           <span class="c1"># Start from Monday</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">weekdays</span> <span class="o">=</span> <span class="p">(</span><span class="s2">"Monday"</span><span class="p">,</span><span class="s2">"Tuesday"</span><span class="p">,</span><span class="s2">"Wednesday"</span><span class="p">,</span><span class="s2">"Thursday"</span><span class="p">,</span><span class="s2">"Friday"</span><span class="p">,</span><span class="s2">"Saturday"</span><span class="p">,</span><span class="s2">"Sunday"</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">__iter__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    <span class="c1"># If this object were a container, then this method would return the iterator over the</span>
+                           <span class="c1"># elements of the container.</span>
+        <span class="k">return</span> <span class="bp">self</span>        <span class="c1"># However, this object is already an iterator, hence we return self.</span>
+    <span class="k">def</span> <span class="nf">__next__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>    <span class="c1"># Returns the next weekday</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">==</span> <span class="mi">7</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">StopIteration</span> <span class="c1"># Signal that all weekdays were already iterated over</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">weekday</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">weekdays</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">i</span><span class="p">]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="n">weekday</span>
+
+<span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">WeekdayIterator</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+</pre></div></div>
+</div>
+<p>We can now check whether the WeekdayIterator is a Sequence type:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">abc</span>  <span class="c1"># Get the abstract base classes</span>
+<span class="n">containers</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"efg"</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">),</span> <span class="n">WeekdayIterator</span><span class="p">()]</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">containers</span><span class="p">:</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Sequence</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">"is a sequence"</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="s2">"is not a sequence"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+efg is a sequence
+[1, 2, 3] is a sequence
+(4, 5) is a sequence
+&lt;__main__.WeekdayIterator object at 0x7f141414d630&gt; is not a sequence
+</pre></div></div>
+</div>
+<p>Weekday is not a sequence because, for instance, you cannot index it with the brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>, but it is an iterable:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">WeekdayIterator</span><span class="p">(),</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="output_area highlight-none notranslate"><div class="highlight"><pre>
+<span></span>True
+</pre></div>
+</div>
+</div>
+<p>So it is possible to create iterators ourselves, but the syntax was quite complicated. There is an easier option using <em>generators</em>. A generator is a function that contains a <code class="docutils literal notranslate"><span class="pre">yield</span></code> statement. Note the difference between generators and generator expressions we saw in the first week. Both however produce iterables. Here’s an example of a generator:</p>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[30]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="k">def</span> <span class="nf">mydate</span><span class="p">(</span><span class="n">day</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">month</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># Generates dates starting from the given date</span>
+    <span class="n">lengths</span><span class="o">=</span><span class="p">(</span><span class="mi">31</span><span class="p">,</span><span class="mi">28</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">30</span><span class="p">,</span><span class="mi">31</span><span class="p">)</span>   <span class="c1"># How many days in a month</span>
+    <span class="n">first_day</span><span class="o">=</span><span class="n">day</span>
+    <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">month</span><span class="p">,</span> <span class="mi">13</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">d</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">first_day</span><span class="p">,</span> <span class="n">lengths</span><span class="p">[</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">yield</span> <span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">m</span><span class="p">)</span>
+        <span class="n">first_day</span><span class="o">=</span><span class="mi">1</span>
+<span class="c1"># Create the generator by calling the function:</span>
+<span class="n">gen</span> <span class="o">=</span> <span class="n">mydate</span><span class="p">(</span><span class="mi">26</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>   <span class="c1"># Start from 26th of February</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">gen</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">5</span><span class="p">:</span> <span class="k">break</span>                 <span class="c1"># Print only the first five dates from the generator</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Index </span><span class="si">%i</span><span class="s2">, day </span><span class="si">%i</span><span class="s2">, month </span><span class="si">%i</span><span class="s2">"</span> <span class="o">%</span> <span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">month</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Index 0, day 26, month 2
+Index 1, day 27, month 2
+Index 2, day 28, month 2
+Index 3, day 1, month 3
+Index 4, day 2, month 3
+</pre></div></div>
+</div>
+<p>Note that it would not be possible to write the above iterable using a generator expression, and it would have been very clumsy to explicitly write it as an iterator like we did the <code class="docutils literal notranslate"><span class="pre">WeekdayIterator</span></code>. The below figure shows the relationships between different iterables we have seen:</p>
+<p><img alt="iterables.svg" src="_images/iterables.svg"/></p>
+<!--NAVIGATION--></div>
 </div>
 </div>
 </div>
